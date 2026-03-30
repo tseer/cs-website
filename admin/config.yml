@@ -27,7 +27,6 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
           - {label: "Permalink", name: "permalink", widget: "hidden", default: "/facilities"}
           - {label: "Body content", name: "body", widget: "markdown"}
-      - name: 
       
   - name: "news"
     label: "News Announcements"
@@ -40,4 +39,19 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Body content", name: "body", widget: "markdown"}
-  
+  - name: "schedules"
+    label: "Course Schedules"
+    media_folder: "WEB/assets/schedules"
+    public_folder: "/WEB/assets/schedules"
+    files:
+      - name: "schedule_list"
+        label: "Manage Schedules"
+        file: "_data/schedules.yml"
+        fields:
+          - label: "Semesters"
+            name: "items"
+            add_to_top: true
+            widget: "list"
+            fields:
+              - {label: "Semester Name", name: "semester", widget: "string", hint: "e.g. Spring 2026"}
+              - {label: "Schedule Excel File", name: "schedule_file", widget: "file"}
