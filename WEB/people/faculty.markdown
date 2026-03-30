@@ -8,7 +8,7 @@ permalink: "/faculty"
   <div class="person">
     <a href="https://www.cs.umb.edu/~ozgun"><img src="/WEB/images/people/ozgun_babur.jpg"></a><br>
     <a href="https://www.cs.umb.edu/~ozgun" target=_blank>Ozgun Babur</a><br>
-    Assistant Professor<br>
+    Assistant<br>
     M-3-201-02<br>
     ozgun.babur@umb.edu<br>
     <br>
