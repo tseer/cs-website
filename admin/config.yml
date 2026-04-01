@@ -27,7 +27,18 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
           - {label: "Permalink", name: "permalink", widget: "hidden", default: "/facilities"}
           - {label: "Body content", name: "body", widget: "markdown"}
-      
+  - name: "research"
+    label: "Create Research Post"
+    folder: "WEB/POSTS/research/_posts"
+    create: true 
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", required: false}
+      - {label: "Author", name: "author", widget: "string", required: false}
+      - {label: "Body content", name: "body", widget: "markdown"}
+
   - name: "news"
     label: "News Announcements"
     folder: "WEB/POSTS/news/_posts"
@@ -39,6 +50,18 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Body content", name: "body", widget: "markdown"}
+  - name: "events"
+    label: "Create Events"
+    folder: "WEB/POSTS/events/_posts"
+    create: true 
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Body content", name: "body", widget: "markdown"}
+         
   - name: "schedules"
     label: "Course Schedules"
     media_folder: "WEB/assets/schedules"
