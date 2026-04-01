@@ -1,23 +1,16 @@
 ---
 title: "CS437"
-layout: page
+layout: course
 permalink: "/academics/courses/CS437"
+course_code: "CS437"
+course_name: "Database-Backed Web Sites and Web Services"
+credits: 3
+description: "Today, much programming is web-based. Web-based programs serve up information from a Web site in a form that can be either read by a browser or processed by another program. This course introduces the student to the design and implementation of such web-based programs."
+prerequisites:
+  - "CS 310 and CS 430, or permission of the instructor."
+keywords:
+  - "CS437"
+  - "Database-Backed Web Sites and Web Services"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Database-Backed Web Sites and Web Services (3 credits)**
-
----
-
-\
-Today, much programming is web-based. Web-based programs serve up information from a Web site in a form that can be either read by a browser or processed by another program. This course introduces the student to the design and implementation of such web-based programs.
-
-**Note:**
-\
-This course is co-taught with CS637.
-
-**Pre-requisites:**
-\
-CS 310 and CS 430, or permission of the instructor.

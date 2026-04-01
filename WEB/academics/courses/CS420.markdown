@@ -1,30 +1,28 @@
 ---
 title: "CS420"
-layout: page
+layout: course
 permalink: "/academics/courses/CS420"
+course_code: "CS420"
+course_name: "Introduction to the Theory of Computation"
+credits: 3
+description: "Introduction to theoretical aspects of computing including models of computation, inherent limits on computation, and feasible computation. Topics studied will include definition of computable functions (recursive functions, functions computable by Turing machines, functions computable in a programming language), insolvability of the halting problem and related problems, the classes P and NP, finite automata, and context-free grammars."
+prerequisites:
+  - "CS 220/CS 320L"
+keywords:
+  - "CS420"
+  - "Introduction to the Theory of Computation"
+  - "UMass Boston"
+  - "course"
 ---
 
-
-
-\
-**Introduction to the Theory of Computation (3 credits)**
-
----
-
-\
-Introduction to theoretical aspects of computing including models of computation, inherent limits on computation, and feasible computation. Topics studied will include definition of computable functions (recursive functions, functions computable by Turing machines, functions computable in a programming language), insolvability of the halting problem and related problems, the classes P and NP, finite automata, and context-free grammars.
-
-**Note:**
+## Notes
 
 This course is required for all computer science majors who took CS 220/CS 320L during fall 1989 or later. It may be used as a theoretical elective by other computer science majors.
 
-**Textbook(s)**
-Title: Introduction to the Theory of Computation
-Author(s): Michael Sipser
-Publisher: Course Technology
-Edition: 3rd
-ISBN: 113318779X
+## Textbooks
 
-**Pre-requisites:**
-\
-CS 220/CS 320L
+Title: Introduction to the Theory of Computation  
+Author(s): Michael Sipser  
+Publisher: Course Technology  
+Edition: 3rd  
+ISBN: 113318779X

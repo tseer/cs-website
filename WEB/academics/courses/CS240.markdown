@@ -1,19 +1,16 @@
 ---
 title: "CS240"
-layout: page
+layout: course
 permalink: "/academics/courses/CS240"
+course_code: "CS240"
+course_name: "Programming in C"
+credits: 3
+description: "C programming for programmers with prior knowledge of some high-level language (e.g., one semester of programming in Java). The course treats C as a machine-level language and as a general-purpose language; it covers number representation, masking, bitwise operations, and memory allocation, as well as more general topics such as dynamic data structures, file I/O, separate compilation, program development tools, and debugging."
+prerequisites:
+  - "CS 110 or CS/IT 115L"
+keywords:
+  - "CS240"
+  - "Programming in C"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Programming in C (3 credits)**
-
----
-
-\
-C programming for programmers with prior knowledge of some high-level language (e.g., one semester of programming in Java). The course treats C as a machine-level language and as a general-purpose language; it covers number representation, masking, bitwise operations, and memory allocation, as well as more general topics such as dynamic data structures, file I/O, separate compilation, program development tools, and debugging.
-
-**Pre-requisites:**
-\
-CS 110 or CS/IT 115L

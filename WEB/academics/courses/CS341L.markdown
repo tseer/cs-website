@@ -1,19 +1,16 @@
 ---
 title: "CS341L"
-layout: page
+layout: course
 permalink: "/academics/courses/CS341L"
+course_code: "CS341L"
+course_name: "Computer Architecture and Organization"
+credits: 3
+description: "Computer hardware concepts and hardware-level programming for C programmers. Topics are: digital logic circuits, computer organization of a microprocessor system (i.e., how the CPU, memory, and I/O interface chips are interconnected to make a system), serial and parallel port interfacing, hardware programming in C and assembler, interrupt programming, device drivers. The course includes a hands-on lab meeting one hour per week."
+prerequisites:
+  - "CS 240"
+keywords:
+  - "CS341L"
+  - "Computer Architecture and Organization"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Computer Architecture and Organization (3 credits)**
-
----
-
-\
-Computer hardware concepts and hardware-level programming for C programmers. Topics are: digital logic circuits, computer organization of a microprocessor system (i.e., how the CPU, memory, and I/O interface chips are interconnected to make a system), serial and parallel port interfacing, hardware programming in C and assembler, interrupt programming, device drivers. The course includes a hands-on lab meeting one hour per week.
-
-**Pre-requisites:**
-\
-CS 240
