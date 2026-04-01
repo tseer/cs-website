@@ -2,9 +2,35 @@
 layout: page
 ---
 
-<article class="course-page" itemscope itemtype="https://schema.org/Course">
+{% assign course_title = page.course_code %}
+{% assign course_pages = site.pages | where_exp: "item", "item.course_code" %}
+{% if page.course_name %}
+  {% assign course_title = page.course_code | append: ': ' | append: page.course_name %}
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": {{ course_title | jsonify }},
+  "courseCode": {{ page.course_code | jsonify }},
+  {% if page.description %}
+  "description": {{ page.description | strip_html | normalize_whitespace | jsonify }},
+  {% endif %}
+  "provider": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Massachusetts Boston",
+    "department": {
+      "@type": "EducationalOrganization",
+      "name": "Computer Science Department"
+    }
+  }
+}
+</script>
+
+<article class="course-page">
   <header class="course-header">
-    <h1 itemprop="name">
+    <h1>
       {{ page.course_code }}{% if page.course_name %}: {{ page.course_name }}{% endif %}
     </h1>
 
@@ -13,29 +39,51 @@ layout: page
     {% endif %}
 
     {% if page.description %}
-      <p itemprop="description">{{ page.description }}</p>
+      <p>{{ page.description }}</p>
     {% endif %}
   </header>
 
   {% if page.prerequisites %}
     <section class="course-prereqs">
       <h2>Prerequisites</h2>
-      <ul>
-        {% for prereq in page.prerequisites %}
-          <li>{{ prereq }}</li>
-        {% endfor %}
-      </ul>
+      {% if page.prerequisites.first %}
+        <ul>
+          {% for prereq in page.prerequisites %}
+            {% assign prereq_page = course_pages | where: "course_code", prereq | first %}
+            <li>
+              {% if prereq_page %}
+                <a href="{{ prereq_page.url | relative_url }}">{{ prereq }}</a>
+              {% else %}
+                {{ prereq }}
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>{{ page.prerequisites }}</p>
+      {% endif %}
     </section>
   {% endif %}
 
-  {% if page.corequisites %}
+  {% if page.co_requisites %}
     <section class="course-coreqs">
       <h2>Co-requisites</h2>
-      <ul>
-        {% for coreq in page.corequisites %}
-          <li>{{ coreq }}</li>
-        {% endfor %}
-      </ul>
+      {% if page.co_requisites.first %}
+        <ul>
+          {% for coreq in page.co_requisites %}
+            {% assign coreq_page = course_pages | where: "course_code", coreq | first %}
+            <li>
+              {% if coreq_page %}
+                <a href="{{ coreq_page.url | relative_url }}">{{ coreq }}</a>
+              {% else %}
+                {{ coreq }}
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>{{ page.co_requisites }}</p>
+      {% endif %}
     </section>
   {% endif %}
 

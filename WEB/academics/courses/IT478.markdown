@@ -1,15 +1,14 @@
 ---
 title: "IT478"
-layout: page
+layout: course
 permalink: "/academics/courses/IT478"
+course_code: "IT478"
+course_name: "Independent Study"
+credits: 3
+description: "Work done by a student or group of students under faculty supervision on material not currently offered in a regularly scheduled course. Students wishing to undertake such work must first find a faculty member willing to supervise it; the work to be completed must be approved by the department chairperson."
+keywords:
+  - "IT478"
+  - "Independent Study"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Independent Study (3 credits)**
-
----
-
-\
-Work done by a student or group of students under faculty supervision on material not currently offered in a regularly scheduled course. Students wishing to undertake such work must first find a faculty member willing to supervise it; the work to be completed must be approved by the department chairperson.

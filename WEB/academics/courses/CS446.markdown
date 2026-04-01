@@ -1,23 +1,19 @@
 ---
 title: "CS446"
-layout: page
+layout: course
 permalink: "/academics/courses/CS446"
+course_code: "CS446"
+course_name: "Introduction to Internetworking"
+credits: 3
+description: "The objective of this course is to provide a practical understanding of computer networks, with emphasis on the Internet. The course starts with an overview of the Internet, its protocol layers, edge and core networks, access networks and physical media. The course then focuses on fundamental design and implementation concepts of the application, transport, and network layers of the Internet."
+prerequisites:
+  - "CS310"
+  - "CS341"
+co_requisites:
+  - "CS444"
+keywords:
+  - "CS446"
+  - "Internetworking"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Introduction to Internetworking (3 credits)**
-
----
-
-\
-The objective of this course is to provide a practical understanding of computer networks, with emphasis on the Internet. The course starts with an overview of the Internet, its protocol layers, edge and core networks, access networks and physical media. The course then focuses on fundamental design and implementation concepts of the application, transport, and network layers of the Internet.
-
-**Pre-requisites:**
-\
-CS 310 and CS 341.
-
-**Co-requisites:**
-\
-CS444.

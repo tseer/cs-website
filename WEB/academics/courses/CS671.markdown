@@ -1,15 +1,15 @@
 ---
 title: "CS671"
-layout: page
+layout: course
 permalink: "/academics/courses/CS671"
+course_code: "CS671"
+course_name: "Machine Learning"
+credits: 3
+description: "Machine Learning is a foundational discipline for data mining and artificial intelligence which explores the limits and capacities of automated learning of abstract concepts. The course will focus on the probably approximately correct (PAC) learning model and will cover topics like the Vapnik-Chervonenkis dimension, the weak and strong learning paradigms, inherent unpredictability, reducibility in PAC learning, and learning finite automata."
+prerequisites:
+keywords:
+  - "CS671"
+  - "Machine Learning"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Machine Learning (3 credits)**
-
----
-
-\
-Machine Learning is a foundational discipline for data mining and artificial intelligence which explores the limits and capacities of automated learning of abstract concepts. The course will focus on the probably approximately correct (PAC) learning model and will cover topics like the Vapnik-Chervonenkis dimension, the weak and strong learning paradigms, inherent unpredictability, reducibility in PAC learning, and learning finite automata.

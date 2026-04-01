@@ -1,19 +1,16 @@
 ---
 title: "IT421"
-layout: page
+layout: course
 permalink: "/academics/courses/IT421"
+course_code: "IT421"
+course_name: "Business Intelligence Applications"
+credits: 3
+description: "This course provides an introduction to advanced digital forensics topics relating to malicious software (malware) and its analysis. Malware (virus, worms, rootkits, spam...) represents an increasing information security threat to computer systems and networks. Students will review software engineering design fundamentals and reverse engineering techniques utilized to conduct static and dynamic forensic analysis on computer systems and networks on multiple platforms (e.g.Windows, Linux..). Students will learn about the importance of forensic principles, legal considerations, digital evidence controls, and documentation of forensic procedures in the context of malware. In addition, students will study remediation measures for malware infection."
+prerequisites:
+  - "MSIS110 or IT110 and IT244"
+keywords:
+  - "IT421"
+  - "Business Intelligence Applications"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Business Intelligence Applications (3 credits)**
-
----
-
-\
-This course provides an introduction to advanced digital forensics topics relating to malicious software (malware) and its analysis. Malware (virus, worms, rootkits, spam...) represents an increasing information security threat to computer systems and networks. Students will review software engineering design fundamentals and reverse engineering techniques utilized to conduct static and dynamic forensic analysis on computer systems and networks on multiple platforms (e.g.Windows, Linux..). Students will learn about the importance of forensic principles, legal considerations, digital evidence controls, and documentation of forensic procedures in the context of malware. In addition, students will study remediation measures for malware infection.
-
-**Pre-requisites:**
-\
-MSIS110 or IT110 and IT244

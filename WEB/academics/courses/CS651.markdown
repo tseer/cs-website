@@ -1,23 +1,20 @@
 ---
 title: "CS651"
-layout: page
+layout: course
 permalink: "/academics/courses/CS651"
+course_code: "CS651"
+course_name: "Compilers"
+credits: 3
+description: "Compiler organization and construction. Programming projects involve scanning input, analyzing program structure, error checking, code translation and interpreting, code generation and optimization. These projects result in a compiler for a reasonably large subset of ALGOL, Pascal, or similar procedural language."
+prerequisites:
+  - "CS310 and CS420 or CS622"
+keywords:
+  - "CS651"
+  - "Compilers"
+  - "UMass Boston"
+  - "course"
 ---
 
+## Notes
 
-
-\
-**Compilers (3 credits)**
-
----
-
-\
-Compiler organization and construction. Programming projects involve scanning input, analyzing program structure, error checking, code translation and interpreting, code generation and optimization. These projects result in a compiler for a reasonably large subset of ALGOL, Pascal, or similar procedural language.
-
-**Note:**
-\
 This course is co-taught with CS451.
-
-**Pre-requisites**
-\
-CS310 and CS420 or CS622.

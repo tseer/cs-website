@@ -1,23 +1,18 @@
 ---
 title: "CS681"
-layout: page
+layout: course
 permalink: "/academics/courses/CS681"
+course_code: "CS681"
+course_name: "Object-Oriented Software Development"
+credits: 3
+description: "In this course students work in small teams to create a useful, complete, medium sized software system for real customers. There is a strong emphasis on process: the systematic use of an object-oriented development methodology based on UML models and incremental development is employed throughout each project."
+prerequisites:
+  - "CS680 and one of the following with a grade of B or better: CS636 or CS CS637 or CS651."
+co_requisites:
+  - "CS682"
+keywords:
+  - "CS681"
+  - "Object-Oriented Software Development"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Object-Oriented Software Development (3 credits)**
-
----
-
-\
-In this course students work in small teams to create a useful, complete, medium sized software system for real customers. There is a strong emphasis on process: the systematic use of an object-oriented development methodology based on UML models and incremental development is employed throughout each project.
-
-**Pre-requisites**
-\
-CS680 and one of the following with a grade of B or better: CS636 or CS CS637 or CS651.
-
-**Co-requisites:**
-\
-CS682

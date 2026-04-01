@@ -1,19 +1,16 @@
 ---
 title: "CS675"
-layout: page
+layout: course
 permalink: "/academics/courses/CS675"
+course_code: "CS675"
+course_name: "Computer Vision"
+credits: 3
+description: "This course provides both theoretical knowledge and practical experience with fundamental and advanced Computer Vision algorithms. Topics range from basic image processing techniques such as image convolution and region and edge detection to more complex vision algorithms for contour detection, depth perception, dynamic vision, and object recognition. Students will implement vision algorithms in the JAVA programming language. The performance of these programs is evaluated, and the advantages and disadvantages of individual approaches are discussed. The final project is the development by students of their own computer vision program solving a given problem."
+prerequisites:
+  - "CS310 and CS220/CS320L/MATH320L or permission of the instructor"
+keywords:
+  - "CS675"
+  - "Computer Vision"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Computer Vision (3 credits)**
-
----
-
-\
-This course provides both theoretical knowledge and practical experience with fundamental and advanced Computer Vision algorithms. Topics range from basic image processing techniques such as image convolution and region and edge detection to more complex vision algorithms for contour detection, depth perception, dynamic vision, and object recognition. Students will implement vision algorithms in the JAVA programming language. The performance of these programs is evaluated, and the advantages and disadvantages of individual approaches are discussed. The final project is the development by students of their own computer vision program solving a given problem.
-
-**Pre-requisites**
-\
-CS310 and CS220/CS320L/MATH320L or permission of the instructor.

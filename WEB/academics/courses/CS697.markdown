@@ -1,19 +1,16 @@
 ---
 title: "CS697"
-layout: page
+layout: course
 permalink: "/academics/courses/CS697"
+course_code: "CS697"
+course_name: "Special Topics"
+credits: 3
+description: "Topics of current interest in the field, according to student and faculty areas of specialization. Course content varies according to the topic and wiill be announced prior to registration."
+prerequisites:
+  - "instructor permission"
+keywords:
+  - "CS697"
+  - "Special Topics"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Special Topics (3 credits)**
-
----
-
-\
-Topics of current interest in the field, according to student and faculty areas of specialization. Course content varies according to the topic and wiill be announced prior to registration.
-
-**Pre-requisites:**
-\
-instructor permission

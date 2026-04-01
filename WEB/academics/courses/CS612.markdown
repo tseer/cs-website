@@ -1,19 +1,17 @@
 ---
 title: "CS612"
-layout: page
+layout: course
 permalink: "/academics/courses/CS612"
+course_code: "CS612"
+course_name: "Algorithms in Bioinformatics"
+credits: 3
+description: "The course will introduce students to bioinformatics - the area concerning the development and application of computational methods to address key problems in biology. It will introduce the students to a variety of methods and skills required to conduct research in this popular field. The emphasis of the course is algorithmic methods in structural bioinformatics with a focus on various computational methods to simulate, analyze, and model protein structure, dynamic, and function."
+prerequisites:
+  - "CS210"
+  - "Math260"
+keywords:
+  - "CS612"
+  - "Algorithms in Bioinformatics"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Algorithms in Bioinformatics (3 credits)**
-
----
-
-\
-The course will introduce students to bioinformatics - the area concerning the development and application of computational methods to address key problems in biology. It will introduce the students to a variety of methods and skills required to conduct research in this popular field. The emphasis of the course is algorithmic methods in structural bioinformatics with a focus on various computational methods to simulate, analyze, and model protein structure, dynamic, and function.
-
-**Pre-requisites:**
-\
-CS210 and Math260.

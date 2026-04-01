@@ -1,19 +1,16 @@
 ---
 title: "CS699"
-layout: page
+layout: course
 permalink: "/academics/courses/CS699"
+course_code: "CS699"
+course_name: "Research for MS Thesis"
+credits: 3
+description: "A one-semester supervised practicum course to help students complete the required thesis, which must be a substantial piece of research on some aspect of computer science. The master's thesis may take the form of a theoretical paper or a report on a piece of software."
+prerequisites:
+  - "15 graduate credits."
+keywords:
+  - "CS699"
+  - "Research for MS Thesis"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Research for MS Thesis (3 credits)**
-
----
-
-\
-A one-semester supervised practicum course to help students complete the required thesis, which must be a substantial piece of research on some aspect of computer science. The master's thesis may take the form of a theoretical paper or a report on a piece of software.
-
-**Pre-requisites:**
-\
-15 graduate credits.

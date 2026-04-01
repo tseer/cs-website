@@ -1,19 +1,17 @@
 ---
 title: "CS444"
-layout: page
+layout: course
 permalink: "/academics/courses/CS444"
+course_code: "CS444"
+course_name: "Introduction to Operating Systems"
+credits: 3
+description: "Description of current operating systems, focusing on one or two in particular. Topics include defining the operating system as distinct from hardware on one side and software systems on the other, process concepts, memory management, CPU scheduling, device management, file systems, and network support."
+prerequisites:
+  - "CS341"
+  - "CS310"
+keywords:
+  - "CS444"
+  - "Operating Systems"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Introduction to Operating Systems (3 credits)**
-
----
-
-\
-Description of current operating systems, focusing on one or two in particular. Topics include defining the operating system as distinct from hardware on one side and software systems on the other, process concepts, memory management, CPU scheduling, device management, file systems, and network support.
-
-**Pre-requisites:**
-\
-CS 341 and CS 310

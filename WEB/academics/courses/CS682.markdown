@@ -1,19 +1,16 @@
 ---
 title: "CS682"
-layout: page
+layout: course
 permalink: "/academics/courses/CS682"
+course_code: "CS682"
+course_name: "Software Development Laboratory I"
+credits: 3
+description: "This is a laboratory course in which students, working in small groups, specify, design, implement, and document a large software project."
+co_requisites:
+  - "CS681"
+keywords:
+  - "CS682"
+  - "Software Development Laboratory I"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Software Development Laboratory I (3 credits)**
-
----
-
-\
-This is a laboratory course in which students, working in small groups, specify, design, implement, and document a large software project.
-
-**Co-requisites:**
-\
-CS681

@@ -1,19 +1,16 @@
 ---
 title: "IT210L"
-layout: page
+layout: course
 permalink: "/academics/courses/IT210L"
+course_code: "IT210L"
+course_name: "Intermediate Computing with Data Structures"
+credits: 4
+description: "The design and implementation of computer programs in a high-level language, with emphasis on proper design principles and advanced programming concepts, including dynamic data structures and recursion. The assignments are designed to introduce the student to a variety of topics in computing: data structures and ADTs, Lists, Stacks, Queues, Ordered Lists, Binary Trees, and searching and sorting techniques. The language of instruction is Java."
+prerequisites:
+  - "CS 110 or CSIT 115L"
+keywords:
+  - "IT210L"
+  - "Intermediate Computing with Data Structures"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Intermediate Computing with Data Structures (4 credits)**
-
----
-
-\
-The design and implementation of computer programs in a high-level language, with emphasis on proper design principles and advanced programming concepts, including dynamic data structures and recursion. The assignments are designed to introduce the student to a variety of topics in computing: data structures and ADTs, Lists, Stacks, Queues, Ordered Lists, Binary Trees, and searching and sorting techniques. The language of instruction is Java.
-
-**Pre-requisites**
-\
-CS 110 or CSIT 115L

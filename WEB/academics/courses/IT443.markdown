@@ -1,19 +1,16 @@
 ---
 title: "IT443"
-layout: page
+layout: course
 permalink: "/academics/courses/IT443"
+course_code: "IT443"
+course_name: "Network Security Administration"
+credits: 3
+description: "This course explores the application of policy and techniques to securing both public and private networks. The course is project-based and includes such topics as threat analysis and management, cryptography, firewalls, isolation, issues in securing wireless networks, and certificates."
+prerequisites:
+  - "IT341."
+keywords:
+  - "IT443"
+  - "Network Security Administration"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Network Security Administration (3 credits)**
-
----
-
-\
-This course explores the application of policy and techniques to securing both public and private networks. The course is project-based and includes such topics as threat analysis and management, cryptography, firewalls, isolation, issues in securing wireless networks, and certificates.
-
-**Pre-requisites:**
-\
-IT341.

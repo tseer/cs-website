@@ -7,7 +7,8 @@ course_name: "Information Technology Capstone"
 credits: 3
 description: "Students will work on a semester-long project, particular to their track and meet together with an instructor and with students from other tracks to discuss each other’s projects. Students will deliver a product that is appropriate to their track in the IT program. At the end of the semester, students report on their product, both in oral presentations and demonstrations and in writing."
 prerequisites:
-  - "IT425 and a track"
+  - "IT425L"
+  - "a track"
 keywords:
   - "IT485"
   - "Information Technology Capstone"

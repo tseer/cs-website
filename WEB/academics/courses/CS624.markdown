@@ -1,19 +1,17 @@
 ---
 title: "CS624"
-layout: page
+layout: course
 permalink: "/academics/courses/CS624"
+course_code: "CS624"
+course_name: "Analysis of Algorithms"
+credits: 3
+description: "Basic techniques for designing algorithms: divide and conquer, the greedy method, dynamic programming, etc. Applications to searching and sorting algorithms. Complexity of parsing. The fast Fourier transform and its applications (evaluation of polynomials and arithmetical problems). Lower bound theory. NP-hard and NP-complete problems. Probabilistic estimates of algorithms."
+prerequisites:
+  - "CS220/CS320L/MATH320L"
+  - "Permission of the instructor"
+keywords:
+  - "CS624"
+  - "Analysis of Algorithms"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Analysis of Algorithms (3 credits)**
-
----
-
-\
-Basic techniques for designing algorithms: divide and conquer, the greedy method, dynamic programming, etc. Applications to searching and sorting algorithms. Complexity of parsing. The fast Fourier transform and its applications (evaluation of polynomials and arithmetical problems). Lower bound theory. NP-hard and NP-complete problems. Probabilistic estimates of algorithms.
-
-**Pre-requisites:**
-\
-CS220/CS320L/MATH320L or permission of the instructor.

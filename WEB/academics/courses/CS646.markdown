@@ -1,19 +1,16 @@
 ---
 title: "CS646"
-layout: page
+layout: course
 permalink: "/academics/courses/CS646"
+course_code: "CS646"
+course_name: "Computer Communication Networks"
+credits: 3
+description: "Need for computer networks. Architectures of networks. Architectures of systems. ISO Reference Model. Standardization efforts. Specification of protocols. Example of protocols and networks."
+prerequisites:
+  - "CS641"
+keywords:
+  - "CS646"
+  - "Computer Communication Networks"
+  - "UMass Boston"
+  - "course"
 ---
-
-
-
-\
-**Computer Communication Networks (3 credits)**
-
----
-
-\
-Need for computer networks. Architectures of networks. Architectures of systems. ISO Reference Model. Standardization efforts. Specification of protocols. Example of protocols and networks.
-
-**Pre-requisites**
-\
-CS641
