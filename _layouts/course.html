@@ -4,6 +4,7 @@ layout: page
 
 {% assign course_title = page.course_code %}
 {% assign course_pages = site.pages | where_exp: "item", "item.course_code" %}
+{% assign linked_course_pages = site.pages | where_exp: "item", "item.course_code and item.course_code != page.course_code" %}
 {% if page.course_name %}
   {% assign course_title = page.course_code | append: ': ' | append: page.course_name %}
 {% endif %}
@@ -14,15 +15,19 @@ layout: page
   "@type": "Course",
   "name": {{ course_title | jsonify }},
   "courseCode": {{ page.course_code | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
   {% if page.description %}
   "description": {{ page.description | strip_html | normalize_whitespace | jsonify }},
   {% endif %}
+  {% if page.keywords %}
+  "keywords": {{ page.keywords | join: ", " | jsonify }},
+  {% endif %}
   "provider": {
     "@type": "CollegeOrUniversity",
-    "name": "University of Massachusetts Boston",
+    "name": {{ site.organization_name | default: "University of Massachusetts Boston" | jsonify }},
     "department": {
       "@type": "EducationalOrganization",
-      "name": "Computer Science Department"
+      "name": {{ site.department_name | default: "Computer Science Department" | jsonify }}
     }
   }
 }
@@ -93,3 +98,114 @@ layout: page
     </section>
   {% endif %}
 </article>
+
+<script type="application/json" id="course-link-data">
+[
+  {% for course in linked_course_pages %}
+    {
+      "code": {{ course.course_code | jsonify }},
+      "url": {{ course.url | relative_url | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
+
+<script>
+  (function() {
+    const dataNode = document.getElementById('course-link-data');
+    const courseRoot = document.querySelector('.course-page');
+
+    if (!dataNode || !courseRoot) {
+      return;
+    }
+
+    const courses = JSON.parse(dataNode.textContent)
+      .map((course) => {
+        const spacedCode = course.code.replace(/^([A-Z]+)([0-9].*)$/, '$1 $2');
+        return {
+          ...course,
+          aliases: [...new Set([course.code, spacedCode])].sort((a, b) => b.length - a.length),
+        };
+      });
+
+    if (!courses.length) {
+      return;
+    }
+
+    const aliasEntries = [];
+    for (const course of courses) {
+      for (const alias of course.aliases) {
+        aliasEntries.push([alias, course.url]);
+      }
+    }
+
+    aliasEntries.sort((a, b) => b[0].length - a[0].length);
+    const aliasMap = new Map(aliasEntries);
+    const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const pattern = new RegExp(
+      `(^|[^A-Za-z0-9])(${aliasEntries.map(([alias]) => escapeRegex(alias)).join('|')})(?=$|[^A-Za-z0-9])`,
+      'g'
+    );
+
+    const skipTags = new Set(['A', 'SCRIPT', 'STYLE', 'CODE', 'PRE', 'TEXTAREA']);
+    const walker = document.createTreeWalker(courseRoot, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        if (!node.nodeValue || !pattern.test(node.nodeValue)) {
+          pattern.lastIndex = 0;
+          return NodeFilter.FILTER_REJECT;
+        }
+
+        pattern.lastIndex = 0;
+
+        const parent = node.parentElement;
+        if (!parent || skipTags.has(parent.tagName)) {
+          return NodeFilter.FILTER_REJECT;
+        }
+
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+
+    const textNodes = [];
+    while (walker.nextNode()) {
+      textNodes.push(walker.currentNode);
+    }
+
+    for (const node of textNodes) {
+      const fragment = document.createDocumentFragment();
+      const text = node.nodeValue;
+      let lastIndex = 0;
+
+      text.replace(pattern, (match, prefix, alias, offset) => {
+        const start = offset;
+        const aliasStart = start + prefix.length;
+
+        if (start > lastIndex) {
+          fragment.appendChild(document.createTextNode(text.slice(lastIndex, start)));
+        }
+
+        if (prefix) {
+          fragment.appendChild(document.createTextNode(prefix));
+        }
+
+        const link = document.createElement('a');
+        link.href = aliasMap.get(alias);
+        link.textContent = alias;
+        fragment.appendChild(link);
+
+        lastIndex = aliasStart + alias.length;
+        return match;
+      });
+
+      if (lastIndex === 0) {
+        continue;
+      }
+
+      if (lastIndex < text.length) {
+        fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+      }
+
+      node.parentNode.replaceChild(fragment, node);
+    }
+  })();
+</script>

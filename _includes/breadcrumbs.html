@@ -1,0 +1,90 @@
+{%- if page.url != "/" -%}
+  {%- assign current_label = page.title | default: page.course_code -%}
+  {%- if page.layout == "course" and page.course_name -%}
+    {%- assign current_label = page.course_code | append: ": " | append: page.course_name -%}
+  {%- elsif page.layout == "course" -%}
+    {%- assign current_label = page.course_code -%}
+  {%- endif -%}
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol class="breadcrumbs-list">
+      <li class="breadcrumbs-item">
+        <a href="{{ '/' | relative_url }}">Home</a>
+      </li>
+
+    {%- if page.layout == "course" -%}
+      <li class="breadcrumbs-item">
+        <a href="{{ '/academics/' | relative_url }}">Academics</a>
+      </li>
+      <li class="breadcrumbs-item">
+        <a href="{{ '/courses' | relative_url }}">Courses</a>
+      </li>
+    {%- elsif page.url == '/academics/' -%}
+      <li class="breadcrumbs-item">
+        <span class="breadcrumb-current" aria-current="page">Academics</span>
+      </li>
+    {%- elsif page.url == '/about/' -%}
+      <li class="breadcrumbs-item">
+        <span class="breadcrumb-current" aria-current="page">About</span>
+      </li>
+    {%- elsif page.url == '/people/' -%}
+      <li class="breadcrumbs-item">
+        <span class="breadcrumb-current" aria-current="page">People</span>
+      </li>
+    {%- elsif page.url == '/research/' -%}
+      <li class="breadcrumbs-item">
+        <span class="breadcrumb-current" aria-current="page">Research</span>
+      </li>
+    {%- elsif page.url == '/resources/' -%}
+      <li class="breadcrumbs-item">
+        <span class="breadcrumb-current" aria-current="page">Resources</span>
+      </li>
+    {%- elsif page.url == '/news-and-events/' -%}
+      <li class="breadcrumbs-item">
+        <span class="breadcrumb-current" aria-current="page">News and Events</span>
+      </li>
+    {%- elsif page.path contains 'WEB/academics/' -%}
+      <li class="breadcrumbs-item">
+        <a href="{{ '/academics/' | relative_url }}">Academics</a>
+      </li>
+    {%- elsif page.path contains 'WEB/about/' -%}
+      <li class="breadcrumbs-item">
+        <a href="{{ '/about/' | relative_url }}">About</a>
+      </li>
+    {%- elsif page.path contains 'WEB/people/' -%}
+      <li class="breadcrumbs-item">
+        <a href="{{ '/people/' | relative_url }}">People</a>
+      </li>
+    {%- elsif page.path contains 'WEB/research/' -%}
+      <li class="breadcrumbs-item">
+        <a href="{{ '/research/' | relative_url }}">Research</a>
+      </li>
+    {%- elsif page.path contains 'WEB/resources/' -%}
+      <li class="breadcrumbs-item">
+        <a href="{{ '/resources/' | relative_url }}">Resources</a>
+      </li>
+    {%- elsif page.path contains 'WEB/jobs-intern/' or page.layout == 'post' -%}
+      {%- assign news_parent = '/news-and-events/' | relative_url -%}
+      {%- if page.categories contains 'research' -%}
+        <li class="breadcrumbs-item">
+          <a href="{{ '/research/' | relative_url }}">Research</a>
+        </li>
+      {%- else -%}
+        <li class="breadcrumbs-item">
+          <a href="{{ news_parent }}">News and Events</a>
+        </li>
+      {%- endif -%}
+    {%- elsif page.path contains 'WEB/chimera/' -%}
+      <li class="breadcrumbs-item">
+        <span class="breadcrumb-current" aria-current="page">Chimera</span>
+      </li>
+    {%- endif -%}
+
+    {%- unless page.url == '/academics/' or page.url == '/about/' or page.url == '/people/' or page.url == '/research/' or page.url == '/resources/' or page.url == '/news-and-events/' -%}
+      <li class="breadcrumbs-item">
+        <span class="breadcrumb-current" aria-current="page">{{ current_label }}</span>
+      </li>
+    {%- endunless -%}
+    </ol>
+  </nav>
+{%- endif -%}

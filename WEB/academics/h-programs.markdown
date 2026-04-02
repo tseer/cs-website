@@ -2,7 +2,32 @@
 title: "Honors Programs"
 layout: page
 permalink: "/honors-programs"
+description: "The UMass Boston Computer Science honors program allows qualified students to graduate with department honors by meeting GPA requirements and completing an honors thesis."
+keywords:
+  - "Honors Programs"
+  - "Computer Science Honors"
+  - "Honors Thesis"
+  - "UMass Boston"
+  - "Computer Science Department"
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalProgram",
+  "name": {{ page.title | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "provider": {
+    "@type": "CollegeOrUniversity",
+    "name": "UMass Boston",
+    "department": {
+      "@type": "EducationalOrganization",
+      "name": "Computer Science"
+    }
+  }
+}
+</script>
 
 The department offers an Honors Program option for those who qualify. To graduate with department Honors in Computer Science, a Computer Science major must satisfy the following requirements:
 

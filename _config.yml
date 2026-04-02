@@ -22,6 +22,9 @@ phone: "617.287.6475"
 addres: "100 William T. Morrissey Blvd. Boston, MA 02125"
 title: "UMass Boston CS"
 email: "csinfo @ cs.umb.edu"
+organization_name: "University of Massachusetts Boston"
+department_name: "Computer Science Department"
+organization_logo: "/WEB/images/umass_logo.png"
 
 description: >- # this means to ignore newlines until "baseurl:"
   UMass Boston

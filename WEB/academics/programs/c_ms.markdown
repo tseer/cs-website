@@ -5,7 +5,7 @@ permalink: "/cs_ms"
 ---
 
 
-UMass Boston’s computer science master’s program thoroughly prepares students for a professional career in software development. This established and innovative program stresses the integration of theoretical knowledge with practical applications. Our Computer Science MS graduates are in high demand with major tech sector employers and startups. We invite you to learn more by joining <a href="https://admissions.umb.edu/graduate-students/request">our email list</a>.
+UMass Boston’s computer science master’s program thoroughly prepares students for a professional career in software development. This established and innovative program stresses the integration of theoretical knowledge with practical applications. Our Computer Science MS graduates are in high demand with major tech sector employers and startups. We invite you to learn more by joining <a href="https://www.umb.edu/admissions/request-info/">our email list</a>.
 
 **Admissions to the Program**
 
@@ -92,4 +92,3 @@ No more than two upper-level undergraduate courses may be used for graduate cred
 To complete the MS program students must participate in a software development project by taking the software development sequence ([CS680]({{site.baseurl}}/academics/courses/CS680), [CS681]({{site.baseurl}}/academics/courses/CS681), and [CS682]({{site.baseurl}}/academics/courses/CS682)). In general, this sequence is taken during the last two semesters in the MS program. The project is approved by a committee that consists of two faculty members (professors who are currently teaching the software development course and supervise the software development laboratory) and the Graduate Program Director.
 
 In exceptional circumstances, students with significant industrial experience may request a waiver of the software development requirement by applying to a faculty committee established for this purpose. As a part of the waiver application, the student must present a portfolio demonstrating the nature of this experience. Students who receive a waiver will be required to complete an MS thesis.
-

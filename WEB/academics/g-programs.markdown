@@ -2,7 +2,32 @@
 title: "Graduate Programs"
 layout: page
 permalink: "/graduate-programs"
+description: "UMass Boston Computer Science graduate programs include the MS and PhD in Computer Science and the graduate certificate in Database Technology."
+keywords:
+  - "Graduate Programs"
+  - "Computer Science MS"
+  - "Computer Science PhD"
+  - "Database Technology Certificate"
+  - "UMass Boston"
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalProgram",
+  "name": {{ page.title | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "provider": {
+    "@type": "CollegeOrUniversity",
+    "name": "UMass Boston",
+    "department": {
+      "@type": "EducationalOrganization",
+      "name": "Computer Science"
+    }
+  }
+}
+</script>
 
 For more information on our program click below:
 
@@ -30,4 +55,3 @@ Students must maintain a minimum GPA of 3.0. A student may re-take one course on
 The minimum grade for graduate credit is C. No more than two grades below B- may count for credit. MS students may register for three credits of [CS699]({{site.baseurl}}/academics/courses/CS699) (Research for MS Thesis) in order to write a thesis with the approval of the Director of the program. This option is open for students whose GPA is at least 3.5.
 
 With the exception of CS485, all Computer Science courses numbered 400 and higher are considered graduate level courses. All courses completed towards the masters degree will be considered in the student’s GPA; a student may not choose to take an additional course in lieu of a course in which he or she has earned a weak grade.
-

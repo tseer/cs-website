@@ -16,21 +16,230 @@
     <meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}">
   {%- endif -%}
 
-  {%- if page.layout == 'course' -%}
+  {%- assign page_title_for_schema = page.title | default: page.course_code | default: site.title -%}
+  {%- assign page_description_for_schema = page.description | default: site.description -%}
+  {%- assign breadcrumb_current_name = page.title | default: page.course_code | default: site.title -%}
+  {%- if page.layout == "course" and page.course_name -%}
+    {%- assign breadcrumb_current_name = page.course_code | append: ": " | append: page.course_name -%}
+  {%- elsif page.layout == "course" -%}
+    {%- assign breadcrumb_current_name = page.course_code -%}
+  {%- endif -%}
+  {%- capture breadcrumb_items -%}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ '/' | absolute_url | jsonify }}
+    }
+    {%- if page.layout == "course" -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Academics",
+      "item": {{ '/academics/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Courses",
+      "item": {{ '/courses' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": {{ breadcrumb_current_name | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.path contains 'WEB/academics/' -%}
+      {%- if page.url == '/academics/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Academics",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- else -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Academics",
+      "item": {{ '/academics/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ breadcrumb_current_name | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- endif -%}
+    {%- elsif page.path contains 'WEB/about/' -%}
+      {%- if page.url == '/about/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- else -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": {{ '/about/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ breadcrumb_current_name | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- endif -%}
+    {%- elsif page.path contains 'WEB/people/' -%}
+      {%- if page.url == '/people/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "People",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- else -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "People",
+      "item": {{ '/people/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ breadcrumb_current_name | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- endif -%}
+    {%- elsif page.path contains 'WEB/research/' or page.categories contains 'research' -%}
+      {%- if page.url == '/research/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Research",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- else -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Research",
+      "item": {{ '/research/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ breadcrumb_current_name | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- endif -%}
+    {%- elsif page.path contains 'WEB/resources/' -%}
+      {%- if page.url == '/resources/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- else -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": {{ '/resources/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ breadcrumb_current_name | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- endif -%}
+    {%- elsif page.path contains 'WEB/jobs-intern/' or page.layout == 'post' -%}
+      {%- unless page.categories contains 'research' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "News and Events",
+      "item": {{ '/news-and-events/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ breadcrumb_current_name | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- endunless -%}
+    {%- elsif page.url != '/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ breadcrumb_current_name | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- endif -%}
+  {%- endcapture -%}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "{{ page.course_code }}: {{ page.course_name | escape }}",
-    "description": {{ page.description | jsonify }},
-    "provider": {
-      "@type": "CollegeOrUniversity",
-      "name": "University of Massachusetts Boston",
-      "department": "Computer Science Department"
-    }
+    "@graph": [
+      {
+        "@type": "CollegeOrUniversity",
+        "@id": {{ site.url | append: "/#organization" | jsonify }},
+        "name": {{ site.organization_name | default: "University of Massachusetts Boston" | jsonify }},
+        "url": {{ site.url | jsonify }},
+        "description": {{ site.description | strip_html | normalize_whitespace | jsonify }},
+        "logo": {
+          "@type": "ImageObject",
+          "url": {{ site.organization_logo | absolute_url | jsonify }}
+        },
+        "department": {
+          "@type": "EducationalOrganization",
+          "name": {{ site.department_name | default: "Computer Science Department" | jsonify }}
+        }{% assign same_as = "" %}
+        {% if site.facebook_url %}{% assign same_as = same_as | append: site.facebook_url %}{% endif %}
+        {% if site.twitter_url %}{% if same_as != "" %}{% assign same_as = same_as | append: "||" %}{% endif %}{% assign same_as = same_as | append: site.twitter_url %}{% endif %}
+        {% if site.linkedin_url %}{% if same_as != "" %}{% assign same_as = same_as | append: "||" %}{% endif %}{% assign same_as = same_as | append: site.linkedin_url %}{% endif %}
+        {% assign same_as_list = same_as | split: "||" %}
+        {% if same_as != "" %},
+        "sameAs": {{ same_as_list | jsonify }}
+        {% endif %}
+      },
+      {
+        "@type": "WebSite",
+        "@id": {{ site.url | append: "/#website" | jsonify }},
+        "url": {{ site.url | jsonify }},
+        "name": {{ site.title | jsonify }},
+        "description": {{ site.description | strip_html | normalize_whitespace | jsonify }},
+        "publisher": {
+          "@id": {{ site.url | append: "/#organization" | jsonify }}
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": {{ page.url | absolute_url | append: "#webpage" | jsonify }},
+        "url": {{ page.url | absolute_url | jsonify }},
+        "name": {{ page_title_for_schema | jsonify }},
+        "description": {{ page_description_for_schema | strip_html | normalize_whitespace | jsonify }},
+        "isPartOf": {
+          "@id": {{ site.url | append: "/#website" | jsonify }}
+        }
+      }
+      {% if page.url != "/" %},
+      {
+        "@type": "BreadcrumbList",
+        "@id": {{ page.url | absolute_url | append: "#breadcrumb" | jsonify }},
+        "itemListElement": [{{ breadcrumb_items | strip }}]
+      }
+      {% endif %}
+    ]
   }
   </script>
-  {%- endif -%}
 
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}

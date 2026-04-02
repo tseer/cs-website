@@ -2,8 +2,32 @@
 title: "Undergraduate Programs"
 layout: page
 permalink: "/undergraduate-programs"
+description: "UMass Boston Computer Science undergraduate programs include the BA and BS in Computer Science, the BS in Information Technology, and the undergraduate certificate in Computer Science."
+keywords:
+  - "Undergraduate Programs"
+  - "Computer Science"
+  - "Information Technology"
+  - "UMass Boston"
+  - "Computer Science Department"
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalProgram",
+  "name": {{ page.title | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "provider": {
+    "@type": "CollegeOrUniversity",
+    "name": "UMass Boston",
+    "department": {
+      "@type": "EducationalOrganization",
+      "name": "Computer Science"
+    }
+  }
+}
+</script>
 
 For more information on our program click below:
 
@@ -33,4 +57,3 @@ New students who wish to work towards a BA or BS at UMass Boston must file the a
 This section describes the various undergraduate degrees that the department offers. Please note that the requirements depend on whether or not you declared your major prior to September 1, 2002. Information for the Undergraduate Certificate Program in CS can be found [here]({{site.baseurl}}/certificate-programs).
 
 **No course taken to satisfy a requirement for a degree or certificate may be taken Pass/Fail.**
-

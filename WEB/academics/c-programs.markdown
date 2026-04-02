@@ -2,7 +2,32 @@
 title: "Certificate Programs"
 layout: page
 permalink: "/certificate-programs"
+description: "UMass Boston Computer Science certificate programs include the undergraduate certificate in Computer Science and the graduate certificate in Database Technology."
+keywords:
+  - "Certificate Programs"
+  - "Computer Science Certificate"
+  - "Database Technology Certificate"
+  - "UMass Boston"
+  - "Computer Science Department"
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalProgram",
+  "name": {{ page.title | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "provider": {
+    "@type": "CollegeOrUniversity",
+    "name": "UMass Boston",
+    "department": {
+      "@type": "EducationalOrganization",
+      "name": "Computer Science"
+    }
+  }
+}
+</script>
 
 # Certificate Undergraduate Program
 

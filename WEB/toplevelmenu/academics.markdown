@@ -2,6 +2,7 @@
 layout: page
 title: Academics
 permalink: /academics/
+schema_collection_key: academics
 ---
 
 - [Admissions](/admissions)
@@ -43,4 +44,3 @@ permalink: /academics/
 
 - [Alumni](/alumni)
   Information regarding our alumni.
-

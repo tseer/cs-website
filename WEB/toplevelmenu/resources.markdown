@@ -2,6 +2,7 @@
 layout: page
 title: Resources
 permalink: /resources/
+schema_collection_key: resources
 ---
 
 - [CS Department IT Policies and Procedures](/cs-department-it-policies-and-procedures)

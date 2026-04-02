@@ -4,6 +4,22 @@ table-count: 4
 ---
 <div class="wrapper">
   <article class="post">
+    {% assign schema_collection_data = nil %}
+    {% if page.schema_collection_key %}
+    {% assign schema_collection_data = site.data.section_indexes[page.schema_collection_key] %}
+    {% endif %}
+    {% assign schema_collection_items = page.schema_collection_items | default: schema_collection_data.items %}
+    {% if schema_collection_items %}
+    {% assign schema_collection_name = page.schema_collection_name | default: schema_collection_data.name | default: page.title %}
+    {% assign schema_collection_description = page.schema_collection_description | default: schema_collection_data.description %}
+    {% include item-list-schema.html
+      name=schema_collection_name
+      url=page.url
+      description=schema_collection_description
+      items=schema_collection_items
+    %}
+    {% endif %}
+    {% include breadcrumbs.html %}
     {% unless page.layout == "course" %}
     <header class="post-header">
       <h1 class="post-title">{{ page.title | escape }}</h1>
