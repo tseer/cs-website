@@ -12,7 +12,7 @@ keywords:
   - "Resources"
 ---
 
-This lightweight assistant searches the department website using the structured site data already published on the site. It does not use an external model and works by ranking matches across pages, courses, programs, and posts.
+This lightweight assistant searches the cs website.
 
 <div class="ai-assistant-search">
   <label for="ai-assistant-query"><strong>Search the site</strong></label>
