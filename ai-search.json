@@ -1,0 +1,66 @@
+---
+layout: null
+permalink: /ai-search.json
+---
+{
+  "site": {
+    "name": "UMass Boston Computer Science Department",
+    "url": {{ site.url | jsonify }}
+  },
+  "pages": [
+    {% assign important_page_urls = "/academics/|/people/|/research/|/resources/|/admissions|/course-schedule|/cs-minor|/student-funding|/alumni|/faculty|/staff|/funding|/groups|/info|/about/|/contact-us|/department|/facilities|/dei|/getting-here|/news-and-events/" | split: "|" %}
+    {% for item_url in important_page_urls %}
+    {% assign page_item = site.pages | where: "url", item_url | first %}
+    {% if page_item %}
+    {
+      "title": {{ page_item.title | strip_html | normalize_whitespace | jsonify }},
+      "url": {{ page_item.url | absolute_url | jsonify }}{% if page_item.description %},
+      "description": {{ page_item.description | strip_html | normalize_whitespace | jsonify }}{% endif %}{% if page_item.keywords %},
+      "keywords": {{ page_item.keywords | jsonify }}{% endif %},
+      "content_excerpt": {{ page_item.content | markdownify | strip_html | normalize_whitespace | truncate: 320 | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endif %}
+    {% endfor %}
+  ],
+  "courses": [
+    {% assign course_pages = site.pages | where_exp: "item", "item.course_code" | sort: "course_code" %}
+    {% for course in course_pages %}
+    {
+      "course_code": {{ course.course_code | jsonify }},
+      "course_name": {{ course.course_name | jsonify }},
+      "title": {{ course.title | strip_html | normalize_whitespace | jsonify }},
+      "url": {{ course.url | absolute_url | jsonify }},
+      "description": {{ course.description | strip_html | normalize_whitespace | jsonify }},
+      "prerequisites": {{ course.prerequisites | default: empty | jsonify }},
+      "co_requisites": {{ course.co_requisites | default: empty | jsonify }},
+      "keywords": {{ course.keywords | default: empty | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "programs": [
+    {% assign program_urls = "/undergraduate-programs|/graduate-programs|/honors-programs|/certificate-programs|/cs_ba|/cs_bs|/it_bs|/cs_ms|/cs_phd" | split: "|" %}
+    {% for item_url in program_urls %}
+    {% assign program_page = site.pages | where: "url", item_url | first %}
+    {% if program_page %}
+    {
+      "title": {{ program_page.title | strip_html | normalize_whitespace | jsonify }},
+      "url": {{ program_page.url | absolute_url | jsonify }},
+      "description": {{ program_page.description | default: "" | strip_html | normalize_whitespace | jsonify }},
+      "keywords": {{ program_page.keywords | default: empty | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endif %}
+    {% endfor %}
+  ],
+  "posts": [
+    {% assign all_posts = site.posts | sort: "date" | reverse %}
+    {% for post in all_posts %}
+    {
+      "title": {{ post.title | strip_html | normalize_whitespace | jsonify }},
+      "url": {{ post.url | absolute_url | jsonify }},
+      "date": {{ post.date | date_to_xmlschema | jsonify }}{% if post.categories and post.categories.first %},
+      "category": {{ post.categories.first | jsonify }}{% endif %},
+      "description": {{ post.description | default: post.excerpt | default: post.content | markdownify | strip_html | normalize_whitespace | truncate: 320 | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}

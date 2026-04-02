@@ -180,6 +180,33 @@ Changes:
 - Pinned `jekyll-sass-converter` to the older stable line to avoid the embedded Sass failure.
 - The site now builds successfully with the current project Ruby environment.
 
+## AI Search Architecture
+
+The site now exposes two machine-readable endpoints and one lightweight retrieval UI:
+
+- `/site-index.json`
+  - canonical machine-readable site index
+  - broad structural export of major sections, courses, programs, and posts
+  - intended for crawlers, indexing tools, and external AI systems that need a high-level map of the site
+
+- `/ai-search.json`
+  - compact search/chat knowledge base
+  - optimized for lightweight retrieval on the site
+  - includes important pages, courses, programs, and posts with normalized text fields and excerpts
+
+- `/ai-assistant`
+  - client-side assistant page implemented in vanilla JavaScript
+  - loads `/ai-search.json`
+  - performs lightweight keyword and course-code ranking in the browser
+  - presents richer direct answers for course-style queries
+
+This architecture improves AI-readability and discoverability without requiring a hosted model, external API, or retrieval service.
+
+The current design also supports a clean future upgrade path:
+- replace the client-side ranking layer with a hosted search service
+- use `/site-index.json` or `/ai-search.json` as a bootstrap feed for embeddings
+- swap in an LLM or RAG backend without having to redesign the underlying content model
+
 ## Build
 
 Use the repo root:
