@@ -57,6 +57,8 @@ Files:
 - `_includes/table.html`
 - `_includes/umass-programms.html`
 - `_data/section_indexes.yml`
+- `site-index.json`
+- `llms.txt`
 
 Changes:
 - Added site-level JSON-LD for:
@@ -76,6 +78,9 @@ Changes:
   - resources
   - research/news/events sections in `_includes/table.html`
 - Updated `table.html` so list items now wrap `BlogPosting` data correctly.
+- Added a dynamic machine-readable site export at `/site-index.json`.
+- Added a plain-text crawler entry point at `llms.txt`.
+- Added `<link rel="alternate" type="application/json" href="/site-index.json">` in `head.html` so tools can discover the site index automatically.
 
 ### 5. Program Page Structured Data
 
@@ -111,6 +116,7 @@ Changes:
   - `schema_collection_description`
   - `schema_collection_items`
 - Academics, people, resources, and research now pull structured list data from `_data/section_indexes.yml`.
+- Programs, resources, people, and academics are now centralized in `_data/section_indexes.yml` instead of repeating hardcoded arrays in multiple files.
 
 ### 7. Course Catalog Structured Data
 
@@ -121,7 +127,24 @@ Changes:
 - Added `ItemList` JSON-LD for the course catalog page.
 - Catalog entries use each course page’s absolute URL and course title.
 
-### 8. Link Cleanup and External Link Audit
+### 8. Machine-Readable Site Index
+
+Files:
+- `site-index.json`
+- `llms.txt`
+- `_includes/head.html`
+
+Changes:
+- Added a dynamic Jekyll page at `/site-index.json` with:
+  - site metadata
+  - section index exports from `_data/section_indexes.yml`
+  - research/news/events post lists
+  - course listings derived from course pages
+- Ensured the JSON output uses absolute URLs and stays current as content changes.
+- Added `llms.txt` at the repository root as a plain-text entry point for AI crawlers and LLM tooling.
+- Added a `rel="alternate"` JSON link in `head.html` to advertise `/site-index.json`.
+
+### 9. Link Cleanup and External Link Audit
 
 Files updated include:
 - `WEB/academics/admissions.markdown`
@@ -147,7 +170,7 @@ Changes:
 - Removed broken Discord-hosted event images.
 - Updated outdated funding/news links that clearly pointed to dead destinations.
 
-### 9. Build and Sass Toolchain Fix
+### 10. Build and Sass Toolchain Fix
 
 Files:
 - `Gemfile`
@@ -190,3 +213,4 @@ These appear to be access-policy or embed restrictions rather than obvious broke
 - UI layout was intentionally preserved during structured-data work.
 - Most changes were limited to metadata, schema, navigation, and link correction.
 - `page.html` now emits reusable hub-page `ItemList` schema automatically when configured.
+- `site-index.json` and `llms.txt` now provide machine-readable entry points for external AI systems.
