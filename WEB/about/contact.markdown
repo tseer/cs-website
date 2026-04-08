@@ -1,9 +1,8 @@
 ---
-title: "Contact Us"
+title: Contact Us
 layout: page
-permalink: "/contact-us"
+permalink: /contact-us
 ---
-
 Please refer to an appropriate point of contact from the list below.
 
 # Department of Computer Science
@@ -15,27 +14,27 @@ Phone: 617.287.6475 <br />
 Fax: 617.287.6433 <br />
 Email: csinfo "at" cs.umb.edu
 
----
+- - -
 
 # Administrative Office
 
 `Office`: M-3-211
 
----
+- - -
 
 # UNIX Lab
 
 `Location`: McCormack Hall, 3rd Floor, Room 731
 
----
+- - -
 
 # Department Chair
 
-[Marc Pomlun](https://www.cs.umb.edu/~marc/) \
-`Office`: M-3-201-9 \
-`Email`: marc.pomplun@umb.edu
+[Nurit Haspel](https://www.umb.edu/directory/nurithaspel/)\
+`Office`: M-3-201-4 \
+`Email`: Nurit.Haspel@umb.edu
 
----
+- - -
 
 # Undergraduate Program Director (Computer Science)
 
@@ -44,7 +43,7 @@ Email: csinfo "at" cs.umb.edu
 `Phone`: 617-287-6414 \
 `Email`: nurit.haspel@umb.edu
 
----
+- - -
 
 # Undergraduate Program Director (Information Technology)
 
@@ -53,7 +52,7 @@ Email: csinfo "at" cs.umb.edu
 `Phone`: 617-287-6466 \
 `Email`: glenn.hoffman@umb.edu
 
----
+- - -
 
 # Graduate Program Director
 
@@ -62,7 +61,7 @@ Email: csinfo "at" cs.umb.edu
 `Phone`: 617.287.6472 \
 `Email`: dan.simovici@umb.edu
 
----
+- - -
 
 # Seminar Coordinator
 
@@ -71,7 +70,7 @@ Email: csinfo "at" cs.umb.edu
 `Phone`: 617.287.6479 \
 `Email`: tiago.cogumbreiro@umb.edu
 
----
+- - -
 
 # Administrative Assistant
 
@@ -80,7 +79,7 @@ Email: csinfo "at" cs.umb.edu
 `Phone`: 617.287.6476 \
 `Email`: debbie.wade@umb.edu
 
----
+- - -
 
 # Graduate Program Secretary
 
@@ -89,7 +88,7 @@ Email: csinfo "at" cs.umb.edu
 `Phone`: 617.287.6441 \
 `Email`: gemma.galecia@umb.edu
 
----
+- - -
 
 # Webmaster
 
