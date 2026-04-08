@@ -1,8 +1,9 @@
-local_backend: true
+# local_backend: true
 
 backend:
-  name: git-gateway
-  branch: add-cms
+  name: github
+  repo: tseer/cs-website
+  branch: tse-add-cms
 
 media_folder: "WEB/assets/images"
 public_folder: "/assets/images"
