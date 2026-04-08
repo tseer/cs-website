@@ -28,10 +28,10 @@
           {% for menui in site.data.menu %}
           <li>
             <input type="checkbox" id="drop-{{ menui.title }}" />
-            <label for="drop-{{ menui.title }}" class="toggle"
+            <label for="drop-{{ menui.title }}" class="toggle{% if menui.accent %} nav-accent{% endif %}"{% if menui.accent %} style="color: #c1121f !important; font-weight: 700;"{% endif %}
               >{{ menui.title }}</label
             >
-            <a href="{{ site.baseurl }}/{{ menui.link }}">{{ menui.title }}</a>
+            <a href="{{ site.baseurl }}/{{ menui.link }}"{% if menui.accent %} class="nav-accent" style="color: #c1121f !important; font-weight: 700;"{% endif %}>{{ menui.title }}</a>
             {% if menui.submenu %}
             <ul>
               {% for submenui in menui.submenu %}

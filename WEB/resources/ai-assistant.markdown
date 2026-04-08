@@ -110,6 +110,9 @@ This lightweight assistant searches the cs website.
 
 <script>
   (function() {
+    const productionSiteOrigin = 'https://www.cs.umb.edu';
+    const productionBasePath = '/~hdeblois/cs410/longproj01/t5-CS/cs-website';
+    const productionBaseUrl = productionSiteOrigin + productionBasePath;
     const queryInput = document.getElementById('ai-assistant-query');
     const searchButton = document.getElementById('ai-assistant-button');
     const statusNode = document.getElementById('ai-assistant-status');
@@ -160,6 +163,33 @@ This lightweight assistant searches the cs website.
       return [value];
     }
 
+    function toProductionUrl(value) {
+      if (!value) {
+        return productionBaseUrl;
+      }
+
+      try {
+        const parsedUrl = new URL(value, productionBaseUrl + '/');
+        const isLocalOrigin = parsedUrl.hostname === 'localhost' || parsedUrl.hostname === '127.0.0.1';
+
+        if (isLocalOrigin) {
+          return productionSiteOrigin + parsedUrl.pathname;
+        }
+
+        if (parsedUrl.origin === productionSiteOrigin) {
+          return parsedUrl.href;
+        }
+
+        if (/^https?:\/\//i.test(value)) {
+          return value;
+        }
+
+        return new URL(value.replace(/^\//, ''), productionBaseUrl + '/').href;
+      } catch (error) {
+        return new URL(String(value).replace(/^\//, ''), productionBaseUrl + '/').href;
+      }
+    }
+
     function buildIndex(data) {
       const buckets = ['pages', 'courses', 'programs', 'posts'];
       const rows = [];
@@ -170,7 +200,7 @@ This lightweight assistant searches the cs website.
             bucket,
             raw: item,
             title: item.title || item.name || [item.course_code, item.course_name].filter(Boolean).join(': '),
-            url: item.url,
+            url: toProductionUrl(item.url),
             description: item.description || item.content_excerpt || '',
             excerpt: item.content_excerpt || item.description || '',
             keywords: toArray(item.keywords),
@@ -293,11 +323,11 @@ This lightweight assistant searches the cs website.
 
           return `
             <article class="ai-assistant-result">
-              <h3><a href="${escapeHtml(item.url)}">${escapeHtml(courseHeading)}</a></h3>
+              <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(courseHeading)}</a></h3>
               <p>${escapeHtml(item.description || 'No course description available.')}</p>
               <p><strong>Prerequisites:</strong> ${escapeHtml(prereqs.length ? prereqs.join(', ') : 'None listed')}</p>
               <p><strong>Co-requisites:</strong> ${escapeHtml(coReqs.length ? coReqs.join(', ') : 'None listed')}</p>
-              <a href="${escapeHtml(item.url)}">View course page</a>
+              <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">View course page</a>
             </article>
           `;
         }
@@ -305,9 +335,9 @@ This lightweight assistant searches the cs website.
         const text = item.excerpt || item.description || 'No summary available.';
         return `
           <article class="ai-assistant-result">
-            <h3><a href="${escapeHtml(item.url)}">${escapeHtml(item.title)}</a></h3>
+            <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a></h3>
             <p>${escapeHtml(text)}</p>
-            <a href="${escapeHtml(item.url)}">${escapeHtml(item.url)}</a>
+            <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.url)}</a>
           </article>
         `;
       }).join('');

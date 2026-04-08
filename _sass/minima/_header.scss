@@ -72,12 +72,19 @@ nav ul {
   position: relative;
 }
 
+nav > .menu {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: max-content;
+  min-width: 100%;
+}
+
 nav ul li {
   margin: 0px;
-  display: inline-block;
-  //float: left;
-  //background-color: white;
+  display: block;
   padding-left: 10px;
+  flex: 0 0 auto;
 }
 nav .menu > li:first-child {
   padding-left: 0;
@@ -88,6 +95,7 @@ nav a {
   color: $umass-blue;
   font-size: 20px;
   text-decoration: none;
+  white-space: nowrap;
   padding-left: 10px;
   padding-right: 10px;
   background-color: white;
@@ -105,6 +113,21 @@ nav a:hover {
   text-decoration: none;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+nav a.nav-accent {
+  color: #c1121f !important;
+  font-weight: 700;
+}
+
+nav a.nav-accent:visited,
+nav a.nav-accent:focus,
+nav a.nav-accent:active {
+  color: #c1121f !important;
+}
+
+nav a.nav-accent:hover {
+  color: white;
 }
 
 nav ul ul {
@@ -155,13 +178,19 @@ nav ul ul li a:hover {
 }
 
 /*Responsive Styles*/
-@media all and (max-width: 768px) {
+@media all and (max-width: 1280px) {
   nav {
     margin: 0;
   }
   .toggle + a,
   .menu {
     display: none;
+  }
+
+  nav > .menu {
+    display: none;
+    width: auto;
+    min-width: 0;
   }
   .toggle,
   .header-menu .menu > li:first-child a {
@@ -179,6 +208,11 @@ nav ul ul li a:hover {
     content: "+";
     padding-left: 10px;
     color: rgba($color: white, $alpha: 0.5);
+  }
+
+  .toggle.nav-accent {
+    color: #c1121f !important;
+    font-weight: 700;
   }
 
   .toggle:hover,
