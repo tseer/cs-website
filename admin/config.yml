@@ -4,7 +4,8 @@ backend:
   name: github
   repo: tseer/cs-website
   branch: tse-add-cms
-
+  base_url: https://cs-web-three.vercel.app
+  
 media_folder: "WEB/assets/images"
 public_folder: "/assets/images"
 
