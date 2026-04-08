@@ -59,6 +59,10 @@
   margin-top: 0px;
 }
 
+.header-menu .wrapper {
+  max-width: none;
+}
+
 nav {
   margin: 0;
   padding: 0;
@@ -142,6 +146,11 @@ nav ul li:hover > ul {
   display: inherit;
 }
 
+nav ul ul ul {
+  top: 0;
+  left: 100%;
+}
+
 nav ul ul li {
   width: 100%;
   float: none;
@@ -193,7 +202,8 @@ nav ul ul li a:hover {
     min-width: 0;
   }
   .toggle,
-  .header-menu .menu > li:first-child a {
+  .header-menu .menu > li:first-child a,
+  .header-menu .menu > li.no-submenu > a {
     display: block;
     background-color: rgba($color: $umass-blue, $alpha: 1);
     padding: 0 20px;
@@ -202,6 +212,8 @@ nav ul ul li a:hover {
     line-height: 60px;
     text-decoration: none;
     border: none;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .toggle::after {
@@ -216,7 +228,8 @@ nav ul ul li a:hover {
   }
 
   .toggle:hover,
-  .header-menu .menu > li:first-child a:hover {
+  .header-menu .menu > li:first-child a:hover,
+  .header-menu .menu > li.no-submenu > a:hover {
     background-color: rgba($color: $umass-blue, $alpha: 0.7);
   }
 
@@ -243,6 +256,15 @@ nav ul ul li a:hover {
   nav ul ul .toggle,
   nav ul ul a {
     padding: 0 40px;
+  }
+
+  nav ul ul .toggle {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    line-height: 60px;
   }
 
   nav ul ul ul a {

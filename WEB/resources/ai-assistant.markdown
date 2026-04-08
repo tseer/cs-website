@@ -1,10 +1,10 @@
 ---
-title: "AI Assistant"
+title: "Search Assistant"
 layout: page
 permalink: "/ai-assistant"
 description: "A lightweight on-site search assistant for the UMass Boston Computer Science Department website."
 keywords:
-  - "AI Assistant"
+  - "Search Assistant"
   - "Site Search"
   - "UMass Boston Computer Science"
   - "Courses"
@@ -12,36 +12,25 @@ keywords:
   - "Resources"
 ---
 
-This lightweight assistant searches the cs website.
-
 <div class="ai-assistant-search">
   <label for="ai-assistant-query"><strong>Search the site</strong></label>
-  <div class="ai-assistant-suggestions">
-    <p><strong>Try asking</strong></p>
-    <div class="ai-assistant-suggestion-list">
-      <button type="button" class="ai-assistant-suggestion" data-query="What are the prerequisites for CS410?">What are the prerequisites for CS410?</button>
-      <button type="button" class="ai-assistant-suggestion" data-query="Show graduate programs">Show graduate programs</button>
-      <button type="button" class="ai-assistant-suggestion" data-query="Find faculty resources">Find faculty resources</button>
-      <button type="button" class="ai-assistant-suggestion" data-query="Research news">Research news</button>
-      <button type="button" class="ai-assistant-suggestion" data-query="Computer vision course">Computer vision course</button>
-    </div>
-  </div>
   <div class="ai-assistant-controls">
     <input
       id="ai-assistant-query"
       type="text"
-      placeholder="Try CS410, database certificate, office hours, faculty, admissions..."
+      placeholder="Search courses, programs, and resources"
       autocomplete="off"
     >
     <button id="ai-assistant-button" type="button">Search</button>
   </div>
-  <div id="ai-assistant-status" class="ai-assistant-status">Type a question or keyword to begin.</div>
+  <div id="ai-assistant-status" class="ai-assistant-status">Search courses, programs, and resources.</div>
   <div id="ai-assistant-results" class="ai-assistant-results" aria-live="polite"></div>
 </div>
 
 <style>
   .ai-assistant-search {
-    margin-top: 1.5rem;
+    margin: 1.5rem auto 0;
+    max-width: 52rem;
   }
 
   .ai-assistant-controls {
@@ -49,26 +38,7 @@ This lightweight assistant searches the cs website.
     gap: 0.75rem;
     margin: 0.75rem 0 1rem;
     flex-wrap: wrap;
-  }
-
-  .ai-assistant-suggestions {
-    margin: 0.75rem 0;
-  }
-
-  .ai-assistant-suggestions p {
-    margin: 0 0 0.5rem;
-  }
-
-  .ai-assistant-suggestion-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .ai-assistant-suggestion {
-    padding: 0.45rem 0.75rem;
-    font: inherit;
-    cursor: pointer;
+    align-items: center;
   }
 
   .ai-assistant-controls input {
@@ -117,7 +87,6 @@ This lightweight assistant searches the cs website.
     const searchButton = document.getElementById('ai-assistant-button');
     const statusNode = document.getElementById('ai-assistant-status');
     const resultsNode = document.getElementById('ai-assistant-results');
-    const suggestionButtons = Array.from(document.querySelectorAll('.ai-assistant-suggestion'));
     const dataUrl = '{{ "/ai-search.json" | relative_url }}';
     let searchIndex = null;
 
@@ -347,7 +316,7 @@ This lightweight assistant searches the cs website.
       const query = queryInput.value.trim();
 
       if (!query) {
-        statusNode.textContent = 'Type a question or keyword to begin.';
+        statusNode.textContent = 'Search courses, programs, and resources.';
         resultsNode.innerHTML = '';
         return;
       }
@@ -378,7 +347,7 @@ This lightweight assistant searches the cs website.
       })
       .then((data) => {
         searchIndex = buildIndex(data);
-        statusNode.textContent = 'Type a question or keyword to begin.';
+        statusNode.textContent = 'Search courses, programs, and resources.';
       })
       .catch(() => {
         statusNode.textContent = 'The search index could not be loaded right now. Please try again later.';
@@ -389,13 +358,6 @@ This lightweight assistant searches the cs website.
       if (event.key === 'Enter') {
         performSearch();
       }
-    });
-
-    suggestionButtons.forEach((button) => {
-      button.addEventListener('click', function() {
-        queryInput.value = button.getAttribute('data-query') || '';
-        performSearch();
-      });
     });
   })();
 </script>

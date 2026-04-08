@@ -5,7 +5,7 @@ permalink: /resources/
 schema_collection_key: resources
 ---
 
-- [AI Assistant](/ai-assistant)
+- [Search Assistant](/ai-assistant)
 
 - [CS Department IT Policies and Procedures](/cs-department-it-policies-and-procedures)
 

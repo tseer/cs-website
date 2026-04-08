@@ -26,27 +26,52 @@
         <ul class="menu">
           <li><a href="{{ site.baseurl }}/">Home</a></li>
           {% for menui in site.data.menu %}
-          <li>
+          <li{% unless menui.submenu %} class="no-submenu"{% endunless %}>
+            {% if menui.submenu %}
             <input type="checkbox" id="drop-{{ menui.title }}" />
             <label for="drop-{{ menui.title }}" class="toggle{% if menui.accent %} nav-accent{% endif %}"{% if menui.accent %} style="color: #c1121f !important; font-weight: 700;"{% endif %}
               >{{ menui.title }}</label
             >
+            {% endif %}
             <a href="{{ site.baseurl }}/{{ menui.link }}"{% if menui.accent %} class="nav-accent" style="color: #c1121f !important; font-weight: 700;"{% endif %}>{{ menui.title }}</a>
             {% if menui.submenu %}
             <ul>
               {% for submenui in menui.submenu %}
-              <li>
+              <li{% unless submenui.submenu %} class="no-submenu"{% endunless %}>
+                {% if submenui.submenu %}
+                <input type="checkbox" id="drop-{{ menui.title | slugify }}-{{ submenui.title | slugify }}" />
+                <label for="drop-{{ menui.title | slugify }}-{{ submenui.title | slugify }}" class="toggle">{{ submenui.title }}</label>
+                {% endif %}
                 <a href="
-                  {% if submenui.url  %}
+                  {% if submenui.url %}
                     {{ submenui.url }}
                   {% else %}
                     {{ site.baseurl }}/{{ submenui.link }}
                   {% endif %}
                 "
-                  {% if submenui.target  %}
+                  {% if submenui.target %}
                     target="{{ submenui.target }}"
                   {% endif %}
                 >{{ submenui.title }}</a>
+                {% if submenui.submenu %}
+                <ul>
+                  {% for childmenui in submenui.submenu %}
+                  <li>
+                    <a href="
+                      {% if childmenui.url %}
+                        {{ childmenui.url }}
+                      {% else %}
+                        {{ site.baseurl }}/{{ childmenui.link }}
+                      {% endif %}
+                    "
+                      {% if childmenui.target %}
+                        target="{{ childmenui.target }}"
+                      {% endif %}
+                    >{{ childmenui.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
               </li>
               {% endfor %}
             </ul>
