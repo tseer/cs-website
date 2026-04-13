@@ -37,7 +37,10 @@
     <h2>Related Courses</h2>
     <ul>
       {% for course_code in page.related_courses %}
-      <li><a href="{{ '/academics/courses/' | append: course_code | relative_url }}">{{ course_code }}</a></li>
+      {% assign related_course_page = site.pages | where: "course_code", course_code | first %}
+      {% if related_course_page %}
+      <li><a href="{{ related_course_page.url | relative_url }}">{{ related_course_page.title }}</a></li>
+      {% endif %}
       {% endfor %}
     </ul>
   </div>

@@ -48,8 +48,6 @@ layout: page
     {% if page.credits %}
       <p><strong>Credits:</strong> {{ page.credits }}</p>
     {% endif %}
-
-    {% include page-summary.html %}
   </header>
 
   {% if page.description %}
@@ -110,6 +108,10 @@ layout: page
     <section class="course-extra">
       {{ content }}
     </section>
+  {% endif %}
+
+  {% if page.summary %}
+    <p>{{ page.summary }}</p>
   {% endif %}
 </article>
 

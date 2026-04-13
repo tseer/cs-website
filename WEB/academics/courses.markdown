@@ -32,28 +32,12 @@ Our department offers the following courses.
 </script>
 
 <div id='courses'></div>
-
-<script type="text/javascript">
-
-window.onload = function() {
-  
-  courses = loadCourses("courses.json");
-  output = "";
-
-  for (c in courses) {
-
-    var number = c;
-    var title = courses[c];
-
-    var url1 = "<a href='academics/courses/" + number + "'>";
-    var url2 = "</a>";
-    output += url1 + number + ': ' + title + url2 + "<br>\n";
-
-  }
-
-
-  document.getElementById('courses').innerHTML = output;
-
-}
-
-</script>
+{% if course_pages.size > 0 %}
+<ul class="course-catalog-list">
+  {% for course in course_pages %}
+  <li><a href="{{ course.url | relative_url }}">{{ course.title }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No courses are currently listed.</p>
+{% endif %}
