@@ -144,3 +144,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // Kick off the slideshow when the page loads
   startSlideShow();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  // --- CAROUSEL ARROW LOGIC (Keep your existing hero carousel JS above this) ---
+  
+  // --- CARD SLIDER LOGIC ---
+  const cardSlider = document.getElementById('card-slider');
+  const nextCardBtn = document.querySelector('.next-card-btn');
+  const prevCardBtn = document.querySelector('.prev-card-btn');
+
+  if (cardSlider && nextCardBtn && prevCardBtn) {
+    nextCardBtn.addEventListener('click', () => {
+      // Scroll right by the exact width of the visible container
+      cardSlider.scrollBy({ left: cardSlider.clientWidth, behavior: 'smooth' });
+    });
+
+    prevCardBtn.addEventListener('click', () => {
+      // Scroll left by the exact width of the visible container
+      cardSlider.scrollBy({ left: -cardSlider.clientWidth, behavior: 'smooth' });
+    });
+  }
+});

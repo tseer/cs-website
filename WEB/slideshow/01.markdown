@@ -1,6 +1,5 @@
 ---
 layout: slideshow
 title: What will you build next?
-subtitle: "Dive into AI, cybersecurity, and software engineering at UMass Boston."
 img: 06.png
 ---
