@@ -9,12 +9,17 @@ summary: Admissions, degree requirements, and elective options for the UMass Bos
 keywords:
 - Computer Science MS
 - MS in Computer Science
+- graduate computer science
+- master's in computer science
 - UMass Boston
 - Computer Science Department
 aliases:
 - Computer Science MS
 - MS in Computer Science
 - CS MS
+- master's in computer science
+related_people:
+- dan-simovici
 related_courses:
 - CS680
 - CS681
@@ -53,6 +58,8 @@ related_topics:
 - computer science graduate study
 - admissions
 - degree requirements
+- software development
+- graduate electives
 provider_id: https://www.cs.umb.edu/#department
 ---
 

@@ -13,17 +13,26 @@ summary: Associate Professor in the UMass Boston Computer Science Department.
 keywords:
 - Tiago Cogumbreiro
 - Associate Professor
+- software verification
+- formal methods
 - UMass Boston
 - Computer Science Department
 aliases:
 - Tiago Cogumbreiro
 research_areas: []
 related_courses: []
+related_groups:
+- software-verification-laboratory
 affiliations:
 - University of Massachusetts Boston
 works_for: Computer Science Department
 same_as:
 - https://cogumbreiro.github.io/
+related_topics:
+- software verification
+- formal methods
+- programming languages
+- concurrency theory
 sort_order: 4
 status: active
 ---

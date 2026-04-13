@@ -9,12 +9,17 @@ summary: Degree requirements, dissertation expectations, and qualifying mileston
 keywords:
 - Computer Science PhD
 - PhD in Computer Science
+- doctoral program
+- computer science research
 - UMass Boston
 - Computer Science Department
 aliases:
 - Computer Science PhD
 - PhD in Computer Science
 - CS PhD
+- doctoral program in computer science
+related_people:
+- dan-simovici
 related_courses:
 - CS720
 - CS724
@@ -27,6 +32,9 @@ related_topics:
 - computer science research
 - qualifying exam
 - dissertation
+- computer vision
+- bioinformatics
+- data mining
 provider_id: https://www.cs.umb.edu/#department
 ---
 

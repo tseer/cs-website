@@ -1,7 +1,29 @@
 ---
-title: "Internships"
+title: "VideaHealth AI and Data Science Internship"
 layout: page
 permalink: "/news_and_events/jobs_and_internships/397/"
+entity_type: resource
+summary: Career opportunity for an AI and data science internship at VideaHealth focused on machine learning and data pipelines.
+keywords:
+  - internship
+  - AI internship
+  - data science internship
+  - VideaHealth
+  - machine learning
+  - career opportunity
+  - internships
+aliases:
+  - VideaHealth internship
+  - AI and data science internship
+  - machine learning internship
+  - data science career opportunity
+related_topics:
+  - internships
+  - careers
+  - machine learning
+  - data science
+  - career opportunities
+parent_section: News-and-Events
 ---
 
 ## Artificial Intelligence / Data Science Internship at VideaHealth

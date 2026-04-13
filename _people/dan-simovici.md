@@ -14,17 +14,27 @@ keywords:
 - Dan Simovici
 - Professor
 - Graduate Program Director
+- data mining
+- machine learning
 - UMass Boston
 - Computer Science Department
 aliases:
 - Dan Simovici
+- Professor Dan Simovici
 research_areas: []
 related_courses: []
+related_groups:
+- data-mining-group
 affiliations:
 - University of Massachusetts Boston
 works_for: Computer Science Department
 same_as:
 - http://www.cs.umb.edu/~dsim
+related_topics:
+- data mining
+- machine learning
+- statistical learning
+- bayesian models
 sort_order: 20
 status: active
 ---

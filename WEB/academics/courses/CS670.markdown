@@ -11,12 +11,15 @@ summary: Graduate course in artificial intelligence for graduate students coveri
 keywords:
 - CS670
 - Artificial Intelligence
+- AI
+- intelligent systems
 - UMass Boston
 - course
 - Computer Science
 aliases:
 - CS670
 - CS 670
+- AI
 - 'CS670: Artificial Intelligence'
 - 'CS 670: Artificial Intelligence'
 prerequisites:
@@ -24,8 +27,14 @@ prerequisites:
 - CS220/CS320L/MATH320L
 - MATH470
 co_requisites: []
-related_programs: []
-related_topics: []
+related_programs:
+- "/cs_ms"
+- "/cs_phd"
+related_topics:
+- artificial intelligence
+- knowledge representation
+- planning
+- intelligent systems
 provider_id: https://www.cs.umb.edu/#department
 ---
 

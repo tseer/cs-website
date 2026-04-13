@@ -1,8 +1,38 @@
 ---
+entity_type: page
 layout: page
 title: Academics
 permalink: /academics/
 summary: Explore computer science and information technology programs, courses, admissions information, and student funding opportunities.
+keywords:
+  - academics
+  - programs
+  - courses
+  - admissions
+  - student funding
+aliases:
+  - academic programs
+  - academics and programs
+nav_label: Academics
+section_name: Academics
+is_landing_page: true
+menu_keywords:
+  - academics
+  - admissions
+  - certificate programs
+  - course schedule
+  - courses
+  - cs minor
+  - graduate programs
+  - honors programs
+  - undergraduate programs
+  - student funding
+  - alumni
+related_topics:
+  - programs
+  - courses
+  - admissions
+  - student funding
 schema_collection_key: academics
 ---
 

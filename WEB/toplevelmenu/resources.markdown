@@ -2,7 +2,36 @@
 layout: page
 title: Resources
 permalink: /resources/
-summary: Access department tools, policies, office hours, and software resources for UMass Boston Computer Science students.
+entity_type: resource
+summary: Department resource hub for student support, office hours, policies, software access, and computing tools.
+keywords:
+  - resources
+  - student resources
+  - department resources
+  - software resources
+  - computing resources
+  - student support
+aliases:
+  - CS resources
+  - student support resources
+  - computing resources
+  - student resources
+nav_label: Resources
+section_name: Resources
+is_landing_page: true
+menu_keywords:
+  - resources
+  - search assistant
+  - office hours
+  - cs department it policies and procedures
+  - dreamspark microsoft imagine
+  - vmware
+related_topics:
+  - student support
+  - office hours
+  - software access
+  - policies
+  - computing resources
 schema_collection_key: resources
 ---
 

@@ -2,6 +2,37 @@
 title: "Important Information for all CS Students"
 layout: page
 permalink: "/info"
+entity_type: resource
+summary: Academic advising and enrollment resource with prerequisite charts, graduate forms, WISER help, and admissions links for CS students.
+keywords:
+  - student information
+  - prerequisite chart
+  - roadmap
+  - graduate enrollment
+  - WISER
+  - advising resources
+  - academic advising
+  - graduate advising
+  - enrollment forms
+aliases:
+  - CS student info
+  - CS student resources
+  - prerequisite roadmap
+  - advising
+  - academic advising
+  - graduate advising
+related_topics:
+  - advising
+  - academic advising
+  - prerequisites
+  - enrollment
+  - graduate students
+  - undergraduate students
+  - wiser
+related_programs:
+  - /undergraduate-programs
+  - /graduate-programs
+parent_section: Academics
 ---
 ## CS Ugrad Prerequisite Chart
 

@@ -9,12 +9,17 @@ summary: Program structure, tracks, and course planning information for the UMas
 keywords:
 - Information Technology BS Program
 - BS in Information Technology
+- information systems
+- business intelligence
 - UMass Boston
 - Computer Science Department
 aliases:
 - Information Technology BS Program
 - BS in Information Technology
 - IT BS
+- bachelor's in information technology
+related_people:
+- glenn-hoffman
 related_courses:
 - IT110
 - IT111L
@@ -50,6 +55,7 @@ related_topics:
 - system administration
 - business intelligence
 - computer forensics
+- network administration
 provider_id: https://www.cs.umb.edu/#department
 ---
 

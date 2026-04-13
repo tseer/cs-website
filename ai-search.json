@@ -4,15 +4,18 @@ permalink: /ai-search.json
 ---
 {
   {% assign site_root_url = '/' | absolute_url %}
+  {% assign empty_array = "" | split: "" %}
   "site": {
     "name": "UMass Boston Computer Science Department",
     "url": {{ site_root_url | jsonify }}
   },
   "pages": [
-    {% assign important_page_urls = "/academics/|/people/|/research/|/resources/|/admissions|/course-schedule|/cs-minor|/student-funding|/alumni|/faculty|/staff|/funding|/groups|/info|/about/|/contact-us|/department|/facilities|/dei|/getting-here|/news-and-events/" | split: "|" %}
+    {% assign important_page_urls = "/academics/|/people/|/research/|/resources/|/admissions|/course-schedule|/cs-minor|/student-funding|/alumni|/faculty|/staff|/funding|/groups|/info|/about/|/contact-us|/department|/facilities|/dei|/getting-here|/news-and-events/|/answers-to-faqs|/office-hours|/cs-department-it-policies|/chimera/|/dreamspark-microsoft-imagine" | split: "|" %}
+    {% assign first_page_written = false %}
     {% for item_url in important_page_urls %}
     {% assign page_item = site.pages | where: "url", item_url | first %}
     {% if page_item %}
+    {% unless first_page_written %}{% assign first_page_written = true %}{% else %},{% endunless %}
     {
       "title": {{ page_item.title | strip_html | normalize_whitespace | jsonify }},
       "url": {{ page_item.url | absolute_url | jsonify }}{% if page_item.summary %},
@@ -28,12 +31,30 @@ permalink: /ai-search.json
       "audience": {{ page_item.audience | jsonify }}{% endif %}{% if page_item.action_phrases %},
       "action_phrases": {{ page_item.action_phrases | jsonify }}{% endif %},
       "content_excerpt": {{ page_item.content | markdownify | strip_html | normalize_whitespace | truncate: 320 | jsonify }}
-    }{% unless forloop.last %},{% endunless %}
+    }
     {% endif %}
+    {% endfor %}
+    {% assign job_pages = site.pages | default: empty_array | where_exp: "item", "item.url contains '/news_and_events/jobs_and_internships/'" | sort: "url" %}
+    {% for resource_page in job_pages %}
+    {% if first_page_written %},{% endif %}{% assign first_page_written = true %}
+    {
+      "title": {{ resource_page.title | strip_html | normalize_whitespace | jsonify }},
+      "url": {{ resource_page.url | absolute_url | jsonify }},
+      "summary": {{ resource_page.summary | default: resource_page.description | default: resource_page.content | markdownify | strip_html | normalize_whitespace | truncate: 220 | jsonify }},
+      "description": {{ resource_page.summary | default: resource_page.description | default: resource_page.content | markdownify | strip_html | normalize_whitespace | truncate: 320 | jsonify }}{% if resource_page.keywords %},
+      "keywords": {{ resource_page.keywords | jsonify }}{% endif %}{% if resource_page.aliases %},
+      "aliases": {{ resource_page.aliases | jsonify }}{% endif %}{% if resource_page.related_people %},
+      "related_people": {{ resource_page.related_people | jsonify }}{% endif %}{% if resource_page.related_courses %},
+      "related_courses": {{ resource_page.related_courses | jsonify }}{% endif %}{% if resource_page.related_groups %},
+      "related_groups": {{ resource_page.related_groups | jsonify }}{% endif %}{% if resource_page.related_programs %},
+      "related_programs": {{ resource_page.related_programs | jsonify }}{% endif %}{% if resource_page.related_topics %},
+      "related_topics": {{ resource_page.related_topics | jsonify }}{% endif %},
+      "content_excerpt": {{ resource_page.content | markdownify | strip_html | normalize_whitespace | truncate: 320 | jsonify }}
+    }
     {% endfor %}
   ],
   "courses": [
-    {% assign course_pages = site.pages | where_exp: "item", "item.course_code" | sort: "course_code" %}
+    {% assign course_pages = site.pages | default: empty_array | where_exp: "item", "item.course_code" | sort: "course_code" %}
     {% for course in course_pages %}
     {
       "course_code": {{ course.course_code | jsonify }},
@@ -58,9 +79,11 @@ permalink: /ai-search.json
   ],
   "programs": [
     {% assign program_urls = "/undergraduate-programs|/graduate-programs|/honors-programs|/certificate-programs|/cs_ba|/cs_bs|/it_bs|/cs_ms|/cs_phd" | split: "|" %}
+    {% assign first_program_written = false %}
     {% for item_url in program_urls %}
     {% assign program_page = site.pages | where: "url", item_url | first %}
     {% if program_page %}
+    {% unless first_program_written %}{% assign first_program_written = true %}{% else %},{% endunless %}
     {
       "title": {{ program_page.title | strip_html | normalize_whitespace | jsonify }},
       "url": {{ program_page.url | absolute_url | jsonify }},
@@ -75,12 +98,12 @@ permalink: /ai-search.json
       "related_topics": {{ program_page.related_topics | jsonify }},
       "audience": {{ program_page.audience | jsonify }},
       "action_phrases": {{ program_page.action_phrases | jsonify }}
-    }{% unless forloop.last %},{% endunless %}
+    }
     {% endif %}
     {% endfor %}
   ],
   "people": [
-    {% assign people_pages = site.people | sort: "person_name" %}
+    {% assign people_pages = site.people | default: empty_array | sort: "person_name" %}
     {% for person in people_pages %}
     {
       "name": {{ person.person_name | default: person.title | strip_html | normalize_whitespace | jsonify }},
@@ -102,7 +125,7 @@ permalink: /ai-search.json
     {% endfor %}
   ],
   "groups": [
-    {% assign group_pages = site.groups | sort: "group_name" %}
+    {% assign group_pages = site.groups | default: empty_array | sort: "group_name" %}
     {% for group in group_pages %}
     {
       "name": {{ group.group_name | default: group.title | strip_html | normalize_whitespace | jsonify }},
@@ -123,7 +146,7 @@ permalink: /ai-search.json
     {% endfor %}
   ],
   "posts": [
-    {% assign all_posts = site.posts | sort: "date" | reverse %}
+    {% assign all_posts = site.posts | default: empty_array | sort: "date" | reverse %}
     {% for post in all_posts %}
     {
       "title": {{ post.title | strip_html | normalize_whitespace | jsonify }},

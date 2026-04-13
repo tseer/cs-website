@@ -11,10 +11,12 @@ keywords:
 - DMG
 - Data Mining
 - Machine Learning
+- data science
 - UMass Boston
 aliases:
 - Data Mining Group
 - DMG
+- data science group
 lead_people:
 - dan-simovici
 member_people: []
@@ -22,6 +24,7 @@ related_courses: []
 related_topics:
 - data mining
 - machine learning
+- data science
 - bayesian models
 - statistical learning
 - large datasets

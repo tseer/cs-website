@@ -9,7 +9,8 @@ redirect_from:
 
 Our department offers the following courses.
 
-{% assign course_pages = site.pages | where_exp: "item", "item.course_code" | sort: "course_code" %}
+{% assign empty_array = "" | split: "" %}
+{% assign course_pages = site.pages | default: empty_array | where_exp: "item", "item.course_code" | sort: "course_code" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

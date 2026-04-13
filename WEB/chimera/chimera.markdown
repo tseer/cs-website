@@ -2,8 +2,35 @@
 layout: page
 title: "Chimera"
 permalink: /chimera/
----
----
+entity_type: facility
+summary: Research computing cluster for high-performance computing, GPU jobs, machine learning, simulations, and large-scale data analysis.
+keywords:
+  - Chimera
+  - HPC
+  - high performance computing
+  - research computing
+  - cluster
+  - GPU
+  - machine learning
+  - computing resources
+  - parallel computing
+aliases:
+  - Chimera
+  - Chimera cluster
+  - HPC cluster
+  - research computing cluster
+  - high performance computing cluster
+related_topics:
+  - high performance computing
+  - research computing
+  - cluster computing
+  - gpu computing
+  - machine learning
+  - data analysis
+  - simulations
+related_groups:
+  - high-performance-computing-group
+parent_section: Research
 ---
 [Chimera](https://www.umb.edu/rc/hpc/chimera/) is a high-performance computing (HPC) cluster provided by UMass Boston Research Computing. It supports advanced workloads such as data analysis, machine learning, simulations, and other compute-intensive research tasks.
 

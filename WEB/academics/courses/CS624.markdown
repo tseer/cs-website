@@ -11,19 +11,28 @@ summary: Graduate course in analysis of algorithms for graduate students coverin
 keywords:
 - CS624
 - Analysis of Algorithms
+- complexity theory
+- algorithm analysis
 - UMass Boston
 - course
 - Computer Science
 aliases:
 - CS624
 - CS 624
+- algorithm analysis
 - 'CS624: Analysis of Algorithms'
 - 'CS 624: Analysis of Algorithms'
 prerequisites:
 - CS220/CS320L/MATH320L
 - Permission of the instructor
 co_requisites: []
-related_programs: []
-related_topics: []
+related_programs:
+- "/cs_ms"
+- "/cs_phd"
+related_topics:
+- algorithms
+- complexity analysis
+- divide and conquer
+- dynamic programming
 provider_id: https://www.cs.umb.edu/#department
 ---

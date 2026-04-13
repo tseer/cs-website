@@ -18,15 +18,22 @@ keywords:
 aliases:
 - CS470
 - CS 470
+- AI
+- intro to AI
 - 'CS470: Introduction to Artificial Intelligence'
 - 'CS 470: Introduction to Artificial Intelligence'
 prerequisites:
 - CS310
 - CS220
 co_requisites: []
-related_programs: []
+related_programs:
+- "/cs_ba"
+- "/cs_bs"
 related_topics:
 - Artificial Intelligence
+- knowledge representation
+- search
+- intelligent systems
 provider_id: https://www.cs.umb.edu/#department
 ---
 

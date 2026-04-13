@@ -14,17 +14,27 @@ keywords:
 - Marc Pomplun
 - Professor
 - Department Chair
+- computer vision
+- visual attention
 - UMass Boston
 - Computer Science Department
 aliases:
 - Marc Pomplun
+- Professor Marc Pomplun
 research_areas: []
 related_courses: []
+related_groups:
+- visual-attention-laboratory
 affiliations:
 - University of Massachusetts Boston
 works_for: Computer Science Department
 same_as:
 - http://www.cs.umb.edu/~marc
+related_topics:
+- computer vision
+- visual attention
+- eye tracking
+- human-computer interfaces
 sort_order: 201
 status: memoriam
 slug: marc-pomplun

@@ -13,17 +13,26 @@ summary: Associate Professor in the UMass Boston Computer Science Department.
 keywords:
 - Xiaohui Liang
 - Associate Professor
+- mobile security
+- privacy
 - UMass Boston
 - Computer Science Department
 aliases:
 - Xiaohui Liang
 research_areas: []
 related_courses: []
+related_groups:
+- mobile-security-and-privacy-research-lab
 affiliations:
 - University of Massachusetts Boston
 works_for: Computer Science Department
 same_as:
 - http://www.faculty.umb.edu/xiaohui.liang
+related_topics:
+- mobile security
+- privacy
+- smartphones
+- iot security
 sort_order: 16
 status: active
 ---

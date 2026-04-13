@@ -36,6 +36,8 @@ related_courses:
 - CS446
 - CS449
 related_groups: []
+related_people:
+- bo-sheng
 related_programs:
 - "/undergraduate-programs"
 - "/honors-programs"
@@ -44,6 +46,9 @@ related_topics:
 - computer science major
 - abet accreditation
 - degree requirements
+- artificial intelligence
+- data mining
+- software engineering
 audience:
 - undergraduate students pursuing a computer science major
 - prospective CS majors

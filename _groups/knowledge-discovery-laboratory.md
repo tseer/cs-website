@@ -11,10 +11,12 @@ keywords:
 - KDLab
 - Data Analysis
 - Data Management
+- data science
 - UMass Boston
 aliases:
 - Knowledge Discovery Laboratory
 - KDLab
+- data science lab
 lead_people:
 - wei-ding
 member_people: []
@@ -23,6 +25,7 @@ related_topics:
 - knowledge discovery
 - data analysis
 - data management
+- data science
 - classification
 - scalable algorithms
 related_programs: []

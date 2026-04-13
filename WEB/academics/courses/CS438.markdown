@@ -11,19 +11,29 @@ summary: Upper-level course in applied machine learning for advanced undergradua
 keywords:
 - CS438
 - Applied Machine Learning
+- machine learning
+- predictive modeling
 - UMass Boston
 - course
 - Computer Science
 aliases:
 - CS438
 - CS 438
+- machine learning
+- applied ML
 - 'CS438: Applied Machine Learning'
 - 'CS 438: Applied Machine Learning'
 prerequisites:
 - CS310
 co_requisites: []
-related_programs: []
-related_topics: []
+related_programs:
+- "/cs_ba"
+- "/cs_bs"
+related_topics:
+- machine learning
+- predictive modeling
+- classification
+- pattern recognition
 provider_id: https://www.cs.umb.edu/#department
 ---
 

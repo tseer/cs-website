@@ -11,18 +11,27 @@ summary: Graduate course in computer vision for graduate students covering compu
 keywords:
 - CS675
 - Computer Vision
+- image processing
+- object recognition
 - UMass Boston
 - course
 - Computer Science
 aliases:
 - CS675
 - CS 675
+- computer vision
 - 'CS675: Computer Vision'
 - 'CS 675: Computer Vision'
 prerequisites:
 - CS310 and CS220/CS320L/MATH320L or permission of the instructor
 co_requisites: []
-related_programs: []
-related_topics: []
+related_programs:
+- "/cs_ms"
+- "/cs_phd"
+related_topics:
+- computer vision
+- image processing
+- object recognition
+- visual recognition
 provider_id: https://www.cs.umb.edu/#department
 ---

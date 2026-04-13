@@ -2,6 +2,32 @@
 title: "Frequently Asked Questions"
 layout: page
 permalink: "/answers-to-faqs"
+entity_type: resource
+summary: Technical support FAQ covering CS accounts, lab access, disk quotas, remote login, printing, and common computing questions.
+keywords:
+  - FAQ
+  - technical support
+  - UNIX account
+  - lab account
+  - disk quota
+  - remote login
+  - printing
+  - ssh
+  - account support
+aliases:
+  - CS FAQ
+  - department FAQ
+  - account help
+  - technical help
+  - computer science faq
+related_topics:
+  - unix accounts
+  - lab access
+  - disk quotas
+  - ssh
+  - printing
+  - remote login
+parent_section: Resources
 ---
 
 [FAQ01: How do I get help if my question is not in this list?](#a1) \
@@ -483,6 +509,3 @@ Log onto webmail.umb.edu using your credentials and under settings (the wheel sy
 ---
 
 ![third floor](/WEB/images/third_floor_map.jpeg)
-
-
-

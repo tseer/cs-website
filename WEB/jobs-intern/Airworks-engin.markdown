@@ -1,7 +1,27 @@
 ---
-title: "Internships"
+title: "Airworks Software Engineer Internships"
 layout: page
 permalink: "/news_and_events/jobs_and_internships/395/"
+entity_type: resource
+summary: Career opportunity for software engineering and computer science internships at Airworks.
+keywords:
+  - internship
+  - software engineering internship
+  - computer science internship
+  - Airworks
+  - career opportunity
+  - internships
+aliases:
+  - Airworks internship
+  - software engineer internship
+  - software development internship
+related_topics:
+  - internships
+  - careers
+  - software engineering
+  - computer science jobs
+  - career opportunities
+parent_section: News-and-Events
 ---
 ## Airworks Software Engineer Internships
 
@@ -14,4 +34,3 @@ Airworks is an AI-powered software that converts aerial data into CAD models. Th
 Please see attached internship description, Airworks overview and how to apply.
 
 [Internship description](pdf)
-

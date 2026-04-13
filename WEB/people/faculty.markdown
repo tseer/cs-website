@@ -3,10 +3,30 @@ title: "Faculty"
 layout: page
 permalink: "/faculty"
 summary: Browse current and retired faculty in the UMass Boston Computer Science Department, including profile links and contact information.
+entity_type: page
+keywords:
+  - faculty
+  - professors
+  - instructors
+  - computer science faculty
+aliases:
+  - faculty directory
+  - cs faculty
+nav_label: Faculty
+section_name: Faculty
+parent_section: People
+is_landing_page: true
+menu_keywords:
+  - faculty
+  - people
+related_topics:
+  - faculty
+  - department leadership
 ---
 
 <div id='active_faculty' class='listing'>
-  {% assign active_people = site.people | where: "status", "active" | sort: "sort_order" %}
+  {% assign empty_array = "" | split: "" %}
+  {% assign active_people = site.people | default: empty_array | where: "status", "active" | sort: "sort_order" %}
   {% for person in active_people %}
   <div class="person">
     <a href="{{ person.url | relative_url }}"><img src="{{ person.image | relative_url }}" alt="{{ person.person_name }}"></a><br>

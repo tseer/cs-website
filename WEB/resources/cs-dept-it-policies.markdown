@@ -2,6 +2,30 @@
 title: "CS Department IT Policies and Procedures"
 layout: page
 permalink: "/cs-department-it-policies"
+entity_type: resource
+summary: Department IT policy resource covering lab operations, system access, asset management, security incidents, and change control.
+keywords:
+  - IT policies
+  - procedures
+  - lab policies
+  - system access
+  - security incidents
+  - change control
+  - security policy
+  - IT procedures
+aliases:
+  - CS IT policies
+  - department IT procedures
+  - IT policy
+  - lab procedures
+related_topics:
+  - lab policies
+  - security
+  - access control
+  - incident handling
+  - asset management
+  - change control
+parent_section: Resources
 ---
 
 # Computer Science Department IT Policies and Procedures

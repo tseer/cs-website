@@ -11,18 +11,28 @@ summary: Graduate course in applied machine learning for graduate students cover
 keywords:
 - CS638
 - Applied Machine Learning
+- machine learning
+- predictive modeling
 - UMass Boston
 - course
 - Computer Science
 aliases:
 - CS638
 - CS 638
+- machine learning
+- applied ML
 - 'CS638: Applied Machine Learning'
 - 'CS 638: Applied Machine Learning'
 prerequisites: []
 co_requisites: []
-related_programs: []
-related_topics: []
+related_programs:
+- "/cs_ms"
+- "/cs_phd"
+related_topics:
+- machine learning
+- predictive modeling
+- classification
+- pattern recognition
 provider_id: https://www.cs.umb.edu/#department
 ---
 

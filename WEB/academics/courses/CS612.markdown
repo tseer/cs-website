@@ -11,19 +11,28 @@ summary: Graduate course in algorithms in bioinformatics for graduate students c
 keywords:
 - CS612
 - Algorithms in Bioinformatics
+- bioinformatics
+- computational biology
 - UMass Boston
 - course
 - Computer Science
 aliases:
 - CS612
 - CS 612
+- bioinformatics algorithms
 - 'CS612: Algorithms in Bioinformatics'
 - 'CS 612: Algorithms in Bioinformatics'
 prerequisites:
 - CS210
 - Math260
 co_requisites: []
-related_programs: []
-related_topics: []
+related_programs:
+- "/cs_ms"
+- "/cs_phd"
+related_topics:
+- bioinformatics
+- computational biology
+- protein structure
+- structural bioinformatics
 provider_id: https://www.cs.umb.edu/#department
 ---

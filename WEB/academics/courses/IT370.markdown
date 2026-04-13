@@ -7,22 +7,31 @@ course_code: IT370
 course_name: Business Intelligence Applications
 credits: 3
 description: This course introduces concepts in business intelligence and explores how business intelligence (BI) can help improve management effectiveness through better decision-making in several functional areas such as marketing, finance, and manufacturing. This course will explore applications of BI, such as online analytical processing (OLAP), dashboards, management reporting, performance measurement, and data visualization, and how these are developed and applied. It will also investigate BI in the context of decision-making and closely related areas such as data warehousing, data marts, business analytics, web analytics, real-time data, and mobile applications. Students will gain hands-on experience through assignments and projects using a comprehensive set of current BI tools.
-summary: Intermediate course in business intelligence applications covering Android application development and mobile programming.
+summary: Upper-level course in business intelligence covering dashboards, analytics, data visualization, and decision support applications.
 keywords:
 - IT370
 - Business Intelligence Applications
+- business intelligence
+- analytics
 - UMass Boston
 - course
 - Information Technology
 aliases:
 - IT370
 - IT 370
+- business intelligence
+- BI applications
 - 'IT370: Business Intelligence Applications'
 - 'IT 370: Business Intelligence Applications'
 prerequisites:
 - IT110 OR MSIS110 AND IT230L OR MSIS411
 co_requisites: []
-related_programs: []
-related_topics: []
+related_programs:
+- "/it_bs"
+related_topics:
+- business intelligence
+- analytics
+- dashboards
+- data visualization
 provider_id: https://www.cs.umb.edu/#department
 ---

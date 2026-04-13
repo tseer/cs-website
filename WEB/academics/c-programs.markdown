@@ -15,6 +15,9 @@ keywords:
 aliases:
 - Certificate Programs
 - Computer Science Certificate Programs
+- certificate options
+related_people:
+- nurit-haspel
 related_courses:
 - CS110
 - CS210
@@ -29,6 +32,7 @@ related_topics:
 - certificate programs
 - database technology
 - computer science
+- undergraduate certificate
 provider_id: https://www.cs.umb.edu/#department
 ---
 # Certificate Undergraduate Program

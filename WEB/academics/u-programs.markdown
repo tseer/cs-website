@@ -15,6 +15,10 @@ keywords:
 aliases:
 - Undergraduate Programs
 - Undergraduate Computer Science Programs
+- undergraduate degrees
+related_people:
+- bo-sheng
+- glenn-hoffman
 related_courses:
 - CS105
 related_topics:
@@ -22,6 +26,7 @@ related_topics:
 - computer science
 - information technology
 - certificate programs
+- degree options
 provider_id: https://www.cs.umb.edu/#department
 ---
 For more information on our program click below:

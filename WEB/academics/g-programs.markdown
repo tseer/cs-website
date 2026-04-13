@@ -15,6 +15,9 @@ keywords:
 aliases:
 - Graduate Programs
 - Graduate Computer Science Programs
+- graduate degrees
+related_people:
+- dan-simovici
 related_courses:
 - CS110
 - CS210
@@ -28,6 +31,7 @@ related_topics:
 - ms program
 - phd program
 - database technology
+- graduate degrees
 provider_id: https://www.cs.umb.edu/#department
 ---
 For more information on our program click below:

@@ -2,6 +2,28 @@
 title: "Funding"
 layout: page
 permalink: "/funding"
+summary: Department research funding page listing grants, sponsors, investigators, and award amounts across CS research projects.
+entity_type: page
+keywords:
+  - funding
+  - research funding
+  - grants
+  - sponsors
+aliases:
+  - grants
+  - funded research
+nav_label: Funding
+section_name: Funding
+parent_section: Research
+is_landing_page: true
+menu_keywords:
+  - funding
+  - research funding
+  - grants
+related_topics:
+  - grants
+  - sponsored research
+  - research funding
 ---
 
 PIs and Co-PIs only include members of the UMass Boston Computer Science department.
@@ -546,6 +568,5 @@ End Date                           |March 31, 2012
 |Start Date                        |Sept. 1, 1997
 |End Date                          |Aug 31, 2004
 |Amount                            |$360,000
-
 
 

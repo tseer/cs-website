@@ -2,6 +2,32 @@
 title: Facilities
 layout: page
 permalink: "/facilities"
+entity_type: facility
+summary: Overview of department computing labs, servers, storage, and student access to the UNIX, Web, and IT labs.
+keywords:
+  - Facilities
+  - labs
+  - UNIX Lab
+  - Web Lab
+  - IT Lab
+  - computing labs
+  - servers
+  - student labs
+  - storage
+aliases:
+  - CS facilities
+  - department labs
+  - computing facilities
+  - computer labs
+  - CS labs
+related_topics:
+  - computing labs
+  - unix lab
+  - web lab
+  - it lab
+  - servers
+  - storage
+  - student access
 ---
 
 The CS department employs a network of 46 Dell PowerEdge servers behind a Palo
