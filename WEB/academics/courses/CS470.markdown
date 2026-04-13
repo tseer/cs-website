@@ -1,19 +1,33 @@
 ---
-title: "CS470"
+title: 'CS470: Introduction to Artificial Intelligence'
 layout: course
 permalink: "/academics/courses/CS470"
-course_code: "CS470"
-course_name: "Introduction to Artificial Intelligence"
+entity_type: course
+course_code: CS470
+course_name: Introduction to Artificial Intelligence
 credits: 3
-description: "An introduction to the main techniques of artificial intelligence: state-space search methods, semantic networks, theorem-proving and production rule systems. Important applications of these techniques will be presented. Students will be expected to write programs exemplifying some of these techniques using the LISP language."
-prerequisites:
-  - "CS310"
-  - "CS220"
+description: 'An introduction to the main techniques of artificial intelligence: state-space search methods, semantic networks, theorem-proving and production rule systems. Important applications of these techniques will be presented. Students will be expected to write programs exemplifying some of these techniques using the LISP language.'
+summary: Introductory course in artificial intelligence for advanced undergraduates covering foundational AI concepts and classic intelligent systems methods.
 keywords:
-  - "CS470"
-  - "Artificial Intelligence"
-  - "UMass Boston"
-  - "course"
+- CS470
+- Artificial Intelligence
+- UMass Boston
+- course
+- Introduction to Artificial Intelligence
+- Computer Science
+aliases:
+- CS470
+- CS 470
+- 'CS470: Introduction to Artificial Intelligence'
+- 'CS 470: Introduction to Artificial Intelligence'
+prerequisites:
+- CS310
+- CS220
+co_requisites: []
+related_programs: []
+related_topics:
+- Artificial Intelligence
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Notes

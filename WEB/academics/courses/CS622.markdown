@@ -1,17 +1,31 @@
 ---
-title: "CS622"
+title: 'CS622: Theory of Formal Languages'
 layout: course
 permalink: "/academics/courses/CS622"
-course_code: "CS622"
-course_name: "Theory of Formal Languages"
+entity_type: course
+course_code: CS622
+course_name: Theory of Formal Languages
 credits: 3
-description: "This course treats languages from an abstract point of view as defined by formal grammars and by families of abstract machines. The Chomsky hierarchy and associated automata are covered. Emphasis is placed on context-free languages. Careful mathematical definition and proof are stressed throughout. This course does not involve programming. This course is of special interest to students interested in linguistics and in the theory of programming language compilers."
-prerequisites:
-  - "CS220/CS320L/MATH320L"
-  - "CS450 or permission of the instructor"
+description: This course treats languages from an abstract point of view as defined by formal grammars and by families of abstract machines. The Chomsky hierarchy and associated automata are covered. Emphasis is placed on context-free languages. Careful mathematical definition and proof are stressed throughout. This course does not involve programming. This course is of special interest to students interested in linguistics and in the theory of programming language compilers.
+summary: Graduate course in theory of formal languages for graduate students covering computability, automata, and formal language theory.
 keywords:
-  - "CS622"
-  - "Formal Languages"
-  - "UMass Boston"
-  - "course"
+- CS622
+- Formal Languages
+- UMass Boston
+- course
+- Theory of Formal Languages
+- Computer Science
+aliases:
+- CS622
+- CS 622
+- 'CS622: Theory of Formal Languages'
+- 'CS 622: Theory of Formal Languages'
+prerequisites:
+- CS220/CS320L/MATH320L
+- CS450 or permission of the instructor
+co_requisites: []
+related_programs: []
+related_topics:
+- Formal Languages
+provider_id: https://www.cs.umb.edu/#department
 ---

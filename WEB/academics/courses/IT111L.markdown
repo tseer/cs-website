@@ -1,20 +1,31 @@
 ---
-title: "IT111L"
+title: 'IT111L: Managerial Statistics'
 layout: course
 permalink: "/academics/courses/IT111L"
-course_code: "IT111L"
-course_name: "Managerial Statistics"
+entity_type: course
+course_code: IT111L
+course_name: Managerial Statistics
 credits: 3
-description: "Provides the student with the basic statistical techniques needed for business decision making in areas such as operations management, quality improvement, marketing research, finance, and general management. The course examines collection and presentation of data, frequency distributions, basic probability, statistical inference, and regression. Students use statistical software for data presentation and analysis."
-prerequisites:
-  - "Math129 or Math130."
-co_requisites:
-  - "IT110 or MSIS110."
+description: Provides the student with the basic statistical techniques needed for business decision making in areas such as operations management, quality improvement, marketing research, finance, and general management. The course examines collection and presentation of data, frequency distributions, basic probability, statistical inference, and regression. Students use statistical software for data presentation and analysis.
+summary: Foundational course in managerial statistics covering statistics for business and data-driven decision making.
 keywords:
-  - "IT111L"
-  - "Managerial Statistics"
-  - "UMass Boston"
-  - "course"
+- IT111L
+- Managerial Statistics
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT111L
+- IT 111L
+- 'IT111L: Managerial Statistics'
+- 'IT 111L: Managerial Statistics'
+prerequisites:
+- Math129 or Math130.
+co_requisites:
+- IT110 or MSIS110.
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Note

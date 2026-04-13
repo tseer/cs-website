@@ -1,16 +1,28 @@
 ---
-title: "CS752"
+title: 'CS752: Parallel Programming'
 layout: course
 permalink: "/academics/courses/CS752"
-course_code: "CS752"
-course_name: "Parallel Programming"
+entity_type: course
+course_code: CS752
+course_name: Parallel Programming
 credits: 3
-description: "This course introduces the issues involved in parallel programming systems, including ease of programming, match between programming language and problem domain, and efficiency of the generated code. It explores and compares several parallel programming paradigms and investigates algorithms for scheduling parallel programs and for automatic parallelization of serial programs."
-prerequisites:
-  - "CS651."
+description: This course introduces the issues involved in parallel programming systems, including ease of programming, match between programming language and problem domain, and efficiency of the generated code. It explores and compares several parallel programming paradigms and investigates algorithms for scheduling parallel programs and for automatic parallelization of serial programs.
+summary: Graduate course in parallel programming for graduate students covering processes, memory, files, and operating system design.
 keywords:
-  - "CS752"
-  - "Parallel Programming"
-  - "UMass Boston"
-  - "course"
+- CS752
+- Parallel Programming
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS752
+- CS 752
+- 'CS752: Parallel Programming'
+- 'CS 752: Parallel Programming'
+prerequisites:
+- CS651.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

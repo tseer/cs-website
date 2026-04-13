@@ -1,7 +1,68 @@
 ---
-title: "Computer Science BA"
+title: Computer Science BA
 layout: page
 permalink: "/cs_ba"
+entity_type: program
+program_name: Computer Science BA
+description: Degree requirements and sample course planning information for the UMass Boston Bachelor of Arts in Computer Science.
+summary: Degree requirements and sample course planning information for the UMass Boston Bachelor of Arts in Computer Science.
+keywords:
+- Computer Science BA
+- BA in Computer Science
+- UMass Boston
+- Computer Science Department
+aliases:
+- Computer Science BA
+- BA in Computer Science
+- CS BA
+related_courses:
+- CS110
+- CS210
+- CS220
+- CS240
+- CS310
+- CS341
+- CS420
+- CS450
+- CS444
+- CS451
+- CS410
+- CS411
+- CS430
+- CS433
+- CS436
+- CS437
+- CS438
+- CS442
+- CS443
+- CS446
+- CS449
+- CS460
+- CS461
+- CS470
+- CS615
+- CS630
+- CS634
+- CS636
+- CS637
+- CS638
+- CS642
+- CS644
+- CS646
+- CS648
+- CS651
+- CS670
+- CS671
+- CS675
+- CS680
+- CS620
+- CS622
+- CS624
+related_topics:
+- bachelor of arts
+- computer science major
+- degree requirements
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 

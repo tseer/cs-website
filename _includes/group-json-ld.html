@@ -1,0 +1,28 @@
+{%- assign group_description = page.summary | default: page.description -%}
+{%- assign site_root_url = '/' | absolute_url -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": {{ page.url | absolute_url | append: "#group" | jsonify }},
+  "name": {{ page.group_name | default: page.title | jsonify }},
+  "description": {{ group_description | strip_html | normalize_whitespace | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "parentOrganization": {
+    "@type": "Organization",
+    "@id": {{ site_root_url | append: "#department" | jsonify }},
+    "name": {{ site.department_name | jsonify }},
+    "url": {{ site_root_url | jsonify }}
+  }{% assign lead_members = site.people | where_exp: "person", "page.lead_people contains person.slug" %}{% assign member_entries = site.people | where_exp: "person", "page.member_people contains person.slug" %}{% assign all_members = lead_members | concat: member_entries %}{% if all_members.size > 0 %},
+  "member": [
+    {% for person in all_members %}
+    {
+      "@type": "Person",
+      "@id": {{ person.url | absolute_url | append: "#person" | jsonify }},
+      "name": {{ person.person_name | jsonify }},
+      "url": {{ person.url | absolute_url | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]{% endif %}
+}
+</script>

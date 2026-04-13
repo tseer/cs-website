@@ -1,7 +1,33 @@
 ---
-title: "Computer Science PhD"
+title: Computer Science PhD
 layout: page
 permalink: "/cs_phd"
+entity_type: program
+program_name: Computer Science PhD
+description: Degree requirements, dissertation expectations, and qualifying milestones for the UMass Boston PhD in Computer Science.
+summary: Degree requirements, dissertation expectations, and qualifying milestones for the UMass Boston PhD in Computer Science.
+keywords:
+- Computer Science PhD
+- PhD in Computer Science
+- UMass Boston
+- Computer Science Department
+aliases:
+- Computer Science PhD
+- PhD in Computer Science
+- CS PhD
+related_courses:
+- CS720
+- CS724
+- CS680
+- CS681
+- CS682
+- CS899
+related_topics:
+- doctoral study
+- computer science research
+- qualifying exam
+- dissertation
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 

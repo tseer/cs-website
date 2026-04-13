@@ -1,34 +1,36 @@
 ---
-title: "Certificate Programs"
+title: Certificate Programs
 layout: page
 permalink: "/certificate-programs"
-description: "UMass Boston Computer Science certificate programs include the undergraduate certificate in Computer Science and the graduate certificate in Database Technology."
+entity_type: program
+program_name: Certificate Programs
+description: UMass Boston Computer Science certificate programs include the undergraduate certificate in Computer Science and the graduate certificate in Database Technology.
+summary: Overview of UMass Boston computer science certificate options, including the undergraduate certificate in Computer Science and the graduate certificate in Database Technology.
 keywords:
-  - "Certificate Programs"
-  - "Computer Science Certificate"
-  - "Database Technology Certificate"
-  - "UMass Boston"
-  - "Computer Science Department"
+- Certificate Programs
+- Computer Science Certificate
+- Database Technology Certificate
+- UMass Boston
+- Computer Science Department
+aliases:
+- Certificate Programs
+- Computer Science Certificate Programs
+related_courses:
+- CS110
+- CS210
+- CS220
+- CS240
+- CS310
+- CS341
+- CS630
+- CS615
+- CS634
+related_topics:
+- certificate programs
+- database technology
+- computer science
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOccupationalProgram",
-  "name": {{ page.title | jsonify }},
-  "url": {{ page.url | absolute_url | jsonify }},
-  "description": {{ page.description | jsonify }},
-  "provider": {
-    "@type": "CollegeOrUniversity",
-    "name": "UMass Boston",
-    "department": {
-      "@type": "EducationalOrganization",
-      "name": "Computer Science"
-    }
-  }
-}
-</script>
-
 # Certificate Undergraduate Program
 
 > Students whose preparation in Computer Science is insufficient for admission to the Master’s program should consider seeking the Undergraduate Certificate. The Undergraduate Certificate is also intended for students who are mainly interested in computer applications, or in a certificate program instead of receiving a Bachelor’s degree in Computer Science. [Read more...](#anchor1)

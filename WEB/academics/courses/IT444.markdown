@@ -1,16 +1,28 @@
 ---
-title: "IT444"
+title: 'IT444: Network Security Administration II'
 layout: course
 permalink: "/academics/courses/IT444"
-course_code: "IT444"
-course_name: "Network Security Administration II"
+entity_type: course
+course_code: IT444
+course_name: Network Security Administration II
 credits: 3
-description: "This course will focus on network protection (firewall implementation, site-to-site vpn configuration, and identity management), information gathering (port scan, service scan), and penetration testing (internal test and external test). The internal pen-test can cover vulnerability assessment including server vulnerabilities discovery, server attack, client side attack and social engineering attack."
-prerequisites:
-  - "IT 443"
+description: This course will focus on network protection (firewall implementation, site-to-site vpn configuration, and identity management), information gathering (port scan, service scan), and penetration testing (internal test and external test). The internal pen-test can cover vulnerability assessment including server vulnerabilities discovery, server attack, client side attack and social engineering attack.
+summary: Upper-level course in network security administration ii for advanced undergraduates covering network security administration and defensive operations.
 keywords:
-  - "IT444"
-  - "Network Security Administration II"
-  - "UMass Boston"
-  - "course"
+- IT444
+- Network Security Administration II
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT444
+- IT 444
+- 'IT444: Network Security Administration II'
+- 'IT 444: Network Security Administration II'
+prerequisites:
+- IT 443
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

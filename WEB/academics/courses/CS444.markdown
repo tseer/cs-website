@@ -1,17 +1,31 @@
 ---
-title: "CS444"
+title: 'CS444: Introduction to Operating Systems'
 layout: course
 permalink: "/academics/courses/CS444"
-course_code: "CS444"
-course_name: "Introduction to Operating Systems"
+entity_type: course
+course_code: CS444
+course_name: Introduction to Operating Systems
 credits: 3
-description: "Description of current operating systems, focusing on one or two in particular. Topics include defining the operating system as distinct from hardware on one side and software systems on the other, process concepts, memory management, CPU scheduling, device management, file systems, and network support."
-prerequisites:
-  - "CS341"
-  - "CS310"
+description: Description of current operating systems, focusing on one or two in particular. Topics include defining the operating system as distinct from hardware on one side and software systems on the other, process concepts, memory management, CPU scheduling, device management, file systems, and network support.
+summary: Introductory course in operating systems for advanced undergraduates covering processes, memory, files, and operating system design.
 keywords:
-  - "CS444"
-  - "Operating Systems"
-  - "UMass Boston"
-  - "course"
+- CS444
+- Operating Systems
+- UMass Boston
+- course
+- Introduction to Operating Systems
+- Computer Science
+aliases:
+- CS444
+- CS 444
+- 'CS444: Introduction to Operating Systems'
+- 'CS 444: Introduction to Operating Systems'
+prerequisites:
+- CS341
+- CS310
+co_requisites: []
+related_programs: []
+related_topics:
+- Operating Systems
+provider_id: https://www.cs.umb.edu/#department
 ---

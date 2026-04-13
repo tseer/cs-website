@@ -51,11 +51,11 @@
       <li class="breadcrumbs-item">
         <a href="{{ '/about/' | relative_url }}">About</a>
       </li>
-    {%- elsif page.path contains 'WEB/people/' -%}
+    {%- elsif page.path contains 'WEB/people/' or page.collection == 'people' or page.entity_type == 'person' -%}
       <li class="breadcrumbs-item">
         <a href="{{ '/people/' | relative_url }}">People</a>
       </li>
-    {%- elsif page.path contains 'WEB/research/' -%}
+    {%- elsif page.path contains 'WEB/research/' or page.collection == 'groups' or page.entity_type == 'group' -%}
       <li class="breadcrumbs-item">
         <a href="{{ '/research/' | relative_url }}">Research</a>
       </li>

@@ -1,20 +1,34 @@
 ---
-title: "CS630"
+title: 'CS630: Database Management Systems'
 layout: course
 permalink: "/academics/courses/CS630"
-course_code: "CS630"
-course_name: "Database Management Systems"
+entity_type: course
+course_code: CS630
+course_name: Database Management Systems
 credits: 3
-description: "Databases and database management systems. The entity/relationship model. The relational model. Relational algebra. The query language SQL. The object-relational model and SQL3. Embedded SQL in programs and dynamic SQL. Database administration: creating views and integrity constraints, handling data security. Functional dependencies. Normalization"
-prerequisites:
-  - "CS240"
-  - "CS310"
-  - "Permission of the instructor"
+description: 'Databases and database management systems. The entity/relationship model. The relational model. Relational algebra. The query language SQL. The object-relational model and SQL3. Embedded SQL in programs and dynamic SQL. Database administration: creating views and integrity constraints, handling data security. Functional dependencies. Normalization'
+summary: Graduate course in database management systems for graduate students covering relational databases, SQL, and data modeling.
 keywords:
-  - "CS630"
-  - "Database Systems"
-  - "UMass Boston"
-  - "course"
+- CS630
+- Database Systems
+- UMass Boston
+- course
+- Database Management Systems
+- Computer Science
+aliases:
+- CS630
+- CS 630
+- 'CS630: Database Management Systems'
+- 'CS 630: Database Management Systems'
+prerequisites:
+- CS240
+- CS310
+- Permission of the instructor
+co_requisites: []
+related_programs: []
+related_topics:
+- Database Systems
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Notes

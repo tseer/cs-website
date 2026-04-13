@@ -1,16 +1,28 @@
 ---
-title: "CS220"
+title: 'CS220: Applied Discrete Mathematics'
 layout: course
 permalink: "/academics/courses/CS220"
-course_code: "CS220"
-course_name: "Applied Discrete Mathematics"
+entity_type: course
+course_code: CS220
+course_name: Applied Discrete Mathematics
 credits: 3
-description: "An introduction to the mathematical structures and concepts used in computing: sets, mathematical induction, ordered sets, Boolean algebras, predicate calculus, trees, relations and lattice theory. Formal and informal theories and corresponding mathematical proofs are taught.Students may not receive credit for both MATH 320 and CS 220.Students may not take MATH 320 to receive a better grade in previously taken CS/MATH 320L."
-prerequisites:
-  - "CS110, MATH 140; or permission from the instructor."
+description: 'An introduction to the mathematical structures and concepts used in computing: sets, mathematical induction, ordered sets, Boolean algebras, predicate calculus, trees, relations and lattice theory. Formal and informal theories and corresponding mathematical proofs are taught.Students may not receive credit for both MATH 320 and CS 220.Students may not take MATH 320 to receive a better grade in previously taken CS/MATH 320L.'
+summary: Intermediate course in applied discrete mathematics covering mathematical structures and logic for computing.
 keywords:
-  - "CS220"
-  - "Applied Discrete Mathematics"
-  - "UMass Boston"
-  - "course"
+- CS220
+- Applied Discrete Mathematics
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS220
+- CS 220
+- 'CS220: Applied Discrete Mathematics'
+- 'CS 220: Applied Discrete Mathematics'
+prerequisites:
+- CS110, MATH 140; or permission from the instructor.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

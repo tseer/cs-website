@@ -1,16 +1,28 @@
 ---
-title: "CS478"
+title: 'CS478: Independent Study'
 layout: course
 permalink: "/academics/courses/CS478"
-course_code: "CS478"
-course_name: "Independent Study"
+entity_type: course
+course_code: CS478
+course_name: Independent Study
 credits: 1-3
-description: "Work done by a student or group of students under faculty supervision on material not currently offered in a regularly scheduled course. Students wishing to undertake such work must first find a faculty member willing to supervise it; By default, an independent study is a one credit course that counts as a general elective. If a student wishes to have the independent study considered as a CS upper level elective, they have to prepare a syllabus and send it to the department chair or undergraduate program director for pre-approval. Afterwards, they may sign up for a three credit course."
-prerequisites:
-  - "Permission of the instructor"
+description: Work done by a student or group of students under faculty supervision on material not currently offered in a regularly scheduled course. Students wishing to undertake such work must first find a faculty member willing to supervise it; By default, an independent study is a one credit course that counts as a general elective. If a student wishes to have the independent study considered as a CS upper level elective, they have to prepare a syllabus and send it to the department chair or undergraduate program director for pre-approval. Afterwards, they may sign up for a three credit course.
+summary: Upper-level course in independent study with faculty-supervised work on a specialized topic.
 keywords:
-  - "CS478"
-  - "Independent Study"
-  - "UMass Boston"
-  - "course"
+- CS478
+- Independent Study
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS478
+- CS 478
+- 'CS478: Independent Study'
+- 'CS 478: Independent Study'
+prerequisites:
+- Permission of the instructor
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

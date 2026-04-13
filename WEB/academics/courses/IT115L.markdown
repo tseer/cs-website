@@ -1,18 +1,30 @@
 ---
-title: "IT115L"
+title: 'IT115L: Introduction to Java Part II'
 layout: course
 permalink: "/academics/courses/IT115L"
-course_code: "IT115L"
-course_name: "Introduction to Java Part II"
+entity_type: course
+course_code: IT115L
+course_name: Introduction to Java Part II
 credits: 3
-description: "A second course in Java programming that exposes students to the concepts involved in using a higher-level, object-oriented programming language. This course, a continuation of IT114L, covers more advanced Java topics and gives students hands-on experience writing small and medium-size Java programs. This course and CS110 may not both be taken for credit."
-prerequisites:
-  - "IT114L."
+description: A second course in Java programming that exposes students to the concepts involved in using a higher-level, object-oriented programming language. This course, a continuation of IT114L, covers more advanced Java topics and gives students hands-on experience writing small and medium-size Java programs. This course and CS110 may not both be taken for credit.
+summary: Introductory course in java part ii covering Java programming fundamentals with hands-on practice.
 keywords:
-  - "IT115L"
-  - "Introduction to Java Part II"
-  - "UMass Boston"
-  - "course"
+- IT115L
+- Introduction to Java Part II
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT115L
+- IT 115L
+- 'IT115L: Introduction to Java Part II'
+- 'IT 115L: Introduction to Java Part II'
+prerequisites:
+- IT114L.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Note

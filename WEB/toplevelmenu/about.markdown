@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+summary: Learn about the department, how to contact us, our facilities, our DEI statement, and how to visit campus.
 ---
 
 Connect:

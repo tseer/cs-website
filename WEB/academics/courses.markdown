@@ -2,6 +2,7 @@
 title: "Courses"
 layout: page
 permalink: "/courses"
+summary: Browse the UMass Boston Computer Science and Information Technology course catalog with course descriptions and requirements.
 redirect_from:
   - /academics/courses/
 ---

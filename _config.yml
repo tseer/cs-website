@@ -23,6 +23,7 @@ addres: "100 William T. Morrissey Blvd. Boston, MA 02125"
 title: "UMass Boston CS"
 email: "csinfo @ cs.umb.edu"
 organization_name: "University of Massachusetts Boston"
+organization_url: "https://www.umb.edu/"
 department_name: "Computer Science Department"
 organization_logo: "/WEB/images/umass_logo.png"
 
@@ -48,6 +49,12 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-sitemap
+
+collections:
+  people:
+    output: true
+  groups:
+    output: true
 
 future: true
 

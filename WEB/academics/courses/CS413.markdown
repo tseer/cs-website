@@ -1,16 +1,28 @@
 ---
-title: "CS413"
+title: 'CS413: Applied Cryptography'
 layout: course
 permalink: "/academics/courses/CS413"
-course_code: "CS413"
-course_name: "Applied Cryptography"
+entity_type: course
+course_code: CS413
+course_name: Applied Cryptography
 credits: 3
-description: "This course aims to introduce fundamental and practical knowledge of cryptography and its applications. This course covers diverse topics on cryptography and network security techniques including conventional encryption, asymmetric and symmetric cryptology, digital signatures, certificates, key exchange, key management, authentication, network access control, cloud computing security, electronic mail security, advanced crypto primitives, bitcoin, blockchain, and differential privacy. This course focuses on both theoretical aspects and practical applications of cryptanalysis and network security techniques."
-prerequisites:
-  - "CS310"
+description: This course aims to introduce fundamental and practical knowledge of cryptography and its applications. This course covers diverse topics on cryptography and network security techniques including conventional encryption, asymmetric and symmetric cryptology, digital signatures, certificates, key exchange, key management, authentication, network access control, cloud computing security, electronic mail security, advanced crypto primitives, bitcoin, blockchain, and differential privacy. This course focuses on both theoretical aspects and practical applications of cryptanalysis and network security techniques.
+summary: Upper-level course in applied cryptography for advanced undergraduates covering ethics, privacy, and social impacts of computing.
 keywords:
-  - "CS413"
-  - "Applied Cryptography"
-  - "UMass Boston"
-  - "course"
+- CS413
+- Applied Cryptography
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS413
+- CS 413
+- 'CS413: Applied Cryptography'
+- 'CS 413: Applied Cryptography'
+prerequisites:
+- CS310
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

@@ -1,0 +1,194 @@
+{%- if page.url != "/" -%}
+  {%- assign current_label = page.title | default: page.course_code -%}
+  {%- if page.layout == "course" and page.course_name -%}
+    {%- assign current_label = page.course_code | append: ": " | append: page.course_name -%}
+  {%- elsif page.layout == "course" -%}
+    {%- assign current_label = page.course_code -%}
+  {%- endif -%}
+
+  {%- capture breadcrumb_items -%}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ '/' | absolute_url | jsonify }}
+    }
+    {%- if page.layout == "course" -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Academics",
+      "item": {{ '/academics/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Courses",
+      "item": {{ '/courses' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": {{ current_label | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.url == '/academics/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Academics",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.url == '/about/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.url == '/people/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "People",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.url == '/research/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Research",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.url == '/resources/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.url == '/news-and-events/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "News and Events",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.path contains 'WEB/academics/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Academics",
+      "item": {{ '/academics/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ current_label | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.path contains 'WEB/about/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": {{ '/about/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ current_label | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.path contains 'WEB/people/' or page.collection == 'people' or page.entity_type == 'person' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "People",
+      "item": {{ '/people/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ current_label | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.path contains 'WEB/research/' or page.collection == 'groups' or page.entity_type == 'group' or page.categories contains 'research' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Research",
+      "item": {{ '/research/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ current_label | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.path contains 'WEB/resources/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": {{ '/resources/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ current_label | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- elsif page.path contains 'WEB/jobs-intern/' or page.layout == 'post' -%}
+      {%- if page.categories contains 'research' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Research",
+      "item": {{ '/research/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ current_label | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- else -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "News and Events",
+      "item": {{ '/news-and-events/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ current_label | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+      {%- endif -%}
+    {%- elsif page.path contains 'WEB/chimera/' -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Chimera",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- else -%},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ current_label | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {%- endif -%}
+  {%- endcapture -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": {{ page.url | absolute_url | append: "#breadcrumb" | jsonify }},
+    "itemListElement": [{{ breadcrumb_items | strip }}]
+  }
+  </script>
+{%- endif -%}

@@ -1,16 +1,28 @@
 ---
-title: "IT460"
+title: 'IT460: Integration Methodologies and Tools'
 layout: course
 permalink: "/academics/courses/IT460"
-course_code: "IT460"
-course_name: "Integration Methodologies and Tools"
+entity_type: course
+course_code: IT460
+course_name: Integration Methodologies and Tools
 credits: 3
-description: "This course develops an understanding of applications architecture based on building IT systems out of common parts and a service-oriented architecture. These are collections of information services, modules and functional components that can be reused in a variety of common contexts. The course will apply several tools to exemplify the use of heterogeneous reusable modules to fulfill an information service. An underlying methodology for integration will be applied."
-prerequisites:
-  - "60 credits."
+description: This course develops an understanding of applications architecture based on building IT systems out of common parts and a service-oriented architecture. These are collections of information services, modules and functional components that can be reused in a variety of common contexts. The course will apply several tools to exemplify the use of heterogeneous reusable modules to fulfill an information service. An underlying methodology for integration will be applied.
+summary: Upper-level course in integration methodologies and tools for advanced undergraduates covering enterprise software architecture and integration approaches.
 keywords:
-  - "IT460"
-  - "Integration Methodologies and Tools"
-  - "UMass Boston"
-  - "course"
+- IT460
+- Integration Methodologies and Tools
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT460
+- IT 460
+- 'IT460: Integration Methodologies and Tools'
+- 'IT 460: Integration Methodologies and Tools'
+prerequisites:
+- 60 credits.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

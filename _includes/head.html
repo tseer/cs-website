@@ -3,15 +3,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {%- seo -%}
+  {%- assign site_root_url = '/' | absolute_url -%}
+  {%- assign organization_url = site.organization_url | default: site.url -%}
+  {%- assign page_title_for_head = page.title | default: page.course_code | default: site.title -%}
+  {%- assign canonical_url = page.url | absolute_url -%}
+  {%- assign page_description_for_meta = page.summary | default: page.description | default: site.description | strip_html | normalize_whitespace -%}
+  {%- assign page_description_for_meta = page_description_for_meta | truncate: 180 -%}
+  <title>{% if page_title_for_head == site.title %}{{ site.title | escape }}{% else %}{{ page_title_for_head | escape }} | {{ site.title | escape }}{% endif %}</title>
+  <meta property="og:title" content="{{ page_title_for_head | escape }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page_title_for_head | escape }}">
   <link rel="stylesheet" href="{{ 'WEB/assets/main.css' | relative_url }}">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="canonical" href="{{ canonical_url }}">
   <link rel="alternate" type="application/json" href="{{ '/site-index.json' | relative_url }}">
   <link rel="alternate" type="application/json" href="{{ '/ai-search.json' | relative_url }}">
   {%- feed_meta -%}
 
-  {%- if page.description -%}
-    <meta name="description" content="{{ page.description | strip_html | strip_newlines | escape }}">
+  {%- if page_description_for_meta -%}
+    <meta name="description" content="{{ page_description_for_meta | strip_html | strip_newlines | escape }}">
+    <meta property="og:description" content="{{ page_description_for_meta | strip_html | strip_newlines | escape }}">
+    <meta name="twitter:description" content="{{ page_description_for_meta | strip_html | strip_newlines | escape }}">
   {%- endif -%}
 
   {%- if page.keywords -%}
@@ -19,182 +33,16 @@
   {%- endif -%}
 
   {%- assign page_title_for_schema = page.title | default: page.course_code | default: site.title -%}
-  {%- assign page_description_for_schema = page.description | default: site.description -%}
-  {%- assign breadcrumb_current_name = page.title | default: page.course_code | default: site.title -%}
-  {%- if page.layout == "course" and page.course_name -%}
-    {%- assign breadcrumb_current_name = page.course_code | append: ": " | append: page.course_name -%}
-  {%- elsif page.layout == "course" -%}
-    {%- assign breadcrumb_current_name = page.course_code -%}
-  {%- endif -%}
-  {%- capture breadcrumb_items -%}
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": {{ '/' | absolute_url | jsonify }}
-    }
-    {%- if page.layout == "course" -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Academics",
-      "item": {{ '/academics/' | absolute_url | jsonify }}
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Courses",
-      "item": {{ '/courses' | absolute_url | jsonify }}
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": {{ breadcrumb_current_name | jsonify }},
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-    {%- elsif page.path contains 'WEB/academics/' -%}
-      {%- if page.url == '/academics/' -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Academics",
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-      {%- else -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Academics",
-      "item": {{ '/academics/' | absolute_url | jsonify }}
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": {{ breadcrumb_current_name | jsonify }},
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-      {%- endif -%}
-    {%- elsif page.path contains 'WEB/about/' -%}
-      {%- if page.url == '/about/' -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "About",
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-      {%- else -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "About",
-      "item": {{ '/about/' | absolute_url | jsonify }}
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": {{ breadcrumb_current_name | jsonify }},
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-      {%- endif -%}
-    {%- elsif page.path contains 'WEB/people/' -%}
-      {%- if page.url == '/people/' -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "People",
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-      {%- else -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "People",
-      "item": {{ '/people/' | absolute_url | jsonify }}
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": {{ breadcrumb_current_name | jsonify }},
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-      {%- endif -%}
-    {%- elsif page.path contains 'WEB/research/' or page.categories contains 'research' -%}
-      {%- if page.url == '/research/' -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Research",
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-      {%- else -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Research",
-      "item": {{ '/research/' | absolute_url | jsonify }}
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": {{ breadcrumb_current_name | jsonify }},
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-      {%- endif -%}
-    {%- elsif page.path contains 'WEB/resources/' -%}
-      {%- if page.url == '/resources/' -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Resources",
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-      {%- else -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Resources",
-      "item": {{ '/resources/' | absolute_url | jsonify }}
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": {{ breadcrumb_current_name | jsonify }},
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-      {%- endif -%}
-    {%- elsif page.path contains 'WEB/jobs-intern/' or page.layout == 'post' -%}
-      {%- unless page.categories contains 'research' -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "News and Events",
-      "item": {{ '/news-and-events/' | absolute_url | jsonify }}
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": {{ breadcrumb_current_name | jsonify }},
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-      {%- endunless -%}
-    {%- elsif page.url != '/' -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": {{ breadcrumb_current_name | jsonify }},
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
-    {%- endif -%}
-  {%- endcapture -%}
+  {%- assign page_description_for_schema = page.summary | default: page.description | default: site.description -%}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "CollegeOrUniversity",
-        "@id": {{ site.url | append: "/#organization" | jsonify }},
+        "@id": {{ organization_url | append: "#organization" | jsonify }},
         "name": {{ site.organization_name | default: "University of Massachusetts Boston" | jsonify }},
-        "url": {{ site.url | jsonify }},
+        "url": {{ organization_url | jsonify }},
         "description": {{ site.description | strip_html | normalize_whitespace | jsonify }},
         "logo": {
           "@type": "ImageObject",
@@ -214,12 +62,12 @@
       },
       {
         "@type": "WebSite",
-        "@id": {{ site.url | append: "/#website" | jsonify }},
-        "url": {{ site.url | jsonify }},
+        "@id": {{ site_root_url | append: "#website" | jsonify }},
+        "url": {{ site_root_url | jsonify }},
         "name": {{ site.title | jsonify }},
         "description": {{ site.description | strip_html | normalize_whitespace | jsonify }},
         "publisher": {
-          "@id": {{ site.url | append: "/#organization" | jsonify }}
+          "@id": {{ organization_url | append: "#organization" | jsonify }}
         }
       },
       {
@@ -229,16 +77,9 @@
         "name": {{ page_title_for_schema | jsonify }},
         "description": {{ page_description_for_schema | strip_html | normalize_whitespace | jsonify }},
         "isPartOf": {
-          "@id": {{ site.url | append: "/#website" | jsonify }}
+          "@id": {{ site_root_url | append: "#website" | jsonify }}
         }
       }
-      {% if page.url != "/" %},
-      {
-        "@type": "BreadcrumbList",
-        "@id": {{ page.url | absolute_url | append: "#breadcrumb" | jsonify }},
-        "itemListElement": [{{ breadcrumb_items | strip }}]
-      }
-      {% endif %}
     ]
   }
   </script>

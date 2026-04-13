@@ -1,16 +1,28 @@
 ---
-title: "CS442"
+title: 'CS442: Cybersecurity in the Internet of Things'
 layout: course
 permalink: "/academics/courses/CS442"
-course_code: "CS442"
-course_name: "Cybersecurity in the Internet of Things"
+entity_type: course
+course_code: CS442
+course_name: Cybersecurity in the Internet of Things
 credits: 3
-description: "This course aims to introduce the concept of IoT and its impact on our daily lives, to understand the architecture and components of IoT, and to address the challenges and solutions of deploying IoT in reality. Students will learn how to make design trade-offs between communication and computation costs and between hardware and software. In addition, cybersecurity is a critical design issue of the IoT system. From this course, students will become aware of the cybersecurity issues raised by IoT and gain the knowledge of the related security techniques. Students will also gain hands-on experiences on building IoT devices and implementing security techniques through team projects."
-prerequisites:
-  - "CS310"
+description: This course aims to introduce the concept of IoT and its impact on our daily lives, to understand the architecture and components of IoT, and to address the challenges and solutions of deploying IoT in reality. Students will learn how to make design trade-offs between communication and computation costs and between hardware and software. In addition, cybersecurity is a critical design issue of the IoT system. From this course, students will become aware of the cybersecurity issues raised by IoT and gain the knowledge of the related security techniques. Students will also gain hands-on experiences on building IoT devices and implementing security techniques through team projects.
+summary: Upper-level course in cybersecurity in the internet of things for advanced undergraduates covering IoT architecture, security, and hands-on system design.
 keywords:
-  - "CS442"
-  - "Cybersecurity in the Internet of Things"
-  - "UMass Boston"
-  - "course"
+- CS442
+- Cybersecurity in the Internet of Things
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS442
+- CS 442
+- 'CS442: Cybersecurity in the Internet of Things'
+- 'CS 442: Cybersecurity in the Internet of Things'
+prerequisites:
+- CS310
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

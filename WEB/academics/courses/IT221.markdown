@@ -1,16 +1,28 @@
 ---
-title: "IT221"
+title: 'IT221: Computer Forensics II'
 layout: course
 permalink: "/academics/courses/IT221"
-course_code: "IT221"
-course_name: "Computer Forensics II"
+entity_type: course
+course_code: IT221
+course_name: Computer Forensics II
 credits: 3
-description: "This course is designed to expose students to advanced concepts in digital/computer forensic analysis. As with Computer Forensics I, there will be a balance between legal and technical aspects, although this course will focus more on the use of specific tools. For example the students will practice Disk and other digital device analysis using professional proprietary widely-used software tools such as Encase."
-prerequisites:
-  - "IT110 or MSIS110 or permission of instructor"
+description: This course is designed to expose students to advanced concepts in digital/computer forensic analysis. As with Computer Forensics I, there will be a balance between legal and technical aspects, although this course will focus more on the use of specific tools. For example the students will practice Disk and other digital device analysis using professional proprietary widely-used software tools such as Encase.
+summary: Intermediate course in computer forensics ii covering digital forensics methods and legal foundations.
 keywords:
-  - "IT221"
-  - "Computer Forensics II"
-  - "UMass Boston"
-  - "course"
+- IT221
+- Computer Forensics II
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT221
+- IT 221
+- 'IT221: Computer Forensics II'
+- 'IT 221: Computer Forensics II'
+prerequisites:
+- IT110 or MSIS110 or permission of instructor
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

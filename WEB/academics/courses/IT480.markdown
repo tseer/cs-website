@@ -1,16 +1,28 @@
 ---
-title: "IT480"
+title: 'IT480: Special Topics'
 layout: course
 permalink: "/academics/courses/IT480"
-course_code: "IT480"
-course_name: "Special Topics"
+entity_type: course
+course_code: IT480
+course_name: Special Topics
 credits: 3
-description: "A course covering material not currently covered by others course. This course can serve as a trial run of material which will later be covered in a new course added to the catalog"
-prerequisites:
-  - "IT443"
+description: A course covering material not currently covered by others course. This course can serve as a trial run of material which will later be covered in a new course added to the catalog
+summary: Upper-level course in special topics with content varying by offering.
 keywords:
-  - "IT480"
-  - "Special Topics"
-  - "UMass Boston"
-  - "course"
+- IT480
+- Special Topics
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT480
+- IT 480
+- 'IT480: Special Topics'
+- 'IT 480: Special Topics'
+prerequisites:
+- IT443
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

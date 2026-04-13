@@ -1,16 +1,29 @@
 ---
-title: "CS899"
+title: 'CS899: Research for PhD Thesis'
 layout: course
 permalink: "/academics/courses/CS899"
-course_code: "CS899"
-course_name: "Research for PhD Thesis"
-credits: "1-9"
-description: "Research, conducted under faculty supervision, which leads to the presentation of a doctoral dissertation. This course carries variable credit and can be taken more than once."
+entity_type: course
+course_code: CS899
+course_name: Research for PhD Thesis
+credits: 1-9
+description: Research, conducted under faculty supervision, which leads to the presentation of a doctoral dissertation. This course carries variable credit and can be taken more than once.
+summary: Doctoral research course supporting dissertation work in computer science.
 keywords:
-  - "CS899"
-  - "Research for PhD Thesis"
-  - "UMass Boston"
-  - "course"
+- CS899
+- Research for PhD Thesis
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS899
+- CS 899
+- 'CS899: Research for PhD Thesis'
+- 'CS 899: Research for PhD Thesis'
+prerequisites: []
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Note

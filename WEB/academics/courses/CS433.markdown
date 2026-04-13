@@ -1,16 +1,28 @@
 ---
-title: "CS433"
+title: 'CS433: Big Data Analytics'
 layout: course
 permalink: "/academics/courses/CS433"
-course_code: "CS433"
-course_name: "Big Data Analytics"
+entity_type: course
+course_code: CS433
+course_name: Big Data Analytics
 credits: 3
-description: "This course introduces methods and platforms for analyzing large amounts of data. Classical paradigms of parallel computing -- such as multithreading, message passing, and accelerator programming -- are presented. Machine learning and data mining techniques -- such as regression, clustering, classification, and deep learning -- are discussed. Platforms of computing with big data -- such as graph databases, distributed file systems, and map-reduce -- are introduced. This course prepares students to perform predictive modeling and explore large, complex datasets."
-prerequisites:
-  - "CS310, MATH 260, and MATH345; or permission of the instructor."
+description: This course introduces methods and platforms for analyzing large amounts of data. Classical paradigms of parallel computing -- such as multithreading, message passing, and accelerator programming -- are presented. Machine learning and data mining techniques -- such as regression, clustering, classification, and deep learning -- are discussed. Platforms of computing with big data -- such as graph databases, distributed file systems, and map-reduce -- are introduced. This course prepares students to perform predictive modeling and explore large, complex datasets.
+summary: Upper-level course in big data analytics for advanced undergraduates covering large-scale data analysis and modern machine learning methods.
 keywords:
-  - "CS433"
-  - "Big Data Analytics"
-  - "UMass Boston"
-  - "course"
+- CS433
+- Big Data Analytics
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS433
+- CS 433
+- 'CS433: Big Data Analytics'
+- 'CS 433: Big Data Analytics'
+prerequisites:
+- CS310, MATH 260, and MATH345; or permission of the instructor.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

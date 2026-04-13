@@ -1,16 +1,28 @@
 ---
-title: "CS697"
+title: 'CS697: Special Topics'
 layout: course
 permalink: "/academics/courses/CS697"
-course_code: "CS697"
-course_name: "Special Topics"
+entity_type: course
+course_code: CS697
+course_name: Special Topics
 credits: 3
-description: "Topics of current interest in the field, according to student and faculty areas of specialization. Course content varies according to the topic and wiill be announced prior to registration."
-prerequisites:
-  - "instructor permission"
+description: Topics of current interest in the field, according to student and faculty areas of specialization. Course content varies according to the topic and wiill be announced prior to registration.
+summary: Graduate course in special topics with content varying by offering.
 keywords:
-  - "CS697"
-  - "Special Topics"
-  - "UMass Boston"
-  - "course"
+- CS697
+- Special Topics
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS697
+- CS 697
+- 'CS697: Special Topics'
+- 'CS 697: Special Topics'
+prerequisites:
+- instructor permission
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

@@ -1,16 +1,28 @@
 ---
-title: "IT341"
+title: 'IT341: Introduction to System Administration'
 layout: course
 permalink: "/academics/courses/IT341"
-course_code: "IT341"
-course_name: "Introduction to System Administration"
+entity_type: course
+course_code: IT341
+course_name: Introduction to System Administration
 credits: 3
-description: "This is an introduction to the process of choosing, installing, configuring and maintaining UNIX operating systems such as Linux. Topics include user management, file system management, security, networked file systems (NFS), networked information systems (NIS), domain name servers (DNS), mail systems and printers. Students will get practice writing shell scripts. Also, students are introduced to general system administration policy."
-prerequisites:
-  - "IT244."
+description: This is an introduction to the process of choosing, installing, configuring and maintaining UNIX operating systems such as Linux. Topics include user management, file system management, security, networked file systems (NFS), networked information systems (NIS), domain name servers (DNS), mail systems and printers. Students will get practice writing shell scripts. Also, students are introduced to general system administration policy.
+summary: Introductory course in system administration covering processes, memory, files, and operating system design.
 keywords:
-  - "IT341"
-  - "Introduction to System Administration"
-  - "UMass Boston"
-  - "course"
+- IT341
+- Introduction to System Administration
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT341
+- IT 341
+- 'IT341: Introduction to System Administration'
+- 'IT 341: Introduction to System Administration'
+prerequisites:
+- IT244.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

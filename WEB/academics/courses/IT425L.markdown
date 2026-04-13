@@ -1,16 +1,28 @@
 ---
-title: "IT425L"
+title: 'IT425L: Project Management'
 layout: course
 permalink: "/academics/courses/IT425L"
-course_code: "IT425L"
-course_name: "Project Management"
+entity_type: course
+course_code: IT425L
+course_name: Project Management
 credits: 3
-description: "This course covers techniques and managerial concepts of project management. It prepares students to manage either complex physical projects or complex software development projects. Topics presented in this course include project life cycles, economic analysis of projects, work breakdown structure, cost estimation, and the scheduling, staffing, directing, and controlling of projects. The course also covers the use of management science techniques and computer software for project management."
-prerequisites:
-  - "60 credits."
+description: This course covers techniques and managerial concepts of project management. It prepares students to manage either complex physical projects or complex software development projects. Topics presented in this course include project life cycles, economic analysis of projects, work breakdown structure, cost estimation, and the scheduling, staffing, directing, and controlling of projects. The course also covers the use of management science techniques and computer software for project management.
+summary: Upper-level course in project management for advanced undergraduates covering processes, memory, files, and operating system design.
 keywords:
-  - "IT425L"
-  - "Project Management"
-  - "UMass Boston"
-  - "course"
+- IT425L
+- Project Management
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT425L
+- IT 425L
+- 'IT425L: Project Management'
+- 'IT 425L: Project Management'
+prerequisites:
+- 60 credits.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

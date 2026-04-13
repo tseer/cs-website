@@ -1,17 +1,29 @@
 ---
-title: "CS624"
+title: 'CS624: Analysis of Algorithms'
 layout: course
 permalink: "/academics/courses/CS624"
-course_code: "CS624"
-course_name: "Analysis of Algorithms"
+entity_type: course
+course_code: CS624
+course_name: Analysis of Algorithms
 credits: 3
-description: "Basic techniques for designing algorithms: divide and conquer, the greedy method, dynamic programming, etc. Applications to searching and sorting algorithms. Complexity of parsing. The fast Fourier transform and its applications (evaluation of polynomials and arithmetical problems). Lower bound theory. NP-hard and NP-complete problems. Probabilistic estimates of algorithms."
-prerequisites:
-  - "CS220/CS320L/MATH320L"
-  - "Permission of the instructor"
+description: 'Basic techniques for designing algorithms: divide and conquer, the greedy method, dynamic programming, etc. Applications to searching and sorting algorithms. Complexity of parsing. The fast Fourier transform and its applications (evaluation of polynomials and arithmetical problems). Lower bound theory. NP-hard and NP-complete problems. Probabilistic estimates of algorithms.'
+summary: Graduate course in analysis of algorithms for graduate students covering algorithms, abstract data types, and complexity analysis.
 keywords:
-  - "CS624"
-  - "Analysis of Algorithms"
-  - "UMass Boston"
-  - "course"
+- CS624
+- Analysis of Algorithms
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS624
+- CS 624
+- 'CS624: Analysis of Algorithms'
+- 'CS 624: Analysis of Algorithms'
+prerequisites:
+- CS220/CS320L/MATH320L
+- Permission of the instructor
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

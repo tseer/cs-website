@@ -2,6 +2,7 @@
 layout: page
 title: People
 permalink: /people/
+summary: Find faculty and staff profiles, contact information, and department leadership across the UMass Boston Computer Science Department.
 schema_collection_key: people
 ---
 

@@ -1,7 +1,57 @@
 ---
-title: "Computer Science BS"
+title: Computer Science BS
 layout: page
 permalink: "/cs_bs"
+entity_type: program
+program_name: Computer Science BS
+description: Degree requirements, outcomes, and sample course planning information for the UMass Boston Bachelor of Science in Computer Science.
+summary: Degree requirements, outcomes, and sample course planning information for the UMass Boston Bachelor of Science in Computer Science.
+keywords:
+- Computer Science BS
+- BS in Computer Science
+- Bachelor of Science in Computer Science
+- computer science major
+- UMass Boston
+- Computer Science Department
+- ABET
+aliases:
+- Computer Science BS
+- BS in Computer Science
+- CS BS
+- Bachelor of Science in Computer Science
+related_people: []
+related_courses:
+- CS110
+- CS210
+- CS240
+- CS220
+- CS310
+- CS341
+- CS420
+- CS450
+- CS444
+- CS451
+- CS410
+- CS285L
+- CS446
+- CS449
+related_groups: []
+related_programs:
+- "/undergraduate-programs"
+- "/honors-programs"
+related_topics:
+- bachelor of science
+- computer science major
+- abet accreditation
+- degree requirements
+audience:
+- undergraduate students pursuing a computer science major
+- prospective CS majors
+action_phrases:
+- review CS BS requirements
+- plan a computer science major
+- compare BA and BS pathways
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 Our BS program in Computer Science is accredited by the [Computing Accreditation Commission of ABET](https://www.abet.org/). ABET assures quality for degree programs in applied science, computing, engineering, and technology. The program provides a rigorous education in theory and practice of Computer Science in addition to outside science courses. A BS degree can be used as a basis for many jobs in industry or for graduate work in Computer Science and other fields. We have an Honors Program for students who complete an Honors Thesis.

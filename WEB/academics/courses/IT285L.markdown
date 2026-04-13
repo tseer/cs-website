@@ -1,16 +1,29 @@
 ---
-title: "IT285L"
+title: 'IT285L: Introduction to Networks'
 layout: course
 permalink: "/academics/courses/IT285L"
-course_code: "IT285L"
-course_name: "Introduction to Networks"
+entity_type: course
+course_code: IT285L
+course_name: Introduction to Networks
 credits: 3
-description: "This course explores some of the ethical and societal issues that are raised by computing. Topics include privacy, freedom of expression, intellectual property, liability, the effect of computing on social interaction, and human-computer interface issues. Students write an analytical paper on an appropriate topic and also present their findings to the class."
+description: This course explores some of the ethical and societal issues that are raised by computing. Topics include privacy, freedom of expression, intellectual property, liability, the effect of computing on social interaction, and human-computer interface issues. Students write an analytical paper on an appropriate topic and also present their findings to the class.
+summary: Introductory course in networks covering ethics, privacy, and social impacts of computing.
 keywords:
-  - "IT285L"
-  - "Introduction to Networks"
-  - "UMass Boston"
-  - "course"
+- IT285L
+- Introduction to Networks
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT285L
+- IT 285L
+- 'IT285L: Introduction to Networks'
+- 'IT 285L: Introduction to Networks'
+prerequisites: []
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Note

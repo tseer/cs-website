@@ -1,17 +1,31 @@
 ---
-title: "CS449"
+title: 'CS449: Introduction to Computer Security'
 layout: course
 permalink: "/academics/courses/CS449"
-course_code: "CS449"
-course_name: "Introduction to Computer Security"
+entity_type: course
+course_code: CS449
+course_name: Introduction to Computer Security
 credits: 3
-description: "The course will provide an introduction to the fundamentals of computer security, and will cover both general theoretical aspects as well as applied methods of computer security. The course will address the general concepts of confidentiality, integrity and availability of digital information, and will focus on aspects such as: risks and vulnerabilities; models and policies for access control; program security - buffer overflow attacks, malware, viruses; browser security; authentication and authorization; encryption; and an overview of applied data, operating system and network security (with emphasis on Internet security). The course will also address the aspect of privacy, which is tightly related to security and is becoming increasingly important in today's digital society."
-prerequisites:
-  - "CS310"
-  - "CS341"
+description: 'The course will provide an introduction to the fundamentals of computer security, and will cover both general theoretical aspects as well as applied methods of computer security. The course will address the general concepts of confidentiality, integrity and availability of digital information, and will focus on aspects such as: risks and vulnerabilities; models and policies for access control; program security - buffer overflow attacks, malware, viruses; browser security; authentication and authorization; encryption; and an overview of applied data, operating system and network security (with emphasis on Internet security). The course will also address the aspect of privacy, which is tightly related to security and is becoming increasingly important in today''s digital society.'
+summary: Introductory course in computer security for advanced undergraduates covering ethics, privacy, and social impacts of computing.
 keywords:
-  - "CS449"
-  - "Computer Security"
-  - "UMass Boston"
-  - "course"
+- CS449
+- Computer Security
+- UMass Boston
+- course
+- Introduction to Computer Security
+- Computer Science
+aliases:
+- CS449
+- CS 449
+- 'CS449: Introduction to Computer Security'
+- 'CS 449: Introduction to Computer Security'
+prerequisites:
+- CS310
+- CS341
+co_requisites: []
+related_programs: []
+related_topics:
+- Computer Security
+provider_id: https://www.cs.umb.edu/#department
 ---

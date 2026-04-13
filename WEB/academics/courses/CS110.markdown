@@ -1,18 +1,30 @@
 ---
-title: "CS110"
+title: 'CS110: Introduction to Computing'
 layout: course
 permalink: "/academics/courses/CS110"
-course_code: "CS110"
-course_name: "Introduction to Computing"
+entity_type: course
+course_code: CS110
+course_name: Introduction to Computing
 credits: 4
-description: "An introduction to computer programming: the concepts involved in using a high-level language and the program development process. The goal of this course is proficiency in the design and implementation of programs of significant size and complexity. This course is quite demanding because of the length of the programming exercises assigned. This is the first course in the computer science major sequence."
-prerequisites:
-  - "MATH 130 with a grade of B or better in the previous semester; or ALEKS placement for MATH 140"
+description: 'An introduction to computer programming: the concepts involved in using a high-level language and the program development process. The goal of this course is proficiency in the design and implementation of programs of significant size and complexity. This course is quite demanding because of the length of the programming exercises assigned. This is the first course in the computer science major sequence.'
+summary: Introductory course in computing covering programming fundamentals and software design.
 keywords:
-  - "CS110"
-  - "Introduction to Computing"
-  - "UMass Boston"
-  - "course"
+- CS110
+- Introduction to Computing
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS110
+- CS 110
+- 'CS110: Introduction to Computing'
+- 'CS 110: Introduction to Computing'
+prerequisites:
+- MATH 130 with a grade of B or better in the previous semester; or ALEKS placement for MATH 140
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Notes

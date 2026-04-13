@@ -1,0 +1,87 @@
+{% assign has_connections = false %}
+{% assign connection_topics = page.related_topics | default: page.research_areas %}
+{% if page.audience or page.related_people.size > 0 or page.related_courses.size > 0 or page.related_groups.size > 0 or page.related_programs.size > 0 or connection_topics.size > 0 %}
+{% assign has_connections = true %}
+{% endif %}
+{% if has_connections %}
+<section class="entity-connections">
+  {% if page.audience %}
+  <div class="entity-connections-block">
+    <h2>Audience</h2>
+    {% if page.audience.first %}
+    <ul>
+      {% for item in page.audience %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>{{ page.audience }}</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% assign related_people = site.people | where_exp: "person", "page.related_people contains person.slug" %}
+  {% if related_people.size > 0 %}
+  <div class="entity-connections-block">
+    <h2>Related People</h2>
+    <ul>
+      {% for person in related_people %}
+      <li><a href="{{ person.url | relative_url }}">{{ person.person_name }}</a>{% if person.job_title %}, {{ person.job_title }}{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if page.related_courses and page.related_courses.size > 0 %}
+  <div class="entity-connections-block">
+    <h2>Related Courses</h2>
+    <ul>
+      {% for course_code in page.related_courses %}
+      <li><a href="{{ '/academics/courses/' | append: course_code | relative_url }}">{{ course_code }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% assign related_groups = site.groups | where_exp: "group", "page.related_groups contains group.slug" %}
+  {% if related_groups.size > 0 %}
+  <div class="entity-connections-block">
+    <h2>Related Groups</h2>
+    <ul>
+      {% for group in related_groups %}
+      <li><a href="{{ group.url | relative_url }}">{{ group.group_name | default: group.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if page.related_programs and page.related_programs.size > 0 %}
+  <div class="entity-connections-block">
+    <h2>Related Programs</h2>
+    <ul>
+      {% for program_url in page.related_programs %}
+      {% assign program_page = site.pages | where: "url", program_url | first %}
+      <li>
+        {% if program_page %}
+        <a href="{{ program_page.url | relative_url }}">{{ program_page.program_name | default: program_page.title }}</a>
+        {% else %}
+        {{ program_url }}
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if connection_topics and connection_topics.size > 0 %}
+  <div class="entity-connections-block">
+    <h2>Related Topics</h2>
+    <ul>
+      {% for topic in connection_topics %}
+      <li>{{ topic }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</section>
+{% endif %}

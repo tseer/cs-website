@@ -1,18 +1,30 @@
 ---
-title: "IT114L"
+title: 'IT114L: Introduction to Java Part I'
 layout: course
 permalink: "/academics/courses/IT114L"
-course_code: "IT114L"
-course_name: "Introduction to Java Part I"
+entity_type: course
+course_code: IT114L
+course_name: Introduction to Java Part I
 credits: 3
-description: "An introductory course in Java programming that exposes students to the concepts involved in using a higher-level, object-oriented programming language. The course will explain the program development process and give students lots of hands-on experience writing small Java programs."
-prerequisites:
-  - "Math129 or Math130 or appropriate scores on the Math placement exam."
+description: An introductory course in Java programming that exposes students to the concepts involved in using a higher-level, object-oriented programming language. The course will explain the program development process and give students lots of hands-on experience writing small Java programs.
+summary: Introductory course in java part i covering Java programming fundamentals with hands-on practice.
 keywords:
-  - "IT114L"
-  - "Introduction to Java Part I"
-  - "UMass Boston"
-  - "course"
+- IT114L
+- Introduction to Java Part I
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT114L
+- IT 114L
+- 'IT114L: Introduction to Java Part I'
+- 'IT 114L: Introduction to Java Part I'
+prerequisites:
+- Math129 or Math130 or appropriate scores on the Math placement exam.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Note

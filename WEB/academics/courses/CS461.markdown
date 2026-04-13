@@ -1,16 +1,30 @@
 ---
-title: "CS461"
+title: 'CS461: Computer Games Programming'
 layout: course
 permalink: "/academics/courses/CS461"
-course_code: "CS461"
-course_name: "Computer Games Programming"
+entity_type: course
+course_code: CS461
+course_name: Computer Games Programming
 credits: 3
-description: "This course covers the game development pipeline, from modeling of virtual environments and gaming assets, to interactive rendering and real-time physics-based simulation in virtual environments. The syllabus is centered on the essential components of a game engine. Special technical issues in game development will also be discussed, such as real-time interactivity, scalability of modeling techniques and the use of the latest virtual reality devices to enhance gaming experience. Students are required to implement some of the standard techniques adopted in common game engines. Students also need to team up to develop their own games using a game engine. The goal of this course is to prepare students for a career as a game developer."
-prerequisites:
-  - "CS310"
+description: This course covers the game development pipeline, from modeling of virtual environments and gaming assets, to interactive rendering and real-time physics-based simulation in virtual environments. The syllabus is centered on the essential components of a game engine. Special technical issues in game development will also be discussed, such as real-time interactivity, scalability of modeling techniques and the use of the latest virtual reality devices to enhance gaming experience. Students are required to implement some of the standard techniques adopted in common game engines. Students also need to team up to develop their own games using a game engine. The goal of this course is to prepare students for a career as a game developer.
+summary: Upper-level course in computer games programming for advanced undergraduates covering game engine concepts and game development workflows.
 keywords:
-  - "CS461"
-  - "Game Development"
-  - "UMass Boston"
-  - "course"
+- CS461
+- Game Development
+- UMass Boston
+- course
+- Computer Games Programming
+- Computer Science
+aliases:
+- CS461
+- CS 461
+- 'CS461: Computer Games Programming'
+- 'CS 461: Computer Games Programming'
+prerequisites:
+- CS310
+co_requisites: []
+related_programs: []
+related_topics:
+- Game Development
+provider_id: https://www.cs.umb.edu/#department
 ---

@@ -1,18 +1,30 @@
 ---
-title: "CS271L"
+title: 'CS271L: Introduction to Cognitive Science'
 layout: course
 permalink: "/academics/courses/CS271L"
-course_code: "CS271L"
-course_name: "Introduction to Cognitive Science"
+entity_type: course
+course_code: CS271L
+course_name: Introduction to Cognitive Science
 credits: 3
-description: "Cognitive science is an interdisciplinary field fundamentally concerned with furthering our understanding of the development, underlying processes, and implementation of language, perception, problem-solving, learning, memory, and other intelligent capacities. This course offers an introduction to this science for all levels of undergraduate majors in psychology, computer science, biology, and other related fields.CS 271L and PSYCH 271L are the same course"
-prerequisites:
-  - "None."
+description: Cognitive science is an interdisciplinary field fundamentally concerned with furthering our understanding of the development, underlying processes, and implementation of language, perception, problem-solving, learning, memory, and other intelligent capacities. This course offers an introduction to this science for all levels of undergraduate majors in psychology, computer science, biology, and other related fields.CS 271L and PSYCH 271L are the same course
+summary: Introductory course in cognitive science covering cognition, perception, language, and intelligent behavior.
 keywords:
-  - "CS271L"
-  - "Introduction to Cognitive Science"
-  - "UMass Boston"
-  - "course"
+- CS271L
+- Introduction to Cognitive Science
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS271L
+- CS 271L
+- 'CS271L: Introduction to Cognitive Science'
+- 'CS 271L: Introduction to Cognitive Science'
+prerequisites:
+- None.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Notes

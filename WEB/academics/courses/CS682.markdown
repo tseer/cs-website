@@ -1,16 +1,28 @@
 ---
-title: "CS682"
+title: 'CS682: Software Development Laboratory I'
 layout: course
 permalink: "/academics/courses/CS682"
-course_code: "CS682"
-course_name: "Software Development Laboratory I"
+entity_type: course
+course_code: CS682
+course_name: Software Development Laboratory I
 credits: 3
-description: "This is a laboratory course in which students, working in small groups, specify, design, implement, and document a large software project."
-co_requisites:
-  - "CS681"
+description: This is a laboratory course in which students, working in small groups, specify, design, implement, and document a large software project.
+summary: Graduate course in software development laboratory i for graduate students covering advanced software design through intensive team projects.
 keywords:
-  - "CS682"
-  - "Software Development Laboratory I"
-  - "UMass Boston"
-  - "course"
+- CS682
+- Software Development Laboratory I
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS682
+- CS 682
+- 'CS682: Software Development Laboratory I'
+- 'CS 682: Software Development Laboratory I'
+prerequisites: []
+co_requisites:
+- CS681
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

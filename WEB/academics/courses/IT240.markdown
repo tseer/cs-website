@@ -1,16 +1,29 @@
 ---
-title: "IT240"
+title: 'IT240: Web Fluency'
 layout: course
 permalink: "/academics/courses/IT240"
-course_code: "IT240"
-course_name: "Web Fluency"
+entity_type: course
+course_code: IT240
+course_name: Web Fluency
 credits: 3
-description: "This course develop an in-depth understanding of how the web works from a technical standpoint, meaning how dynamic pages are created and delivered by web servers, and then used by browsers and other clients. Students demonstrate this understanding by achieving competency by using a current integrated development environment (IDE) to develop web applications."
+description: This course develop an in-depth understanding of how the web works from a technical standpoint, meaning how dynamic pages are created and delivered by web servers, and then used by browsers and other clients. Students demonstrate this understanding by achieving competency by using a current integrated development environment (IDE) to develop web applications.
+summary: Intermediate course in web fluency covering how web applications are built and delivered.
 keywords:
-  - "IT240"
-  - "Web Fluency"
-  - "UMass Boston"
-  - "course"
+- IT240
+- Web Fluency
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT240
+- IT 240
+- 'IT240: Web Fluency'
+- 'IT 240: Web Fluency'
+prerequisites: []
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Note

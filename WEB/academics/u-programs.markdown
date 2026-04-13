@@ -1,34 +1,29 @@
 ---
-title: "Undergraduate Programs"
+title: Undergraduate Programs
 layout: page
 permalink: "/undergraduate-programs"
-description: "UMass Boston Computer Science undergraduate programs include the BA and BS in Computer Science, the BS in Information Technology, and the undergraduate certificate in Computer Science."
+entity_type: program
+program_name: Undergraduate Programs
+description: UMass Boston Computer Science undergraduate programs include the BA and BS in Computer Science, the BS in Information Technology, and the undergraduate certificate in Computer Science.
+summary: Overview of UMass Boston undergraduate computer science offerings, including the BA and BS in Computer Science, the BS in Information Technology, and the undergraduate certificate pathway.
 keywords:
-  - "Undergraduate Programs"
-  - "Computer Science"
-  - "Information Technology"
-  - "UMass Boston"
-  - "Computer Science Department"
+- Undergraduate Programs
+- Computer Science
+- Information Technology
+- UMass Boston
+- Computer Science Department
+aliases:
+- Undergraduate Programs
+- Undergraduate Computer Science Programs
+related_courses:
+- CS105
+related_topics:
+- undergraduate study
+- computer science
+- information technology
+- certificate programs
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOccupationalProgram",
-  "name": {{ page.title | jsonify }},
-  "url": {{ page.url | absolute_url | jsonify }},
-  "description": {{ page.description | jsonify }},
-  "provider": {
-    "@type": "CollegeOrUniversity",
-    "name": "UMass Boston",
-    "department": {
-      "@type": "EducationalOrganization",
-      "name": "Computer Science"
-    }
-  }
-}
-</script>
-
 For more information on our program click below:
 
 - [Computer Science BA Program]({{site.baseurl}}/cs_ba)

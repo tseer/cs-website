@@ -2,222 +2,24 @@
 title: "Faculty"
 layout: page
 permalink: "/faculty"
+summary: Browse current and retired faculty in the UMass Boston Computer Science Department, including profile links and contact information.
 ---
 
 <div id='active_faculty' class='listing'>
+  {% assign active_people = site.people | where: "status", "active" | sort: "sort_order" %}
+  {% for person in active_people %}
   <div class="person">
-    <a href="https://www.cs.umb.edu/~ozgun"><img src="/WEB/images/people/ozgun_babur.jpg"></a><br>
-    <a href="https://www.cs.umb.edu/~ozgun" target=_blank>Ozgun Babur</a><br>
-    Assistant Professor<br>
-    M-3-201-02<br>
-    ozgun.babur@umb.edu<br>
-    <br>
+    <a href="{{ person.url | relative_url }}"><img src="{{ person.image | relative_url }}" alt="{{ person.person_name }}"></a><br>
+    <a href="{{ person.url | relative_url }}">{{ person.person_name }}</a><br>
+    {{ person.job_title }}<br>
+    {% if person.office %}{{ person.office }}<br>{% endif %}
+    {% if person.telephone %}{{ person.telephone }}<br>{% endif %}
+    {% if person.email %}<a href="mailto:{{ person.email }}">{{ person.email }}</a><br>{% endif %}
+    {% if person.same_as and person.same_as.size > 0 %}
+    <a href="{{ person.same_as | first }}" target="_blank" rel="noopener">External profile</a>
+    {% endif %}
   </div>
-  <div class="person">
-    <img src="/WEB/images/people/Temitayo_Banjo.jpg"><br>
-    Temitayo Banjo<br>
-    Lecturer<br>
-    M-3-201-32<br>
-    617.287.6490<br>
-    temitayo.banjo@umb.edu
-  </div>
-  <div class="person">
-    <a href="https://www.cs.umb.edu/~stchang/"><img src="/WEB/images/people/stephen_chang.jpg"></a><br>
-    <a href="https://www.cs.umb.edu/~stchang/" target=_blank>Stephen Chang</a><br>
-    Assistant Professor<br>
-    M-3-201-03<br>
-    stephen.chang@umb.edu<br>
-    <br>
-  </div>
-  <div class="person">
-    <a href="https://cogumbreiro.github.io/"><img src="/WEB/images/people/Tiago_Cogumbreiro.jpg"></a><br>
-    <a href="https://cogumbreiro.github.io/" target=_blank>Tiago Cogumbreiro</a><br>
-    Associate Professor<br>
-    M-3-201-16<br>
-    617-287-6479<br>
-    tiago.cogumbreiro@umb.edu
-  </div>
-  <div class="person">
-    <a href="https://www.cs.umb.edu/~hdeblois"><img src="/WEB/images/people/Jane_Holly_DeBlois.jpg"></a><br>
-    <a href="https://www.cs.umb.edu/~hdeblois" target=_blank>Jane H. DeBlois</a><br>
-    Lecturer<br>
-    M-3-201-32<br>
-    jane.deblois@umb.edu<br>
-  </div>
-  <div class="person">
-    <a href="http://www.cs.umb.edu/~ding"><img src="/WEB/images/people/Wei_Ding.jpg"></a><br>
-    <a href="http://www.cs.umb.edu/~ding" target=_blank>Wei Ding</a><br>
-    Professor<br>
-    M-3-201-7<br>
-    617.287.6428<br>
-    wei.ding@umb.edu
-  </div>
-  <div class="person">
-    <a href="http://www.cs.umb.edu/~fundad"><img src="/WEB/images/people/Funda_Durupinar.jpg"></a><br>
-    <a href="http://www.cs.umb.edu/~fundad" target=_blank>Funda Durupinar</a><br>
-    Associate Professor<br>
-    M-3-201-08<br>
-    funda.durupinarbabur@umb.edu<br>
-    <br>
-  </div>
-  <div class="person">
-    <img src="/WEB/images/people/Kenneth_K_Fletcher.jpg"><br>
-    Kenneth Fletcher<br>
-    Associate Professor<br>
-    M-3-201-21<br>
-    kenneth.fletcher@umb.edu<br>
-    <br>
-  </div>
-  <div class="person">
-    <a href="http://www.cs.umb.edu/~gghinita/"><img src="/WEB/images/people/Gabriel_Ghinita.jpg"></a><br>
-    <a href="http://www.cs.umb.edu/~gghinita/" target=_blank>Gabriel Ghinita</a><br>
-    Professor<br>
-    M-3-201-19<br>
-    617.287.6479<br>
-    gabriel.ghinita@umb.edu
-  </div>
-  <div class="person">
-    <a href="http://www.cs.umb.edu/~haehn"><img src="/WEB/images/people/Daniel_Haehn.jpg"></a><br>
-    <a href="http://www.cs.umb.edu/~haehn" target=_blank>Daniel Haehn</a><br>
-    Associate Professor<br>
-    M-3-201-20<br>
-    daniel.haehn@umb.edu<br>
-    <br>
-  </div>
-  <div class="person">
-    <a href="http://www.cs.umb.edu/~nurith"><img src="/WEB/images/people/nurit_haspel.jpg"></a><br>
-    <a href="http://www.cs.umb.edu/~nurith" target=_blank>Nurit Haspel</a><br>
-    Professor, Department Chair<br>
-    M-3-201-09<br>
-    617-287-6414<br>
-    nurit.haspel@umb.edu
-  </div>
-  <div class="person">
-    <a href="http://www.cs.umb.edu/~ghoffman"><img src="/WEB/images/people/Glenn_Hoffman.jpg"></a><br>
-    <a href="http://www.cs.umb.edu/~ghoffman" target=_blank>Glenn Hoffman</a><br>
-    IT Program Director, Senior Lecturer<br>
-    M-3-201-22<br>
-    617-287-6466<br>
-    glenn.hoffman@umb.edu
-  </div>
-  <div class="person">
-    <a href="http://www.cs.umb.edu/~siyer"><img src="/WEB/images/people/swami.jpg"></a><br>
-    <a href="http://www.cs.umb.edu/~siyer" target=_blank>Swami Iyer</a><br>
-    Senior Lecturer<br>
-    M-3-201-14<br>
-    swaminathan.iyer@umb.edu<br>
-    <br>
-  </div>
-<div class="person">
-    <a href="https://talesimbiriba.github.io"><img src="/WEB/images/people/Tales_Imbiriba.jpg"></a><br>
-    <a href="https://talesimbiriba.github.io" target=_blank>Tales Imbiriba</a><br>
-    Assistant Professor<br>
-    M-3-201-04<br>
-    tales.imbiriba@umb.edu
-  </div>
-  <div class="person">
-    <img src="/WEB/images/people/Christopher_Kelly.jpg"><br>
-    Christopher Kelly<br>
-    Lecturer<br>
-    M-3-201-31<br>
-    christopher.kelly005@umb.edu<br>
-    <br>
-  </div>
-  <div class="person">
-    <a href="http://www.faculty.umb.edu/xiaohui.liang"><img src="/WEB/images/people/Xiaohui_Liang.jpg"></a><br>
-    <a href="http://www.faculty.umb.edu/xiaohui.liang" target=_blank>Xiaohui Liang</a><br>
-    Associate Professor<br>
-    M-3-201-24<br>
-    617-287-6791<br>
-    xiaohui.liang@umb.edu
-    <br>
-  </div>
-<div class="person">
-       <a href="https://www.cs.umb.edu/~tpapon/"><img src="/WEB/images/people/tarikulislam_papon.jpg"></a><br>
-    <a href="https://www.cs.umb.edu/~tpapon/" target=_blank>Tarikul Islam Papon</a><br>
-    Assistant Professor<br>
-    M-3-201-28<br>
-    <!-- 617-287-6791<br> -->
-    T.Papon@umb.edu
-  <br>
-  </div>
-  <div class="person">
-    <img src="/WEB/images/people/amanda_potasznik.jpg"><br>
-    <a href="https://blogs.umb.edu/potasznikresearch/" target=_blank>Amanda Potasznik</a><br>
-    Senior Lecturer<br>
-    M-3-201-31<br>
-    617-287-6490<br>
-    amanda.potasznik@umb.edu
-  </div>
-  <div class="person">
-    <a href="http://www.cs.umb.edu/~shengbo"><img src="/WEB/images/people/Bo_Sheng.jpg"></a><br>
-    <a href="http://www.cs.umb.edu/~shengbo" target=_blank>Bo Sheng</a><br>
-    Professor, Undergraduate Program Director<br>
-    M-3-201-23<br>
-    617.287.6468<br>
-    bo.sheng@umb.edu
-  </div>
-  <div class="person">
-    <a href="http://www.cs.umb.edu/~dsim"><img src="/WEB/images/people/Dan_Simovici.jpg"></a><br>
-    <a href="http://www.cs.umb.edu/~dsim" target=_blank>Dan Simovici</a><br>
-    Professor, Graduate Program Director<br>
-    M-3-201-05<br>
-    617-287-6472<br>
-    dan.simovici@umb.edu
-  </div>
-  <div class="person">
-    <a href="https://www.cs.umb.edu/~tsoro/"><img src="/WEB/images/people/Torna_Omar_Soro.jpg"></a><br>
-    <a href="https://www.cs.umb.edu/~tsoro/" target=_blank>Torna Soro</a><br>
-    Lecturer<br>
-    M-3-201-32<br>
-    torna.soro001@umb.edu<br>
-    <br>
-  </div>
-  <div class="person">
-    <a href="http://www.cs.umb.edu/~jxs"><img src="/WEB/images/people/Jun_Suzuki.jpg"></a><br>
-    <a href="http://www.cs.umb.edu/~jxs" target=_blank>Jun Suzuki</a><br>
-    Associate Professor<br>
-    M-3-201-15<br>
-    617.287.6462<br>
-    junichi.suzuki@umb.edu
-  </div>
-  <div class="person">
-    <a href="http://www.cs.umb.edu/~duc"><img src="/WEB/images/people/Duc_Tran.jpg"></a><br>
-    <a href="http://www.cs.umb.edu/~duc" target=_blank>Duc Tran</a><br>
-    Associate Professor<br>
-    M-3-201-18<br>
-    617-287-6452<br>
-    duc.tran@umb.edu
-  </div>
-  <div class="person">
-    <a href="https://www.cs.umb.edu/~ywan/"><img src="/WEB/images/people/Yinxin_Wan.jpg"></a><br>
-    <a href="https://www.cs.umb.edu/~ywan/" target=_blank>Yinxin Wan</a><br>
-    Assistant Professor<br>
-    M-3-201-06<br>
-    yinxin.wan@umb.edu
-  </div>
-  <div class="person">
-    <a href="https://www.cs.umb.edu/~spei2/"><img src="/WEB/images/people/Shichao_Pei.jpg"></a><br>
-    <a href="https://www.cs.umb.edu/~spei2/" target=_blank>Shichao Pei</a><br>
-    Assistant Professor<br>
-    M-3-201-05<br>
-    shichao.pei@umb.edu
-  </div>
-  <div class="person">
-    <img src="/WEB/images/people/No_Photo_Available.jpg"><br>
-    Zaihan Yang<br>
-    Lecturer<br>
-    zaihan.yang@umb.edu<br>
-    <br>
-    <br>
-  </div>
-  <div class="person">
-    <a href="https://soheilappear.github.io/soheilsepahyar/"><img src="/WEB/images/people/Soheil_Sepahyar.jpg"></a><br>
-    <a href="https://soheilappear.github.io/soheilsepahyar/" target=_blank>Soheil Sepahyar</a><br>
-    Lecturer<br>
-    M-3-201-31<br>
-    soheil.sepahyar@umb.edu
-  </div>
+  {% endfor %}
 </div>
 
 

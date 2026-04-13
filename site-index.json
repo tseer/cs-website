@@ -3,9 +3,10 @@ layout: null
 permalink: /site-index.json
 ---
 {
+  {% assign site_root_url = '/' | absolute_url %}
   "site": {
     "name": "UMass Boston Computer Science Department",
-    "url": {{ site.url | jsonify }}
+    "url": {{ site_root_url | jsonify }}
   },
   "sections": [
     {% assign indexed_section_keys = "academics|programs|people|resources" | split: "|" %}

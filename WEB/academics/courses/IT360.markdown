@@ -1,16 +1,28 @@
 ---
-title: "IT360"
+title: 'IT360: Enterprise Software'
 layout: course
 permalink: "/academics/courses/IT360"
-course_code: "IT360"
-course_name: "Enterprise Software"
+entity_type: course
+course_code: IT360
+course_name: Enterprise Software
 credits: 3
-description: "This course explains the core applications of a typical organization to support their fundamental business functions. It explains the role of IT in attaining competitive advantage and how modern organizations configure commercially available products to satisfy their information needs. The course makes extensive use of collaborative technologies and business applications to demonstrate the work of virtual teams and how they implement their operations."
-prerequisites:
-  - "60 credits."
+description: This course explains the core applications of a typical organization to support their fundamental business functions. It explains the role of IT in attaining competitive advantage and how modern organizations configure commercially available products to satisfy their information needs. The course makes extensive use of collaborative technologies and business applications to demonstrate the work of virtual teams and how they implement their operations.
+summary: Intermediate course in enterprise software covering enterprise software architecture and integration approaches.
 keywords:
-  - "IT360"
-  - "Enterprise Software"
-  - "UMass Boston"
-  - "course"
+- IT360
+- Enterprise Software
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT360
+- IT 360
+- 'IT360: Enterprise Software'
+- 'IT 360: Enterprise Software'
+prerequisites:
+- 60 credits.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

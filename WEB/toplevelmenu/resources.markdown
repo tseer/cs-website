@@ -2,6 +2,7 @@
 layout: page
 title: Resources
 permalink: /resources/
+summary: Access department tools, policies, office hours, and software resources for UMass Boston Computer Science students.
 schema_collection_key: resources
 ---
 

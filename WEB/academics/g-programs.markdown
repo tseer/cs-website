@@ -1,34 +1,35 @@
 ---
-title: "Graduate Programs"
+title: Graduate Programs
 layout: page
 permalink: "/graduate-programs"
-description: "UMass Boston Computer Science graduate programs include the MS and PhD in Computer Science and the graduate certificate in Database Technology."
+entity_type: program
+program_name: Graduate Programs
+description: UMass Boston Computer Science graduate programs include the MS and PhD in Computer Science and the graduate certificate in Database Technology.
+summary: Overview of UMass Boston graduate computer science offerings, including the MS and PhD in Computer Science and the graduate certificate in Database Technology.
 keywords:
-  - "Graduate Programs"
-  - "Computer Science MS"
-  - "Computer Science PhD"
-  - "Database Technology Certificate"
-  - "UMass Boston"
+- Graduate Programs
+- Computer Science MS
+- Computer Science PhD
+- Database Technology Certificate
+- UMass Boston
+aliases:
+- Graduate Programs
+- Graduate Computer Science Programs
+related_courses:
+- CS110
+- CS210
+- CS220
+- CS240
+- CS310
+- CS699
+related_topics:
+- graduate study
+- computer science
+- ms program
+- phd program
+- database technology
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOccupationalProgram",
-  "name": {{ page.title | jsonify }},
-  "url": {{ page.url | absolute_url | jsonify }},
-  "description": {{ page.description | jsonify }},
-  "provider": {
-    "@type": "CollegeOrUniversity",
-    "name": "UMass Boston",
-    "department": {
-      "@type": "EducationalOrganization",
-      "name": "Computer Science"
-    }
-  }
-}
-</script>
-
 For more information on our program click below:
 
 - [Computer Science MS Program]({{site.baseurl}}/cs_ms)

@@ -1,16 +1,28 @@
 ---
-title: "CS620"
+title: 'CS620: Theory of Computation'
 layout: course
 permalink: "/academics/courses/CS620"
-course_code: "CS620"
-course_name: "Theory of Computation"
+entity_type: course
+course_code: CS620
+course_name: Theory of Computation
 credits: 3
-description: "Functions computable by programs. Recursive functions and Turing machines; simulation and diagonalization. Universality and unsolvable problems. Kleene's hierarchy and the recursion theorem. Gregorczyk's hierarchy and Ackermann's function. Abstract complexity. Formal languages and classes of automata. Inherently difficult combinatorial problems."
-prerequisites:
-  - "CS220/CS320L/MATH320L"
+description: Functions computable by programs. Recursive functions and Turing machines; simulation and diagonalization. Universality and unsolvable problems. Kleene's hierarchy and the recursion theorem. Gregorczyk's hierarchy and Ackermann's function. Abstract complexity. Formal languages and classes of automata. Inherently difficult combinatorial problems.
+summary: Graduate course in theory of computation for graduate students covering computability, automata, and formal language theory.
 keywords:
-  - "CS620"
-  - "Theory of Computation"
-  - "UMass Boston"
-  - "course"
+- CS620
+- Theory of Computation
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS620
+- CS 620
+- 'CS620: Theory of Computation'
+- 'CS 620: Theory of Computation'
+prerequisites:
+- CS220/CS320L/MATH320L
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

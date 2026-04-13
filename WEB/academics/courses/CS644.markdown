@@ -1,16 +1,28 @@
 ---
-title: "CS644"
+title: 'CS644: Operating Systems'
 layout: course
 permalink: "/academics/courses/CS644"
-course_code: "CS644"
-course_name: "Operating Systems"
+entity_type: course
+course_code: CS644
+course_name: Operating Systems
 credits: 3
-description: "Structure and dynamics of operating system software. Operating systems as event driven software: interrupt processing and asynchronous operation. Memory management, scheduling, concurrency, device drivers. UNIX as a major example."
-prerequisites:
-  - "CS641 or permission of the instructor"
+description: 'Structure and dynamics of operating system software. Operating systems as event driven software: interrupt processing and asynchronous operation. Memory management, scheduling, concurrency, device drivers. UNIX as a major example.'
+summary: Graduate course in operating systems for graduate students covering computer organization, digital logic, and hardware-level programming.
 keywords:
-  - "CS644"
-  - "Operating Systems"
-  - "UMass Boston"
-  - "course"
+- CS644
+- Operating Systems
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS644
+- CS 644
+- 'CS644: Operating Systems'
+- 'CS 644: Operating Systems'
+prerequisites:
+- CS641 or permission of the instructor
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

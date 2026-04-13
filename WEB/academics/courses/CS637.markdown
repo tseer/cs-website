@@ -1,19 +1,31 @@
 ---
-title: "CS637"
+title: 'CS637: Database-Backed Web Sites and Web Services'
 layout: course
 permalink: "/academics/courses/CS637"
-course_code: "CS637"
-course_name: "Database-Backed Web Sites and Web Services"
+entity_type: course
+course_code: CS637
+course_name: Database-Backed Web Sites and Web Services
 credits: 3
-description: "The design and implementation of database-backed websites. Static sites, dynamic sites, and sites that act as interfaces to relational database systems, providing for web-based collaboration through scalable online communities. Students install and maintain their own web servers, extend existing tool sets, and build their own sites from scratch in a series of intensive programming projects."
-prerequisites:
-  - "CS430 or CS630"
-  - "CS451 or CS651"
+description: The design and implementation of database-backed websites. Static sites, dynamic sites, and sites that act as interfaces to relational database systems, providing for web-based collaboration through scalable online communities. Students install and maintain their own web servers, extend existing tool sets, and build their own sites from scratch in a series of intensive programming projects.
+summary: Graduate course in database-backed web sites and web services for graduate students covering database-backed web applications and web services.
 keywords:
-  - "CS637"
-  - "Database-Backed Web Sites and Web Services"
-  - "UMass Boston"
-  - "course"
+- CS637
+- Database-Backed Web Sites and Web Services
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS637
+- CS 637
+- 'CS637: Database-Backed Web Sites and Web Services'
+- 'CS 637: Database-Backed Web Sites and Web Services'
+prerequisites:
+- CS430 or CS630
+- CS451 or CS651
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Notes

@@ -2,6 +2,7 @@
 title: "Staff"
 layout: page
 permalink: "/staff"
+summary: Browse current and retired department staff, including office locations, phone numbers, and email contacts where listed.
 ---
 <div id='active_staff' class='listing'>
   <div class="person">

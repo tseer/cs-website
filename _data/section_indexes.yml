@@ -18,7 +18,7 @@ resources:
     - name: "Search Assistant"
       url: "/ai-assistant"
     - name: "CS Department IT Policies and Procedures"
-      url: "/cs-department-it-policies-and-procedures"
+      url: "/cs-department-it-policies"
     - name: "Office Hours"
       url: "/office-hours"
 

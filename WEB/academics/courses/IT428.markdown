@@ -1,16 +1,28 @@
 ---
-title: "IT428"
+title: 'IT428: Introduction to Information Security'
 layout: course
 permalink: "/academics/courses/IT428"
-course_code: "IT428"
-course_name: "Introduction to Information Security"
+entity_type: course
+course_code: IT428
+course_name: Introduction to Information Security
 credits: 3
-description: "The purpose of the course is to provide the student with an overview of the field of Information Security and Assurance. Students will be exposed to the spectrum of Security activities, methods, methodologies, and procedures. Coverage will include inspection and protection of information assets, detection of and reaction to threats to information assets, and examination of pre- and post-incident procedures, technical and managerial responses and an overview of the Information Security Planning and Staffing functions."
-prerequisites:
-  - "60 credits."
+description: The purpose of the course is to provide the student with an overview of the field of Information Security and Assurance. Students will be exposed to the spectrum of Security activities, methods, methodologies, and procedures. Coverage will include inspection and protection of information assets, detection of and reaction to threats to information assets, and examination of pre- and post-incident procedures, technical and managerial responses and an overview of the Information Security Planning and Staffing functions.
+summary: Introductory course in information security for advanced undergraduates covering information security concepts and assurance practices.
 keywords:
-  - "IT428"
-  - "Introduction to Information Security"
-  - "UMass Boston"
-  - "course"
+- IT428
+- Introduction to Information Security
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT428
+- IT 428
+- 'IT428: Introduction to Information Security'
+- 'IT 428: Introduction to Information Security'
+prerequisites:
+- 60 credits.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

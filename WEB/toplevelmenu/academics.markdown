@@ -2,6 +2,7 @@
 layout: page
 title: Academics
 permalink: /academics/
+summary: Explore computer science and information technology programs, courses, admissions information, and student funding opportunities.
 schema_collection_key: academics
 ---
 

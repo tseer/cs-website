@@ -1,16 +1,28 @@
 ---
-title: "IT442"
+title: 'IT442: Windows System Administration'
 layout: course
 permalink: "/academics/courses/IT442"
-course_code: "IT442"
-course_name: "Windows System Administration"
+entity_type: course
+course_code: IT442
+course_name: Windows System Administration
 credits: 3
-description: "This is an introduction to the process of choosing, installing, configuring and maintaining Microsoft Windows client and server systems. Topics include user management, file systems, network domains and domain management, mailers, and printing. Students get practice in writing scripts for performing maintenance tasks. Also, students learn how these tasks fit into the more general system administration process."
-prerequisites:
-  - "IT341."
+description: This is an introduction to the process of choosing, installing, configuring and maintaining Microsoft Windows client and server systems. Topics include user management, file systems, network domains and domain management, mailers, and printing. Students get practice in writing scripts for performing maintenance tasks. Also, students learn how these tasks fit into the more general system administration process.
+summary: Upper-level course in windows system administration for advanced undergraduates covering processes, memory, files, and operating system design.
 keywords:
-  - "IT442"
-  - "Windows System Administration"
-  - "UMass Boston"
-  - "course"
+- IT442
+- Windows System Administration
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT442
+- IT 442
+- 'IT442: Windows System Administration'
+- 'IT 442: Windows System Administration'
+prerequisites:
+- IT341.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

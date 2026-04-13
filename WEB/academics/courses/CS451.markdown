@@ -1,19 +1,31 @@
 ---
-title: "CS451"
+title: 'CS451: Compilers'
 layout: course
 permalink: "/academics/courses/CS451"
-course_code: "CS451"
-course_name: "Compilers"
+entity_type: course
+course_code: CS451
+course_name: Compilers
 credits: 3
-description: "Introduction to compiler organization and implementation, including formal specifications and algorithms for lexical and syntactic analysis, internal representation of the source program, semantic analysis, run-time environment issues and code generation. Students will write a compiler for a reasonably large subset of a contemporary language, targeted to a virtual machine."
-prerequisites:
-  - "CS310"
-  - "CS420 or CS622"
+description: Introduction to compiler organization and implementation, including formal specifications and algorithms for lexical and syntactic analysis, internal representation of the source program, semantic analysis, run-time environment issues and code generation. Students will write a compiler for a reasonably large subset of a contemporary language, targeted to a virtual machine.
+summary: Upper-level course in compiler design and implementation for advanced undergraduates.
 keywords:
-  - "CS451"
-  - "Compilers"
-  - "UMass Boston"
-  - "course"
+- CS451
+- Compilers
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS451
+- CS 451
+- 'CS451: Compilers'
+- 'CS 451: Compilers'
+prerequisites:
+- CS310
+- CS420 or CS622
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Notes

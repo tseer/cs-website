@@ -1,16 +1,28 @@
 ---
-title: "CS648"
+title: 'CS648: Wireless Networks and Mobile Computing'
 layout: course
 permalink: "/academics/courses/CS648"
-course_code: "CS648"
-course_name: "Wireless Networks and Mobile Computing"
+entity_type: course
+course_code: CS648
+course_name: Wireless Networks and Mobile Computing
 credits: 3
-description: "Wireless communications, wireless networking, mobility management technologies, and protocols for wireless LANs and WANs are surveyed. Selected mobile computing models and mobile applications development environments are evaluated. A wireless networks laboratory provides a realistic mobile/wireless computing environment. Students are expected to form groups to complete a semester project involving an investigation and the development of a prototype."
-prerequisites:
-  - "CS446 or CS646"
+description: Wireless communications, wireless networking, mobility management technologies, and protocols for wireless LANs and WANs are surveyed. Selected mobile computing models and mobile applications development environments are evaluated. A wireless networks laboratory provides a realistic mobile/wireless computing environment. Students are expected to form groups to complete a semester project involving an investigation and the development of a prototype.
+summary: Graduate course in wireless networks and mobile computing for graduate students covering Android application development and mobile programming.
 keywords:
-  - "CS648"
-  - "Wireless Networks and Mobile Computing"
-  - "UMass Boston"
-  - "course"
+- CS648
+- Wireless Networks and Mobile Computing
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS648
+- CS 648
+- 'CS648: Wireless Networks and Mobile Computing'
+- 'CS 648: Wireless Networks and Mobile Computing'
+prerequisites:
+- CS446 or CS646
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

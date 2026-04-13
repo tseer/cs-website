@@ -1,0 +1,7 @@
+{% assign page_summary = include.summary | default: page.summary %}
+{% if page_summary %}
+<section class="page-summary" aria-label="{{ include.heading | default: 'Overview' }}">
+  <h2 class="page-summary-heading">{{ include.heading | default: "Overview" }}</h2>
+  <p class="page-summary-text">{{ page_summary }}</p>
+</section>
+{% endif %}

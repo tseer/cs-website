@@ -5,6 +5,12 @@ layout: page
 {% assign course_title = page.course_code %}
 {% assign course_pages = site.pages | where_exp: "item", "item.course_code" %}
 {% assign linked_course_pages = site.pages | where_exp: "item", "item.course_code and item.course_code != page.course_code" %}
+{% assign site_root_url = '/' | absolute_url %}
+{% if page.provider_id %}
+  {% assign course_provider_id = page.provider_id %}
+{% else %}
+  {% assign course_provider_id = site_root_url | append: "#department" %}
+{% endif %}
 {% if page.course_name %}
   {% assign course_title = page.course_code | append: ': ' | append: page.course_name %}
 {% endif %}
@@ -13,22 +19,22 @@ layout: page
 {
   "@context": "https://schema.org",
   "@type": "Course",
+  "@id": {{ page.url | absolute_url | append: "#course" | jsonify }},
   "name": {{ course_title | jsonify }},
   "courseCode": {{ page.course_code | jsonify }},
   "url": {{ page.url | absolute_url | jsonify }},
-  {% if page.description %}
-  "description": {{ page.description | strip_html | normalize_whitespace | jsonify }},
+  {% assign course_description = page.summary | default: page.description %}
+  {% if course_description %}
+  "description": {{ course_description | strip_html | normalize_whitespace | jsonify }},
   {% endif %}
   {% if page.keywords %}
   "keywords": {{ page.keywords | join: ", " | jsonify }},
   {% endif %}
   "provider": {
-    "@type": "CollegeOrUniversity",
-    "name": {{ site.organization_name | default: "University of Massachusetts Boston" | jsonify }},
-    "department": {
-      "@type": "EducationalOrganization",
-      "name": {{ site.department_name | default: "Computer Science Department" | jsonify }}
-    }
+    "@type": "Organization",
+    "@id": {{ course_provider_id | jsonify }},
+    "name": {{ site.department_name | default: "Computer Science Department" | jsonify }},
+    "url": {{ site_root_url | jsonify }}
   }
 }
 </script>
@@ -43,10 +49,17 @@ layout: page
       <p><strong>Credits:</strong> {{ page.credits }}</p>
     {% endif %}
 
-    {% if page.description %}
-      <p>{{ page.description }}</p>
-    {% endif %}
+    {% include page-summary.html %}
   </header>
+
+  {% if page.description %}
+    <section class="course-description">
+      <h2>Catalog Description</h2>
+      <p>{{ page.description }}</p>
+    </section>
+  {% endif %}
+
+  {% include entity-connections.html %}
 
   {% if page.prerequisites %}
     <section class="course-prereqs">
@@ -92,7 +105,8 @@ layout: page
     </section>
   {% endif %}
 
-  {% if content and content != "" %}
+  {% assign stripped_content = content | strip %}
+  {% if stripped_content != "" %}
     <section class="course-extra">
       {{ content }}
     </section>

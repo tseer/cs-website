@@ -1,16 +1,28 @@
 ---
-title: "CS310"
+title: 'CS310: Advanced Data Structures and Algorithms'
 layout: course
 permalink: "/academics/courses/CS310"
-course_code: "CS310"
-course_name: "Advanced Data Structures and Algorithms"
+entity_type: course
+course_code: CS310
+course_name: Advanced Data Structures and Algorithms
 credits: 3
-description: "A systematic study of the methods of structuring and manipulating data in computing. Abstract data types. The design and analysis of algorithms. Advanced techniques for program development and organization."
-prerequisites:
-  - "CS/IT 210L and CS 240 and either CS 220 or MATH 320"
+description: A systematic study of the methods of structuring and manipulating data in computing. Abstract data types. The design and analysis of algorithms. Advanced techniques for program development and organization.
+summary: Advanced course in data structures and algorithms covering data structures, recursion, and algorithmic problem solving.
 keywords:
-  - "CS310"
-  - "Advanced Data Structures and Algorithms"
-  - "UMass Boston"
-  - "course"
+- CS310
+- Advanced Data Structures and Algorithms
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS310
+- CS 310
+- 'CS310: Advanced Data Structures and Algorithms'
+- 'CS 310: Advanced Data Structures and Algorithms'
+prerequisites:
+- CS/IT 210L and CS 240 and either CS 220 or MATH 320
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

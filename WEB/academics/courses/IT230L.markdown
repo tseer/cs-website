@@ -1,16 +1,29 @@
 ---
-title: "IT230L"
+title: 'IT230L: Relational Databases'
 layout: course
 permalink: "/academics/courses/IT230L"
-course_code: "IT230L"
-course_name: "Relational Databases"
+entity_type: course
+course_code: IT230L
+course_name: Relational Databases
 credits: 3
-description: "This course provides a thorough review of basic relational database concepts and how to apply these concepts to a variety of application problems. The course focuses on the use and properties of relational database management systems. Topics covered include DBMS architecture levels, data modeling, data definition and manipulation capabilities of Structured Query Language programming, and programming techniques for accessing relational databases."
+description: This course provides a thorough review of basic relational database concepts and how to apply these concepts to a variety of application problems. The course focuses on the use and properties of relational database management systems. Topics covered include DBMS architecture levels, data modeling, data definition and manipulation capabilities of Structured Query Language programming, and programming techniques for accessing relational databases.
+summary: Intermediate course in relational databases covering relational databases, SQL, and data modeling.
 keywords:
-  - "IT230L"
-  - "Relational Databases"
-  - "UMass Boston"
-  - "course"
+- IT230L
+- Relational Databases
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT230L
+- IT 230L
+- 'IT230L: Relational Databases'
+- 'IT 230L: Relational Databases'
+prerequisites: []
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Note

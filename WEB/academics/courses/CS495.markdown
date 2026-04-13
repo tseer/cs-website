@@ -1,16 +1,28 @@
 ---
-title: "CS495"
+title: 'CS495: Practicum in Computer Science'
 layout: course
 permalink: "/academics/courses/CS495"
-course_code: "CS495"
-course_name: "Practicum in Computer Science"
+entity_type: course
+course_code: CS495
+course_name: Practicum in Computer Science
 credits: 1
-description: "This course is intended to enhance academic studies by providing an industrial context for learning new concepts and skills. It will help to prepare the student for the transition from an academic program to eventual employment in the computer industry. This course is not open to graduate students."
-prerequisites:
-  - "Permission of the instructor"
+description: This course is intended to enhance academic studies by providing an industrial context for learning new concepts and skills. It will help to prepare the student for the transition from an academic program to eventual employment in the computer industry. This course is not open to graduate students.
+summary: Upper-level course in practicum in computer science connecting coursework with applied professional experience.
 keywords:
-  - "CS495"
-  - "Practicum in Computer Science"
-  - "UMass Boston"
-  - "course"
+- CS495
+- Practicum in Computer Science
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS495
+- CS 495
+- 'CS495: Practicum in Computer Science'
+- 'CS 495: Practicum in Computer Science'
+prerequisites:
+- Permission of the instructor
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

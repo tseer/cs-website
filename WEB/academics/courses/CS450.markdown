@@ -1,19 +1,33 @@
 ---
-title: "CS450"
+title: 'CS450: The Structure of Higher Level Languages'
 layout: course
 permalink: "/academics/courses/CS450"
-course_code: "CS450"
-course_name: "The Structure of Higher Level Languages"
+entity_type: course
+course_code: CS450
+course_name: The Structure of Higher Level Languages
 credits: 3
-description: "The syntax and semantics of higher-level languages are treated. Formal specifications of syntax and models of semantics will be used. Important topics include mechanisms for parameter passing, scoping, dynamic storage allocation and systems interfacing. Both compiled and interpreted languages will be used as examples. The language of instruction is Scheme, a dialect of LISP, which is taught in the course."
-prerequisites:
-  - "CS220"
-  - "CS310"
+description: The syntax and semantics of higher-level languages are treated. Formal specifications of syntax and models of semantics will be used. Important topics include mechanisms for parameter passing, scoping, dynamic storage allocation and systems interfacing. Both compiled and interpreted languages will be used as examples. The language of instruction is Scheme, a dialect of LISP, which is taught in the course.
+summary: Upper-level course in the structure of higher level languages for advanced undergraduates covering programming language syntax, semantics, and implementation models.
 keywords:
-  - "CS450"
-  - "Programming Languages"
-  - "UMass Boston"
-  - "course"
+- CS450
+- Programming Languages
+- UMass Boston
+- course
+- The Structure of Higher Level Languages
+- Computer Science
+aliases:
+- CS450
+- CS 450
+- 'CS450: The Structure of Higher Level Languages'
+- 'CS 450: The Structure of Higher Level Languages'
+prerequisites:
+- CS220
+- CS310
+co_requisites: []
+related_programs: []
+related_topics:
+- Programming Languages
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Textbooks

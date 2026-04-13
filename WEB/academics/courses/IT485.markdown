@@ -1,17 +1,29 @@
 ---
-title: "IT485"
+title: 'IT485: Information Technology Capstone'
 layout: course
 permalink: "/academics/courses/IT485"
-course_code: "IT485"
-course_name: "Information Technology Capstone"
+entity_type: course
+course_code: IT485
+course_name: Information Technology Capstone
 credits: 3
-description: "Students will work on a semester-long project, particular to their track and meet together with an instructor and with students from other tracks to discuss each other’s projects. Students will deliver a product that is appropriate to their track in the IT program. At the end of the semester, students report on their product, both in oral presentations and demonstrations and in writing."
-prerequisites:
-  - "IT425L"
-  - "a track"
+description: Students will work on a semester-long project, particular to their track and meet together with an instructor and with students from other tracks to discuss each other’s projects. Students will deliver a product that is appropriate to their track in the IT program. At the end of the semester, students report on their product, both in oral presentations and demonstrations and in writing.
+summary: Upper-level course in information technology capstone centered on substantial project-based work.
 keywords:
-  - "IT485"
-  - "Information Technology Capstone"
-  - "UMass Boston"
-  - "course"
+- IT485
+- Information Technology Capstone
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT485
+- IT 485
+- 'IT485: Information Technology Capstone'
+- 'IT 485: Information Technology Capstone'
+prerequisites:
+- IT425L
+- a track
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

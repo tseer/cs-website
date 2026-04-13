@@ -1,18 +1,30 @@
 ---
-title: "CS285L"
+title: 'CS285L: Social Issues and Ethics in Computing'
 layout: course
 permalink: "/academics/courses/CS285L"
-course_code: "CS285L"
-course_name: "Social Issues and Ethics in Computing"
+entity_type: course
+course_code: CS285L
+course_name: Social Issues and Ethics in Computing
 credits: 3
-description: "This course explores some of the ethical and societal issues that are raised by computing. Topics include privacy, freedom of expression, intellectual property, liability, the effect of computing on social interaction, and human-computer interface issues. Students write an analytical paper on an appropriate topic and also present their findings to the class.CS 285L and IT 285L are the same course."
-prerequisites:
-  - "None."
+description: This course explores some of the ethical and societal issues that are raised by computing. Topics include privacy, freedom of expression, intellectual property, liability, the effect of computing on social interaction, and human-computer interface issues. Students write an analytical paper on an appropriate topic and also present their findings to the class.CS 285L and IT 285L are the same course.
+summary: Intermediate course in social issues and ethics in computing covering ethics, privacy, and social impacts of computing.
 keywords:
-  - "CS285L"
-  - "Social Issues and Ethics in Computing"
-  - "UMass Boston"
-  - "course"
+- CS285L
+- Social Issues and Ethics in Computing
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS285L
+- CS 285L
+- 'CS285L: Social Issues and Ethics in Computing'
+- 'CS 285L: Social Issues and Ethics in Computing'
+prerequisites:
+- None.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Notes

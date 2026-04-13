@@ -1,18 +1,30 @@
 ---
-title: "CS430"
+title: 'CS430: Database Management Systems'
 layout: course
 permalink: "/academics/courses/CS430"
-course_code: "CS430"
-course_name: "Database Management Systems"
+entity_type: course
+course_code: CS430
+course_name: Database Management Systems
 credits: 3
-description: "Introduction to database systems, including database programming. The course covers relational algebra, SQL, object-relational systems, embedded programming, and basic transaction concepts. It covers database design, both entity-relationship modeling and normalization."
-prerequisites:
-  - "CS 240 and CS 310 or permission of the instructor."
+description: Introduction to database systems, including database programming. The course covers relational algebra, SQL, object-relational systems, embedded programming, and basic transaction concepts. It covers database design, both entity-relationship modeling and normalization.
+summary: Upper-level course in database management systems for advanced undergraduates covering relational databases, SQL, and data modeling.
 keywords:
-  - "CS430"
-  - "Database Management Systems"
-  - "UMass Boston"
-  - "course"
+- CS430
+- Database Management Systems
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS430
+- CS 430
+- 'CS430: Database Management Systems'
+- 'CS 430: Database Management Systems'
+prerequisites:
+- CS 240 and CS 310 or permission of the instructor.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Notes

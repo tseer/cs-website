@@ -10,7 +10,7 @@
   </div>
 
   <div class="header-bottom">
-    <a href="/" style='text-decoration: none; color:black;'>
+    <a href="{{ '/' | relative_url }}" style='text-decoration: none; color:black;'>
       <div class="wrapper">
         <p>Department of</p>
         <p>COMPUTER SCIENCE</p>
@@ -24,7 +24,7 @@
         <input type="checkbox" id="drop" />
         <label for="drop" class="toggle">Menu</label>
         <ul class="menu">
-          <li><a href="{{ site.baseurl }}/">Home</a></li>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
           {% for menui in site.data.menu %}
           <li{% unless menui.submenu %} class="no-submenu"{% endunless %}>
             {% if menui.submenu %}
@@ -33,7 +33,7 @@
               >{{ menui.title }}</label
             >
             {% endif %}
-            <a href="{{ site.baseurl }}/{{ menui.link }}"{% if menui.accent %} class="nav-accent" style="color: #c1121f !important; font-weight: 700;"{% endif %}>{{ menui.title }}</a>
+            <a href="{{ menui.link | prepend: '/' | relative_url }}"{% if menui.accent %} class="nav-accent" style="color: #c1121f !important; font-weight: 700;"{% endif %}>{{ menui.title }}</a>
             {% if menui.submenu %}
             <ul>
               {% for submenui in menui.submenu %}
@@ -46,7 +46,7 @@
                   {% if submenui.url %}
                     {{ submenui.url }}
                   {% else %}
-                    {{ site.baseurl }}/{{ submenui.link }}
+                    {{ submenui.link | prepend: '/' | relative_url }}
                   {% endif %}
                 "
                   {% if submenui.target %}
@@ -61,7 +61,7 @@
                       {% if childmenui.url %}
                         {{ childmenui.url }}
                       {% else %}
-                        {{ site.baseurl }}/{{ childmenui.link }}
+                        {{ childmenui.link | prepend: '/' | relative_url }}
                       {% endif %}
                     "
                       {% if childmenui.target %}

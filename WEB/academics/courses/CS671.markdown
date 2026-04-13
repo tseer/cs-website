@@ -1,15 +1,27 @@
 ---
-title: "CS671"
+title: 'CS671: Machine Learning'
 layout: course
 permalink: "/academics/courses/CS671"
-course_code: "CS671"
-course_name: "Machine Learning"
+entity_type: course
+course_code: CS671
+course_name: Machine Learning
 credits: 3
-description: "Machine Learning is a foundational discipline for data mining and artificial intelligence which explores the limits and capacities of automated learning of abstract concepts. The course will focus on the probably approximately correct (PAC) learning model and will cover topics like the Vapnik-Chervonenkis dimension, the weak and strong learning paradigms, inherent unpredictability, reducibility in PAC learning, and learning finite automata."
-prerequisites:
+description: Machine Learning is a foundational discipline for data mining and artificial intelligence which explores the limits and capacities of automated learning of abstract concepts. The course will focus on the probably approximately correct (PAC) learning model and will cover topics like the Vapnik-Chervonenkis dimension, the weak and strong learning paradigms, inherent unpredictability, reducibility in PAC learning, and learning finite automata.
+summary: Graduate course in machine learning for graduate students covering computability, automata, and formal language theory.
 keywords:
-  - "CS671"
-  - "Machine Learning"
-  - "UMass Boston"
-  - "course"
+- CS671
+- Machine Learning
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS671
+- CS 671
+- 'CS671: Machine Learning'
+- 'CS 671: Machine Learning'
+prerequisites: []
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

@@ -1,7 +1,56 @@
 ---
-title: "Information Technology BS Program"
+title: Information Technology BS Program
 layout: page
 permalink: "/it_bs"
+entity_type: program
+program_name: Information Technology BS Program
+description: Program structure, tracks, and course planning information for the UMass Boston Bachelor of Science in Information Technology.
+summary: Program structure, tracks, and course planning information for the UMass Boston Bachelor of Science in Information Technology.
+keywords:
+- Information Technology BS Program
+- BS in Information Technology
+- UMass Boston
+- Computer Science Department
+aliases:
+- Information Technology BS Program
+- BS in Information Technology
+- IT BS
+related_courses:
+- IT110
+- IT111L
+- IT114L
+- IT115L
+- IT230L
+- IT240
+- IT244
+- IT246
+- IT285L
+- IT341
+- IT442
+- IT443
+- IT444
+- IT360
+- IT428
+- IT461
+- IT370
+- IT471
+- IT472
+- IT428L
+- IT456
+- IT460
+- IT461L
+- IT220
+- IT221
+- IT420
+- IT421
+- IT425L
+- IT485
+related_topics:
+- information technology
+- system administration
+- business intelligence
+- computer forensics
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 **Guiding Principles**

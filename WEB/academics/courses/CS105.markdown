@@ -1,18 +1,49 @@
 ---
-title: "CS105"
+title: 'CS105: Introduction to Computer Concepts'
 layout: course
 permalink: "/academics/courses/CS105"
-course_code: "CS105"
-course_name: "Introduction to Computer Concepts"
+entity_type: course
+course_code: CS105
+course_name: Introduction to Computer Concepts
 credits: 3
-description: "This course presents an overview of the role of computers in society -- their application and misapplication, their capabilities and limitations. Applications may include artificial intelligence, medical, aerospace and business uses of computers. Computer hardware and associated technologies will be discussed. Computer programming will be taught from a non-mathematical, problem-solving point of view, the objective being an understanding of the programming process, rather than the development of complex or extended computer programs. This survey course is not part of the computer science major sequence. Students planning to major in computer science should start with CS110."
-prerequisites:
-  - "MATH 115 or appropriate scores on the Math Placement Test."
+description: This course presents an overview of the role of computers in society -- their application and misapplication, their capabilities and limitations. Applications may include artificial intelligence, medical, aerospace and business uses of computers. Computer hardware and associated technologies will be discussed. Computer programming will be taught from a non-mathematical, problem-solving point of view, the objective being an understanding of the programming process, rather than the development of complex or extended computer programs. This survey course is not part of the computer science major sequence. Students planning to major in computer science should start with CS110.
+summary: Introductory course in computer concepts covering applications, hardware, and basic programming.
 keywords:
-  - "CS105"
-  - "Introduction to Computer Concepts"
-  - "UMass Boston"
-  - "course"
+- CS105
+- Introduction to Computer Concepts
+- computer literacy
+- introductory computing
+- UMass Boston
+- Computer Science
+aliases:
+- CS105
+- CS 105
+- Intro to Computer Concepts
+- Introduction to Computing Concepts
+- 'CS105: Introduction to Computer Concepts'
+- 'CS 105: Introduction to Computer Concepts'
+prerequisites:
+- MATH 115 or appropriate scores on the Math Placement Test.
+co_requisites: []
+related_people: []
+related_courses: []
+related_groups: []
+related_programs:
+- "/undergraduate-programs"
+- "/certificate-programs"
+related_topics:
+- computer literacy
+- introductory computing
+- programming fundamentals
+- computers in society
+audience:
+- non-majors
+- students seeking introductory computing background
+action_phrases:
+- find a non-major computing course
+- learn computer basics
+- explore introductory programming concepts
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Notes

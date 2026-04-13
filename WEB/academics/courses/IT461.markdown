@@ -1,16 +1,28 @@
 ---
-title: "IT461"
+title: 'IT461: System Analysis and Design'
 layout: course
 permalink: "/academics/courses/IT461"
-course_code: "IT461"
-course_name: "System Analysis and Design"
+entity_type: course
+course_code: IT461
+course_name: System Analysis and Design
 credits: 3
-description: "This course provides an introduction to the analysis and logical design of computer-based information systems. Information systems development is a process in which technical, organizational, and human aspects of a system are analyzed and changed in the hope of creating an improved system. In spite of the advanced technology that surrounds computer-based information systems, the process of systems analysis and design is still largely an art. There is a high dependence on the skills of individual analysts and designers even though there are principles, methods, techniques and tools to guide and assist in the processes involved. This course will give students an understanding of the tools and techniques that are available and will introduce the concepts and theory that underlie the processes."
-prerequisites:
-  - "60 credits."
+description: This course provides an introduction to the analysis and logical design of computer-based information systems. Information systems development is a process in which technical, organizational, and human aspects of a system are analyzed and changed in the hope of creating an improved system. In spite of the advanced technology that surrounds computer-based information systems, the process of systems analysis and design is still largely an art. There is a high dependence on the skills of individual analysts and designers even though there are principles, methods, techniques and tools to guide and assist in the processes involved. This course will give students an understanding of the tools and techniques that are available and will introduce the concepts and theory that underlie the processes.
+summary: Upper-level course in system analysis and design for advanced undergraduates covering systems analysis and information system design.
 keywords:
-  - "IT461"
-  - "System Analysis and Design"
-  - "UMass Boston"
-  - "course"
+- IT461
+- System Analysis and Design
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT461
+- IT 461
+- 'IT461: System Analysis and Design'
+- 'IT 461: System Analysis and Design'
+prerequisites:
+- 60 credits.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

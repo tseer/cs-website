@@ -1,0 +1,83 @@
+---
+layout: null
+permalink: /ai/index.json
+---
+{
+  {% assign site_root_url = '/' | absolute_url %}
+  "site": {
+    "name": {{ site.title | jsonify }},
+    "url": {{ site_root_url | jsonify }}
+  },
+  "entities": [
+    {
+      "id": "department:computer-science",
+      "type": "department",
+      "title": {{ site.department_name | jsonify }},
+      "summary": {{ page.summary | default: site.description | strip_html | normalize_whitespace | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "keywords": {{ "Computer Science Department|UMass Boston|Computer Science|Information Technology" | split: "|" | jsonify }},
+      "aliases": {{ "Computer Science Department|UMass Boston Computer Science|UMass Boston CS|CS Department" | split: "|" | jsonify }},
+      "related_people": [],
+      "related_courses": [],
+      "related_groups": [],
+      "related_programs": [],
+      "related_topics": {{ "computer science|information technology|research|teaching" | split: "|" | jsonify }}
+    }{% assign course_pages = site.pages | where_exp: "item", "item.course_code" | sort: "course_code" %}{% for course in course_pages %},
+    {
+      "id": {{ course.course_code | prepend: "course:" | jsonify }},
+      "type": "course",
+      "title": {{ course.title | strip_html | normalize_whitespace | jsonify }},
+      "summary": {{ course.summary | default: course.description | default: "" | strip_html | normalize_whitespace | jsonify }},
+      "url": {{ course.url | absolute_url | jsonify }},
+      "keywords": {% if course.keywords %}{{ course.keywords | jsonify }}{% else %}[]{% endif %},
+      "aliases": {% if course.aliases %}{{ course.aliases | jsonify }}{% else %}[]{% endif %},
+      "related_people": {% if course.related_people %}{{ course.related_people | jsonify }}{% else %}[]{% endif %},
+      "related_courses": {% if course.related_courses %}{{ course.related_courses | jsonify }}{% else %}[]{% endif %},
+      "related_groups": {% if course.related_groups %}{{ course.related_groups | jsonify }}{% else %}[]{% endif %},
+      "related_programs": {% if course.related_programs %}{{ course.related_programs | jsonify }}{% else %}[]{% endif %},
+      "related_topics": {% if course.related_topics %}{{ course.related_topics | jsonify }}{% else %}[]{% endif %}
+    }{% endfor %}{% assign program_urls = "/undergraduate-programs|/graduate-programs|/honors-programs|/certificate-programs|/cs_ba|/cs_bs|/it_bs|/cs_ms|/cs_phd" | split: "|" %}{% for item_url in program_urls %}{% assign program_page = site.pages | where: "url", item_url | first %}{% if program_page %},
+    {
+      "id": {{ program_page.url | replace: "/", "" | prepend: "program:" | jsonify }},
+      "type": "program",
+      "title": {{ program_page.program_name | default: program_page.title | strip_html | normalize_whitespace | jsonify }},
+      "summary": {{ program_page.summary | default: program_page.description | default: "" | strip_html | normalize_whitespace | jsonify }},
+      "url": {{ program_page.url | absolute_url | jsonify }},
+      "keywords": {% if program_page.keywords %}{{ program_page.keywords | jsonify }}{% else %}[]{% endif %},
+      "aliases": {% if program_page.aliases %}{{ program_page.aliases | jsonify }}{% else %}[]{% endif %},
+      "related_people": {% if program_page.related_people %}{{ program_page.related_people | jsonify }}{% else %}[]{% endif %},
+      "related_courses": {% if program_page.related_courses %}{{ program_page.related_courses | jsonify }}{% else %}[]{% endif %},
+      "related_groups": {% if program_page.related_groups %}{{ program_page.related_groups | jsonify }}{% else %}[]{% endif %},
+      "related_programs": {% if program_page.related_programs %}{{ program_page.related_programs | jsonify }}{% else %}[]{% endif %},
+      "related_topics": {% if program_page.related_topics %}{{ program_page.related_topics | jsonify }}{% else %}[]{% endif %}
+    }{% endif %}{% endfor %}{% assign people_pages = site.people | sort: "person_name" %}{% for person in people_pages %},
+    {
+      "id": {{ person.slug | prepend: "person:" | jsonify }},
+      "type": "person",
+      "title": {{ person.person_name | default: person.title | strip_html | normalize_whitespace | jsonify }},
+      "summary": {{ person.summary | default: person.description | default: "" | strip_html | normalize_whitespace | jsonify }},
+      "url": {{ person.url | absolute_url | jsonify }},
+      "keywords": {% if person.keywords %}{{ person.keywords | jsonify }}{% else %}[]{% endif %},
+      "aliases": {% if person.aliases %}{{ person.aliases | jsonify }}{% else %}[]{% endif %},
+      "related_people": {% if person.related_people %}{{ person.related_people | jsonify }}{% else %}[]{% endif %},
+      "related_courses": {% if person.related_courses %}{{ person.related_courses | jsonify }}{% else %}[]{% endif %},
+      "related_groups": {% if person.related_groups %}{{ person.related_groups | jsonify }}{% else %}[]{% endif %},
+      "related_programs": {% if person.related_programs %}{{ person.related_programs | jsonify }}{% else %}[]{% endif %},
+      "related_topics": {% assign person_topics = person.related_topics | default: person.research_areas %}{% if person_topics %}{{ person_topics | jsonify }}{% else %}[]{% endif %}
+    }{% endfor %}{% assign group_pages = site.groups | sort: "group_name" %}{% for group in group_pages %},
+    {
+      "id": {{ group.slug | prepend: "group:" | jsonify }},
+      "type": "group",
+      "title": {{ group.group_name | default: group.title | strip_html | normalize_whitespace | jsonify }},
+      "summary": {{ group.summary | default: group.description | default: "" | strip_html | normalize_whitespace | jsonify }},
+      "url": {{ group.url | absolute_url | jsonify }},
+      "keywords": {% if group.keywords %}{{ group.keywords | jsonify }}{% else %}[]{% endif %},
+      "aliases": {% if group.aliases %}{{ group.aliases | jsonify }}{% else %}[]{% endif %},
+      "related_people": {% assign group_people = group.related_people | default: group.lead_people %}{% if group_people %}{{ group_people | jsonify }}{% else %}[]{% endif %},
+      "related_courses": {% if group.related_courses %}{{ group.related_courses | jsonify }}{% else %}[]{% endif %},
+      "related_groups": {% if group.related_groups %}{{ group.related_groups | jsonify }}{% else %}[]{% endif %},
+      "related_programs": {% if group.related_programs %}{{ group.related_programs | jsonify }}{% else %}[]{% endif %},
+      "related_topics": {% if group.related_topics %}{{ group.related_topics | jsonify }}{% else %}[]{% endif %}
+    }{% endfor %}
+  ]
+}

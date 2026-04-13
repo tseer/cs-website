@@ -1,7 +1,59 @@
 ---
-title: "Computer Science MS"
+title: Computer Science MS
 layout: page
 permalink: "/cs_ms"
+entity_type: program
+program_name: Computer Science MS
+description: Admissions, degree requirements, and elective options for the UMass Boston Master of Science in Computer Science.
+summary: Admissions, degree requirements, and elective options for the UMass Boston Master of Science in Computer Science.
+keywords:
+- Computer Science MS
+- MS in Computer Science
+- UMass Boston
+- Computer Science Department
+aliases:
+- Computer Science MS
+- MS in Computer Science
+- CS MS
+related_courses:
+- CS680
+- CS681
+- CS682
+- CS620
+- CS622
+- CS624
+- CS420
+- CS720
+- CS724
+- CS612
+- CS615
+- CS630
+- CS634
+- CS636
+- CS637
+- CS638
+- CS642
+- CS646
+- CS648
+- CS651
+- CS670
+- CS671
+- CS675
+- CS752
+- CS410
+- CS411
+- CS433
+- CS443
+- CS449
+- CS450
+- CS460
+- CS461
+related_topics:
+- master of science
+- computer science graduate study
+- admissions
+- degree requirements
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 

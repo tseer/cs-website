@@ -1,18 +1,30 @@
 ---
-title: "CS108"
+title: 'CS108: An Introduction to Python'
 layout: course
 permalink: "/academics/courses/CS108"
-course_code: "CS108"
-course_name: "An Introduction to Python"
+entity_type: course
+course_code: CS108
+course_name: An Introduction to Python
 credits: 3
-description: "An introduction to some of the basic issues in computation through exercises in Python programming. Students will write relatively simple programs in several application areas, e.g. mathematics, graphics and biology. This is a good course for those who have no programing experience and who want preparation for taking CS 110; students learn about using an editor, program design, implementation, and testing. This is also a good course for scientists who wish to learn a popular scientific scripting language."
-prerequisites:
-  - "Place into MATH 130 on the MATH Placement Exam."
+description: An introduction to some of the basic issues in computation through exercises in Python programming. Students will write relatively simple programs in several application areas, e.g. mathematics, graphics and biology. This is a good course for those who have no programing experience and who want preparation for taking CS 110; students learn about using an editor, program design, implementation, and testing. This is also a good course for scientists who wish to learn a popular scientific scripting language.
+summary: Introductory course in python for beginners covering Python programming and computational problem solving.
 keywords:
-  - "CS108"
-  - "An Introduction to Python"
-  - "UMass Boston"
-  - "course"
+- CS108
+- An Introduction to Python
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS108
+- CS 108
+- 'CS108: An Introduction to Python'
+- 'CS 108: An Introduction to Python'
+prerequisites:
+- Place into MATH 130 on the MATH Placement Exam.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Textbooks

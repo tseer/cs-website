@@ -1,16 +1,28 @@
 ---
-title: "IT116"
+title: 'IT116: Introduction to Scripting'
 layout: course
 permalink: "/academics/courses/IT116"
-course_code: "IT116"
-course_name: "Introduction to Scripting"
+entity_type: course
+course_code: IT116
+course_name: Introduction to Scripting
 credits: 1
-description: "Information Technology specialists do not spend most of their time programming, but they must perform many routine tasks to keep the systems maintained in good working order. Automating these routine tasks, allows this work to be performed quickly and consistently, freeing the specialist for work that requires time and judgement. This automation is accomplished by writing small programs which are specific to the task at hand. These programs are best written in programming languages which are simple and flexible. This makes languages designed for large projects, such as Java and C++, unsuitable for this task. To meet this need, scripting languages such as Perl, Python, and PHP have been created. These languages are designed to be easier to learn than more demanding programming languages such as Java, C and C++. This course will teach the basics of scripting language and show students how it can be used to automate routine system administration and workflow tasks."
-prerequisites:
-  - "Pre-req: MATH 115"
+description: Information Technology specialists do not spend most of their time programming, but they must perform many routine tasks to keep the systems maintained in good working order. Automating these routine tasks, allows this work to be performed quickly and consistently, freeing the specialist for work that requires time and judgement. This automation is accomplished by writing small programs which are specific to the task at hand. These programs are best written in programming languages which are simple and flexible. This makes languages designed for large projects, such as Java and C++, unsuitable for this task. To meet this need, scripting languages such as Perl, Python, and PHP have been created. These languages are designed to be easier to learn than more demanding programming languages such as Java, C and C++. This course will teach the basics of scripting language and show students how it can be used to automate routine system administration and workflow tasks.
+summary: Introductory course in scripting covering Python programming and computational problem solving.
 keywords:
-  - "IT116"
-  - "Introduction to Scripting"
-  - "UMass Boston"
-  - "course"
+- IT116
+- Introduction to Scripting
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT116
+- IT 116
+- 'IT116: Introduction to Scripting'
+- 'IT 116: Introduction to Scripting'
+prerequisites:
+- 'Pre-req: MATH 115'
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---

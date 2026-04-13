@@ -1,16 +1,29 @@
 ---
-title: "CS696"
+title: 'CS696: Independent Study'
 layout: course
 permalink: "/academics/courses/CS696"
-course_code: "CS696"
-course_name: "Independent Study"
+entity_type: course
+course_code: CS696
+course_name: Independent Study
 credits: 3
-description: "A student must find a faculty sponsor for his or her independent study and arrange study under that person, normally about a computer science topic not covered by the department's courses."
+description: A student must find a faculty sponsor for his or her independent study and arrange study under that person, normally about a computer science topic not covered by the department's courses.
+summary: Graduate course in independent study with faculty-supervised work on a specialized topic.
 keywords:
-  - "CS696"
-  - "Independent Study"
-  - "UMass Boston"
-  - "course"
+- CS696
+- Independent Study
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS696
+- CS 696
+- 'CS696: Independent Study'
+- 'CS 696: Independent Study'
+prerequisites: []
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 ## Note
