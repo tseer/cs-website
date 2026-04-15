@@ -306,3 +306,148 @@
   margin: 0;
   font-size: 1.05rem;
 }
+
+/* Container Layout */
+.programs-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+
+/* Base Card Styling */
+.program-card {
+  position: relative;
+  height: 320px;
+  border-radius: 4px; /* Optional: smooths the corners */
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Animation */
+.program-card:hover {
+  transform: scale(1.03); /* Slight pop effect */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* Background Image Sizing */
+.card-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+/* Slight image zoom on hover */
+.program-card:hover .card-bg-img {
+  transform: scale(1.1);
+}
+
+/* --- The Magic Overlay --- */
+.card-color-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Height of the starting banner */
+  transition: height 0.4s ease-in-out, background-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 1. Base Colors (Solid Banners) */
+.card-undergrad .card-color-overlay { background-color: rgba(12, 85, 128, 0.95); } /* Blue */
+.card-grad .card-color-overlay { background-color: rgba(56, 118, 29, 0.95); }      /* Green */
+.card-honors .card-color-overlay { background-color: rgba(142, 37, 56, 0.95); }    /* Red */
+.card-certs .card-color-overlay { background-color: rgba(30, 116, 92, 0.95); }     /* Teal */
+
+/* 2. Hover Colors (Expands & becomes Translucent) */
+.card-undergrad:hover .card-color-overlay { height: 100%; background-color: rgba(12, 85, 128, 0.85); }
+.card-grad:hover .card-color-overlay { height: 100%; background-color: rgba(56, 118, 29, 0.85); }
+.card-honors:hover .card-color-overlay { height: 100%; background-color: rgba(142, 37, 56, 0.85); }
+.card-certs:hover .card-color-overlay { height: 100%; background-color: rgba(30, 116, 92, 0.85); }
+
+/* Title Styling */
+.card-title {
+  color: white;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 60px; /* Keeps text centered vertically in the base banner */
+  font-weight: 600;
+  transition: margin-top 0.4s ease, line-height 0.4s ease;
+}
+
+/* Moves title slightly down when expanded */
+.program-card:hover .card-title {
+  margin-top: 30px;
+  line-height: 1.2;
+}
+
+/* Hidden Content (Paragraph & Button) */
+.card-hidden-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s; /* Slight delay to follow the banner expansion */
+  text-align: center;
+  color: white;
+}
+
+/* Fades in content on hover */
+.program-card:hover .card-hidden-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-hidden-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+  text-align: center;
+  color: white;
+  pointer-events: none; /* ADD THIS: Prevents the invisible div from blocking clicks */
+}
+
+.program-card:hover .card-hidden-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* ADD THIS: Makes it clickable again once visible */
+}
+
+/* Read More Button Styling */
+.read-more-btn {
+  display: inline-block;
+  padding: 8px 24px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color 0.2s, color 0.2s;
+  position: relative; /* ADD THIS */
+  z-index: 10;        /* ADD THIS: Forces button to the top layer */
+}
+
+.read-more-btn:hover {
+  background-color: white;
+  color: #333;
+}
+
+/* Responsive adjust for smaller laptop/tablet screens */
+@media (max-width: 900px) {
+  .programs-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Responsive adjust for mobile */
+@media (max-width: 600px) {
+  .programs-container { grid-template-columns: 1fr; }
+}
