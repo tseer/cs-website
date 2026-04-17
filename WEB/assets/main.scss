@@ -4,6 +4,109 @@
 
 @import "minima";
 
+/* --- Top Bar Styling (Scale & Alignment) --- */
+.wrapper {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: block !important; /* CHANGED: Back to block so it doesn't break other sections */
+  width: 100%;
+}
+
+/* --- 2. Top Bar (Blue Section) --- */
+.header-top {
+  background-color: #005A8B;
+  padding: 8px 0;    /* Tightened for a sleeker look */
+}
+
+.header-top .wrapper, 
+.header-bottom .wrapper {
+  display: flex !important; /* Turns flex on ONLY here */
+  align-items: center;
+}
+
+.header-top .wrapper {
+  justify-content: space-between !important;
+}
+
+.univ-link {
+  margin-left: 0 !important;   /* Pins 'University' to the far left */
+  padding-left: 0 !important;
+  font-weight: 700;
+  color: white !important;
+  font-size: 1.15rem;          /* Slightly bigger for better presence */
+}
+
+.header-top-links {
+  margin-left: auto !important;
+  display: flex;
+  gap: 35px;
+}
+.header-top-links a {
+  color: white !important;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* --- 3. Branding Section (Removing the "Yellow" Space) --- */
+.header-bottom {
+  padding: 5px 0 !important;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header-bottom .wrapper {
+  padding: 0 !important;
+  height: 60px;                /* Forces the entire bar to stay short */
+  display: flex;
+  align-items: center;         /* Centers text vertically in that short bar */
+  justify-content: flex-start;
+}
+
+.dept-branding-link {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  text-decoration: none !important;
+}
+
+.dept-label {
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.dept-name {
+  font-size: 2.2rem;
+  color: #000;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+/* --- 4. Main Menu Alignment (Home, About...) --- */
+.header-menu {
+  padding: 0;
+}
+
+ul.menu {
+  margin: 0;
+  padding: 0; 
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+ul.menu li a {
+  display: block;
+  padding: 10px 0; 
+  text-decoration: none;
+  font-weight: 500;
+  color: #005A8B;
+  font-size: 1.1rem;
+}
+
 /* Container Spacing */
 .alert-container {
   display: flex;
@@ -69,31 +172,64 @@
 }
 
 /* Step 1: Edge-to-Edge Container */
-.home-back-slide-cover, .carousel-container {
+.home-back-slide-cover {
   position: relative;
-  width: 100%; /* Changed to strictly fill the parent container */
-  height: 60vh; /* Adjust this number to make the banner taller or shorter */
-  min-height: 400px; /* Ensures it doesn't get too small on mobile */
-  overflow: hidden;
+  width: 100%; 
   display: block;
+}
+
+/* 2. The inner container gets the edge-to-edge breakout trick */
+.carousel-container {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: 60vh;          /*  ADD THIS: Brings the slides back! */
+  min-height: 400px;     /*  ADD THIS: Keeps it from getting too small */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  overflow: hidden;
+  background-color: #000;
+  display: block !important;
+  z-index: 1;            /* Ensures it stays behind the navigation dropdowns */
 }
 
 /* Base Slide Setup */
 .carousel-slide {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0; left: 0; 
+  width: 100%; height: 100%;
   opacity: 0; 
   transition: opacity 1s ease-in-out;
 }
+
 .carousel-slide.active {
   opacity: 1;
-  z-index: 1;
 }
+
+/* ADDED: The new blurred ambient background layer */
+.slide-ambient-bg {
+  position: absolute;
+  top: -5%; left: -5%; right: -5%; bottom: -5%; /* Stretches past the edges */
+  background-size: cover;
+  background-position: center;
+  filter: blur(25px) brightness(0.7); /* Blurs and dims */
+  opacity: 0.8; 
+  z-index: 0; /* Sits at the very back */
+}
+
+/* The Foreground Image  */
 .carousel-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* This forces the image to fill the space without stretching */
-  object-position: center; /* Keeps the center of the image in view */
+  object-fit: cover; /* Keeps your original dimensions centered */
+  object-position: center;
+  position: relative;
+  z-index: 2;
+  /* If you want the sharp image centered in a 1200px box: */
+  max-width: 1200px;
+  margin: 0 auto;
   display: block;
 }
 
@@ -115,6 +251,7 @@
   width: 80%; /* Prevents text from hitting the arrows */
   z-index: 3;
 }
+
 .carousel-headline {
   font-size: 3.5rem; /* Prominent headline */
   font-weight: 800;
@@ -138,6 +275,7 @@
   z-index: 4;
   transition: background 0.3s;
 }
+
 .carousel-btn:hover { background: rgba(0, 0, 0, 0.8); }
 .prev-btn { left: 0; }
 .next-btn { right: 0; }
@@ -312,7 +450,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  margin: 40px 0;
+  margin: 0 0 20px 0;
 }
 
 /* Base Card Styling */
@@ -386,55 +524,51 @@
   transition: margin-top 0.4s ease, line-height 0.4s ease;
 }
 
-/* Moves title slightly down when expanded */
+/* Moves title further down when expanded */
 .program-card:hover .card-title {
-  margin-top: 30px;
-  line-height: 1.2;
+  margin-top: 20px;       /* UPDATED */
+  margin-bottom: 15px;    /* ADDED */
+  line-height: 1.4;       /* UPDATED */
 }
 
-/* Hidden Content (Paragraph & Button) */
-.card-hidden-content {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s; /* Slight delay to follow the banner expansion */
-  text-align: center;
-  color: white;
-}
-
-/* Fades in content on hover */
-.program-card:hover .card-hidden-content {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* Hidden Content Container (Cleaned up duplicates) */
 .card-hidden-content {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
   text-align: center;
   color: white;
-  pointer-events: none; /* ADD THIS: Prevents the invisible div from blocking clicks */
+  pointer-events: none; 
 }
 
+/* Fades in content on hover */
 .program-card:hover .card-hidden-content {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto; /* ADD THIS: Makes it clickable again once visible */
+  pointer-events: auto; 
 }
 
-/* Read More Button Styling */
+/* ADDED: Spaces out the paragraph text inside the hidden content */
+.card-hidden-content p {
+  font-size: 0.95rem;
+  margin: 0 0 35px 0;     
+  line-height: 1.6;       
+  padding: 0 10px;        
+}
+
+/* Read More Button Styling (Updated padding and border-radius) */
 .read-more-btn {
   display: inline-block;
-  padding: 8px 24px;
+  padding: 10px 30px;     /* UPDATED: roomier button */
   background-color: transparent;
   color: white;
   text-decoration: none;
   border: 2px solid white;
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 25px;    /* UPDATED: rounder edges */
   transition: background-color 0.2s, color 0.2s;
-  position: relative; /* ADD THIS */
-  z-index: 10;        /* ADD THIS: Forces button to the top layer */
+  position: relative; 
+  z-index: 10;        
 }
 
 .read-more-btn:hover {
