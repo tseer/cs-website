@@ -42,9 +42,6 @@ schema_collection_key: academics
 - [Certificate Programs]({{ '/certificate-programs' | relative_url }})
   Provides description and requirements of our Certificate program for Computer Science.
 
-- [Course Schedule]({{ '/course-schedule' | relative_url }})
-  Provides course schedule for the current term with the option of selecting past and future terms.
-
 - [Course Catalog]({{ '/academics/course-catalog/' | relative_url }})
   Provides current and upcoming course offerings grouped by academic year and term.
 

@@ -15,6 +15,8 @@ from openpyxl import load_workbook
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_PATH = REPO_ROOT / "_data" / "course_offerings.yml"
+PEOPLE_DIR = REPO_ROOT / "_people"
+COURSES_DIR = REPO_ROOT / "WEB" / "academics" / "courses"
 FILE_PATTERN = re.compile(r"^schedule_(fall|spring|summer(?:_session[123])?)_(\d{4})\.xlsx$")
 
 TERM_CONFIG = {
@@ -104,6 +106,189 @@ def normalize_meeting_line(days: str, start: str, end: str) -> str:
     if days and time_part:
         return f"{days} {time_part}"
     return days or time_part or "TBA"
+
+
+def normalize_name_text(value: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"[.,]+", " ", stringify(value).lower())).strip()
+
+
+def name_tokens(value: str) -> list[str]:
+    return [token for token in normalize_name_text(value).split(" ") if token]
+
+
+def split_instructor_names(value: str) -> list[str]:
+    text = stringify(value)
+    if not text:
+        return []
+    normalized = (
+        text.replace(" / ", " ; ")
+        .replace(" & ", " ; ")
+        .replace(" and ", " ; ")
+        .replace("; ", ";")
+        .replace(" ;", ";")
+    )
+    return [part.strip() for part in normalized.split(";") if part.strip()]
+
+
+def load_front_matter(path: Path) -> dict[str, Any]:
+    text = path.read_text(encoding="utf-8")
+    if not text.startswith("---"):
+        return {}
+    parts = text.split("---", 2)
+    if len(parts) < 3:
+        return {}
+    return yaml.safe_load(parts[1]) or {}
+
+
+def build_people_index() -> dict[str, dict[str, Any]]:
+    people_index: dict[str, dict[str, Any]] = {}
+    for path in sorted(PEOPLE_DIR.glob("*.md")):
+        data = load_front_matter(path)
+        slug = path.stem
+        person_name = stringify(data.get("person_name") or data.get("title"))
+        aliases = [stringify(alias) for alias in (data.get("aliases") or []) if stringify(alias)]
+        variants = []
+        for candidate in [person_name, stringify(data.get("title"))] + aliases:
+            if candidate and candidate not in variants:
+                variants.append(candidate)
+        people_index[slug] = {
+            "slug": slug,
+            "person_name": person_name,
+            "url": stringify(data.get("permalink")),
+            "aliases": aliases,
+            "variants": variants,
+        }
+    return people_index
+
+
+def build_course_page_index() -> dict[str, dict[str, Any]]:
+    course_index: dict[str, dict[str, Any]] = {}
+    for path in sorted(COURSES_DIR.glob("*.markdown")):
+        data = load_front_matter(path)
+        course_code = stringify(data.get("course_code"))
+        if not course_code:
+            continue
+        course_index[course_code] = {
+            "course_code": course_code,
+            "course_name": stringify(data.get("course_name")),
+            "title": stringify(data.get("title")),
+            "url": stringify(data.get("permalink")),
+            "keywords": [stringify(keyword) for keyword in (data.get("keywords") or []) if stringify(keyword)],
+        }
+    return course_index
+
+
+def match_person(name: str, people_index: dict[str, dict[str, Any]]) -> dict[str, Any] | None:
+    normalized = normalize_name_text(name)
+    if not normalized:
+        return None
+
+    instructor_token_set = set(name_tokens(name))
+    best_match = None
+    best_score = -1
+    tied = False
+
+    for person in people_index.values():
+        person_best_score = -1
+        for variant in person["variants"]:
+            variant_normalized = normalize_name_text(variant)
+            variant_token_set = set(name_tokens(variant))
+
+            if variant_normalized == normalized:
+                person_best_score = max(person_best_score, 3)
+            elif instructor_token_set and variant_token_set and instructor_token_set == variant_token_set and len(variant_token_set) >= 2:
+                person_best_score = max(person_best_score, 2)
+            elif instructor_token_set and variant_token_set and len(variant_token_set) >= 2:
+                if variant_token_set.issubset(instructor_token_set) or instructor_token_set.issubset(variant_token_set):
+                    person_best_score = max(person_best_score, 1)
+
+        if person_best_score > best_score:
+            best_match = person
+            best_score = person_best_score
+            tied = False
+        elif person_best_score == best_score and person_best_score >= 0:
+            tied = True
+
+    if tied or best_score < 0:
+        return None
+    return best_match
+
+
+def build_relationships(
+    academic_years: list[dict[str, Any]],
+    people_index: dict[str, dict[str, Any]],
+    course_page_index: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    people_relationships: dict[str, dict[str, Any]] = {
+        slug: {
+            "related_courses": [],
+            "related_course_entries": [],
+            "keyword_supplements": [],
+        }
+        for slug in people_index.keys()
+    }
+    course_relationships: dict[str, dict[str, Any]] = {}
+    instructor_matches: dict[str, dict[str, Any]] = {}
+
+    for academic_year in academic_years:
+        for term in academic_year["terms"]:
+            for offering in term["offerings"]:
+                course_code = offering["course_code"]
+                course_entry = course_relationships.setdefault(
+                    course_code,
+                    {
+                        "related_people": [],
+                        "related_people_entries": [],
+                        "keyword_supplements": [],
+                    },
+                )
+
+                for instructor_name in split_instructor_names(offering.get("instructor", "")):
+                    matched_person = match_person(instructor_name, people_index)
+                    if not matched_person:
+                        continue
+
+                    instructor_matches[instructor_name] = {
+                        "slug": matched_person["slug"],
+                        "person_name": matched_person["person_name"],
+                        "url": matched_person["url"],
+                    }
+
+                    if matched_person["slug"] not in course_entry["related_people"]:
+                        course_entry["related_people"].append(matched_person["slug"])
+                        course_entry["related_people_entries"].append(
+                            {
+                                "slug": matched_person["slug"],
+                                "person_name": matched_person["person_name"],
+                                "url": matched_person["url"],
+                            }
+                        )
+
+                    if matched_person["person_name"] not in course_entry["keyword_supplements"]:
+                        course_entry["keyword_supplements"].append(matched_person["person_name"])
+
+                    if course_code in course_page_index:
+                        person_entry = people_relationships[matched_person["slug"]]
+                        if course_code not in person_entry["related_courses"]:
+                            person_entry["related_courses"].append(course_code)
+                            course_page = course_page_index[course_code]
+                            person_entry["related_course_entries"].append(
+                                {
+                                    "course_code": course_code,
+                                    "course_name": course_page.get("course_name") or course_page.get("title"),
+                                    "url": course_page.get("url"),
+                                }
+                            )
+                        for keyword in [course_code, course_page_index[course_code].get("course_name") or course_page_index[course_code].get("title")]:
+                            keyword = stringify(keyword)
+                            if keyword and keyword not in person_entry["keyword_supplements"]:
+                                person_entry["keyword_supplements"].append(keyword)
+
+    return {
+        "people": people_relationships,
+        "courses": course_relationships,
+        "instructor_matches": instructor_matches,
+    }
 
 
 def current_academic_year_start(today: date) -> int:
@@ -257,6 +442,8 @@ def build_offerings_for_term(rows: list[dict[str, Any]], *, term_type: str, year
 def build_payload(today: date) -> dict[str, Any]:
     current_ay_start = current_academic_year_start(today)
     schedule_files = discover_schedule_files(REPO_ROOT)
+    people_index = build_people_index()
+    course_page_index = build_course_page_index()
 
     academic_year_map: "OrderedDict[int, dict[str, Any]]" = OrderedDict()
     course_index: dict[str, list[dict[str, Any]]] = {}
@@ -318,6 +505,8 @@ def build_payload(today: date) -> dict[str, Any]:
         for course_code, offerings in sorted(course_index.items())
     }
 
+    relationships = build_relationships(academic_years, people_index, course_page_index)
+
     return {
         "generated_at": datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "generated_for_date": today.isoformat(),
@@ -334,6 +523,7 @@ def build_payload(today: date) -> dict[str, Any]:
         "skipped_files": skipped_files,
         "academic_years": academic_years,
         "course_index": sorted_course_index,
+        "relationships": relationships,
     }
 
 

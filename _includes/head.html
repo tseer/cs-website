@@ -9,6 +9,28 @@
   {%- assign canonical_url = page.url | absolute_url -%}
   {%- assign page_description_for_meta = page.summary | default: page.description | default: site.description | strip_html | normalize_whitespace -%}
   {%- assign page_description_for_meta = page_description_for_meta | truncate: 180 -%}
+  {%- assign keyword_blob = "" -%}
+  {%- if page.keywords and page.keywords.size > 0 -%}
+    {%- assign keyword_blob = page.keywords | join: "||" -%}
+  {%- endif -%}
+  {%- if page.layout == "course" and page.course_code -%}
+    {%- assign dynamic_course_relationships = site.data.course_offerings.relationships.courses[page.course_code] -%}
+    {%- if dynamic_course_relationships and dynamic_course_relationships.keyword_supplements -%}
+      {%- for keyword in dynamic_course_relationships.keyword_supplements -%}
+        {%- if keyword_blob != "" -%}{%- assign keyword_blob = keyword_blob | append: "||" -%}{%- endif -%}
+        {%- assign keyword_blob = keyword_blob | append: keyword -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- elsif page.layout == "person" -%}
+    {%- assign dynamic_person_relationships = site.data.course_offerings.relationships.people[page.slug] -%}
+    {%- if dynamic_person_relationships and dynamic_person_relationships.keyword_supplements -%}
+      {%- for keyword in dynamic_person_relationships.keyword_supplements -%}
+        {%- if keyword_blob != "" -%}{%- assign keyword_blob = keyword_blob | append: "||" -%}{%- endif -%}
+        {%- assign keyword_blob = keyword_blob | append: keyword -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endif -%}
+  {%- assign meta_keywords = keyword_blob | split: "||" | uniq -%}
   <title>{% if page_title_for_head == site.title %}{{ site.title | escape }}{% else %}{{ page_title_for_head | escape }} | {{ site.title | escape }}{% endif %}</title>
   <meta property="og:title" content="{{ page_title_for_head | escape }}">
   <meta property="og:locale" content="en_US">
@@ -28,8 +50,8 @@
     <meta name="twitter:description" content="{{ page_description_for_meta | strip_html | strip_newlines | escape }}">
   {%- endif -%}
 
-  {%- if page.keywords -%}
-    <meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}">
+  {%- if meta_keywords and meta_keywords.size > 0 and meta_keywords.first != "" -%}
+    <meta name="keywords" content="{{ meta_keywords | join: ', ' | escape }}">
   {%- endif -%}
 
   {%- assign page_title_for_schema = page.title | default: page.course_code | default: site.title -%}

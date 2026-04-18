@@ -1,0 +1,26 @@
+{% assign raw_instructor = include.instructor | default: "" | strip %}
+{% assign relationship_data = site.data.course_offerings.relationships.instructor_matches %}
+{% if raw_instructor == "" %}
+  TBA
+{% else %}
+  {% assign normalized_instructors = raw_instructor
+    | replace: " / ", " ; "
+    | replace: " & ", " ; "
+    | replace: " and ", " ; "
+    | replace: "; ", ";"
+    | replace: " ;", ";"
+  %}
+  {% assign instructor_parts = normalized_instructors | split: ";" %}
+  {% for instructor_part in instructor_parts %}
+    {% assign instructor_name = instructor_part | strip %}
+    {% if instructor_name != "" %}
+      {% assign match = relationship_data[instructor_name] %}
+      {% if match %}
+        <a href="{{ match.url | relative_url }}">{{ instructor_name }}</a>
+      {% else %}
+        {{ instructor_name }}
+      {% endif %}
+      {% unless forloop.last %}; {% endunless %}
+    {% endif %}
+  {% endfor %}
+{% endif %}

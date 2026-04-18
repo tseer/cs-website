@@ -52,7 +52,7 @@
               <div>{{ schedule_line }}</div>
             {% endfor %}
           </td>
-          <td>{{ offering.instructor | default: "TBA" }}</td>
+          <td>{% include instructor-links.html instructor=offering.instructor %}</td>
           <td>
             {% for location in offering.location_lines %}
               <div>{{ location }}</div>

@@ -1,11 +1,83 @@
 {% assign has_connections = false %}
+{% assign empty_array = "" | split: "" %}
 {% assign connection_topics = page.related_topics | default: page.research_areas %}
-{% assign hide_background_metadata = page.layout == "course" %}
-{% if page.related_people.size > 0 or page.related_courses.size > 0 or page.related_groups.size > 0 %}
+{% assign is_course_page = false %}
+{% if page.course_code %}
+  {% assign is_course_page = true %}
+{% endif %}
+{% assign hide_background_metadata = is_course_page %}
+{% assign hide_course_relationship_metadata = is_course_page %}
+{% assign dynamic_course_relationships = nil %}
+{% assign dynamic_person_relationships = nil %}
+{% assign dynamic_person_course_entries = empty_array %}
+{% assign is_person_page = nil %}
+{% if page.layout == "person" or page.collection == "people" or page.entity_type == "person" %}
+  {% assign is_person_page = true %}
+{% endif %}
+{% if is_course_page and page.course_code %}
+  {% assign dynamic_course_relationships = site.data.course_offerings.relationships.courses[page.course_code] %}
+{% endif %}
+{% if is_person_page %}
+  {% assign dynamic_person_relationships = site.data.course_offerings.relationships.people[page.slug] %}
+  {% if dynamic_person_relationships and dynamic_person_relationships.related_course_entries %}
+    {% assign dynamic_person_course_entries = dynamic_person_relationships.related_course_entries %}
+  {% endif %}
+{% endif %}
+
+{% capture related_people_blob %}
+{% if page.related_people and page.related_people.size > 0 %}
+  {% for slug in page.related_people %}{{ slug }}||{% endfor %}
+{% endif %}
+{% if dynamic_course_relationships and dynamic_course_relationships.related_people %}
+  {% for slug in dynamic_course_relationships.related_people %}{{ slug }}||{% endfor %}
+{% endif %}
+{% endcapture %}
+{% assign related_people_slugs = related_people_blob | split: "||" | uniq %}
+{% assign related_people_count = 0 %}
+{% for slug in related_people_slugs %}
+  {% if slug != "" %}
+    {% assign related_people_count = related_people_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% capture related_courses_blob %}
+{% if is_person_page and page.related_courses and page.related_courses.size > 0 %}
+  {% for code in page.related_courses %}{{ code }}||{% endfor %}
+{% endif %}
+{% if is_person_page and dynamic_person_relationships and dynamic_person_relationships.related_courses %}
+  {% for code in dynamic_person_relationships.related_courses %}{{ code }}||{% endfor %}
+{% endif %}
+{% endcapture %}
+{% assign related_course_codes = related_courses_blob | split: "||" | uniq %}
+{% assign related_course_count = 0 %}
+{% for code in related_course_codes %}
+  {% if code != "" %}
+    {% assign related_course_count = related_course_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign display_related_people_count = related_people_count %}
+{% if hide_course_relationship_metadata %}
+  {% assign display_related_people_count = 0 %}
+{% endif %}
+{% assign related_group_count = 0 %}
+{% if page.related_groups %}
+  {% assign related_group_count = page.related_groups.size %}
+{% endif %}
+
+{% if display_related_people_count > 0 or related_course_count > 0 or related_group_count > 0 %}
 {% assign has_connections = true %}
 {% endif %}
 {% unless hide_background_metadata %}
-  {% if page.audience or page.related_programs.size > 0 or connection_topics.size > 0 %}
+  {% assign related_program_count = 0 %}
+  {% if page.related_programs %}
+    {% assign related_program_count = page.related_programs.size %}
+  {% endif %}
+  {% assign connection_topic_count = 0 %}
+  {% if connection_topics %}
+    {% assign connection_topic_count = connection_topics.size %}
+  {% endif %}
+  {% if page.audience or related_program_count > 0 or connection_topic_count > 0 %}
   {% assign has_connections = true %}
   {% endif %}
 {% endunless %}
@@ -26,8 +98,8 @@
   </div>
   {% endif %}
 
-  {% assign related_people = site.people | where_exp: "person", "page.related_people contains person.slug" %}
-  {% if related_people.size > 0 %}
+  {% assign related_people = site.people | where_exp: "person", "related_people_slugs contains person.slug" %}
+  {% if related_people.size > 0 and hide_course_relationship_metadata != true %}
   <div class="entity-connections-block">
     <h2>Related People</h2>
     <ul>
@@ -38,16 +110,24 @@
   </div>
   {% endif %}
 
-  {% if page.related_courses and page.related_courses.size > 0 %}
+  {% if is_person_page and related_course_count > 0 %}
   <div class="entity-connections-block">
     <h2>Related Courses</h2>
     <ul>
-      {% for course_code in page.related_courses %}
-      {% assign related_course_page = site.pages | where: "course_code", course_code | first %}
-      {% if related_course_page %}
-      <li><a href="{{ related_course_page.url | relative_url }}">{{ related_course_page.title }}</a></li>
+      {% if dynamic_person_course_entries and dynamic_person_course_entries.size > 0 %}
+        {% for course_entry in dynamic_person_course_entries %}
+          <li><a href="{{ course_entry.url | relative_url }}">{{ course_entry.course_code }}: {{ course_entry.course_name }}</a></li>
+        {% endfor %}
+      {% else %}
+        {% for course_code in related_course_codes %}
+        {% if course_code != "" %}
+        {% assign related_course_page = site.pages | where: "course_code", course_code | first %}
+        {% if related_course_page %}
+        <li><a href="{{ related_course_page.url | relative_url }}">{{ related_course_page.title }}</a></li>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
       {% endif %}
-      {% endfor %}
     </ul>
   </div>
   {% endif %}

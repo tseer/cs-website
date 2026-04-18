@@ -39,8 +39,6 @@ academics:
       url: "/admissions"
     - name: "Certificate Programs"
       url: "/certificate-programs"
-    - name: "Course Schedule"
-      url: "/course-schedule"
     - name: "Course Catalog"
       url: "/academics/course-catalog/"
     - name: "Courses"

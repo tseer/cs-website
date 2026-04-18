@@ -1,4 +1,4 @@
-generated_at: '2026-04-18T12:54:09Z'
+generated_at: '2026-04-18T13:46:57Z'
 generated_for_date: '2026-04-18'
 current_academic_year: 2025-2026
 current_academic_year_start: 2025
@@ -18590,3 +18590,1837 @@ course_index:
     location_lines:
     - Y03-3350
     schedule_summary: Tu 05:30PM - 08:15PM
+relationships:
+  people:
+    amanda-potasznik:
+      related_courses:
+      - CS285L
+      - IT285L
+      related_course_entries:
+      - course_code: CS285L
+        course_name: Social Issues and Ethics in Computing
+        url: /academics/courses/CS285L
+      - course_code: IT285L
+        course_name: Introduction to Networks
+        url: /academics/courses/IT285L
+      keyword_supplements:
+      - CS285L
+      - Social Issues and Ethics in Computing
+      - IT285L
+      - Introduction to Networks
+    bo-sheng:
+      related_courses:
+      - CS446
+      - CS646
+      - CS696
+      - CS899
+      - CS480
+      related_course_entries:
+      - course_code: CS446
+        course_name: Introduction to Internetworking
+        url: /academics/courses/CS446
+      - course_code: CS646
+        course_name: Computer Communication Networks
+        url: /academics/courses/CS646
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      - course_code: CS899
+        course_name: Research for PhD Thesis
+        url: /academics/courses/CS899
+      - course_code: CS480
+        course_name: Special Topics
+        url: /academics/courses/CS480
+      keyword_supplements:
+      - CS446
+      - Introduction to Internetworking
+      - CS646
+      - Computer Communication Networks
+      - CS696
+      - Independent Study
+      - CS899
+      - Research for PhD Thesis
+      - CS480
+      - Special Topics
+    christopher-kelly:
+      related_courses:
+      - IT110
+      - IT114L
+      - IT341
+      related_course_entries:
+      - course_code: IT110
+        course_name: IT Problem Solving
+        url: /academics/courses/IT110
+      - course_code: IT114L
+        course_name: Introduction to Java Part I
+        url: /academics/courses/IT114L
+      - course_code: IT341
+        course_name: Introduction to System Administration
+        url: /academics/courses/IT341
+      keyword_supplements:
+      - IT110
+      - IT Problem Solving
+      - IT114L
+      - Introduction to Java Part I
+      - IT341
+      - Introduction to System Administration
+    dan-simovici:
+      related_courses:
+      - CS724
+      - CS622
+      - CS899
+      related_course_entries:
+      - course_code: CS724
+        course_name: Topics in Algorithm Theory and Design
+        url: /academics/courses/CS724
+      - course_code: CS622
+        course_name: Theory of Formal Languages
+        url: /academics/courses/CS622
+      - course_code: CS899
+        course_name: Research for PhD Thesis
+        url: /academics/courses/CS899
+      keyword_supplements:
+      - CS724
+      - Topics in Algorithm Theory and Design
+      - CS622
+      - Theory of Formal Languages
+      - CS899
+      - Research for PhD Thesis
+    daniel-haehn:
+      related_courses:
+      - CS460
+      - CS478
+      - CS696
+      - CS698
+      - CS699
+      - CS899
+      - CS480
+      - CS666
+      - CS697
+      related_course_entries:
+      - course_code: CS460
+        course_name: Graphics
+        url: /academics/courses/CS460
+      - course_code: CS478
+        course_name: Independent Study
+        url: /academics/courses/CS478
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      - course_code: CS698
+        course_name: Practicum in Computer Science
+        url: /academics/courses/CS698
+      - course_code: CS699
+        course_name: Research for MS Thesis
+        url: /academics/courses/CS699
+      - course_code: CS899
+        course_name: Research for PhD Thesis
+        url: /academics/courses/CS899
+      - course_code: CS480
+        course_name: Special Topics
+        url: /academics/courses/CS480
+      - course_code: CS666
+        course_name: Biomedical Signal and Image Processing
+        url: /academics/courses/CS666
+      - course_code: CS697
+        course_name: Special Topics
+        url: /academics/courses/CS697
+      keyword_supplements:
+      - CS460
+      - Graphics
+      - CS478
+      - Independent Study
+      - CS696
+      - CS698
+      - Practicum in Computer Science
+      - CS699
+      - Research for MS Thesis
+      - CS899
+      - Research for PhD Thesis
+      - CS480
+      - Special Topics
+      - CS666
+      - Biomedical Signal and Image Processing
+      - CS697
+    duc-tran:
+      related_courses:
+      - CS240
+      - CS495
+      - CS696
+      - CS899
+      related_course_entries:
+      - course_code: CS240
+        course_name: Programming in C
+        url: /academics/courses/CS240
+      - course_code: CS495
+        course_name: Practicum in Computer Science
+        url: /academics/courses/CS495
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      - course_code: CS899
+        course_name: Research for PhD Thesis
+        url: /academics/courses/CS899
+      keyword_supplements:
+      - CS240
+      - Programming in C
+      - CS495
+      - Practicum in Computer Science
+      - CS696
+      - Independent Study
+      - CS899
+      - Research for PhD Thesis
+    funda-durupinar:
+      related_courses:
+      - CS461
+      - CS615
+      - CS698
+      - CS899
+      - CS495
+      - CS696
+      related_course_entries:
+      - course_code: CS461
+        course_name: Computer Games Programming
+        url: /academics/courses/CS461
+      - course_code: CS615
+        course_name: User Interface Design
+        url: /academics/courses/CS615
+      - course_code: CS698
+        course_name: Practicum in Computer Science
+        url: /academics/courses/CS698
+      - course_code: CS899
+        course_name: Research for PhD Thesis
+        url: /academics/courses/CS899
+      - course_code: CS495
+        course_name: Practicum in Computer Science
+        url: /academics/courses/CS495
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      keyword_supplements:
+      - CS461
+      - Computer Games Programming
+      - CS615
+      - User Interface Design
+      - CS698
+      - Practicum in Computer Science
+      - CS899
+      - Research for PhD Thesis
+      - CS495
+      - CS696
+      - Independent Study
+    gabriel-ghinita:
+      related_courses:
+      - CS430
+      - CS630
+      related_course_entries:
+      - course_code: CS430
+        course_name: Database Management Systems
+        url: /academics/courses/CS430
+      - course_code: CS630
+        course_name: Database Management Systems
+        url: /academics/courses/CS630
+      keyword_supplements:
+      - CS430
+      - Database Management Systems
+      - CS630
+    glenn-hoffman:
+      related_courses:
+      - IT116
+      - IT117
+      - IT244
+      - CS495
+      - IT480
+      related_course_entries:
+      - course_code: IT116
+        course_name: Introduction to Scripting
+        url: /academics/courses/IT116
+      - course_code: IT117
+        course_name: Intermediate Scripting
+        url: /academics/courses/IT117
+      - course_code: IT244
+        course_name: Introduction to Linux/Unix
+        url: /academics/courses/IT244
+      - course_code: CS495
+        course_name: Practicum in Computer Science
+        url: /academics/courses/CS495
+      - course_code: IT480
+        course_name: Special Topics
+        url: /academics/courses/IT480
+      keyword_supplements:
+      - IT116
+      - Introduction to Scripting
+      - IT117
+      - Intermediate Scripting
+      - IT244
+      - Introduction to Linux/Unix
+      - CS495
+      - Practicum in Computer Science
+      - IT480
+      - Special Topics
+    jane-h-deblois:
+      related_courses:
+      - CS410
+      - CS444
+      related_course_entries:
+      - course_code: CS410
+        course_name: Introduction to Software Engineering
+        url: /academics/courses/CS410
+      - course_code: CS444
+        course_name: Introduction to Operating Systems
+        url: /academics/courses/CS444
+      keyword_supplements:
+      - CS410
+      - Introduction to Software Engineering
+      - CS444
+      - Introduction to Operating Systems
+    jun-suzuki:
+      related_courses:
+      - CS680
+      - CS681
+      related_course_entries:
+      - course_code: CS680
+        course_name: Object-Oriented Design and Programming
+        url: /academics/courses/CS680
+      - course_code: CS681
+        course_name: Object-Oriented Software Development
+        url: /academics/courses/CS681
+      keyword_supplements:
+      - CS680
+      - Object-Oriented Design and Programming
+      - CS681
+      - Object-Oriented Software Development
+    kenneth-fletcher:
+      related_courses:
+      - CS410
+      - CS478
+      - CS682
+      - CS698
+      - CS899
+      - CS696
+      related_course_entries:
+      - course_code: CS410
+        course_name: Introduction to Software Engineering
+        url: /academics/courses/CS410
+      - course_code: CS478
+        course_name: Independent Study
+        url: /academics/courses/CS478
+      - course_code: CS682
+        course_name: Software Development Laboratory I
+        url: /academics/courses/CS682
+      - course_code: CS698
+        course_name: Practicum in Computer Science
+        url: /academics/courses/CS698
+      - course_code: CS899
+        course_name: Research for PhD Thesis
+        url: /academics/courses/CS899
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      keyword_supplements:
+      - CS410
+      - Introduction to Software Engineering
+      - CS478
+      - Independent Study
+      - CS682
+      - Software Development Laboratory I
+      - CS698
+      - Practicum in Computer Science
+      - CS899
+      - Research for PhD Thesis
+      - CS696
+    marc-pomplun:
+      related_courses:
+      - CS699
+      related_course_entries:
+      - course_code: CS699
+        course_name: Research for MS Thesis
+        url: /academics/courses/CS699
+      keyword_supplements:
+      - CS699
+      - Research for MS Thesis
+    ming-ouyang:
+      related_courses: []
+      related_course_entries: []
+      keyword_supplements: []
+    nurit-haspel:
+      related_courses:
+      - CS478
+      - CS495
+      - CS624
+      - CS696
+      - CS899
+      related_course_entries:
+      - course_code: CS478
+        course_name: Independent Study
+        url: /academics/courses/CS478
+      - course_code: CS495
+        course_name: Practicum in Computer Science
+        url: /academics/courses/CS495
+      - course_code: CS624
+        course_name: Analysis of Algorithms
+        url: /academics/courses/CS624
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      - course_code: CS899
+        course_name: Research for PhD Thesis
+        url: /academics/courses/CS899
+      keyword_supplements:
+      - CS478
+      - Independent Study
+      - CS495
+      - Practicum in Computer Science
+      - CS624
+      - Analysis of Algorithms
+      - CS696
+      - CS899
+      - Research for PhD Thesis
+    ozgun-babur:
+      related_courses:
+      - CS220
+      - CS438
+      - CS638
+      - CS696
+      - CS899
+      related_course_entries:
+      - course_code: CS220
+        course_name: Applied Discrete Mathematics
+        url: /academics/courses/CS220
+      - course_code: CS438
+        course_name: Applied Machine Learning
+        url: /academics/courses/CS438
+      - course_code: CS638
+        course_name: Applied Machine Learning
+        url: /academics/courses/CS638
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      - course_code: CS899
+        course_name: Research for PhD Thesis
+        url: /academics/courses/CS899
+      keyword_supplements:
+      - CS220
+      - Applied Discrete Mathematics
+      - CS438
+      - Applied Machine Learning
+      - CS638
+      - CS696
+      - Independent Study
+      - CS899
+      - Research for PhD Thesis
+    shichao-pei:
+      related_courses:
+      - CS310
+      - CS470
+      - CS670
+      - CS495
+      - CS696
+      related_course_entries:
+      - course_code: CS310
+        course_name: Advanced Data Structures and Algorithms
+        url: /academics/courses/CS310
+      - course_code: CS470
+        course_name: Introduction to Artificial Intelligence
+        url: /academics/courses/CS470
+      - course_code: CS670
+        course_name: Artificial Intelligence
+        url: /academics/courses/CS670
+      - course_code: CS495
+        course_name: Practicum in Computer Science
+        url: /academics/courses/CS495
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      keyword_supplements:
+      - CS310
+      - Advanced Data Structures and Algorithms
+      - CS470
+      - Introduction to Artificial Intelligence
+      - CS670
+      - Artificial Intelligence
+      - CS495
+      - Practicum in Computer Science
+      - CS696
+      - Independent Study
+    soheil-sepahyar:
+      related_courses:
+      - CS110
+      - CS119
+      - CS220
+      - CS420
+      related_course_entries:
+      - course_code: CS110
+        course_name: Introduction to Computing
+        url: /academics/courses/CS110
+      - course_code: CS119
+        course_name: Computer Language Supplement
+        url: /academics/courses/CS119
+      - course_code: CS220
+        course_name: Applied Discrete Mathematics
+        url: /academics/courses/CS220
+      - course_code: CS420
+        course_name: Introduction to the Theory of Computation
+        url: /academics/courses/CS420
+      keyword_supplements:
+      - CS110
+      - Introduction to Computing
+      - CS119
+      - Computer Language Supplement
+      - CS220
+      - Applied Discrete Mathematics
+      - CS420
+      - Introduction to the Theory of Computation
+    stephen-chang:
+      related_courses:
+      - CS420
+      - CS478
+      - CS696
+      - CS450
+      related_course_entries:
+      - course_code: CS420
+        course_name: Introduction to the Theory of Computation
+        url: /academics/courses/CS420
+      - course_code: CS478
+        course_name: Independent Study
+        url: /academics/courses/CS478
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      - course_code: CS450
+        course_name: The Structure of Higher Level Languages
+        url: /academics/courses/CS450
+      keyword_supplements:
+      - CS420
+      - Introduction to the Theory of Computation
+      - CS478
+      - Independent Study
+      - CS696
+      - CS450
+      - The Structure of Higher Level Languages
+    swami-iyer:
+      related_courses:
+      - CS110
+      - CS119
+      - CS210
+      - CS451
+      - CS651
+      related_course_entries:
+      - course_code: CS110
+        course_name: Introduction to Computing
+        url: /academics/courses/CS110
+      - course_code: CS119
+        course_name: Computer Language Supplement
+        url: /academics/courses/CS119
+      - course_code: CS210
+        course_name: Intermediate Computing with Data Structures
+        url: /academics/courses/CS210
+      - course_code: CS451
+        course_name: Compilers
+        url: /academics/courses/CS451
+      - course_code: CS651
+        course_name: Compilers
+        url: /academics/courses/CS651
+      keyword_supplements:
+      - CS110
+      - Introduction to Computing
+      - CS119
+      - Computer Language Supplement
+      - CS210
+      - Intermediate Computing with Data Structures
+      - CS451
+      - Compilers
+      - CS651
+    tales-imbiriba:
+      related_courses:
+      - CS675
+      - CS696
+      related_course_entries:
+      - course_code: CS675
+        course_name: Computer Vision
+        url: /academics/courses/CS675
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      keyword_supplements:
+      - CS675
+      - Computer Vision
+      - CS696
+      - Independent Study
+    tarikul-islam-papon:
+      related_courses:
+      - CS187SL
+      - CS436
+      - CS636
+      related_course_entries:
+      - course_code: CS187SL
+        course_name: Science Gateway Seminar I
+        url: /academics/courses/CS187SL
+      - course_code: CS436
+        course_name: Database Application Development
+        url: /academics/courses/CS436
+      - course_code: CS636
+        course_name: Database Application Development
+        url: /academics/courses/CS636
+      keyword_supplements:
+      - CS187SL
+      - Science Gateway Seminar I
+      - CS436
+      - Database Application Development
+      - CS636
+    temitayo-banjo:
+      related_courses:
+      - IT244
+      - IT485
+      - IT116
+      related_course_entries:
+      - course_code: IT244
+        course_name: Introduction to Linux/Unix
+        url: /academics/courses/IT244
+      - course_code: IT485
+        course_name: Information Technology Capstone
+        url: /academics/courses/IT485
+      - course_code: IT116
+        course_name: Introduction to Scripting
+        url: /academics/courses/IT116
+      keyword_supplements:
+      - IT244
+      - Introduction to Linux/Unix
+      - IT485
+      - Information Technology Capstone
+      - IT116
+      - Introduction to Scripting
+    tiago-cogumbreiro:
+      related_courses:
+      - CS450
+      - CS495
+      - CS498
+      - CS696
+      - CS698
+      - CS899
+      - CS699
+      - CS720
+      related_course_entries:
+      - course_code: CS450
+        course_name: The Structure of Higher Level Languages
+        url: /academics/courses/CS450
+      - course_code: CS495
+        course_name: Practicum in Computer Science
+        url: /academics/courses/CS495
+      - course_code: CS498
+        course_name: Honors Thesis
+        url: /academics/courses/CS498
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      - course_code: CS698
+        course_name: Practicum in Computer Science
+        url: /academics/courses/CS698
+      - course_code: CS899
+        course_name: Research for PhD Thesis
+        url: /academics/courses/CS899
+      - course_code: CS699
+        course_name: Research for MS Thesis
+        url: /academics/courses/CS699
+      - course_code: CS720
+        course_name: Logical Foundations in Computer Science
+        url: /academics/courses/CS720
+      keyword_supplements:
+      - CS450
+      - The Structure of Higher Level Languages
+      - CS495
+      - Practicum in Computer Science
+      - CS498
+      - Honors Thesis
+      - CS696
+      - Independent Study
+      - CS698
+      - CS899
+      - Research for PhD Thesis
+      - CS699
+      - Research for MS Thesis
+      - CS720
+      - Logical Foundations in Computer Science
+    torna-soro:
+      related_courses:
+      - IT442
+      - IT443
+      - IT444
+      - CS495
+      related_course_entries:
+      - course_code: IT442
+        course_name: Windows System Administration
+        url: /academics/courses/IT442
+      - course_code: IT443
+        course_name: Network Security Administration
+        url: /academics/courses/IT443
+      - course_code: IT444
+        course_name: Network Security Administration II
+        url: /academics/courses/IT444
+      - course_code: CS495
+        course_name: Practicum in Computer Science
+        url: /academics/courses/CS495
+      keyword_supplements:
+      - IT442
+      - Windows System Administration
+      - IT443
+      - Network Security Administration
+      - IT444
+      - Network Security Administration II
+      - CS495
+      - Practicum in Computer Science
+    wei-ding:
+      related_courses:
+      - CS899
+      - CS478
+      - CS699
+      related_course_entries:
+      - course_code: CS899
+        course_name: Research for PhD Thesis
+        url: /academics/courses/CS899
+      - course_code: CS478
+        course_name: Independent Study
+        url: /academics/courses/CS478
+      - course_code: CS699
+        course_name: Research for MS Thesis
+        url: /academics/courses/CS699
+      keyword_supplements:
+      - CS899
+      - Research for PhD Thesis
+      - CS478
+      - Independent Study
+      - CS699
+      - Research for MS Thesis
+    xiaohui-liang:
+      related_courses:
+      - CS442
+      - CS478
+      - CS642
+      - CS696
+      - CS698
+      - CS899
+      - CS413
+      - CS498
+      - CS613
+      related_course_entries:
+      - course_code: CS442
+        course_name: Cybersecurity in the Internet of Things
+        url: /academics/courses/CS442
+      - course_code: CS478
+        course_name: Independent Study
+        url: /academics/courses/CS478
+      - course_code: CS642
+        course_name: Cybersecurity in the Internet of Things
+        url: /academics/courses/CS642
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      - course_code: CS698
+        course_name: Practicum in Computer Science
+        url: /academics/courses/CS698
+      - course_code: CS899
+        course_name: Research for PhD Thesis
+        url: /academics/courses/CS899
+      - course_code: CS413
+        course_name: Applied Cryptography
+        url: /academics/courses/CS413
+      - course_code: CS498
+        course_name: Honors Thesis
+        url: /academics/courses/CS498
+      - course_code: CS613
+        course_name: Applied Cryptography
+        url: /academics/courses/CS613
+      keyword_supplements:
+      - CS442
+      - Cybersecurity in the Internet of Things
+      - CS478
+      - Independent Study
+      - CS642
+      - CS696
+      - CS698
+      - Practicum in Computer Science
+      - CS899
+      - Research for PhD Thesis
+      - CS413
+      - Applied Cryptography
+      - CS498
+      - Honors Thesis
+      - CS613
+    yinxin-wan:
+      related_courses:
+      - CS449
+      - CS478
+      - CS696
+      - CS480
+      - CS697
+      related_course_entries:
+      - course_code: CS449
+        course_name: Introduction to Computer Security
+        url: /academics/courses/CS449
+      - course_code: CS478
+        course_name: Independent Study
+        url: /academics/courses/CS478
+      - course_code: CS696
+        course_name: Independent Study
+        url: /academics/courses/CS696
+      - course_code: CS480
+        course_name: Special Topics
+        url: /academics/courses/CS480
+      - course_code: CS697
+        course_name: Special Topics
+        url: /academics/courses/CS697
+      keyword_supplements:
+      - CS449
+      - Introduction to Computer Security
+      - CS478
+      - Independent Study
+      - CS696
+      - CS480
+      - Special Topics
+      - CS697
+    zaihan-yang:
+      related_courses: []
+      related_course_entries: []
+      keyword_supplements: []
+  courses:
+    CS105:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    CS110:
+      related_people:
+      - swami-iyer
+      - soheil-sepahyar
+      related_people_entries:
+      - slug: swami-iyer
+        person_name: Swami Iyer
+        url: /people/swami-iyer/
+      - slug: soheil-sepahyar
+        person_name: Soheil Sepahyar
+        url: /people/soheil-sepahyar/
+      keyword_supplements:
+      - Swami Iyer
+      - Soheil Sepahyar
+    CS119:
+      related_people:
+      - swami-iyer
+      - soheil-sepahyar
+      related_people_entries:
+      - slug: swami-iyer
+        person_name: Swami Iyer
+        url: /people/swami-iyer/
+      - slug: soheil-sepahyar
+        person_name: Soheil Sepahyar
+        url: /people/soheil-sepahyar/
+      keyword_supplements:
+      - Swami Iyer
+      - Soheil Sepahyar
+    CS187SL:
+      related_people:
+      - tarikul-islam-papon
+      related_people_entries:
+      - slug: tarikul-islam-papon
+        person_name: Tarikul Islam Papon
+        url: /people/tarikul-islam-papon/
+      keyword_supplements:
+      - Tarikul Islam Papon
+    CS210:
+      related_people:
+      - swami-iyer
+      related_people_entries:
+      - slug: swami-iyer
+        person_name: Swami Iyer
+        url: /people/swami-iyer/
+      keyword_supplements:
+      - Swami Iyer
+    CS220:
+      related_people:
+      - ozgun-babur
+      - soheil-sepahyar
+      related_people_entries:
+      - slug: ozgun-babur
+        person_name: Ozgun Babur
+        url: /people/ozgun-babur/
+      - slug: soheil-sepahyar
+        person_name: Soheil Sepahyar
+        url: /people/soheil-sepahyar/
+      keyword_supplements:
+      - Ozgun Babur
+      - Soheil Sepahyar
+    CS240:
+      related_people:
+      - duc-tran
+      related_people_entries:
+      - slug: duc-tran
+        person_name: Duc Tran
+        url: /people/duc-tran/
+      keyword_supplements:
+      - Duc Tran
+    CS271L:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    CS285L:
+      related_people:
+      - amanda-potasznik
+      related_people_entries:
+      - slug: amanda-potasznik
+        person_name: Amanda Potasznik
+        url: /people/amanda-potasznik/
+      keyword_supplements:
+      - Amanda Potasznik
+    CS310:
+      related_people:
+      - shichao-pei
+      related_people_entries:
+      - slug: shichao-pei
+        person_name: Shichao Pei
+        url: /people/shichao-pei/
+      keyword_supplements:
+      - Shichao Pei
+    CS341:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    CS410:
+      related_people:
+      - kenneth-fletcher
+      - jane-h-deblois
+      related_people_entries:
+      - slug: kenneth-fletcher
+        person_name: Kenneth Fletcher
+        url: /people/kenneth-fletcher/
+      - slug: jane-h-deblois
+        person_name: Jane H. DeBlois
+        url: /people/jane-h-deblois/
+      keyword_supplements:
+      - Kenneth Fletcher
+      - Jane H. DeBlois
+    CS420:
+      related_people:
+      - stephen-chang
+      - soheil-sepahyar
+      related_people_entries:
+      - slug: stephen-chang
+        person_name: Stephen Chang
+        url: /people/stephen-chang/
+      - slug: soheil-sepahyar
+        person_name: Soheil Sepahyar
+        url: /people/soheil-sepahyar/
+      keyword_supplements:
+      - Stephen Chang
+      - Soheil Sepahyar
+    CS430:
+      related_people:
+      - gabriel-ghinita
+      related_people_entries:
+      - slug: gabriel-ghinita
+        person_name: Gabriel Ghinita
+        url: /people/gabriel-ghinita/
+      keyword_supplements:
+      - Gabriel Ghinita
+    CS437:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    CS438:
+      related_people:
+      - ozgun-babur
+      related_people_entries:
+      - slug: ozgun-babur
+        person_name: Ozgun Babur
+        url: /people/ozgun-babur/
+      keyword_supplements:
+      - Ozgun Babur
+    CS442:
+      related_people:
+      - xiaohui-liang
+      related_people_entries:
+      - slug: xiaohui-liang
+        person_name: Xiaohui Liang
+        url: /people/xiaohui-liang/
+      keyword_supplements:
+      - Xiaohui Liang
+    CS444:
+      related_people:
+      - jane-h-deblois
+      related_people_entries:
+      - slug: jane-h-deblois
+        person_name: Jane H. DeBlois
+        url: /people/jane-h-deblois/
+      keyword_supplements:
+      - Jane H. DeBlois
+    CS446:
+      related_people:
+      - bo-sheng
+      related_people_entries:
+      - slug: bo-sheng
+        person_name: Bo Sheng
+        url: /people/bo-sheng/
+      keyword_supplements:
+      - Bo Sheng
+    CS449:
+      related_people:
+      - yinxin-wan
+      related_people_entries:
+      - slug: yinxin-wan
+        person_name: Yinxin Wan
+        url: /people/yinxin-wan/
+      keyword_supplements:
+      - Yinxin Wan
+    CS450:
+      related_people:
+      - tiago-cogumbreiro
+      - stephen-chang
+      related_people_entries:
+      - slug: tiago-cogumbreiro
+        person_name: Tiago Cogumbreiro
+        url: /people/tiago-cogumbreiro/
+      - slug: stephen-chang
+        person_name: Stephen Chang
+        url: /people/stephen-chang/
+      keyword_supplements:
+      - Tiago Cogumbreiro
+      - Stephen Chang
+    CS451:
+      related_people:
+      - swami-iyer
+      related_people_entries:
+      - slug: swami-iyer
+        person_name: Swami Iyer
+        url: /people/swami-iyer/
+      keyword_supplements:
+      - Swami Iyer
+    CS460:
+      related_people:
+      - daniel-haehn
+      related_people_entries:
+      - slug: daniel-haehn
+        person_name: Daniel Haehn
+        url: /people/daniel-haehn/
+      keyword_supplements:
+      - Daniel Haehn
+    CS461:
+      related_people:
+      - funda-durupinar
+      related_people_entries:
+      - slug: funda-durupinar
+        person_name: Funda Durupinar
+        url: /people/funda-durupinar/
+      keyword_supplements:
+      - Funda Durupinar
+    CS470:
+      related_people:
+      - shichao-pei
+      related_people_entries:
+      - slug: shichao-pei
+        person_name: Shichao Pei
+        url: /people/shichao-pei/
+      keyword_supplements:
+      - Shichao Pei
+    CS478:
+      related_people:
+      - kenneth-fletcher
+      - yinxin-wan
+      - nurit-haspel
+      - stephen-chang
+      - daniel-haehn
+      - xiaohui-liang
+      - wei-ding
+      related_people_entries:
+      - slug: kenneth-fletcher
+        person_name: Kenneth Fletcher
+        url: /people/kenneth-fletcher/
+      - slug: yinxin-wan
+        person_name: Yinxin Wan
+        url: /people/yinxin-wan/
+      - slug: nurit-haspel
+        person_name: Nurit Haspel
+        url: /people/nurit-haspel/
+      - slug: stephen-chang
+        person_name: Stephen Chang
+        url: /people/stephen-chang/
+      - slug: daniel-haehn
+        person_name: Daniel Haehn
+        url: /people/daniel-haehn/
+      - slug: xiaohui-liang
+        person_name: Xiaohui Liang
+        url: /people/xiaohui-liang/
+      - slug: wei-ding
+        person_name: Wei Ding
+        url: /people/wei-ding/
+      keyword_supplements:
+      - Kenneth Fletcher
+      - Yinxin Wan
+      - Nurit Haspel
+      - Stephen Chang
+      - Daniel Haehn
+      - Xiaohui Liang
+      - Wei Ding
+    CS495:
+      related_people:
+      - nurit-haspel
+      - duc-tran
+      - tiago-cogumbreiro
+      - shichao-pei
+      - funda-durupinar
+      - glenn-hoffman
+      - torna-soro
+      related_people_entries:
+      - slug: nurit-haspel
+        person_name: Nurit Haspel
+        url: /people/nurit-haspel/
+      - slug: duc-tran
+        person_name: Duc Tran
+        url: /people/duc-tran/
+      - slug: tiago-cogumbreiro
+        person_name: Tiago Cogumbreiro
+        url: /people/tiago-cogumbreiro/
+      - slug: shichao-pei
+        person_name: Shichao Pei
+        url: /people/shichao-pei/
+      - slug: funda-durupinar
+        person_name: Funda Durupinar
+        url: /people/funda-durupinar/
+      - slug: glenn-hoffman
+        person_name: Glenn Hoffman
+        url: /people/glenn-hoffman/
+      - slug: torna-soro
+        person_name: Torna Soro
+        url: /people/torna-soro/
+      keyword_supplements:
+      - Nurit Haspel
+      - Duc Tran
+      - Tiago Cogumbreiro
+      - Shichao Pei
+      - Funda Durupinar
+      - Glenn Hoffman
+      - Torna Soro
+    CS498:
+      related_people:
+      - tiago-cogumbreiro
+      - xiaohui-liang
+      related_people_entries:
+      - slug: tiago-cogumbreiro
+        person_name: Tiago Cogumbreiro
+        url: /people/tiago-cogumbreiro/
+      - slug: xiaohui-liang
+        person_name: Xiaohui Liang
+        url: /people/xiaohui-liang/
+      keyword_supplements:
+      - Tiago Cogumbreiro
+      - Xiaohui Liang
+    CS615:
+      related_people:
+      - funda-durupinar
+      related_people_entries:
+      - slug: funda-durupinar
+        person_name: Funda Durupinar
+        url: /people/funda-durupinar/
+      keyword_supplements:
+      - Funda Durupinar
+    CS620:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    CS624:
+      related_people:
+      - nurit-haspel
+      related_people_entries:
+      - slug: nurit-haspel
+        person_name: Nurit Haspel
+        url: /people/nurit-haspel/
+      keyword_supplements:
+      - Nurit Haspel
+    CS630:
+      related_people:
+      - gabriel-ghinita
+      related_people_entries:
+      - slug: gabriel-ghinita
+        person_name: Gabriel Ghinita
+        url: /people/gabriel-ghinita/
+      keyword_supplements:
+      - Gabriel Ghinita
+    CS637:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    CS638:
+      related_people:
+      - ozgun-babur
+      related_people_entries:
+      - slug: ozgun-babur
+        person_name: Ozgun Babur
+        url: /people/ozgun-babur/
+      keyword_supplements:
+      - Ozgun Babur
+    CS642:
+      related_people:
+      - xiaohui-liang
+      related_people_entries:
+      - slug: xiaohui-liang
+        person_name: Xiaohui Liang
+        url: /people/xiaohui-liang/
+      keyword_supplements:
+      - Xiaohui Liang
+    CS646:
+      related_people:
+      - bo-sheng
+      related_people_entries:
+      - slug: bo-sheng
+        person_name: Bo Sheng
+        url: /people/bo-sheng/
+      keyword_supplements:
+      - Bo Sheng
+    CS651:
+      related_people:
+      - swami-iyer
+      related_people_entries:
+      - slug: swami-iyer
+        person_name: Swami Iyer
+        url: /people/swami-iyer/
+      keyword_supplements:
+      - Swami Iyer
+    CS670:
+      related_people:
+      - shichao-pei
+      related_people_entries:
+      - slug: shichao-pei
+        person_name: Shichao Pei
+        url: /people/shichao-pei/
+      keyword_supplements:
+      - Shichao Pei
+    CS672:
+      related_people:
+      - tales-imbiriba
+      related_people_entries:
+      - slug: tales-imbiriba
+        person_name: Tales Imbiriba
+        url: /people/tales-imbiriba/
+      keyword_supplements:
+      - Tales Imbiriba
+    CS675:
+      related_people:
+      - tales-imbiriba
+      related_people_entries:
+      - slug: tales-imbiriba
+        person_name: Tales Imbiriba
+        url: /people/tales-imbiriba/
+      keyword_supplements:
+      - Tales Imbiriba
+    CS680:
+      related_people:
+      - jun-suzuki
+      related_people_entries:
+      - slug: jun-suzuki
+        person_name: Jun Suzuki
+        url: /people/jun-suzuki/
+      keyword_supplements:
+      - Jun Suzuki
+    CS681:
+      related_people:
+      - jun-suzuki
+      related_people_entries:
+      - slug: jun-suzuki
+        person_name: Jun Suzuki
+        url: /people/jun-suzuki/
+      keyword_supplements:
+      - Jun Suzuki
+    CS682:
+      related_people:
+      - kenneth-fletcher
+      related_people_entries:
+      - slug: kenneth-fletcher
+        person_name: Kenneth Fletcher
+        url: /people/kenneth-fletcher/
+      keyword_supplements:
+      - Kenneth Fletcher
+    CS696:
+      related_people:
+      - yinxin-wan
+      - duc-tran
+      - bo-sheng
+      - nurit-haspel
+      - xiaohui-liang
+      - tiago-cogumbreiro
+      - stephen-chang
+      - ozgun-babur
+      - daniel-haehn
+      - kenneth-fletcher
+      - tales-imbiriba
+      - shichao-pei
+      - funda-durupinar
+      related_people_entries:
+      - slug: yinxin-wan
+        person_name: Yinxin Wan
+        url: /people/yinxin-wan/
+      - slug: duc-tran
+        person_name: Duc Tran
+        url: /people/duc-tran/
+      - slug: bo-sheng
+        person_name: Bo Sheng
+        url: /people/bo-sheng/
+      - slug: nurit-haspel
+        person_name: Nurit Haspel
+        url: /people/nurit-haspel/
+      - slug: xiaohui-liang
+        person_name: Xiaohui Liang
+        url: /people/xiaohui-liang/
+      - slug: tiago-cogumbreiro
+        person_name: Tiago Cogumbreiro
+        url: /people/tiago-cogumbreiro/
+      - slug: stephen-chang
+        person_name: Stephen Chang
+        url: /people/stephen-chang/
+      - slug: ozgun-babur
+        person_name: Ozgun Babur
+        url: /people/ozgun-babur/
+      - slug: daniel-haehn
+        person_name: Daniel Haehn
+        url: /people/daniel-haehn/
+      - slug: kenneth-fletcher
+        person_name: Kenneth Fletcher
+        url: /people/kenneth-fletcher/
+      - slug: tales-imbiriba
+        person_name: Tales Imbiriba
+        url: /people/tales-imbiriba/
+      - slug: shichao-pei
+        person_name: Shichao Pei
+        url: /people/shichao-pei/
+      - slug: funda-durupinar
+        person_name: Funda Durupinar
+        url: /people/funda-durupinar/
+      keyword_supplements:
+      - Yinxin Wan
+      - Duc Tran
+      - Bo Sheng
+      - Nurit Haspel
+      - Xiaohui Liang
+      - Tiago Cogumbreiro
+      - Stephen Chang
+      - Ozgun Babur
+      - Daniel Haehn
+      - Kenneth Fletcher
+      - Tales Imbiriba
+      - Shichao Pei
+      - Funda Durupinar
+    CS698:
+      related_people:
+      - tiago-cogumbreiro
+      - kenneth-fletcher
+      - daniel-haehn
+      - xiaohui-liang
+      - funda-durupinar
+      related_people_entries:
+      - slug: tiago-cogumbreiro
+        person_name: Tiago Cogumbreiro
+        url: /people/tiago-cogumbreiro/
+      - slug: kenneth-fletcher
+        person_name: Kenneth Fletcher
+        url: /people/kenneth-fletcher/
+      - slug: daniel-haehn
+        person_name: Daniel Haehn
+        url: /people/daniel-haehn/
+      - slug: xiaohui-liang
+        person_name: Xiaohui Liang
+        url: /people/xiaohui-liang/
+      - slug: funda-durupinar
+        person_name: Funda Durupinar
+        url: /people/funda-durupinar/
+      keyword_supplements:
+      - Tiago Cogumbreiro
+      - Kenneth Fletcher
+      - Daniel Haehn
+      - Xiaohui Liang
+      - Funda Durupinar
+    CS699:
+      related_people:
+      - daniel-haehn
+      - wei-ding
+      - marc-pomplun
+      - tiago-cogumbreiro
+      related_people_entries:
+      - slug: daniel-haehn
+        person_name: Daniel Haehn
+        url: /people/daniel-haehn/
+      - slug: wei-ding
+        person_name: Wei Ding
+        url: /people/wei-ding/
+      - slug: marc-pomplun
+        person_name: Marc Pomplun
+        url: /people/marc-pomplun/
+      - slug: tiago-cogumbreiro
+        person_name: Tiago Cogumbreiro
+        url: /people/tiago-cogumbreiro/
+      keyword_supplements:
+      - Daniel Haehn
+      - Wei Ding
+      - Marc Pomplun
+      - Tiago Cogumbreiro
+    CS724:
+      related_people:
+      - dan-simovici
+      related_people_entries:
+      - slug: dan-simovici
+        person_name: Dan Simovici
+        url: /people/dan-simovici/
+      keyword_supplements:
+      - Dan Simovici
+    CS899:
+      related_people:
+      - ozgun-babur
+      - funda-durupinar
+      - tiago-cogumbreiro
+      - kenneth-fletcher
+      - wei-ding
+      - bo-sheng
+      - daniel-haehn
+      - duc-tran
+      - xiaohui-liang
+      - nurit-haspel
+      - dan-simovici
+      related_people_entries:
+      - slug: ozgun-babur
+        person_name: Ozgun Babur
+        url: /people/ozgun-babur/
+      - slug: funda-durupinar
+        person_name: Funda Durupinar
+        url: /people/funda-durupinar/
+      - slug: tiago-cogumbreiro
+        person_name: Tiago Cogumbreiro
+        url: /people/tiago-cogumbreiro/
+      - slug: kenneth-fletcher
+        person_name: Kenneth Fletcher
+        url: /people/kenneth-fletcher/
+      - slug: wei-ding
+        person_name: Wei Ding
+        url: /people/wei-ding/
+      - slug: bo-sheng
+        person_name: Bo Sheng
+        url: /people/bo-sheng/
+      - slug: daniel-haehn
+        person_name: Daniel Haehn
+        url: /people/daniel-haehn/
+      - slug: duc-tran
+        person_name: Duc Tran
+        url: /people/duc-tran/
+      - slug: xiaohui-liang
+        person_name: Xiaohui Liang
+        url: /people/xiaohui-liang/
+      - slug: nurit-haspel
+        person_name: Nurit Haspel
+        url: /people/nurit-haspel/
+      - slug: dan-simovici
+        person_name: Dan Simovici
+        url: /people/dan-simovici/
+      keyword_supplements:
+      - Ozgun Babur
+      - Funda Durupinar
+      - Tiago Cogumbreiro
+      - Kenneth Fletcher
+      - Wei Ding
+      - Bo Sheng
+      - Daniel Haehn
+      - Duc Tran
+      - Xiaohui Liang
+      - Nurit Haspel
+      - Dan Simovici
+    IT110:
+      related_people:
+      - christopher-kelly
+      related_people_entries:
+      - slug: christopher-kelly
+        person_name: Christopher Kelly
+        url: /people/christopher-kelly/
+      keyword_supplements:
+      - Christopher Kelly
+    IT111L:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT114L:
+      related_people:
+      - christopher-kelly
+      related_people_entries:
+      - slug: christopher-kelly
+        person_name: Christopher Kelly
+        url: /people/christopher-kelly/
+      keyword_supplements:
+      - Christopher Kelly
+    IT116:
+      related_people:
+      - glenn-hoffman
+      - temitayo-banjo
+      related_people_entries:
+      - slug: glenn-hoffman
+        person_name: Glenn Hoffman
+        url: /people/glenn-hoffman/
+      - slug: temitayo-banjo
+        person_name: Temitayo Banjo
+        url: /people/temitayo-banjo/
+      keyword_supplements:
+      - Glenn Hoffman
+      - Temitayo Banjo
+    IT117:
+      related_people:
+      - glenn-hoffman
+      related_people_entries:
+      - slug: glenn-hoffman
+        person_name: Glenn Hoffman
+        url: /people/glenn-hoffman/
+      keyword_supplements:
+      - Glenn Hoffman
+    IT221:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT230L:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT240:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT244:
+      related_people:
+      - glenn-hoffman
+      - temitayo-banjo
+      related_people_entries:
+      - slug: glenn-hoffman
+        person_name: Glenn Hoffman
+        url: /people/glenn-hoffman/
+      - slug: temitayo-banjo
+        person_name: Temitayo Banjo
+        url: /people/temitayo-banjo/
+      keyword_supplements:
+      - Glenn Hoffman
+      - Temitayo Banjo
+    IT246:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT285L:
+      related_people:
+      - amanda-potasznik
+      related_people_entries:
+      - slug: amanda-potasznik
+        person_name: Amanda Potasznik
+        url: /people/amanda-potasznik/
+      keyword_supplements:
+      - Amanda Potasznik
+    IT341:
+      related_people:
+      - christopher-kelly
+      related_people_entries:
+      - slug: christopher-kelly
+        person_name: Christopher Kelly
+        url: /people/christopher-kelly/
+      keyword_supplements:
+      - Christopher Kelly
+    IT370:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT425L:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT428L:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT442:
+      related_people:
+      - torna-soro
+      related_people_entries:
+      - slug: torna-soro
+        person_name: Torna Soro
+        url: /people/torna-soro/
+      keyword_supplements:
+      - Torna Soro
+    IT443:
+      related_people:
+      - torna-soro
+      related_people_entries:
+      - slug: torna-soro
+        person_name: Torna Soro
+        url: /people/torna-soro/
+      keyword_supplements:
+      - Torna Soro
+    IT444:
+      related_people:
+      - torna-soro
+      related_people_entries:
+      - slug: torna-soro
+        person_name: Torna Soro
+        url: /people/torna-soro/
+      keyword_supplements:
+      - Torna Soro
+    IT456:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT460:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT461L:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT471:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT485:
+      related_people:
+      - temitayo-banjo
+      related_people_entries:
+      - slug: temitayo-banjo
+        person_name: Temitayo Banjo
+        url: /people/temitayo-banjo/
+      keyword_supplements:
+      - Temitayo Banjo
+    CS188SL:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    CS413:
+      related_people:
+      - xiaohui-liang
+      related_people_entries:
+      - slug: xiaohui-liang
+        person_name: Xiaohui Liang
+        url: /people/xiaohui-liang/
+      keyword_supplements:
+      - Xiaohui Liang
+    CS436:
+      related_people:
+      - tarikul-islam-papon
+      related_people_entries:
+      - slug: tarikul-islam-papon
+        person_name: Tarikul Islam Papon
+        url: /people/tarikul-islam-papon/
+      keyword_supplements:
+      - Tarikul Islam Papon
+    CS480:
+      related_people:
+      - bo-sheng
+      - daniel-haehn
+      - yinxin-wan
+      related_people_entries:
+      - slug: bo-sheng
+        person_name: Bo Sheng
+        url: /people/bo-sheng/
+      - slug: daniel-haehn
+        person_name: Daniel Haehn
+        url: /people/daniel-haehn/
+      - slug: yinxin-wan
+        person_name: Yinxin Wan
+        url: /people/yinxin-wan/
+      keyword_supplements:
+      - Bo Sheng
+      - Daniel Haehn
+      - Yinxin Wan
+    CS613:
+      related_people:
+      - xiaohui-liang
+      related_people_entries:
+      - slug: xiaohui-liang
+        person_name: Xiaohui Liang
+        url: /people/xiaohui-liang/
+      keyword_supplements:
+      - Xiaohui Liang
+    CS622:
+      related_people:
+      - dan-simovici
+      related_people_entries:
+      - slug: dan-simovici
+        person_name: Dan Simovici
+        url: /people/dan-simovici/
+      keyword_supplements:
+      - Dan Simovici
+    CS636:
+      related_people:
+      - tarikul-islam-papon
+      related_people_entries:
+      - slug: tarikul-islam-papon
+        person_name: Tarikul Islam Papon
+        url: /people/tarikul-islam-papon/
+      keyword_supplements:
+      - Tarikul Islam Papon
+    CS648:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    CS666:
+      related_people:
+      - daniel-haehn
+      related_people_entries:
+      - slug: daniel-haehn
+        person_name: Daniel Haehn
+        url: /people/daniel-haehn/
+      keyword_supplements:
+      - Daniel Haehn
+    CS697:
+      related_people:
+      - daniel-haehn
+      - yinxin-wan
+      related_people_entries:
+      - slug: daniel-haehn
+        person_name: Daniel Haehn
+        url: /people/daniel-haehn/
+      - slug: yinxin-wan
+        person_name: Yinxin Wan
+        url: /people/yinxin-wan/
+      keyword_supplements:
+      - Daniel Haehn
+      - Yinxin Wan
+    CS720:
+      related_people:
+      - tiago-cogumbreiro
+      related_people_entries:
+      - slug: tiago-cogumbreiro
+        person_name: Tiago Cogumbreiro
+        url: /people/tiago-cogumbreiro/
+      keyword_supplements:
+      - Tiago Cogumbreiro
+    IT220:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT360:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT420:
+      related_people: []
+      related_people_entries: []
+      keyword_supplements: []
+    IT480:
+      related_people:
+      - glenn-hoffman
+      related_people_entries:
+      - slug: glenn-hoffman
+        person_name: Glenn Hoffman
+        url: /people/glenn-hoffman/
+      keyword_supplements:
+      - Glenn Hoffman
+  instructor_matches:
+    Iyer, Swaminathan Raghunathan:
+      slug: swami-iyer
+      person_name: Swami Iyer
+      url: /people/swami-iyer/
+    Sepahyar, Soheil:
+      slug: soheil-sepahyar
+      person_name: Soheil Sepahyar
+      url: /people/soheil-sepahyar/
+    Papon, Tarikul Islam:
+      slug: tarikul-islam-papon
+      person_name: Tarikul Islam Papon
+      url: /people/tarikul-islam-papon/
+    Babur, Ozgun:
+      slug: ozgun-babur
+      person_name: Ozgun Babur
+      url: /people/ozgun-babur/
+    Tran, Duc:
+      slug: duc-tran
+      person_name: Duc Tran
+      url: /people/duc-tran/
+    Potasznik, Amanda:
+      slug: amanda-potasznik
+      person_name: Amanda Potasznik
+      url: /people/amanda-potasznik/
+    Pei, Shichao:
+      slug: shichao-pei
+      person_name: Shichao Pei
+      url: /people/shichao-pei/
+    Fletcher, Kenneth Kofi:
+      slug: kenneth-fletcher
+      person_name: Kenneth Fletcher
+      url: /people/kenneth-fletcher/
+    Chang, Stephen T:
+      slug: stephen-chang
+      person_name: Stephen Chang
+      url: /people/stephen-chang/
+    Ghinita, Gabriel:
+      slug: gabriel-ghinita
+      person_name: Gabriel Ghinita
+      url: /people/gabriel-ghinita/
+    Liang, Xiaohui:
+      slug: xiaohui-liang
+      person_name: Xiaohui Liang
+      url: /people/xiaohui-liang/
+    Sheng, Bo:
+      slug: bo-sheng
+      person_name: Bo Sheng
+      url: /people/bo-sheng/
+    Wan, Yinxin:
+      slug: yinxin-wan
+      person_name: Yinxin Wan
+      url: /people/yinxin-wan/
+    Soares Cogumbreiro Garcia, Tiago:
+      slug: tiago-cogumbreiro
+      person_name: Tiago Cogumbreiro
+      url: /people/tiago-cogumbreiro/
+    Haehn, Daniel Felix:
+      slug: daniel-haehn
+      person_name: Daniel Haehn
+      url: /people/daniel-haehn/
+    Durupinar Babur, Funda:
+      slug: funda-durupinar
+      person_name: Funda Durupinar
+      url: /people/funda-durupinar/
+    Haspel, Nurit:
+      slug: nurit-haspel
+      person_name: Nurit Haspel
+      url: /people/nurit-haspel/
+    De Oliveira Imbiriba, Tales Cesar:
+      slug: tales-imbiriba
+      person_name: Tales Imbiriba
+      url: /people/tales-imbiriba/
+    Suzuki, Junichi:
+      slug: jun-suzuki
+      person_name: Jun Suzuki
+      url: /people/jun-suzuki/
+    Simovici, Dan:
+      slug: dan-simovici
+      person_name: Dan Simovici
+      url: /people/dan-simovici/
+    Ding, Wei:
+      slug: wei-ding
+      person_name: Wei Ding
+      url: /people/wei-ding/
+    Kelly, Christopher Grant:
+      slug: christopher-kelly
+      person_name: Christopher Kelly
+      url: /people/christopher-kelly/
+    Hoffman, Glenn Alfred:
+      slug: glenn-hoffman
+      person_name: Glenn Hoffman
+      url: /people/glenn-hoffman/
+    Banjo, Temitayo:
+      slug: temitayo-banjo
+      person_name: Temitayo Banjo
+      url: /people/temitayo-banjo/
+    Soro, Torna Omar:
+      slug: torna-soro
+      person_name: Torna Soro
+      url: /people/torna-soro/
+    Iyer, Swaminathan:
+      slug: swami-iyer
+      person_name: Swami Iyer
+      url: /people/swami-iyer/
+    Deblois, Jane Holly:
+      slug: jane-h-deblois
+      person_name: Jane H. DeBlois
+      url: /people/jane-h-deblois/
+    Papon, Md Tarikul Islam:
+      slug: tarikul-islam-papon
+      person_name: Tarikul Islam Papon
+      url: /people/tarikul-islam-papon/
+    Pomplun, Marc:
+      slug: marc-pomplun
+      person_name: Marc Pomplun
+      url: /people/marc-pomplun/
