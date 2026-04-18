@@ -381,15 +381,33 @@ keywords:
           id: entity.id || '',
           type: entity.type || 'entity',
           title,
+          courseCode: entity.course_code || '',
+          courseName: entity.course_name || '',
+          personName: entity.person_name || '',
+          jobTitle: entity.job_title || '',
           url: normalizedUrl,
           summary: entity.summary || '',
           keywords: toArray(entity.keywords),
           aliases: toArray(entity.aliases),
           relatedPeople: toArray(entity.related_people),
+          relatedPeopleNames: toArray(entity.related_people_names),
           relatedCourses: toArray(entity.related_courses),
           relatedGroups: toArray(entity.related_groups),
           relatedPrograms: toArray(entity.related_programs),
           relatedTopics: toArray(entity.related_topics),
+          researchAreas: toArray(entity.research_areas),
+          teachesCourses: toArray(entity.teaches_courses),
+          currentTeachingTerms: toArray(entity.current_teaching_terms),
+          teachingAcademicYears: toArray(entity.teaching_academic_years),
+          externalResearchTopics: toArray(entity.external_research_topics),
+          labOrGroup: toArray(entity.lab_or_group),
+          profileLinks: toArray(entity.profile_links),
+          sourceUrls: toArray(entity.source_urls),
+          recentNewsTitles: toArray(entity.recent_news_titles),
+          instructors: toArray(entity.instructors),
+          offeringsTerms: toArray(entity.offerings_terms),
+          offeringsAcademicYears: toArray(entity.offerings_academic_years),
+          instructorTopics: toArray(entity.instructor_topics),
           navLabel: entity.nav_label || '',
           sectionName: entity.section_name || '',
           parentSection: entity.parent_section || '',
@@ -621,6 +639,11 @@ keywords:
       const queryTokens = normalizedQuery.tokens;
       const intent = inferIntent(cleanQuery);
       const title = normalizeText(item.title);
+      const courseCode = normalizeText(item.courseCode);
+      const compactCourseCode = (item.courseCode || '').replace(/\s+/g, '').toLowerCase();
+      const courseName = normalizeText(item.courseName);
+      const personName = normalizeText(item.personName);
+      const jobTitle = normalizeText(item.jobTitle);
       const compactTitle = title.replace(/\s+/g, '');
       const compactQuery = normalizedQuery.compact;
       const summary = normalizeText(item.summary);
@@ -628,6 +651,20 @@ keywords:
       const aliases = item.aliases.map(normalizeText);
       const keywords = item.keywords.map(normalizeText);
       const topics = item.relatedTopics.map(normalizeText);
+      const researchAreas = item.researchAreas.map(normalizeText);
+      const teachesCourses = item.teachesCourses.map(normalizeText);
+      const currentTeachingTerms = item.currentTeachingTerms.map(normalizeText);
+      const teachingAcademicYears = item.teachingAcademicYears.map(normalizeText);
+      const externalResearchTopics = item.externalResearchTopics.map(normalizeText);
+      const labOrGroup = item.labOrGroup.map(normalizeText);
+      const profileLinks = item.profileLinks.map(normalizeText);
+      const sourceUrls = item.sourceUrls.map(normalizeText);
+      const recentNewsTitles = item.recentNewsTitles.map(normalizeText);
+      const instructors = item.instructors.map(normalizeText);
+      const offeringsTerms = item.offeringsTerms.map(normalizeText);
+      const offeringsAcademicYears = item.offeringsAcademicYears.map(normalizeText);
+      const instructorTopics = item.instructorTopics.map(normalizeText);
+      const relatedPeopleNames = item.relatedPeopleNames.map(normalizeText);
       const navLabel = normalizeText(item.navLabel);
       const sectionName = normalizeText(item.sectionName);
       const parentSection = normalizeText(item.parentSection);
@@ -635,8 +672,28 @@ keywords:
       const relatedTopicSignals = relationMaps && item.type === 'person'
         ? toArray(relationMaps.groupTopicsByPersonId.get(item.id)).map(normalizeText)
         : [];
-      const fields = [title, summary, slug, navLabel, sectionName, parentSection]
-        .concat(aliases, keywords, topics, menuKeywords, relatedTopicSignals)
+      const fields = [title, courseCode, courseName, personName, jobTitle, summary, slug, navLabel, sectionName, parentSection]
+        .concat(
+          aliases,
+          keywords,
+          topics,
+          researchAreas,
+          teachesCourses,
+          currentTeachingTerms,
+          teachingAcademicYears,
+          externalResearchTopics,
+          labOrGroup,
+          profileLinks,
+          sourceUrls,
+          recentNewsTitles,
+          instructors,
+          offeringsTerms,
+          offeringsAcademicYears,
+          instructorTopics,
+          relatedPeopleNames,
+          menuKeywords,
+          relatedTopicSignals
+        )
         .filter(Boolean);
       const singleTokenQuery = !cleanQuery.includes(' ');
       const phraseMatched = fields.some((field) => {
@@ -655,15 +712,37 @@ keywords:
 
       let score = 0;
 
+      if (compactCourseCode && compactCourseCode === compactQuery) {
+        score += 900;
+      }
+
       if (compactTitle === compactQuery) {
         score += 700;
       }
 
+      score += scoreField(courseCode, cleanQuery, queryTokens, { exact: 650, partial: 280, token: 65 });
+      score += scoreField(courseName, cleanQuery, queryTokens, { exact: 320, partial: 140, token: 32 });
+      score += scoreField(personName, cleanQuery, queryTokens, { exact: 560, partial: 240, token: 55 });
+      score += scoreField(jobTitle, cleanQuery, queryTokens, { exact: 100, partial: 50, token: 12 });
       score += scoreField(title, cleanQuery, queryTokens, { exact: 500, partial: 220, token: 50 });
       score += scoreField(slug, cleanQuery, queryTokens, { exact: 180, partial: 80, token: 20 });
       score += scoreArray(aliases, cleanQuery, queryTokens, { exact: 420, partial: 180, token: 42 });
       score += scoreArray(keywords, cleanQuery, queryTokens, { exact: 260, partial: 110, token: 30 });
       score += scoreArray(topics, cleanQuery, queryTokens, { exact: 160, partial: 70, token: 20 });
+      score += scoreArray(researchAreas, cleanQuery, queryTokens, { exact: 180, partial: 90, token: 22 });
+      score += scoreArray(teachesCourses, cleanQuery, queryTokens, { exact: 220, partial: 110, token: 28 });
+      score += scoreArray(currentTeachingTerms, cleanQuery, queryTokens, { exact: 90, partial: 40, token: 10 });
+      score += scoreArray(teachingAcademicYears, cleanQuery, queryTokens, { exact: 60, partial: 25, token: 8 });
+      score += scoreArray(externalResearchTopics, cleanQuery, queryTokens, { exact: 140, partial: 60, token: 14 });
+      score += scoreArray(labOrGroup, cleanQuery, queryTokens, { exact: 120, partial: 55, token: 14 });
+      score += scoreArray(profileLinks, cleanQuery, queryTokens, { exact: 30, partial: 12, token: 4 });
+      score += scoreArray(sourceUrls, cleanQuery, queryTokens, { exact: 10, partial: 5, token: 2 });
+      score += scoreArray(recentNewsTitles, cleanQuery, queryTokens, { exact: 45, partial: 18, token: 5 });
+      score += scoreArray(instructors, cleanQuery, queryTokens, { exact: 260, partial: 120, token: 35 });
+      score += scoreArray(offeringsTerms, cleanQuery, queryTokens, { exact: 80, partial: 30, token: 8 });
+      score += scoreArray(offeringsAcademicYears, cleanQuery, queryTokens, { exact: 70, partial: 25, token: 8 });
+      score += scoreArray(instructorTopics, cleanQuery, queryTokens, { exact: 110, partial: 45, token: 12 });
+      score += scoreArray(relatedPeopleNames, cleanQuery, queryTokens, { exact: 180, partial: 80, token: 20 });
       score += scoreField(navLabel, cleanQuery, queryTokens, { exact: 520, partial: 240, token: 60 });
       score += scoreField(sectionName, cleanQuery, queryTokens, { exact: 400, partial: 180, token: 45 });
       score += scoreField(parentSection, cleanQuery, queryTokens, { exact: 90, partial: 40, token: 12 });
@@ -672,11 +751,20 @@ keywords:
       score += scoreField(summary, cleanQuery, queryTokens, { exact: 120, partial: 45, token: 10 });
       score += tokenHits * 35;
 
-      if (item.type === 'course' && /^([a-z]{2,4}\s?\d{3}[a-z]?)$/i.test(cleanQuery) && compactTitle.includes(compactQuery)) {
+      if (item.type === 'course' && /^([a-z]{2,4}\s?\d{3}[a-z]?)$/i.test(cleanQuery) && (compactTitle.includes(compactQuery) || compactCourseCode === compactQuery)) {
         score += 500;
       }
 
+      if (item.type === 'person' && (personName === cleanQuery || aliases.includes(cleanQuery))) {
+        score += 420;
+      }
+
+      if (item.type === 'person' && (externalResearchTopics.length || labOrGroup.length)) {
+        score += 8;
+      }
+
       if (intent.person && item.type === 'person') { score += 160; }
+      if (intent.person && item.type === 'course' && (instructors.length || relatedPeopleNames.length)) { score += 45; }
       if (intent.person && item.type === 'group') { score += 35; }
       if (intent.course && item.type === 'course') { score += 120; }
       if (intent.group && item.type === 'group') { score += 120; }

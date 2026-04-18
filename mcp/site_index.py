@@ -124,6 +124,26 @@ class SiteIndex:
         self._program_alias_map = self._build_program_alias_map()
         self._group_alias_map = self._build_group_alias_map()
 
+    def _format_external_profiles(self, person: dict[str, Any], profile: dict[str, Any]) -> dict[str, Any]:
+        formatted_profiles = []
+        for entry in profile.get("profiles", []):
+            fields = entry.get("fields", {}) or {}
+            formatted = dict(entry)
+            formatted["supplemental"] = True
+            formatted["authority"] = "supplemental_external_profile"
+            formatted["extracted_field_names"] = list(fields.keys())
+            formatted_profiles.append(formatted)
+        return {
+            "slug": person["slug"],
+            "person_name": person["person_name"],
+            "supplemental": True,
+            "authority": "supplemental_external_profile",
+            "profiles": formatted_profiles,
+            "source_urls": profile.get("source_urls", []),
+            "last_checked": self.external_profiles.get("last_checked"),
+            "generated_at": self.external_profiles.get("generated_at"),
+        }
+
     def _load_yaml(self, name: str) -> Any:
         path = self.data_dir / name
         if not path.exists():
@@ -585,7 +605,7 @@ class SiteIndex:
         }
         external = self.get_external_faculty_profile(person["slug"])
         if external:
-            result["external_profiles"] = external.get("profiles", [])
+            result["external_profiles"] = external
         return result
 
     def get_person_related_courses(self, person_slug_or_name: str) -> dict[str, Any] | None:
@@ -608,14 +628,7 @@ class SiteIndex:
         profile = external_people.get(person["slug"])
         if not profile:
             return None
-        return {
-            "slug": person["slug"],
-            "person_name": person["person_name"],
-            "profiles": profile.get("profiles", []),
-            "source_urls": profile.get("source_urls", []),
-            "last_checked": self.external_profiles.get("last_checked"),
-            "generated_at": self.external_profiles.get("generated_at"),
-        }
+        return self._format_external_profiles(person, profile)
 
     def get_program(self, program_slug_or_name: str) -> dict[str, Any] | None:
         program = self.match_program(program_slug_or_name)

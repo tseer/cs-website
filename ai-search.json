@@ -5,6 +5,9 @@ permalink: /ai-search.json
 {
   {% assign site_root_url = '/' | absolute_url %}
   {% assign empty_array = "" | split: "" %}
+  {% assign offerings_data = site.data.course_offerings %}
+  {% assign offering_relationships = offerings_data.relationships %}
+  {% assign external_people = site.data.external_faculty_profiles.people %}
   "site": {
     "name": "UMass Boston Computer Science Department",
     "url": {{ site_root_url | jsonify }}
@@ -55,7 +58,7 @@ permalink: /ai-search.json
   ],
   "courses": [
     {% assign course_pages = site.pages | default: empty_array | where_exp: "item", "item.course_code" | sort: "course_code" %}
-    {% for course in course_pages %}
+    {% for course in course_pages %}{% assign course_relationships = offering_relationships.courses[course.course_code] %}{% assign course_offerings = offerings_data.course_index[course.course_code] | default: empty_array %}{% capture course_instructors_blob %}{% for offering in course_offerings %}{% if offering.instructor %}{{ offering.instructor }}||{% endif %}{% endfor %}{% endcapture %}{% assign course_instructors = course_instructors_blob | split: "||" | uniq %}{% capture course_terms_blob %}{% for offering in course_offerings %}{% if offering.term_label %}{{ offering.term_label }}||{% endif %}{% endfor %}{% endcapture %}{% assign course_terms = course_terms_blob | split: "||" | uniq %}{% capture course_years_blob %}{% for offering in course_offerings %}{% if offering.academic_year %}{{ offering.academic_year }}||{% endif %}{% endfor %}{% endcapture %}{% assign course_years = course_years_blob | split: "||" | uniq %}
     {
       "course_code": {{ course.course_code | jsonify }},
       "course_name": {{ course.course_name | jsonify }},
@@ -67,13 +70,16 @@ permalink: /ai-search.json
       "prerequisites": {{ course.prerequisites | jsonify }},
       "co_requisites": {{ course.co_requisites | jsonify }},
       "keywords": {{ course.keywords | jsonify }},
-      "related_people": {{ course.related_people | jsonify }},
+      "related_people": {% if course_relationships and course_relationships.related_people_entries %}{{ course_relationships.related_people_entries | jsonify }}{% else %}[]{% endif %},
       "related_courses": {% include related-course-codes.json codes=course.related_courses %},
       "related_groups": {{ course.related_groups | jsonify }},
       "related_programs": {{ course.related_programs | jsonify }},
       "related_topics": {{ course.related_topics | jsonify }},
       "audience": {{ course.audience | jsonify }},
-      "action_phrases": {{ course.action_phrases | jsonify }}
+      "action_phrases": {{ course.action_phrases | jsonify }},
+      "offerings_terms": {% if course_terms %}{{ course_terms | jsonify }}{% else %}[]{% endif %},
+      "offerings_academic_years": {% if course_years %}{{ course_years | jsonify }}{% else %}[]{% endif %},
+      "instructors": {% if course_instructors %}{{ course_instructors | jsonify }}{% else %}[]{% endif %}
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ],
@@ -104,7 +110,7 @@ permalink: /ai-search.json
   ],
   "people": [
     {% assign people_pages = site.people | default: empty_array | sort: "person_name" %}
-    {% for person in people_pages %}
+    {% for person in people_pages %}{% assign person_relationships = offering_relationships.people[person.slug] %}{% assign external_person = external_people[person.slug] %}{% capture person_course_names_blob %}{% if person_relationships and person_relationships.related_course_entries %}{% for course_entry in person_relationships.related_course_entries %}{{ course_entry.course_name }}||{% endfor %}{% endif %}{% endcapture %}{% assign person_course_names = person_course_names_blob | split: "||" | uniq %}{% capture person_teaching_terms_blob %}{% if person_relationships and person_relationships.related_courses %}{% for related_code in person_relationships.related_courses %}{% assign related_offerings = offerings_data.course_index[related_code] | default: empty_array %}{% for offering in related_offerings %}{% assign instructor_match = offering_relationships.instructor_matches[offering.instructor] %}{% if instructor_match and instructor_match.slug == person.slug and offering.term_label %}{{ offering.term_label }}||{% endif %}{% endfor %}{% endfor %}{% endif %}{% endcapture %}{% assign person_teaching_terms = person_teaching_terms_blob | split: "||" | uniq %}{% capture external_research_topics_blob %}{% if external_person and external_person.profiles %}{% for profile in external_person.profiles %}{% assign ext_topics = profile.fields.research_topics.value %}{% if ext_topics %}{% for topic in ext_topics %}{{ topic }}||{% endfor %}{% endif %}{% endfor %}{% endif %}{% endcapture %}{% assign external_research_topics = external_research_topics_blob | split: "||" | uniq %}{% capture external_lab_group_blob %}{% if external_person and external_person.profiles %}{% for profile in external_person.profiles %}{% assign ext_lab = profile.fields.lab_or_group.value %}{% if ext_lab %}{{ ext_lab }}||{% endif %}{% endfor %}{% endif %}{% endcapture %}{% assign external_lab_groups = external_lab_group_blob | split: "||" | uniq %}
     {
       "name": {{ person.person_name | default: person.title | strip_html | normalize_whitespace | jsonify }},
       "title": {{ person.title | strip_html | normalize_whitespace | jsonify }},
@@ -115,10 +121,16 @@ permalink: /ai-search.json
       "keywords": {{ person.keywords | jsonify }},
       "aliases": {{ person.aliases | jsonify }},
       "related_people": {{ person.related_people | jsonify }},
-      "related_courses": {% include related-course-codes.json codes=person.related_courses %},
+      "related_courses": {% if person_relationships and person_relationships.related_course_entries %}{{ person_relationships.related_course_entries | jsonify }}{% else %}[]{% endif %},
       "related_groups": {{ person.related_groups | jsonify }},
       "related_programs": {{ person.related_programs | jsonify }},
       "related_topics": {{ person.related_topics | default: person.research_areas | jsonify }},
+      "research_areas": {{ person.research_areas | jsonify }},
+      "teaches_courses": {% if person_course_names %}{{ person_course_names | jsonify }}{% else %}[]{% endif %},
+      "current_teaching_terms": {% if person_teaching_terms %}{{ person_teaching_terms | jsonify }}{% else %}[]{% endif %},
+      "external_research_topics": {% if external_research_topics %}{{ external_research_topics | jsonify }}{% else %}[]{% endif %},
+      "lab_or_group": {% if external_lab_groups %}{{ external_lab_groups | jsonify }}{% else %}[]{% endif %},
+      "source_urls": {% if external_person and external_person.source_urls %}{{ external_person.source_urls | jsonify }}{% elsif person.same_as %}{{ person.same_as | jsonify }}{% else %}[]{% endif %},
       "audience": {{ person.audience | jsonify }},
       "action_phrases": {{ person.action_phrases | jsonify }}
     }{% unless forloop.last %},{% endunless %}
