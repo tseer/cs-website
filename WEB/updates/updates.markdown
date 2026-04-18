@@ -17,8 +17,17 @@ This page lists completed updates made to the CS website.
 - Removed visible overview and summary sections from rendered pages while preserving summary data for metadata and structured data.
 - Simplified course page rendering so course pages focus on the title, credits, description, prerequisites, and co-requisites.
 
+## Link Integrity & Navigation Improvements
+
+- Performed a full site audit for broken links.
+- Updated outdated university and department resources.
+- Removed dead media references.
+- Improved navigation and page connectivity.
+- Reduced stale external references across the site.
+
 ## Related Links
 
 - [Course Catalog]({{ '/academics/courses/' | relative_url }})
 - [Search Assistant]({{ '/ai-assistant' | relative_url }})
+- [Broken Links Repaired]({{ '/broken-links/' | relative_url }})
 - [Updates]({{ '/updates/' | relative_url }})
