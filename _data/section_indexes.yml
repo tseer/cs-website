@@ -41,6 +41,8 @@ academics:
       url: "/certificate-programs"
     - name: "Course Schedule"
       url: "/course-schedule"
+    - name: "Course Catalog"
+      url: "/academics/course-catalog/"
     - name: "Courses"
       url: "/courses"
     - name: "CS Minor"

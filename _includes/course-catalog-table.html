@@ -1,0 +1,65 @@
+{% assign course_pages = include.course_pages | default: site.pages | where_exp: "item", "item.course_code" %}
+{% assign compact = include.compact %}
+{% assign hide_course = include.hide_course %}
+{% assign hide_title = include.hide_title %}
+
+<div class="course-catalog-table-wrap{% if compact %} course-catalog-table-wrap-compact{% endif %}">
+  <table class="course-catalog-table{% if compact %} course-catalog-table-compact{% endif %}">
+    <thead>
+      <tr>
+        {% unless hide_course %}
+          <th>Course</th>
+        {% endunless %}
+        {% unless hide_title %}
+          <th>Title</th>
+        {% endunless %}
+        <th>Section</th>
+        <th>Schedule / Time</th>
+        <th>Instructor</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for offering in include.offerings %}
+        {% assign course_page = course_pages | where: "course_code", offering.course_code | first %}
+        <tr>
+          {% unless hide_course %}
+            <td class="course-catalog-course">
+              {% if course_page %}
+                <a href="{{ course_page.url | relative_url }}">{{ offering.course_code }}</a>
+              {% else %}
+                {{ offering.course_code }}
+              {% endif %}
+            </td>
+          {% endunless %}
+          {% unless hide_title %}
+            <td class="course-catalog-title">
+              {% if course_page %}
+                <a href="{{ course_page.url | relative_url }}">{{ offering.title }}</a>
+              {% else %}
+                {{ offering.title }}
+              {% endif %}
+            </td>
+          {% endunless %}
+          <td>
+            {{ offering.section }}
+            {% if offering.component %}
+              <span class="course-catalog-component">{{ offering.component }}</span>
+            {% endif %}
+          </td>
+          <td>
+            {% for schedule_line in offering.schedule_lines %}
+              <div>{{ schedule_line }}</div>
+            {% endfor %}
+          </td>
+          <td>{{ offering.instructor | default: "TBA" }}</td>
+          <td>
+            {% for location in offering.location_lines %}
+              <div>{{ location }}</div>
+            {% endfor %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

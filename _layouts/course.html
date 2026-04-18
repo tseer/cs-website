@@ -5,6 +5,8 @@ layout: page
 {% assign course_title = page.course_code %}
 {% assign course_pages = site.pages | where_exp: "item", "item.course_code" %}
 {% assign linked_course_pages = site.pages | where_exp: "item", "item.course_code and item.course_code != page.course_code" %}
+{% assign offerings_data = site.data.course_offerings %}
+{% assign course_offerings = offerings_data.course_index[page.course_code] %}
 {% assign site_root_url = '/' | absolute_url %}
 {% if page.provider_id %}
   {% assign course_provider_id = page.provider_id %}
@@ -29,6 +31,21 @@ layout: page
   {% endif %}
   {% if page.keywords %}
   "keywords": {{ page.keywords | join: ", " | jsonify }},
+  {% endif %}
+  {% if course_offerings %}
+  "hasCourseInstance": [
+    {% for offering in course_offerings %}
+    {
+      "@type": "CourseInstance",
+      "name": {{ page.course_code | append: " " | append: offering.term_label | append: " Section " | append: offering.section | jsonify }},
+      "location": {{ offering.location | default: "TBA" | jsonify }},
+      "instructor": {
+        "@type": "Person",
+        "name": {{ offering.instructor | default: "TBA" | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
   {% endif %}
   "provider": {
     "@type": "Organization",
@@ -56,6 +73,8 @@ layout: page
       <p>{{ page.description }}</p>
     </section>
   {% endif %}
+
+  {% include course-offerings-summary.html %}
 
   {% include entity-connections.html %}
 
@@ -113,6 +132,10 @@ layout: page
   {% if page.summary %}
     <p>{{ page.summary }}</p>
   {% endif %}
+
+  <p class="course-catalog-link">
+    <a href="{{ '/academics/course-catalog/' | relative_url }}">View Full Course Catalog</a>
+  </p>
 </article>
 
 <script type="application/json" id="course-link-data">
