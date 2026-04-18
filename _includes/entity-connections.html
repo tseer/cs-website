@@ -1,11 +1,17 @@
 {% assign has_connections = false %}
 {% assign connection_topics = page.related_topics | default: page.research_areas %}
-{% if page.audience or page.related_people.size > 0 or page.related_courses.size > 0 or page.related_groups.size > 0 or page.related_programs.size > 0 or connection_topics.size > 0 %}
+{% assign hide_background_metadata = page.layout == "course" %}
+{% if page.related_people.size > 0 or page.related_courses.size > 0 or page.related_groups.size > 0 %}
 {% assign has_connections = true %}
 {% endif %}
+{% unless hide_background_metadata %}
+  {% if page.audience or page.related_programs.size > 0 or connection_topics.size > 0 %}
+  {% assign has_connections = true %}
+  {% endif %}
+{% endunless %}
 {% if has_connections %}
 <section class="entity-connections">
-  {% if page.audience %}
+  {% if page.audience and hide_background_metadata != true %}
   <div class="entity-connections-block">
     <h2>Audience</h2>
     {% if page.audience.first %}
@@ -58,7 +64,7 @@
   </div>
   {% endif %}
 
-  {% if page.related_programs and page.related_programs.size > 0 %}
+  {% if page.related_programs and page.related_programs.size > 0 and hide_background_metadata != true %}
   <div class="entity-connections-block">
     <h2>Related Programs</h2>
     <ul>
@@ -76,7 +82,7 @@
   </div>
   {% endif %}
 
-  {% if connection_topics and connection_topics.size > 0 %}
+  {% if connection_topics and connection_topics.size > 0 and hide_background_metadata != true %}
   <div class="entity-connections-block">
     <h2>Related Topics</h2>
     <ul>

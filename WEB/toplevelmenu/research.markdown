@@ -41,8 +41,8 @@ schema_collection_items:
 
 Lists financial support received from companies and foundations by our department for its research initiatives.
 
-- [Funding](/funding)
+- [Funding]({{ '/funding' | relative_url }})
 
 Lists research topics that members in the department are currently focusing on.
 
-- [Groups](/groups)
+- [Groups]({{ '/groups' | relative_url }})

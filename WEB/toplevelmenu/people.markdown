@@ -28,6 +28,6 @@ schema_collection_key: people
 
 Includes bios, photos and contact information of our faculty and staff members.
 
-- [Faculty](/faculty)
+- [Faculty]({{ '/faculty' | relative_url }})
 
-- [Staff](/staff)
+- [Staff]({{ '/staff' | relative_url }})

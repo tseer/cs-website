@@ -72,11 +72,6 @@ keywords:
     background: #f8f8f8;
   }
 
-  .ai-assistant-answer h2 {
-    margin: 0 0 0.75rem;
-    font-size: 1.1rem;
-  }
-
   .ai-assistant-answer ul {
     margin: 0;
     padding-left: 1.25rem;
@@ -245,7 +240,7 @@ keywords:
     const resultsNode = document.getElementById('ai-assistant-results');
     const dataUrl = '{{ "/ai/index.json" | relative_url }}';
     const configuredSiteRoot = {{ '/' | absolute_url | jsonify }};
-    const maxContextEntities = 5;
+    const maxContextEntities = 4;
     const debugQueries = [
       'chimera',
       'hpc',
@@ -511,14 +506,10 @@ keywords:
 
     function buildCompactEntity(item) {
       return {
-        id: item.id,
-        type: item.type,
         title: item.title,
+        type: item.type,
         summary: item.summary || '',
-        url: sanitizeEntityUrl(item.url),
-        keywords: item.keywords.slice(0, 4),
-        aliases: item.aliases.slice(0, 4),
-        related_topics: item.relatedTopics.slice(0, 4)
+        url: sanitizeEntityUrl(item.url)
       };
     }
 
@@ -541,23 +532,23 @@ keywords:
     function buildPromptPayload(query, results) {
       const entities = results.slice(0, maxContextEntities).map(buildCompactEntity);
       const systemMessage = [
-        'You are the UMass Boston Computer Science Department search and advising assistant.',
-        'Answer using only the retrieved entities provided to you.',
-        'Do not invent courses, faculty, research groups, or programs.',
-        'If the retrieved entities are insufficient, say that directly.',
-        'Return grounded recommendations with links.'
+        'You are a CS department assistant for the UMass Boston Computer Science Department.',
+        'ONLY use the provided entities.',
+        'DO NOT invent courses, people, programs, groups, facilities, or resources.',
+        'If unsure or if there is no exact match, say "No exact match found."',
+        'Return concise structured results.',
+        'Use only each entity title, type, summary, and url.',
+        'Output plain text bullet lines in this exact format:',
+        '- Title (Type): short explanation. Link: URL'
       ].join(' ');
       const userPayload = {
         query: query.trim(),
         instructions: {
           use_only_retrieved_entities: true,
           do_not_invent_entities: true,
-          output_format: [
-            'entity title',
-            'entity type',
-            'short explanation',
-            'link'
-          ]
+          no_full_site_content: true,
+          concise_grounded_output: true,
+          output_format: '- Title (Type): short explanation. Link: URL'
         },
         retrieved_entities: entities
       };
@@ -916,33 +907,89 @@ keywords:
       }
 
       answerNode.hidden = false;
-      answerNode.innerHTML = `
-        <h2>Assistant answer</h2>
-        <div>${escapeHtml(responseText).replace(/\n/g, '<br>')}</div>
-      `;
+      answerNode.innerHTML = `<div>${escapeHtml(responseText).replace(/\n/g, '<br>')}</div>`;
     }
 
     function renderFallbackMessage() {
-      answerNode.hidden = false;
-      answerNode.innerHTML = `
-        <h2>Assistant answer</h2>
-        <div>Showing direct search results from the department index.</div>
-      `;
+      answerNode.hidden = true;
+      answerNode.innerHTML = '';
+    }
+
+    function getSlmConfig() {
+      if (!window.csDepartmentAssistantSlmConfig) {
+        return null;
+      }
+
+      const config = window.csDepartmentAssistantSlmConfig;
+      if (!config.endpoint || !config.model) {
+        return null;
+      }
+
+      return {
+        endpoint: config.endpoint,
+        model: config.model,
+        apiKey: config.apiKey || '',
+        headers: config.headers || {},
+        temperature: typeof config.temperature === 'number' ? config.temperature : 0.2,
+        maxTokens: typeof config.maxTokens === 'number' ? config.maxTokens : 220
+      };
+    }
+
+    async function requestSlmCompletion(promptPayload) {
+      const slmConfig = getSlmConfig();
+      if (!slmConfig) {
+        return null;
+      }
+
+      const headers = Object.assign(
+        {
+          'Content-Type': 'application/json'
+        },
+        slmConfig.headers
+      );
+
+      if (slmConfig.apiKey) {
+        headers.Authorization = `Bearer ${slmConfig.apiKey}`;
+      }
+
+      const response = await fetch(slmConfig.endpoint, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({
+          model: slmConfig.model,
+          temperature: slmConfig.temperature,
+          max_tokens: slmConfig.maxTokens,
+          messages: promptPayload.messages
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('SLM request failed.');
+      }
+
+      const data = await response.json();
+      const content = data
+        && data.choices
+        && data.choices[0]
+        && data.choices[0].message
+        && data.choices[0].message.content;
+
+      return typeof content === 'string' ? content.trim() : null;
     }
 
     async function requestGroundedAnswer(promptPayload) {
       window.csAssistantLastPromptPayload = promptPayload;
 
-      if (!window.csDepartmentAssistantLlm || typeof window.csDepartmentAssistantLlm.complete !== 'function') {
-        return null;
-      }
-
       try {
-        return await window.csDepartmentAssistantLlm.complete({
-          query: promptPayload.query,
-          messages: promptPayload.messages,
-          entities: promptPayload.entities
-        });
+        if (window.csDepartmentAssistantLlm && typeof window.csDepartmentAssistantLlm.complete === 'function') {
+          return await window.csDepartmentAssistantLlm.complete({
+            query: promptPayload.query,
+            messages: promptPayload.messages,
+            entities: promptPayload.entities
+          });
+        }
+
+        return await requestSlmCompletion(promptPayload);
       } catch (error) {
         return null;
       }

@@ -81,7 +81,7 @@ layout: page
     </section>
   {% endif %}
 
-  {% if page.co_requisites %}
+  {% if page.co_requisites and page.co_requisites != empty %}
     <section class="course-coreqs">
       <h2>Co-requisites</h2>
       {% if page.co_requisites.first %}

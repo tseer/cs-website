@@ -31,17 +31,17 @@ related_topics:
 
 Connect:
 
-- [Contact Us](/contact-us)
+- [Contact Us]({{ '/contact-us' | relative_url }})
   Lists emails, extensions and office locations of key faculty and staff members.
 
-- [Department](/department)
+- [Department]({{ '/department' | relative_url }})
   Provides a brief background on the Computer Science department and its role in UMass Boston and the community.
 
-- [Facilities](/facilities)
+- [Facilities]({{ '/facilities' | relative_url }})
   Describes the resources that are available within our department.
 
-- [Diversity, Equity and Inclusion](/dei)
+- [Diversity, Equity and Inclusion]({{ '/dei' | relative_url }})
   Our DEI Statement.
 
-- [Getting Here](/getting-here)
+- [Getting Here]({{ '/getting-here' | relative_url }})
   Provides useful information if you are visiting us.

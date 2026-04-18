@@ -39,11 +39,11 @@ parent_section: Academics
 **We now have an interactive roadmap (made by Estevao Lordeiro
 ):**
 
-<h1><img src="WEB/images/new.gif">&nbsp;&nbsp;<a href="https://umbcs.github.io/UMassCSPreReqChart/CSChart_unified.html" target=_blank>INTERACTIVE ROADMAP</a></h1>
+<h1><a href="https://umbcs.github.io/UMassCSPreReqChart/CSChart_unified.html" target=_blank>INTERACTIVE ROADMAP</a></h1>
 
 **Prof. Ming Ouyang created this roadmap to the Computer Science BS (outdated, above is better!).**
 
-<a href="/CSPrereqChart.pdf" target=_blank>
+<a href="{{ '/CSPrereqChart.pdf' | relative_url }}" target=_blank>
 <img src="WEB/images/prereq.png" width=100 border=1>
 </a>
 
@@ -53,7 +53,7 @@ parent_section: Academics
 **Our Graduate Program Secretary Gemma Galecia collected the following extremely useful links.**
 
 **APPLICANTS:** 
-[Admission](https://www.cs.umb.edu/admissions) | [CS-MS](https://www.cs.umb.edu/cs_ms) | [CS-PHD](https://www.cs.umb.edu/cs_phd) | [Waiver Request](https://www.cs.umb.edu/~dsim/)  | [Application Process Questions (contact your Evaluator)](https://www.umb.edu/admissions/graduate-students/apply/program-requirements-contacts/) |
+[Admission]({{ '/admissions' | relative_url }}) | [CS-MS]({{ '/cs_ms' | relative_url }}) | [CS-PHD]({{ '/cs_phd' | relative_url }}) | [Waiver Request](https://www.cs.umb.edu/~dsim/)  | [Application Process Questions (contact your Evaluator)](https://www.umb.edu/admissions/graduate-students/apply/program-requirements-contacts/) |
 
 **Newly Admitted Graduate Students:**
  [Search for Classes](https://www.umb.edu/it/software-systems/wiser/student-help/) | [View Financial Account (tuition will only show when once you are enrolled in courses)](https://www.umb.edu/onestop/faq/) | [Tuition Information (contact the Bursars Office)](https://www.umb.edu/bursar) | [International Students (I20, Arival Information and more)](https://www.umb.edu/academics/global/isss) |

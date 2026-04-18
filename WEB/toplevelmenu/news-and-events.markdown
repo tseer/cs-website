@@ -38,14 +38,14 @@ related_topics:
   - internships
 ---
 
-- [Announcements](/announcements)
+- [Announcements]({{ '/announcements' | relative_url }})
 
-- [Colloquia](/colloquia)
+- [Colloquia]({{ '/colloquia' | relative_url }})
 
-- [Events Calendar](/events-calendar)
+- [Events Calendar]({{ '/events-calendar' | relative_url }})
 
-- [Faculty Search](/faculty-search)
+- [Faculty Search]({{ '/faculty-search' | relative_url }})
 
-- [Jobs and Internships](/jobs-and-internships)
+- [Jobs and Internships]({{ '/jobs-and-internships' | relative_url }})
 
-- [Staff Search](/staff-search)
+- [Staff Search]({{ '/staff-search' | relative_url }})
