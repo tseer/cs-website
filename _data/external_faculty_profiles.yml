@@ -1,0 +1,1024 @@
+generated_at: '2026-04-18T15:21:00Z'
+last_checked: '2026-04-18'
+people:
+  amanda-potasznik:
+    person_name: Amanda Potasznik
+    source_urls:
+    - https://blogs.umb.edu/potasznikresearch/
+    profiles:
+    - url: https://blogs.umb.edu/potasznikresearch/
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Potasznik Research – Auxiliary Materials for Amanda Potasznik's Current Research at Umass Boston
+  bo-sheng:
+    person_name: Bo Sheng
+    source_urls:
+    - http://www.cs.umb.edu/~shengbo
+    profiles:
+    - url: http://www.cs.umb.edu/~shengbo
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Bo Sheng's Homepage
+      resolved_url: https://www.cs.umb.edu/~shengbo/
+  dan-simovici:
+    person_name: Dan Simovici
+    source_urls:
+    - http://www.cs.umb.edu/~dsim
+    profiles:
+    - url: http://www.cs.umb.edu/~dsim
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Dan Simovici
+      resolved_url: https://www.cs.umb.edu/~dsim/
+      fields:
+        research_topics:
+          value:
+          - Semantic Models in Databases Algebraic Aspects of Multiple-Valued Logic
+          - Algebraic Aspects of Multiple-Valued Logic
+          confidence: medium
+          source_section: Research Interests
+        publication_links:
+          value:
+          - url: http://www.cs.umb.edu/~dsim/papersps/egc15.pdf
+            label: (pdf file)
+          - url: http://www.cs.umb.edu/~dsim/papersps/rud.pdf
+            label: (pdf file)
+          - url: http://www.cs.umb.edu/~dsim/papersps/egc14s.pdf
+            label: (pdf file)
+          - url: http://www.cs.umb.edu/~dsim/papersps/COMPR.pdf
+            label: (pdf file)
+          - url: http://www.cs.umb.edu/~dsim/papersps/ISMVL14.pdf
+            label: (pdf file)
+          - url: http://www.cs.umb.edu/~dsim/papersps/dmmd.pdf
+            label: (pdf file)
+          - url: http://www.cs.umb.edu/~dsim/papersps/dataanal.pdf
+            label: (pdf file)
+          - url: http://www.cs.umb.edu/~dsim/papersps/DaWaK2012.pdf
+            label: (pdf file)
+          confidence: medium
+          source_section: Recent Publications
+        teaching_links:
+          value:
+          - url: http://www.cs.umb.edu/~dsim/syllabus622-26.pdf
+            label: CS622 Syllabus - SPRING 2026
+          confidence: medium
+          source_section: CS622 Syllabus - SPRING 2026
+  daniel-haehn:
+    person_name: Daniel Haehn
+    source_urls:
+    - http://www.cs.umb.edu/~haehn
+    profiles:
+    - url: http://www.cs.umb.edu/~haehn
+      last_checked: '2026-04-18'
+      redirected_to: https://danielhaehn.com
+      http_status: 200
+      source_title: DANIELHAEHN.com
+      resolved_url: https://danielhaehn.com
+      fields:
+        publication_links:
+          value:
+          - url: https://danielhaehn.com/papers/?+BIBTEXKEY+
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: https://scholar.google.com/citations?user=HGvsO6oAAAAJ&hl=en
+            label: Google Scholar
+          - url: https://www.linkedin.com/in/haehn
+            label: LinkedIn
+          - url: https://github.com/haehn
+            label: GitHub
+          - url: https://danielhaehn.com/CV.pdf
+            label: My C.V.
+          confidence: high
+          source_section: page links
+  duc-tran:
+    person_name: Duc Tran
+    source_urls:
+    - http://www.cs.umb.edu/~duc
+    profiles:
+    - url: http://www.cs.umb.edu/~duc
+      last_checked: '2026-04-18'
+      redirected_to: https://www.cs.umb.edu/~duc/www/
+      http_status: 200
+      source_title: Duc (David) Tran | Home
+      resolved_url: https://www.cs.umb.edu/~duc/www/
+      fields:
+        lab_or_group:
+          value: Network Computing Laboratory
+          confidence: medium
+          source_section: page links
+        publication_links:
+          value:
+          - url: https://arxiv.org/abs/2205.01091
+            label: '"Blockchain in a Nutshell."'
+          - url: http://cms.comsoc.org/eprise/main/SiteGen/CCNC_2009/Content/Home/call_for_papers/Workshop_on_Information_Retrieval_in_Sensor_Networ.html
+            label: IRSN 2009
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: http://www.linkedin.com/in/ductran
+            label: LinkedIn
+          - url: http://nclab.cs.umb.edu/
+            label: Network Computing Laboratory
+          - url: https://scholar.google.com/citations?user=Wi02UQoAAAAJ&hl=en
+            label: Google Scholar
+          confidence: high
+          source_section: page links
+        teaching_links:
+          value:
+          - url: https://www.cs.umb.edu/~duc/www/teaching/index.html
+            label: Teaching
+          confidence: medium
+          source_section: page links
+  funda-durupinar:
+    person_name: Funda Durupinar
+    source_urls:
+    - http://www.cs.umb.edu/~fundad
+    profiles:
+    - url: http://www.cs.umb.edu/~fundad
+      last_checked: '2026-04-18'
+      redirected_to: https://sites.google.com/site/fdurupinar
+      http_status: 200
+      source_title: Funda Durupinar, Ph.D.
+      resolved_url: https://sites.google.com/site/fdurupinar
+      fields:
+        external_summary:
+          value: About Me I am an associate professor in the Department of Computer Science at UMass Boston. My research focuses on building computational models that bridge internal psychological processes with external expressions, ranging from body and facial movements to social interactions and language. I
+          confidence: high
+          source_section: meta description
+        lab_or_group:
+          value: Center for Human Modeling and Simulation,
+          confidence: medium
+          source_section: page links
+        recent_news_titles:
+          value:
+          - 2026 Grand Scholarly Challenge
+          - Emotional Expression as a Means of Communicating Virtual Human Personalities
+          - Modeling Visual Aesthetics, Emotion, and Artistic Style
+          - MASSXR Workshop
+          - ACM Transactions on Applied Perception
+          confidence: medium
+          source_section: News
+        publication_links:
+          value:
+          - url: https://sites.google.com/site/fdurupinar/home/publications-1
+            label: Publications
+          - url: https://arxiv.org/abs/2407.10993
+          - url: https://www.cs.umb.edu/~fundad/publications/conversationalAgent.pdf
+            label: pdf
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: https://sites.google.com/site/fdurupinar/home/cv
+            label: CV
+          - url: http://cg.cis.upenn.edu/
+            label: Center for Human Modeling and Simulation,
+          - url: https://umbvrlab.github.io/perfex/
+          confidence: high
+          source_section: page links
+        teaching_links:
+          value:
+          - url: https://sites.google.com/site/fdurupinar/home/teaching
+            label: Teaching
+          - url: https://sites.google.com/site/fdurupinar/home/teaching/cs461
+            label: CS461
+          - url: https://sites.google.com/site/fdurupinar/home/teaching/cs461/cs461-26-spring
+            label: CS461-26-Spring
+          - url: https://sites.google.com/site/fdurupinar/home/teaching/cs461/cs461-25-fall
+            label: CS461-25-Fall
+          - url: https://sites.google.com/site/fdurupinar/home/teaching/cs461/cs461-25-spring
+            label: CS461-25-Spring
+          - url: https://sites.google.com/site/fdurupinar/home/teaching/cs461/cs461-24
+            label: CS461-24
+          - url: https://sites.google.com/site/fdurupinar/home/teaching/cs461/cs461-23
+            label: CS461-23
+          - url: https://sites.google.com/site/fdurupinar/home/teaching/cs461/cs461-22
+            label: CS461-22
+          confidence: medium
+          source_section: page links
+  gabriel-ghinita:
+    person_name: Gabriel Ghinita
+    source_urls:
+    - http://www.cs.umb.edu/~gghinita/
+    profiles:
+    - url: http://www.cs.umb.edu/~gghinita/
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Gabriel Ghinita's Homepage
+      resolved_url: https://www.cs.umb.edu:443/~gghinita/
+      fields:
+        external_summary:
+          value: 'My main research interests lie in the area of data security and privacy: geo-spatial context-aware access control outsourcing and digital rights management of spatio-temporal data private location-based queries privacy-preserving publishing of microdata and transactional data.'
+          confidence: medium
+          source_section: intro paragraph
+        research_topics:
+          value:
+          - Privacy-Preserving Measurement of High-Speed Network Data
+          confidence: medium
+          source_section: Research Interests
+        lab_or_group:
+          value: Purdue Cyber Center
+          confidence: medium
+          source_section: page links
+        publication_links:
+          value:
+          - url: https://www.cs.umb.edu:443/~gghinita/#Publications
+            label: Publications
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: http://www.purdue.edu/dp/cyber/
+            label: Purdue Cyber Center
+          confidence: high
+          source_section: page links
+        teaching_terms:
+          value:
+          - Spring 2018
+          confidence: low
+          source_section: Teaching
+  glenn-hoffman:
+    person_name: Glenn Hoffman
+    source_urls:
+    - http://www.cs.umb.edu/~ghoffman
+    profiles:
+    - url: http://www.cs.umb.edu/~ghoffman
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Glenn Hoffman
+      resolved_url: https://www.cs.umb.edu/~ghoffman/
+      fields:
+        teaching_links:
+          value:
+          - url: http://www.cs.umb.edu/~ghoffman/it116_html/class_page_it116
+            label: Class Web Page
+          - url: http://www.cs.umb.edu/~ghoffman/it117_html/class_page_it117
+            label: Class Web Page
+          - url: http://www.cs.umb.edu/~ghoffman/it244_html/class_page_it244
+            label: Class Web Page
+          - url: http://www.cs.umb.edu/~ghoffman/it480_html/class_page_it480
+            label: Class Web Page
+          confidence: medium
+          source_section: Classes
+  jane-h-deblois:
+    person_name: Jane H. DeBlois
+    source_urls:
+    - https://www.cs.umb.edu/~hdeblois
+    profiles:
+    - url: https://www.cs.umb.edu/~hdeblois
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: J. Holly DeBlois
+      resolved_url: https://www.cs.umb.edu/~hdeblois/
+      fields:
+        external_summary:
+          value: My research area is algorithms and parallel computing. Also scene classifiers using CUDA. Previously, I did research in sensor networks and molecular communication. I am also an experienced software engineer.
+          confidence: medium
+          source_section: intro paragraph
+        lab_or_group:
+          value: High Performance Computing Research Group, 2015 - 2019
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: http://www.cs.umb.edu/research/groups/
+            label: High Performance Computing Research Group, 2015 - 2019
+          - url: https://www.cs.umb.edu/~hdeblois/resume.pdf
+            label: CV
+          confidence: high
+          source_section: page links
+  jun-suzuki:
+    person_name: Jun Suzuki
+    source_urls:
+    - http://www.cs.umb.edu/~jxs
+    profiles:
+    - url: http://www.cs.umb.edu/~jxs
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Welcome to Jun Suzuki's Web Site
+      resolved_url: https://www.cs.umb.edu/~jxs/
+      fields:
+        lab_or_group:
+          value: S-3-168 (Room 168, 3rd floor, Science Center Building)
+          confidence: medium
+          source_section: page links
+        recent_news_titles:
+          value:
+          - Special Issue of International Journal of Software Engineering and Knowledge Engineering on Emerging Synergies of Artificial Intelligence and Software Engineering
+          - Special Issue of Elsevier Nano Communication Networks on Bio-inspired Computing and Communication
+          - Special Issue of Journal of Sensor and Actuator Networks on Body Area Networks
+          - Cloud-integrated Cyber-Physical Systems
+          - Modeling, Methodologies and Tools for Molecular and Nano-scale Communications
+          confidence: medium
+          source_section: News
+        publication_links:
+          value:
+          - url: http://www.journals.elsevier.com/nano-communication-networks/call-for-papers/special-issue-on-bio-inspired-computing-and-communication/
+            label: Special Issue of Elsevier Nano Communication Networks on Bio-inspired Computing and Communication
+          - url: http://bodynets.org/2013/media/uploads/cf-papers-ccps.html
+            label: BodyNets 2013 Special Track on Cloud-assisted Cyber-Physical Systems (CCPS)
+          - url: http://www.journals.elsevier.com/information-sciences/call-for-papers/special-issue-of-information-sciences-on-cloud-assisted/
+            label: Special Issue of Elsevier Information Sciences on Cloud-assisted Wireless Body Area Networks
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: http://www.cs.umb.edu/~jxs/resume.html
+            label: Resume/CV
+          - url: http://www.linkedin.com/profile/view?id=141644
+            label: LinkedIn
+          - url: http://scholar.google.com/citations?user=4oVjDuoAAAAJ
+            label: Google Scholar
+          confidence: high
+          source_section: page links
+        teaching_links:
+          value:
+          - url: http://www.cs.umb.edu/~jxs/teaching.html
+            label: Teaching
+          confidence: medium
+          source_section: page links
+  marc-pomplun:
+    person_name: Marc Pomplun
+    source_urls:
+    - http://www.cs.umb.edu/~marc
+    profiles:
+    - url: http://www.cs.umb.edu/~marc
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Marc Pomplun's Homepage
+      resolved_url: https://www.cs.umb.edu/~marc/
+      fields:
+        external_summary:
+          value: I am a Professor and the Chair of the Department of Computer Science at the University of Massachusetts Boston and Director of the Visual Attention Laboratory. My work focuses on analyzing, modeling, and simulating aspects of human vision. If you have any questions, comments or suggestions regarding anything you find on these pages, please don't hesitate to send me an e-mail .
+          confidence: medium
+          source_section: intro paragraph
+        lab_or_group:
+          value: Visual Attention Laboratory
+          confidence: medium
+          source_section: page links
+        publication_links:
+          value:
+          - url: http://www.cs.umb.edu/~marc/publications.htm
+            label: Publications
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: http://www.cs.umb.edu/~marc/lab/
+            label: Visual Attention Laboratory
+          - url: http://www.cs.umb.edu/~marc/cv.pdf
+            label: Curriculum Vitae
+          confidence: high
+          source_section: page links
+  ming-ouyang:
+    person_name: Ming Ouyang
+    source_urls:
+    - http://www.cs.umb.edu/~ming/
+    profiles:
+    - url: http://www.cs.umb.edu/~ming/
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Ming Ouyang's Homepage
+      resolved_url: https://www.cs.umb.edu:443/~ming/
+  nurit-haspel:
+    person_name: Nurit Haspel
+    source_urls:
+    - http://www.cs.umb.edu/~nurith
+    profiles:
+    - url: http://www.cs.umb.edu/~nurith
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Nurit Haspel's Homepage
+      resolved_url: https://www.cs.umb.edu/~nurith/
+      fields:
+        external_summary:
+          value: I am a professor in the department of Computer Science at the University of Massachusetts, Boston. Before that I was a postdoctoral research associate with the Physical and Biological Computing group at Rice University . I graduated from the Department of Computer Science in Tel Aviv University , Israel, where I was a member of the structural bioinformatics group .
+          confidence: medium
+          source_section: About me
+        lab_or_group:
+          value: Physical and Biological Computing group
+          confidence: medium
+          source_section: page links
+        recent_news_titles:
+          value:
+          - ACM-BCB 2022
+          - Valid XHTML 1.0
+          - super j man
+          - I am the PC chair for ACM-BCB 2022 , which took place in August 2022 in Chicago.
+          - Congratulations to Dr. Ramin Dehghanpoor for defending his PhD thesis in July 2022.
+          confidence: medium
+          source_section: Announcements
+        publication_links:
+          value:
+          - url: https://www.cs.umb.edu/~nurith/publications/index.html
+            label: Publications
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: https://www.cs.umb.edu/~nurith/haspel_cv.pdf
+            label: CV
+          - url: http://www.kavrakilab.org
+            label: Physical and Biological Computing group
+          - url: http://bioinfo3d.cs.tau.ac.il
+            label: structural bioinformatics group
+          confidence: high
+          source_section: page links
+        teaching_links:
+          value:
+          - url: https://www.umb.edu/course_catalog/course_info/ugrd_CS_all_220
+            label: CS220, formerly CS/Math320
+          confidence: medium
+          source_section: Teaching
+        teaching_terms:
+          value:
+          - Spring 2018
+          - Fall 2013
+          - Spring 2014
+          confidence: low
+          source_section: Past courses
+  ozgun-babur:
+    person_name: Ozgun Babur
+    source_urls:
+    - https://www.cs.umb.edu/~ozgun
+    profiles:
+    - url: https://www.cs.umb.edu/~ozgun
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: null
+      resolved_url: https://www.cs.umb.edu/~ozgun/
+  shichao-pei:
+    person_name: Shichao Pei
+    source_urls:
+    - https://www.cs.umb.edu/~spei2/
+    profiles:
+    - url: https://www.cs.umb.edu/~spei2/
+      last_checked: '2026-04-18'
+      redirected_to: https://scpei.github.io/
+      http_status: 200
+      source_title: Shichao Pei
+      resolved_url: https://scpei.github.io/
+      fields:
+        external_summary:
+          value: Assistant Professor Department of Computer Science University of Massachusetts Boston M-3-201-05, 3rd Floor, McCormack Hall shichao.pei@umb.edu
+          confidence: medium
+          source_section: intro paragraph
+        publication_links:
+          value:
+          - url: https://scpei.github.io/publication.html
+            label: Publications
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: https://scholar.google.ca/citations?user=IDaNWgIAAAAJ
+          - url: https://dblp.org/pid/168/9433.html
+          - url: https://github.com/scpei
+          confidence: high
+          source_section: page links
+  soheil-sepahyar:
+    person_name: Soheil Sepahyar
+    source_urls:
+    - https://soheilappear.github.io/soheilsepahyar/
+    profiles:
+    - url: https://soheilappear.github.io/soheilsepahyar/
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Soheil Sepahyar, Ph.D. | VR, Graphics, HCI
+      fields:
+        external_summary:
+          value: Soheil Sepahyar, Ph.D. Lecturer at UMass Boston. VR/AR, graphics, eye tracking, distance perception, and simulation.
+          confidence: high
+          source_section: meta description
+        research_topics:
+          value:
+          - 'Thesis: the impact of pre-experiment walking on distance perception in VR'
+          - Quantified pre-experiment blind walking effects
+          - improving distance judgment accuracy from about 80% to 97%+
+          - 'Step detection: filtering plus scipy.signal.find_peaks on vertical HMD motion'
+          - 'Reusable tooling: Python modules for data processing and visualization'
+          confidence: medium
+          source_section: Ph.D. Researcher, Michigan Technological University
+        publication_links:
+          value:
+          - url: https://dl.acm.org/doi/abs/10.1145/3548814.3551463
+            label: ACM DL
+          - url: https://dl.acm.org/doi/abs/10.1145/3385955.3407929
+            label: ACM DL
+          - url: https://dl.acm.org/doi/abs/10.1145/3377713.3377808
+            label: ACM DL
+          - url: https://scholar.google.com/citations?user=JXdvsmMAAAAJ&hl=en&oi=ao
+            label: Google Scholar
+          confidence: medium
+          source_section: Publications
+        profile_links:
+          value:
+          - url: https://soheilappear.github.io/soheilsepahyar/resume.pdf
+            label: CV (PDF)
+          - url: https://www.linkedin.com/in/soheil-sepahyar/
+            label: LinkedIn
+          - url: https://github.com/soheilAppear
+            label: GitHub
+          - url: https://scholar.google.com/citations?user=JXdvsmMAAAAJ&hl=en&oi=ao
+            label: Google Scholar
+          - url: https://soheilappear.github.io/soheilsepahyar/#about
+            label: About
+          - url: https://soheilappear.github.io/soheilsepahyar/#work
+            label: Current work
+          - url: https://soheilappear.github.io/soheilsepahyar/#experience
+            label: Experience
+          - url: https://soheilappear.github.io/soheilsepahyar/#teaching
+            label: Teaching
+          confidence: high
+          source_section: page links
+        teaching_links:
+          value:
+          - url: https://soheilappear.github.io/soheilsepahyar/#teaching
+            label: Teaching
+          confidence: medium
+          source_section: page links
+  stephen-chang:
+    person_name: Stephen Chang
+    source_urls:
+    - https://www.cs.umb.edu/~stchang/
+    profiles:
+    - url: https://www.cs.umb.edu/~stchang/
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Stephen Chang
+      fields:
+        external_summary:
+          value: Homepage for Stephen Chang
+          confidence: high
+          source_section: meta description
+        research_topics:
+          value:
+          - Previously
+          - my dissertation explored lazy evaluation from both a theoretical and a practical perspective. I also enjoy hacking with/on Racket .
+          confidence: medium
+          source_section: Research interests
+        lab_or_group:
+          value: PLT Research Group
+          confidence: medium
+          source_section: page links
+        publication_links:
+          value:
+          - url: https://2024.ecoop.org/
+            label: ECOOP 2024
+          - url: https://lambdaland.org/
+            label: Ashton Wiersdorf
+          - url: https://drops.dagstuhl.de/storage/00lipics/lipics-vol313-ecoop2024/LIPIcs.ECOOP.2024.44/LIPIcs.ECOOP.2024.44.pdf
+            label: pdf
+          - url: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2024.44
+            label: DROPS link
+          - url: https://lambdaland.org/posts/2024-07-15_type_tailoring
+            label: blog
+          - url: https://github.com/bennn/trivial/
+            label: code
+          - url: http://tfp2021.org/
+            label: TFP 2021
+          - url: https://melcer.dev/
+            label: Daniel Melcer
+          confidence: medium
+          source_section: Papers
+        profile_links:
+          value:
+          - url: https://www.cs.umb.edu/~stchang/cv/cv.pdf
+            label: cv
+          - url: https://racket-lang.org/plt.html
+            label: PLT Research Group
+          - url: https://github.com/stchang
+            label: hacking
+          - url: https://www.linkedin.com/in/kclapper
+            label: Kyle Clapper
+          - url: https://www.linkedin.com/in/mitch-gamburg-6691a569/
+            label: Mitch Gamburg
+          - url: https://github.com/bennn/trivial/
+            label: code
+          - url: https://github.com/dmelcer9/cur/tree/visual-explorer
+            label: code
+          - url: https://github.com/stchang/macrotypes/tree/popl2020-artifact
+            label: code (Turnstile+)
+          confidence: high
+          source_section: page links
+        teaching_links:
+          value:
+          - url: http://www.ccs.neu.edu/course/cs5010sp15/
+            label: 'CS5010 (Spring 2015, NEU): Program Design Paradigms'
+          - url: http://www.ccs.neu.edu/course/cs5010f14/
+            label: 'CS5010 (Fall 2014, NEU): Program Design Paradigms'
+          - url: http://blackboard.neu.edu/bin/common/course.pl?course_id=_130621_1
+            label: 'CS5010 (Spring 2010, NEU): Program Design Paradigms'
+          - url: http://www.ccs.neu.edu/course/csu211/
+            label: 'CS2500 (Fall 2008, NEU): Fundamentals of Computer Science 1'
+          confidence: medium
+          source_section: Teaching
+        teaching_terms:
+          value:
+          - Fall 2025
+          - Spring 2025
+          - Fall 2024
+          - Spring 2024
+          - Fall 2023
+          - Spring 2023
+          - Fall 2022
+          - Spring 2022
+          - Fall 2021
+          - Spring 2021
+          - Fall 2020
+          - Spring 2018
+          - Spring 2015
+          - Fall 2014
+          - Spring 2010
+          - Fall 2009
+          - Spring 2009
+          - Fall 2008
+          - Spring 2008
+          confidence: low
+          source_section: Teaching
+  swami-iyer:
+    person_name: Swami Iyer
+    source_urls:
+    - http://www.cs.umb.edu/~siyer
+    profiles:
+    - url: http://www.cs.umb.edu/~siyer
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Swami Iyer · Greetings!
+      resolved_url: https://www.cs.umb.edu/~siyer/
+      fields:
+        external_summary:
+          value: My name is Swami Iyer ( 禹师文 ). I am a Senior Lecturer I in the Computer Science department at the University of Massachusetts Boston .
+          confidence: medium
+          source_section: intro paragraph
+        research_topics:
+          value:
+          - Evolutionary dynamics on complex networks
+          - machine learning
+          - coding
+          - and pedagogy
+          confidence: medium
+          source_section: Academic Interests
+        profile_links:
+          value:
+          - url: https://www.cs.umb.edu/~siyer/cv.html
+            label: CV
+          - url: https://github.com/swamiiyer
+          - url: https://www.linkedin.com/in/swami-iyer-3a6b2b113
+          - url: https://umassboston.zoom.us/j/8790346943?pwd=N1VCR0RnbnJhNVpBZEprbmdFcVF0Zz09
+            label: zoom
+          confidence: high
+          source_section: page links
+        teaching_links:
+          value:
+          - url: https://www.cs.umb.edu/~siyer/teaching/cs110/index.html
+            label: 'CS110: Introduction to Computing'
+          - url: https://www.cs.umb.edu/~siyer/teaching/cs210/index.html
+            label: 'CS210: Intermediate Computing with Data Structures'
+          - url: https://www.cs.umb.edu/~siyer/teaching/cs451/index.html
+            label: 'CS451/651: Compilers'
+          confidence: medium
+          source_section: Courses (Spring 2026)
+  tales-imbiriba:
+    person_name: Tales Imbiriba
+    source_urls:
+    - https://talesimbiriba.github.io
+    profiles:
+    - url: https://talesimbiriba.github.io
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Tales Imbiriba | This is the Tales Imbiriba personal page used for sharing a bit of his research interests and active research projects.
+      fields:
+        external_summary:
+          value: This is the Tales Imbiriba personal page used for sharing a bit of his research interests and active research projects.
+          confidence: high
+          source_section: meta description
+        publication_links:
+          value:
+          - url: https://arxiv.org/pdf/2402.15656.pdf
+            label: ICLR2024
+          - url: https://arxiv.org/pdf/2212.07311.pdf
+            label: TSP2023
+          - url: https://arxiv.org/pdf/2310.02340
+            label: TCI2023
+          - url: https://arxiv.org/pdf/2303.10566
+            label: TIP2023
+          - url: https://arxiv.org/pdf/2001.07307.pdf
+            label: GSRSMagazine2021
+          - url: https://arxiv.org/pdf/1503.05521.pdf
+            label: TIP2016
+          - url: https://arxiv.org/pdf/1710.07723
+            label: ICASSP2018
+          - url: https://arxiv.org/pdf/1811.02413.pdf
+            label: TGRS2019
+          confidence: medium
+          source_section: page links
+  tarikul-islam-papon:
+    person_name: Tarikul Islam Papon
+    source_urls:
+    - https://www.cs.umb.edu/~tpapon/
+    profiles:
+    - url: https://www.cs.umb.edu/~tpapon/
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Tarikul Islam Papon's Homepage
+      fields:
+        lab_or_group:
+          value: Computing Hardware & Large Data Lab (CHiLL)
+          confidence: medium
+          source_section: page links
+        recent_news_titles:
+          value:
+          - VLDB 2026
+          - NEDB Day 2026
+          - '[Poster 1]'
+          - '[Poster 2]'
+          - '[Poster 3]'
+          confidence: medium
+          source_section: Recent News
+        publication_links:
+          value:
+          - url: https://www.cs.umb.edu/~tpapon/publications.html
+            label: Publications
+          - url: https://dl.acm.org/doi/pdf/10.1145/3722212.3725077
+            label: '[Paper]'
+          - url: https://ieeexplore.ieee.org/document/10495146
+            label: '[Official Paper]'
+          - url: https://www.cs.umb.edu/~tpapon/pdfs/paper-sigmod24-cave.pdf
+            label: '[Local Paper]'
+          - url: https://dl.acm.org/doi/10.1145/3654928
+            label: '[Official Paper]'
+          - url: https://www.cs.umb.edu/~tpapon/pdfs/paper-icde24-phd-symposium.pdf
+            label: '[Local Paper]'
+          - url: https://mlforsystems.org/assets/papers/neurips2023/paper25.pdf
+            label: '[Official Paper]'
+          - url: https://www.vldb.org/pvldb/vol16/p3950-mun.pdf
+            label: '[Official Paper]'
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: https://www.cs.umb.edu/~tpapon/pdfs/CV_MTIP.pdf
+            label: CV(Download)
+          - url: https://scholar.google.com/citations?user=dwKLrWIAAAAJ&hl=en
+          - url: https://github.com/tarikulpapon
+          - url: https://www.linkedin.com/in/tarikul-islam-papon-264581191/
+          - url: https://www.cs.umb.edu/~tpapon/pdfs/CV_MTIP.pdf
+          - url: https://www.cs.umb.edu/~tpapon/research.html
+            label: Computing Hardware & Large Data Lab (CHiLL)
+          - url: https://nedbday.github.io/2026
+            label: NEDB Day 2026
+          - url: https://nedbday.github.io/2026/download/posters/poster_47.pdf
+            label: '[Poster 1]'
+          confidence: high
+          source_section: page links
+        teaching_links:
+          value:
+          - url: https://www.cs.umb.edu/~tpapon/teaching.html
+            label: Teaching
+          - url: https://www.cs.umb.edu/~tpapon/pdfs/award_cs_teaching_excellence.pdf
+            label: Computer Science Teaching Excellence Award
+          - url: https://bu-disc.github.io/CS561/
+            label: '[Class Website]'
+          confidence: medium
+          source_section: page links
+  tiago-cogumbreiro:
+    person_name: Tiago Cogumbreiro
+    source_urls:
+    - https://cogumbreiro.github.io/
+    profiles:
+    - url: https://cogumbreiro.github.io/
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Tiago Cogumbreiro
+      fields:
+        external_summary:
+          value: Tiago is an associate professor at University of Massachusetts Boston. Tiago's research helps programmers write software with fewer bugs.
+          confidence: medium
+          source_section: intro paragraph
+        research_topics:
+          value:
+          - You can meet my collaborators at the Software Verification Lab
+          confidence: medium
+          source_section: Research
+        lab_or_group:
+          value: Software Verification Lab
+          confidence: medium
+          source_section: page links
+        publication_links:
+          value:
+          - url: https://link.springer.com/article/10.1007/s10703-024-00459-w
+            label: invited paper (CAV'21 special issue)
+          - url: https://arxiv.org/abs/2203.12142
+            label: PLACES
+          - url: https://link.springer.com/article/10.1007/s10703-024-00459-w
+            label: 1 of 5 top papers invited for FMSD'23
+          - url: https://arxiv.org/abs/1606.05403
+            label: PLACES
+          - url: https://arxiv.org/abs/1110.3853
+            label: PLACES
+          - url: https://arxiv.org/abs/1002.1408
+            label: PLACES
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: https://umb-svl.gitlab.io/
+            label: Software Verification Lab
+          - url: https://solarsystem.nasa.gov/resources/652/plutos-majestic-mountains-frozen-plains-and-foggy-hazes/?category=planets/dwarf-planets_pluto
+            label: NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute
+          - url: http://dblp.dagstuhl.de/pers/hd/c/Cogumbreiro:Tiago
+            label: '@DBLP'
+          - url: https://scholar.google.com/citations?user=4uTAp_gAAAAJ
+            label: '@Scholar'
+          - url: https://cogumbreiro.github.io/assets/faial-popl26-cogumbreiro.pdf
+            label: Slides
+          - url: https://cogumbreiro.github.io/assets/faial-popl26.pdf
+            label: PDF
+          - url: https://cogumbreiro.github.io/assets/faial-vivekfest24-slides.pdf
+            label: Slides
+          - url: https://cogumbreiro.github.io/assets/faial-vivekfest24.pdf
+            label: PDF
+          confidence: high
+          source_section: page links
+        teaching_links:
+          value:
+          - url: https://cogumbreiro.github.io/teaching/cs720/s26/
+            label: 'CS720: Logical Foundations in Computer Science'
+          confidence: medium
+          source_section: Teaching
+  torna-soro:
+    person_name: Torna Soro
+    source_urls:
+    - https://www.cs.umb.edu/~tsoro/
+    profiles:
+    - url: https://www.cs.umb.edu/~tsoro/
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Torna Omar Soro @ the University of Massachusetts Boston
+      fields:
+        external_summary:
+          value: Dr. Soro is a lecturer in the computer science department at the University of Massachusetts - Boston, a tenured professor of Economics at Bunker hill community College - Boston and a technical staff (Weekend Group) at Meditech (Medical Information Technology, Inc)
+          confidence: medium
+          source_section: intro paragraph
+        research_topics:
+          value:
+          - Machine Learning
+          - Artificial Intelligence (AI)
+          - Predictive modelling
+          - Econometrics
+          - Industrial Organization
+          - Health Information Technology
+          - Teaching
+          confidence: medium
+          source_section: RESEARCH INTERESTS
+        teaching_links:
+          value:
+          - url: https://www.cs.umb.edu/~tsoro/teaching/teach.html
+            label: Teaching
+          confidence: medium
+          source_section: page links
+  wei-ding:
+    person_name: Wei Ding
+    source_urls:
+    - http://www.cs.umb.edu/~ding
+    profiles:
+    - url: http://www.cs.umb.edu/~ding
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Wei Ding@The University of Massachusetts Boston
+      resolved_url: https://www.cs.umb.edu/~ding/
+      fields:
+        lab_or_group:
+          value: The Knowledge Discovery Lab (KDLab)
+          confidence: medium
+          source_section: page links
+        publication_links:
+          value:
+          - url: https://www.cs.umb.edu/~ding/publications.html
+            label: Publications
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: https://www.cs.umb.edu/~ding/resume/CV.pdf
+            label: Curriculum Vita
+          - url: http://ai.cs.umb.edu
+            label: The Knowledge Discovery Lab (KDLab)
+          confidence: high
+          source_section: page links
+        teaching_links:
+          value:
+          - url: https://www.cs.umb.edu/~ding/teaching.html
+            label: Teaching
+          confidence: medium
+          source_section: page links
+  xiaohui-liang:
+    person_name: Xiaohui Liang
+    source_urls:
+    - http://www.faculty.umb.edu/xiaohui.liang
+    profiles:
+    - url: http://www.faculty.umb.edu/xiaohui.liang
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Xiaohui's Homepage
+      resolved_url: https://www.faculty.umb.edu/xiaohui.liang/
+      fields:
+        external_summary:
+          value: 'IEEE Fellow, Associate Professor [CV] Associate Chair, Department of Computer Science University of Massachusetts at Boston Address: McCormack Hall, 3rd Floor, M-3-201-24 100 Morrissey Boulevard, Boston, MA 02125, US Office Phone: 617-287-6791 Email: Xiaohui.Liang~at~umb.edu'
+          confidence: medium
+          source_section: intro paragraph
+        lab_or_group:
+          value: MobCP Lab
+          confidence: medium
+          source_section: page links
+        recent_news_titles:
+          value:
+          - The 22nd International Conference on Wireless and Mobile Computing, Networking and Communications.
+          - IEEE International Conference on Communications (ICC) 2026
+          - IEEE Communications and Information Security Technical Committee (CISTC)
+          - IEEE International Conference on E-health Networking, Application & Services (Healthcom)
+          - ACM Transactions on Computing for Healthcare
+          confidence: medium
+          source_section: Updates
+        publication_links:
+          value:
+          - url: https://www.faculty.umb.edu/xiaohui.liang/publications.html
+            label: Publications
+          - url: https://www.faculty.umb.edu/xiaohui.liang/pdf/ICC2021_Best_Paper_Award.pdf
+            label: Best Paper
+          - url: https://www.faculty.umb.edu/xiaohui.liang/pdf/IPCCC2020_BEST_PAPER_LIDAUS.pdf
+            label: Best Paper
+          - url: https://arxiv.org/abs/2008.07052
+            label: Exploiting Fully Convolutional Network and Visualization Techniques on Spontaneous Speech for Dementia Detection
+          - url: https://www.journals.elsevier.com/smart-health/call-for-papers/special-issue-on-security-in-medical-cyber-physical-systems
+            label: Check CFP!
+          confidence: medium
+          source_section: page links
+        profile_links:
+          value:
+          - url: https://www.faculty.umb.edu/xiaohui.liang/mobcp.html
+            label: MobCP Lab
+          - url: https://www.faculty.umb.edu/xiaohui.liang/pdf/Xiaohui_CV.pdf
+            label: '[CV]'
+          - url: https://www.faculty.umb.edu/xiaohui.liang/mobcp.html
+            label: Mobile Computing and Privacy (MobCP) Lab
+          - url: http://scholar.google.com/citations?user=fzX2e3sAAAAJ&hl=en
+            label: Google Scholar H-Index is 55 and total citation is 13,832 as of December 2025
+          - url: https://nenlp.github.io/spr2025/index.html
+            label: New England NLP (NENLP) workshop
+          - url: https://www.linkedin.com/feed/update/urn:li:activity:7185819154174595072/
+            label: News
+          - url: https://multimodal-kdd-2023.github.io/#home
+            label: 'Multimodal KDD 2023: International Workshop on Multimodal Learning'
+          - url: https://socalnlp.github.io/symp22/index.html
+            label: Southern California Natural Language Processing Symposium (SoCal)
+          confidence: high
+          source_section: page links
+        teaching_links:
+          value:
+          - url: https://www.faculty.umb.edu/xiaohui.liang/teaching.html
+            label: Teaching
+          - url: https://www.faculty.umb.edu/xiaohui.liang/course_materials/CS480_697_Speech_and_Language_Processing.pdf
+            label: Speech and Language Processing
+          - url: https://www.faculty.umb.edu/xiaohui.liang/course_materials/CS442_642_Cybersecurity_in_the_IoT.pdf
+            label: Cybersecurity in the Internet of Things
+          - url: https://www.faculty.umb.edu/xiaohui.liang/course_materials/CS480_697_Applied_Crypto.pdf
+            label: Applied Cryptography
+          - url: https://www.faculty.umb.edu/xiaohui.liang/course_materials/cs240_overview.pdf
+            label: overview
+          confidence: medium
+          source_section: page links
+  yinxin-wan:
+    person_name: Yinxin Wan
+    source_urls:
+    - https://www.cs.umb.edu/~ywan/
+    profiles:
+    - url: https://www.cs.umb.edu/~ywan/
+      last_checked: '2026-04-18'
+      http_status: 200
+      source_title: Yinxin Wan | UMass Boston
+      fields:
+        external_summary:
+          value: I obtained my Ph.D. degree in Computer Science from Arizona State University (ASU). I was supervised by Prof. Guoliang Xue and Prof. Kuai Xu . I received my B.E degree in Information Security from University of Science and Technology of China (USTC) under the supervision of Prof. Kaiping Xue .
+          confidence: medium
+          source_section: intro paragraph
+        profile_links:
+          value:
+          - url: https://scholar.google.com/citations?user=7JufleoAAAAJ
+            label: Google Scholar
+          - url: https://dblp.org/pid/224/0803.html
+            label: DBLP
+          - url: https://www.linkedin.com/in/yinxin-wan/
+            label: Linkedin
+          - url: https://github.com/CyberAINet
+            label: Github
+          - url: https://www.linkedin.com/in/ting-xu/
+            label: Ting Xu
+          - url: https://guanjielin.github.io/
+            label: Guanjie Lin
+          confidence: high
+          source_section: page links
