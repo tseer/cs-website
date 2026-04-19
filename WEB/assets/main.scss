@@ -180,6 +180,31 @@
   white-space: nowrap;
 }
 
+.post--program .entity-connections {
+  margin: 2rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid #d7e2ea;
+}
+
+.post--program .entity-connections-block {
+  margin-top: 0.9rem;
+}
+
+.post--program .entity-connections-block h2 {
+  margin: 0 0 0.35rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.post--program .entity-connections-block ul,
+.post--program .entity-connections-block p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
 .course-catalog-table {
   width: 100%;
   border-collapse: collapse;

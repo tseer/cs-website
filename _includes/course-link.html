@@ -1,7 +1,7 @@
-{% assign linked_course = site.pages | where: "course_code", include.code | first %}
-{% assign course_label = include.label | default: include.code %}
-{% if linked_course %}
-  <a href="{{ linked_course.url | relative_url }}">{{ course_label }}</a>
-{% else %}
-  {{ course_label }}
-{% endif %}
+{%- assign linked_course = site.pages | where: "course_code", include.code | first -%}
+{%- assign course_label = include.label | default: include.code -%}
+{%- if linked_course -%}
+<a href="{{ linked_course.url | relative_url }}">{{ course_label }}</a>
+{%- else -%}
+{{ course_label }}
+{%- endif -%}

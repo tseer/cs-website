@@ -3,7 +3,7 @@ layout: default
 table-count: 4
 ---
 <div class="wrapper">
-  <article class="post">
+  <article class="post{% if page.entity_type %} post--{{ page.entity_type | slugify }}{% endif %}">
     {% assign schema_collection_data = nil %}
     {% if page.schema_collection_key %}
     {% assign schema_collection_data = site.data.section_indexes[page.schema_collection_key] %}
@@ -32,12 +32,12 @@ table-count: 4
     {% unless page.layout == "course" or page.layout == "person" or page.layout == "group" %}
     {% include page-summary.html %}
     {% endunless %}
-    {% unless page.layout == "course" or page.layout == "person" or page.layout == "group" %}
-    {% include entity-connections.html %}
-    {% endunless %}
-    
     <div class="post-content">
       {{ content }}
     </div>
+
+    {% unless page.layout == "course" or page.layout == "person" or page.layout == "group" %}
+    {% include entity-connections.html %}
+    {% endunless %}
   </article>
 </div>

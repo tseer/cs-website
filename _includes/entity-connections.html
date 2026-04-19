@@ -1,4 +1,3 @@
-{% assign has_connections = false %}
 {% assign empty_array = "" | split: "" %}
 {% assign connection_topics = page.related_topics | default: page.research_areas %}
 {% assign is_course_page = false %}
@@ -56,34 +55,41 @@
   {% endif %}
 {% endfor %}
 
-{% assign display_related_people_count = related_people_count %}
-{% if hide_course_relationship_metadata %}
-  {% assign display_related_people_count = 0 %}
-{% endif %}
-{% assign related_group_count = 0 %}
-{% if page.related_groups %}
-  {% assign related_group_count = page.related_groups.size %}
+{% assign show_audience = false %}
+{% if page.audience and hide_background_metadata != true %}
+  {% assign show_audience = true %}
 {% endif %}
 
-{% if display_related_people_count > 0 or related_course_count > 0 or related_group_count > 0 %}
-{% assign has_connections = true %}
+{% assign related_people = site.people | where_exp: "person", "related_people_slugs contains person.slug" %}
+{% assign show_related_people = false %}
+{% if related_people.size > 0 and hide_course_relationship_metadata != true %}
+  {% assign show_related_people = true %}
 {% endif %}
-{% unless hide_background_metadata %}
-  {% assign related_program_count = 0 %}
-  {% if page.related_programs %}
-    {% assign related_program_count = page.related_programs.size %}
-  {% endif %}
-  {% assign connection_topic_count = 0 %}
-  {% if connection_topics %}
-    {% assign connection_topic_count = connection_topics.size %}
-  {% endif %}
-  {% if page.audience or related_program_count > 0 or connection_topic_count > 0 %}
-  {% assign has_connections = true %}
-  {% endif %}
-{% endunless %}
-{% if has_connections %}
+
+{% assign show_related_courses = false %}
+{% if is_person_page and related_course_count > 0 %}
+  {% assign show_related_courses = true %}
+{% endif %}
+
+{% assign related_groups = site.groups | where_exp: "group", "page.related_groups contains group.slug" %}
+{% assign show_related_groups = false %}
+{% if related_groups.size > 0 %}
+  {% assign show_related_groups = true %}
+{% endif %}
+
+{% assign show_related_programs = false %}
+{% if page.related_programs and page.related_programs.size > 0 and hide_background_metadata != true %}
+  {% assign show_related_programs = true %}
+{% endif %}
+
+{% assign show_related_topics = false %}
+{% if connection_topics and connection_topics.size > 0 and hide_background_metadata != true %}
+  {% assign show_related_topics = true %}
+{% endif %}
+
+{% if show_audience or show_related_people or show_related_courses or show_related_groups or show_related_programs or show_related_topics %}
 <section class="entity-connections">
-  {% if page.audience and hide_background_metadata != true %}
+  {% if show_audience %}
   <div class="entity-connections-block">
     <h2>Audience</h2>
     {% if page.audience.first %}
@@ -98,8 +104,7 @@
   </div>
   {% endif %}
 
-  {% assign related_people = site.people | where_exp: "person", "related_people_slugs contains person.slug" %}
-  {% if related_people.size > 0 and hide_course_relationship_metadata != true %}
+  {% if show_related_people %}
   <div class="entity-connections-block">
     <h2>Related People</h2>
     <ul>
@@ -110,7 +115,7 @@
   </div>
   {% endif %}
 
-  {% if is_person_page and related_course_count > 0 %}
+  {% if show_related_courses %}
   <div class="entity-connections-block">
     <h2>Related Courses</h2>
     <ul>
@@ -132,8 +137,7 @@
   </div>
   {% endif %}
 
-  {% assign related_groups = site.groups | where_exp: "group", "page.related_groups contains group.slug" %}
-  {% if related_groups.size > 0 %}
+  {% if show_related_groups %}
   <div class="entity-connections-block">
     <h2>Related Groups</h2>
     <ul>
@@ -144,7 +148,7 @@
   </div>
   {% endif %}
 
-  {% if page.related_programs and page.related_programs.size > 0 and hide_background_metadata != true %}
+  {% if show_related_programs %}
   <div class="entity-connections-block">
     <h2>Related Programs</h2>
     <ul>
@@ -162,7 +166,7 @@
   </div>
   {% endif %}
 
-  {% if connection_topics and connection_topics.size > 0 and hide_background_metadata != true %}
+  {% if show_related_topics %}
   <div class="entity-connections-block">
     <h2>Related Topics</h2>
     <ul>
