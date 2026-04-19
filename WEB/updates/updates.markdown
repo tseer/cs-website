@@ -50,7 +50,16 @@ This page lists completed updates made to the CS website.
 - Improved navigation and page connectivity.
 - Reduced stale external references across the site.
 
+<<<<<<< HEAD
 ## Clone and Build Guide
+=======
+## Chimera Research Computing Page
+
+- Added a dedicated Chimera page under **Research** to highlight the department's research computing resources, high-performance computing context, and GPU-supported workloads.
+- Organized the page with a short overview, related research computing links, and guidance on who should use Chimera and what kinds of work it supports.
+
+## Related Links
+>>>>>>> rescue-finald
 
 This page documents the project’s clone-and-build workflow, including the steps needed to pull the repository, install dependencies if needed, and build the CS website so it can be tested locally or deployed in the project environment.
 
@@ -58,6 +67,7 @@ This page documents the project’s clone-and-build workflow, including the step
 
 - [Clone and Build Guide]({{ '/resources/clone-and-build/' | relative_url }})
 - [Course Catalog]({{ '/academics/courses/' | relative_url }})
+- [Chimera]({{ '/research/chimera/' | relative_url }})
 - [Search Assistant]({{ '/ai-assistant' | relative_url }})
 - [Broken Links Repaired]({{ '/broken-links/' | relative_url }})
 - [Updates]({{ '/updates/' | relative_url }})

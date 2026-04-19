@@ -33,6 +33,7 @@ related_topics:
 related_groups:
   - high-performance-computing-group
 parent_section: Research
+section_name: Research
 ---
 Chimera is a high-performance computing (HPC) cluster provided by UMass Boston Research Computing. It supports advanced workloads such as data analysis, machine learning, simulations, and other compute-intensive research tasks.
 

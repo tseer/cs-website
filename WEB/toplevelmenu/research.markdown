@@ -37,6 +37,8 @@ schema_collection_items:
     url: "/funding"
   - name: "Groups"
     url: "/groups"
+  - name: "Chimera"
+    url: "/research/chimera/"
 ---
 
 Lists financial support received from companies and foundations by our department for its research initiatives.
@@ -46,3 +48,7 @@ Lists financial support received from companies and foundations by our departmen
 Lists research topics that members in the department are currently focusing on.
 
 - [Groups]({{ '/groups' | relative_url }})
+
+Highlights departmental research computing infrastructure and cluster resources for advanced workloads.
+
+- [Chimera]({{ '/research/chimera/' | relative_url }})
