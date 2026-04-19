@@ -36,6 +36,24 @@ parent_section: Research
 
 Chimera is designed for distributed computing and includes a mix of compute resources, including GPU-enabled nodes for accelerated workloads.
 
+<figure style="max-width: 760px; margin: 1.5rem auto 2rem;">
+  <img src="{{ '/WEB/images/GPU.jpg' | relative_url }}" alt="GPU hardware used for high-performance computing, AI, and accelerated research workloads on Chimera">
+  <figcaption>GPU acceleration supports modern workloads including AI, simulation, and parallel computing.</figcaption>
+</figure>
+
+---
+
+## Related Research Computing Links
+
+- [Chimera HPC Cluster](https://www.umb.edu/rc/hpc/chimera/)  
+  Main UMass Boston Chimera cluster page for access, usage details, and platform information.
+- [Unity HPC Cluster](https://unityhpc.org/)  
+  Regional high-performance computing environment available for broader research workloads.
+- [High Performance Computing](https://www.umb.edu/rc/hpc/)  
+  UMass Boston overview page for campus HPC infrastructure and support resources.
+- [Research Computing](https://www.umb.edu/rc/)  
+  Central research computing hub for services, documentation, and related computing support.
+
 ---
 
 ## Who Should Use Chimera?
