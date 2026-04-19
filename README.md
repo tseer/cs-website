@@ -1,243 +1,213 @@
-# UMass Boston CS Website
+# Project Title
 
-This repository contains the Jekyll site for the UMass Boston Computer Science Department.
+UMass Boston CS Website Modernization
 
-## Current Change Summary
+# Overview
 
-The site has been updated in several areas to improve consistency, structured data, navigation, and link quality without changing the visible design beyond breadcrumb presentation.
+This repository contains the Jekyll-based modernization of the University of Massachusetts Boston Computer Science Department website. The project preserves the department's existing content footprint while improving site structure, machine readability, course data handling, search, and AI/MCP readiness.
 
-### 1. Course Page Standardization
+The work goes beyond a cosmetic refresh. It adds structured metadata, normalized academic content, generated course-offering data, lightweight on-site search, and a read-only MCP layer that makes the repository usable as a retrieval source for local AI workflows and future department tooling.
 
-- Course markdown files were normalized to the `course` layout format.
-- Course pages now use structured front matter such as:
-  - `course_code`
-  - `course_name`
-  - `credits`
-  - `description`
-  - `prerequisites`
-  - `co_requisites`
-  - `keywords`
-- Older course files using inconsistent front matter were migrated to the newer structure.
-- Prerequisite and co-requisite fields are rendered as structured sections.
-- Course mentions inside course pages are automatically linkable to matching internal course pages.
+# Objectives
 
-### 2. Course Layout Improvements
+- Improve the public website's maintainability without forcing a full CMS migration.
+- Make courses, programs, faculty, groups, and resources easier to discover.
+- Add structured data and machine-readable exports for search engines, crawlers, and AI systems.
+- Reduce brittle hand-maintained content where automation is practical.
+- Create a foundation that future student teams can extend semester by semester.
 
-File:
-- `_layouts/course.html`
+# Key Improvements Delivered
 
-Changes:
-- Added `Course` JSON-LD for individual course pages.
-- Added support for linking exact prerequisite and co-requisite course codes to internal course pages.
-- Added automatic linking of course-code mentions inside course page content.
-- Removed the old separate "Back to All Courses" link after breadcrumb navigation was introduced.
+- Standardized course pages around a consistent `layout: course` content model.
+- Added JSON-LD for pages, people, groups, programs, courses, breadcrumbs, and list pages.
+- Built generated site exports for AI/search use:
+  - `site-index.json`
+  - `ai-search.json`
+  - `ai/index.json`
+  - `llms.txt`
+- Added a lightweight browser-based search assistant for courses, faculty, programs, groups, and resources.
+- Added generated course offerings from repository schedule spreadsheets via `_data/course_offerings.yml`.
+- Added offering summaries to course pages, including instructor, meeting pattern, room/location, section, and term context.
+- Added support for current/future academic-year logic and ordered term handling across Fall, Spring, and Summer sessions.
+- Added reusable section-index data and schema support for hub pages.
+- Added a read-only MCP server and local Ollama integration path for grounded repository retrieval.
+- Improved breadcrumbs, link integrity, and internal page connectivity.
 
-### 3. Breadcrumb Navigation
+# Technical Stack
 
-Files:
-- `_includes/breadcrumbs.html`
-- `_layouts/page.html`
-- `_layouts/post.html`
-- `_layouts/course.html`
-- `_includes/head.html`
-- `WEB/assets/main.scss`
+- Jekyll 4.3.x
+- Liquid templates
+- SCSS
+- Vanilla JavaScript
+- YAML data files
+- Python 3.12+ scripts for data generation and MCP support
+- `openpyxl`, `PyYAML`, `BeautifulSoup` for schedule/profile processing
+- Optional local Ollama workflow for grounded AI experiments
 
-Changes:
-- Added visible breadcrumb navigation across major page types.
-- Added breadcrumb structured data in `head.html`.
-- Styled breadcrumbs separately from the main site navigation.
-- Removed overlap between breadcrumb styling and page controls.
+# AI / Structured Data Enhancements
 
-### 4. Site-Wide Structured Data
-
-Files:
-- `_includes/head.html`
-- `_includes/item-list-schema.html`
-- `_layouts/page.html`
-- `_includes/table.html`
-- `_includes/umass-programms.html`
-- `_data/section_indexes.yml`
-- `site-index.json`
-- `llms.txt`
-
-Changes:
-- Added site-level JSON-LD for:
-  - `CollegeOrUniversity`
-  - `WebSite`
-  - `WebPage`
-  - `BreadcrumbList`
-- Added reusable `ItemList` include:
-  - `_includes/item-list-schema.html`
-- Added reusable section index data:
-  - `_data/section_indexes.yml`
-- Updated page layout so hub pages can emit `ItemList` schema from front matter or data keys.
-- Added structured `ItemList` data for:
-  - programs
-  - academics
+- Head-level schema graph for `CollegeOrUniversity`, `WebSite`, and `WebPage`.
+- Page-specific schema for:
+  - courses
   - people
-  - resources
-  - research/news/events sections in `_includes/table.html`
-- Updated `table.html` so list items now wrap `BlogPosting` data correctly.
-- Added a dynamic machine-readable site export at `/site-index.json`.
-- Added a plain-text crawler entry point at `llms.txt`.
-- Added `<link rel="alternate" type="application/json" href="/site-index.json">` in `head.html` so tools can discover the site index automatically.
+  - groups
+  - programs
+  - item lists / hubs
+  - breadcrumbs
+- AI-oriented exports:
+  - `site-index.json` for broad machine-readable crawling
+  - `ai-search.json` for lighter-weight retrieval payloads
+  - `ai/index.json` for richer assistant-side entity ranking
+  - `llms.txt` as a discovery entry point
+- Read-only MCP server in `mcp/` exposing structured repo entities and relationships for local retrieval workflows.
 
-### 5. Program Page Structured Data
+# Search System
 
-Files:
-- `WEB/academics/u-programs.markdown`
-- `WEB/academics/g-programs.markdown`
-- `WEB/academics/h-programs.markdown`
-- `WEB/academics/c-programs.markdown`
+The site includes a client-side search assistant at `/ai-assistant` that loads generated index data and ranks results in the browser. It is designed as a lightweight retrieval layer rather than a hosted chatbot.
 
-Changes:
-- Added `description` front matter.
-- Added `keywords` front matter.
-- Added `EducationalOccupationalProgram` JSON-LD using:
-  - `name`
-  - `url`
-  - `description`
-  - `provider`
+The current search stack supports:
 
-### 6. Hub Page Schema Support
+- course code lookups
+- person/program/group/resource discovery
+- metadata-aware ranking
+- related-entity context
+- MCP reuse for local AI testing
 
-Files:
-- `WEB/toplevelmenu/academics.markdown`
-- `WEB/toplevelmenu/people.markdown`
-- `WEB/toplevelmenu/resources.markdown`
-- `WEB/toplevelmenu/research.markdown`
-- `_layouts/page.html`
-- `_data/section_indexes.yml`
+This is a strong base for future upgrades such as embeddings, hybrid ranking, advisor workflows, or course/faculty recommendation systems.
 
-Changes:
-- Hub pages can now declare section lists through:
-  - `schema_collection_key`
-  - `schema_collection_name`
-  - `schema_collection_description`
-  - `schema_collection_items`
-- Academics, people, resources, and research now pull structured list data from `_data/section_indexes.yml`.
-- Programs, resources, people, and academics are now centralized in `_data/section_indexes.yml` instead of repeating hardcoded arrays in multiple files.
+# Site Architecture
 
-### 7. Course Catalog Structured Data
+- `_layouts/` contains page, course, home, person, group, and post templates.
+- `_includes/` contains shared rendering and schema fragments.
+- `_sass/` and `WEB/assets/main.scss` define the visual layer.
+- `WEB/` holds the main site content.
+- `_people/` and `_groups/` hold structured collection content.
+- `_data/` contains navigation, section indexes, generated offerings, and external faculty enrichment.
+- `scripts/` generates normalized backend data from spreadsheets and public profile sources.
+- `mcp/` exposes repository data through a read-only MCP server.
 
-File:
-- `WEB/academics/courses.markdown`
+# How to Run Locally
 
-Changes:
-- Added `ItemList` JSON-LD for the course catalog page.
-- Catalog entries use each course page’s absolute URL and course title.
+## Prerequisites
 
-### 8. Machine-Readable Site Index
+- Ruby with Bundler
+- Python 3.12+
 
-Files:
-- `site-index.json`
-- `llms.txt`
-- `_includes/head.html`
-
-Changes:
-- Added a dynamic Jekyll page at `/site-index.json` with:
-  - site metadata
-  - section index exports from `_data/section_indexes.yml`
-  - research/news/events post lists
-  - course listings derived from course pages
-- Ensured the JSON output uses absolute URLs and stays current as content changes.
-- Added `llms.txt` at the repository root as a plain-text entry point for AI crawlers and LLM tooling.
-- Added a `rel="alternate"` JSON link in `head.html` to advertise `/site-index.json`.
-
-### 9. Link Cleanup and External Link Audit
-
-Files updated include:
-- `WEB/academics/admissions.markdown`
-- `WEB/academics/info.md`
-- `WEB/academics/programs/c_ba.markdown`
-- `WEB/academics/programs/c_ms.markdown`
-- `WEB/about/dei.markdown`
-- `WEB/about/360.markdown`
-- `WEB/POSTS/research/_posts/2020-09-01-bitstobytes.md`
-- `WEB/POSTS/research/_posts/2023-01-03-sloan.md`
-- `WEB/jobs-intern/AI-videa-health.markdown`
-- `WEB/POSTS/events/_posts/2022-11-02-allyssa.md`
-- `WEB/POSTS/events/_posts/2022-11-07-jasmine.md`
-- `WEB/POSTS/news/_posts/2023-11-17-datathon.md`
-- `WEB/research/funding.markdown`
-- `WEB/POSTS/news/_posts/2022-04-04-cs460.md`
-
-Changes:
-- Replaced stale UMass admissions and help links with current official destinations.
-- Replaced outdated UMass news links with current URLs.
-- Replaced outdated VideaHealth application link with the careers page.
-- Replaced broken Three.js script URLs with current CDN-hosted versions.
-- Removed broken Discord-hosted event images.
-- Updated outdated funding/news links that clearly pointed to dead destinations.
-
-### 10. Build and Sass Toolchain Fix
-
-Files:
-- `Gemfile`
-- `Gemfile.lock` after local update
-
-Changes:
-- Pinned `jekyll-sass-converter` to the older stable line to avoid the embedded Sass failure.
-- The site now builds successfully with the current project Ruby environment.
-
-## AI Search Architecture
-
-The site now exposes two machine-readable endpoints and one lightweight retrieval UI:
-
-- `/site-index.json`
-  - canonical machine-readable site index
-  - broad structural export of major sections, courses, programs, and posts
-  - intended for crawlers, indexing tools, and external AI systems that need a high-level map of the site
-
-- `/ai-search.json`
-  - compact search/chat knowledge base
-  - optimized for lightweight retrieval on the site
-  - includes important pages, courses, programs, and posts with normalized text fields and excerpts
-
-- `/ai-assistant`
-  - client-side assistant page implemented in vanilla JavaScript
-  - loads `/ai-search.json`
-  - performs lightweight keyword and course-code ranking in the browser
-  - presents richer direct answers for course-style queries
-
-This architecture improves AI-readability and discoverability without requiring a hosted model, external API, or retrieval service.
-
-The current design also supports a clean future upgrade path:
-- replace the client-side ranking layer with a hosted search service
-- use `/site-index.json` or `/ai-search.json` as a bootstrap feed for embeddings
-- swap in an LLM or RAG backend without having to redesign the underlying content model
-
-## Build
-
-Use the repo root:
+## Install
 
 ```bash
-export PATH="$HOME/.rbenv/shims:$PATH"
-bundle exec jekyll build
-bundle exec jekyll serve
+bundle install
 ```
 
-## Current Validation Status
+## Regenerate generated data when needed
 
-### Internal Links
+```bash
+python3 scripts/build_course_offerings.py
+python3 scripts/build_external_faculty_profiles.py
+```
 
-- Internal link checks on the generated `_site` passed.
+## Serve locally
 
-### External Links
+```bash
+bundle exec jekyll serve --config _config.yml,_config_local.yml
+```
 
-Most stale external links were corrected.
+## Production-style build
 
-Remaining external URLs that still fail automated HTTP checks are:
+```bash
+bundle exec jekyll build --config _config.yml,_config_csserver.yml
+```
 
-- Vimeo embed URL in `WEB/POSTS/news/_posts/2022-04-04-cs460.md`
-- Harvard CFA page in `WEB/jobs-intern/Summ-intern.markdown`
-- `https://www.amnh.org/` in `WEB/research/funding.markdown`
+# How to Deploy
 
-These appear to be access-policy or embed restrictions rather than obvious broken internal site routing.
+The repository currently uses Jekyll config overlays rather than a formal CI/CD deployment pipeline.
 
-## Notes
+Expected deployment flow:
 
-- UI layout was intentionally preserved during structured-data work.
-- Most changes were limited to metadata, schema, navigation, and link correction.
-- `page.html` now emits reusable hub-page `ItemList` schema automatically when configured.
-- `site-index.json` and `llms.txt` now provide machine-readable entry points for external AI systems.
+1. Regenerate course offerings and any supplemental faculty data.
+2. Build with the server config:
+
+```bash
+bundle exec jekyll build --config _config.yml,_config_csserver.yml
+```
+
+3. Publish the generated output or repository contents to the CS server using the existing department hosting workflow.
+
+Recommended next step: replace manual deployment with a scripted build-and-sync process or CI job to reduce drift and accidental regressions.
+
+# Repository Structure
+
+```text
+.
+├── _config*.yml
+├── _data/
+├── _groups/
+├── _includes/
+├── _layouts/
+├── _people/
+├── _sass/
+├── WEB/
+├── ai/
+├── mcp/
+├── scripts/
+├── llms.txt
+├── site-index.json
+└── ai-search.json
+```
+
+# Screenshots / Demo Links
+
+- Public site: placeholder
+- Search assistant demo: placeholder
+- MCP demo / local Ollama demo: placeholder
+- Course catalog / offerings demo: placeholder
+
+# Future Roadmap
+
+- Replace manual deployment with CI/CD and automated validation.
+- Add true responsive design cleanup for navigation, cards, and content-heavy pages.
+- Add automated broken-link checks and image optimization in CI.
+- Add prerequisite graphing and pathway exploration for students.
+- Add faculty expertise graph and research discovery tooling.
+- Add a structured publications layer instead of relying only on external faculty pages.
+- Add embeddings or hybrid search for better semantic retrieval.
+- Add advising and course-planning workflows backed by generated course data.
+- Add analytics and search telemetry to understand user intent and content gaps.
+
+# Lessons Learned
+
+- Jekyll remains viable for departmental sites when paired with strong data conventions.
+- Structured metadata and retrieval exports provide outsized value even before full AI integration.
+- Legacy content quality is the main long-term risk; data automation helps, but editorial cleanup is still necessary.
+- A modernization project benefits most when content governance, not just code, is treated as part of the system.
+
+# Contributors
+
+Original Spring 2021 CS410.net team:
+
+- John Kilfeather
+- Jeffrey Handorff
+- Yiming Jin
+- Dennis Popovs
+- Duyanh Nguyen
+- Ritesh Shah
+- Ananya Jude
+- Sinan Liu
+- Jonathan Ohop
+
+Spring 2024 modernization team:
+
+- Branden Favre
+- Riley Choquette
+- Khushbu Kapadia
+- Mehya N. Tambi
+- Bhavana Manneni
+- Jacob Jashwanth Patoju
+
+See `WEB/about/thankyou.markdown` for the in-site attribution page.
+
+# License
+
+No repository license file is currently present.
+
+Recommended next step: add an explicit license after confirming department and course-project expectations. If public reuse is intended, `MIT` is the simplest default; if attribution and documentation preservation matter more, `Apache-2.0` is a stronger option.
