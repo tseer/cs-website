@@ -13,7 +13,7 @@ permalink: /ai-search.json
     "url": {{ site_root_url | jsonify }}
   },
   "pages": [
-    {% assign important_page_urls = "/academics/|/people/|/research/|/resources/|/admissions|/course-schedule|/cs-minor|/student-funding|/alumni|/faculty|/staff|/funding|/groups|/info|/about/|/contact-us|/department|/facilities|/dei|/getting-here|/news-and-events/|/answers-to-faqs|/office-hours|/cs-department-it-policies|/chimera/|/dreamspark-microsoft-imagine" | split: "|" %}
+    {% assign important_page_urls = "/academics/|/people/|/research/|/resources/|/admissions|/course-schedule|/cs-minor|/student-funding|/alumni|/faculty|/staff|/funding|/groups|/research/chimera/|/info|/about/|/contact-us|/department|/facilities|/dei|/getting-here|/news-and-events/|/answers-to-faqs|/office-hours|/cs-department-it-policies|/dreamspark-microsoft-imagine" | split: "|" %}
     {% assign first_page_written = false %}
     {% for item_url in important_page_urls %}
     {% assign page_item = site.pages | where: "url", item_url | first %}

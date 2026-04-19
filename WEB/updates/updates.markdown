@@ -50,9 +50,11 @@ This page lists completed updates made to the CS website.
 - Improved navigation and page connectivity.
 - Reduced stale external references across the site.
 
-## Related Links
+## Clone and Build Guide
 
 This page documents the project’s clone-and-build workflow, including the steps needed to pull the repository, install dependencies if needed, and build the CS website so it can be tested locally or deployed in the project environment.
+
+## Related Links
 
 - [Clone and Build Guide]({{ '/resources/clone-and-build/' | relative_url }})
 - [Course Catalog]({{ '/academics/courses/' | relative_url }})

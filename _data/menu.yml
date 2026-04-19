@@ -51,9 +51,8 @@
       link: funding
     - title: Groups
       link: groups
-
-- title: Chimera
-  link: chimera
+    - title: Chimera
+      link: research/chimera
 
 - title: Resources
   link: resources
