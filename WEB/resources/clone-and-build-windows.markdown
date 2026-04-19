@@ -3,6 +3,10 @@ layout: page
 title: "Clone and Build Guide (Windows)"
 permalink: /resources/clone-and-build/windows/
 hide_page_header: true
+summary: "Step-by-step Windows setup instructions for the CS410 website project, including cloning the repository, running the site locally with WSL, building for deployment, and uploading to the UMass Boston CS server."
+description: "Step-by-step Windows setup instructions for the CS410 website project, including cloning the repository, running the site locally with WSL, building for deployment, and uploading to the UMass Boston CS server."
+og_type: article
+twitter_card: summary
 ---
 <div class="setup-guide">
   {% include setup-guide-tabs.html active="windows" %}

@@ -33,10 +33,11 @@
   {%- assign meta_keywords = keyword_blob | split: "||" | uniq -%}
   <title>{% if page_title_for_head == site.title %}{{ site.title | escape }}{% else %}{{ page_title_for_head | escape }} | {{ site.title | escape }}{% endif %}</title>
   <meta property="og:title" content="{{ page_title_for_head | escape }}">
+  <meta property="og:type" content="{{ page.og_type | default: 'website' | escape }}">
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:site_name" content="{{ site.title | escape }}">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="{{ page.twitter_card | default: 'summary' | escape }}">
   <meta name="twitter:title" content="{{ page_title_for_head | escape }}">
   <link rel="stylesheet" href="{{ 'WEB/assets/main.css' | relative_url }}">
   <link rel="canonical" href="{{ canonical_url }}">

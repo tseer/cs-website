@@ -3,6 +3,10 @@ layout: page
 title: "Clone and Build Guide"
 permalink: /resources/clone-and-build/
 hide_page_header: true
+summary: "Step-by-step setup instructions for the CS410 website project, including cloning the repository, running the site locally, building for deployment, and uploading to the UMass Boston CS server."
+description: "Step-by-step setup instructions for the CS410 website project, including cloning the repository, running the site locally, building for deployment, and uploading to the UMass Boston CS server."
+og_type: article
+twitter_card: summary
 ---
 <div class="setup-guide">
   {% include setup-guide-tabs.html active="mac" %}
