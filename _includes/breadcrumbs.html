@@ -74,10 +74,6 @@
           <a href="{{ news_parent }}">News and Events</a>
         </li>
       {%- endif -%}
-    {%- elsif page.path contains 'WEB/chimera/' -%}
-      <li class="breadcrumbs-item">
-        <span class="breadcrumb-current" aria-current="page">Chimera</span>
-      </li>
     {%- endif -%}
 
     {%- unless page.url == '/academics/' or page.url == '/about/' or page.url == '/people/' or page.url == '/research/' or page.url == '/resources/' or page.url == '/news-and-events/' -%}

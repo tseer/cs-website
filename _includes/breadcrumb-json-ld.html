@@ -167,13 +167,6 @@
       "item": {{ page.url | absolute_url | jsonify }}
     }
       {%- endif -%}
-    {%- elsif page.path contains 'WEB/chimera/' -%},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Chimera",
-      "item": {{ page.url | absolute_url | jsonify }}
-    }
     {%- else -%},
     {
       "@type": "ListItem",
