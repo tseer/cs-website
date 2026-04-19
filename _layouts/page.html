@@ -24,7 +24,7 @@ table-count: 4
     {% endif %}
     {% include breadcrumbs.html %}
     {% include breadcrumb-json-ld.html %}
-    {% unless page.layout == "course" %}
+    {% unless page.layout == "course" or page.hide_page_header %}
     <header class="post-header">
       <h1 class="post-title">{{ page.title | escape }}</h1>
     </header>

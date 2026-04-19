@@ -211,6 +211,231 @@
   font-size: 0.95rem;
 }
 
+.setup-guide {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.setup-guide-banner {
+  margin: 0 0 1.5rem;
+  background: #0b3a75;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.setup-guide-banner__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.setup-guide-banner__title {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.setup-guide-tabs {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.setup-guide-tab {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.setup-guide-tab:visited,
+.setup-guide-tab:hover,
+.setup-guide-tab:focus {
+  color: #fff;
+}
+
+.setup-guide-tab:hover,
+.setup-guide-tab:focus {
+  background: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+.setup-guide-tab.is-active {
+  background: #fff;
+  color: #0b3a75;
+}
+
+.setup-guide-tab.is-active:visited,
+.setup-guide-tab.is-active:hover,
+.setup-guide-tab.is-active:focus {
+  color: #0b3a75;
+}
+
+.setup-guide-card {
+  background: #fff;
+  border: 1px solid #d6dbe4;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.setup-guide-card h1,
+.setup-guide-card h2,
+.setup-guide-card h3 {
+  color: #0b3a75;
+  line-height: 1.25;
+}
+
+.setup-guide-card h1 {
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 3px solid #0b3a75;
+  font-size: 2.2rem;
+}
+
+.setup-guide-card h2 {
+  margin: 2.25rem 0 0.85rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #d6dbe4;
+  font-size: 1.8rem;
+}
+
+.setup-guide-card h3 {
+  margin: 1.5rem 0 0.65rem;
+  font-size: 1.2rem;
+}
+
+.setup-guide-card p,
+.setup-guide-card ul,
+.setup-guide-card ol {
+  margin-bottom: 0.75rem;
+}
+
+.setup-guide-card ul,
+.setup-guide-card ol {
+  margin-left: 1.5rem;
+}
+
+.setup-guide-card li {
+  margin: 0.35rem 0;
+}
+
+.setup-guide-card code {
+  background: #eef2f7;
+  color: #111827;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95em;
+}
+
+.setup-guide-divider {
+  margin: 1.75rem 0;
+  border: 0;
+  border-top: 1px solid #d6dbe4;
+}
+
+.setup-guide-code-block {
+  position: relative;
+  margin: 0.9rem 0 1.15rem;
+}
+
+.setup-guide-code-block pre {
+  margin: 0;
+  background: #111827;
+  color: #f9fafb;
+  padding: 1.1rem 1.1rem 1rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  border: 1px solid #0f172a;
+}
+
+.setup-guide-code-block pre code {
+  background: transparent;
+  color: #f9fafb;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.97rem;
+  line-height: 1.55;
+  white-space: pre;
+  display: block;
+}
+
+.setup-guide-copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  background: #2563eb;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.setup-guide-copy-btn:hover,
+.setup-guide-copy-btn:focus {
+  background: #1d4ed8;
+}
+
+.setup-guide-copy-btn.copied {
+  background: #059669;
+}
+
+.setup-guide-note,
+.setup-guide-important {
+  padding: 0.9rem 1rem;
+  border-left: 5px solid;
+  border-radius: 8px;
+  margin: 1rem 0 1.15rem;
+}
+
+.setup-guide-note {
+  background: #fff8db;
+  border-color: #f1c40f;
+}
+
+.setup-guide-important {
+  background: #fde8e8;
+  border-color: #dc2626;
+}
+
+.setup-guide-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #d6dbe4;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .setup-guide-card {
+    padding: 1.4rem;
+  }
+
+  .setup-guide-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .setup-guide-card h2 {
+    font-size: 1.45rem;
+  }
+
+  .setup-guide-copy-btn {
+    position: static;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+}
+
 .course-catalog-table th,
 .course-catalog-table td {
   padding: 0.65rem 0.75rem;
