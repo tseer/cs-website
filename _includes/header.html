@@ -37,7 +37,7 @@
             {% if menui.submenu %}
             <ul>
               {% for submenui in menui.submenu %}
-              <li{% unless submenui.submenu %} class="no-submenu"{% endunless %}>
+              <li{% if submenui.submenu %} class="has-submenu"{% else %} class="no-submenu"{% endif %}>
                 {% if submenui.submenu %}
                 <input type="checkbox" id="drop-{{ menui.title | slugify }}-{{ submenui.title | slugify }}" />
                 <label for="drop-{{ menui.title | slugify }}-{{ submenui.title | slugify }}" class="toggle">{{ submenui.title }}</label>

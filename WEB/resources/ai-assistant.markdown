@@ -910,15 +910,10 @@ keywords:
 
     function renderResultCard(item, relatedItems) {
       const explanation = buildExplanation(item);
-      const topics = item.relatedTopics.slice(0, 4);
       const itemLabel = getEntityLabel(item.type);
       const metaParts = [];
       const itemUrl = sanitizeEntityUrl(item.url);
       const safeRelatedItems = relatedItems || [];
-
-      if (topics.length) {
-        metaParts.push(`Topics: ${topics.join(', ')}`);
-      }
 
       const relatedMarkup = safeRelatedItems.length ? `
         <div class="ai-assistant-related">

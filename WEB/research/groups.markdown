@@ -50,10 +50,6 @@ The Computer Science Department supports research groups and laboratories across
     </p>
     {% endif %}
 
-    {% if group.related_topics and group.related_topics.size > 0 %}
-    <p><strong>Topics:</strong> {{ group.related_topics | join: ", " }}</p>
-    {% endif %}
-
     <p><a href="{{ group.url | relative_url }}">View group page</a></p>
   </article>
   {% endfor %}

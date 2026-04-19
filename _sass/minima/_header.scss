@@ -123,7 +123,7 @@ nav a.nav-accent:hover {
 nav ul ul {
   display: none;
   position: absolute;
-  top: 25;
+  top: 25px;
   z-index: 99;
   width: max-content;
 }
@@ -158,6 +158,25 @@ nav ul ul li a {
   -moz-transition: margin 1s;
   -o-transition: margin 1s;
   transition: margin 1s;*/
+}
+
+nav ul ul li.has-submenu {
+  min-width: 100%;
+}
+
+nav ul ul li.has-submenu > a {
+  position: relative;
+  padding-right: 28px;
+  white-space: nowrap;
+}
+
+nav ul ul li.has-submenu > a::after {
+  content: ">";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85em;
 }
 
 nav ul ul li a:hover {

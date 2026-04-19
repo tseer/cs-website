@@ -1,5 +1,4 @@
 {% assign empty_array = "" | split: "" %}
-{% assign connection_topics = page.related_topics | default: page.research_areas %}
 {% assign is_course_page = false %}
 {% if page.course_code %}
   {% assign is_course_page = true %}
@@ -82,12 +81,7 @@
   {% assign show_related_programs = true %}
 {% endif %}
 
-{% assign show_related_topics = false %}
-{% if connection_topics and connection_topics.size > 0 and hide_background_metadata != true %}
-  {% assign show_related_topics = true %}
-{% endif %}
-
-{% if show_audience or show_related_people or show_related_courses or show_related_groups or show_related_programs or show_related_topics %}
+{% if show_audience or show_related_people or show_related_courses or show_related_groups or show_related_programs %}
 <section class="entity-connections">
   {% if show_audience %}
   <div class="entity-connections-block">
@@ -166,15 +160,5 @@
   </div>
   {% endif %}
 
-  {% if show_related_topics %}
-  <div class="entity-connections-block">
-    <h2>Related Topics</h2>
-    <ul>
-      {% for topic in connection_topics %}
-      <li>{{ topic }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
 </section>
 {% endif %}
