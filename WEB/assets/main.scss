@@ -214,7 +214,7 @@ ul.menu li a {
   top: -5%; left: -5%; right: -5%; bottom: -5%; /* Stretches past the edges */
   background-size: cover;
   background-position: center;
-  filter: blur(25px) brightness(0.7); /* Blurs and dims */
+  filter: blur(60px) brightness(2); /* Blurs and dims */
   opacity: 0.8; 
   z-index: 0; /* Sits at the very back */
 }
@@ -449,7 +449,7 @@ ul.menu li a {
 .programs-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 25px;
   margin: 0 0 20px 0;
 }
 
@@ -519,14 +519,14 @@ ul.menu li a {
   color: white;
   font-size: 1.1rem;
   margin: 0;
-  line-height: 60px; /* Keeps text centered vertically in the base banner */
+  line-height: 50px; /* Keeps text centered vertically in the base banner */
   font-weight: 600;
   transition: margin-top 0.4s ease, line-height 0.4s ease;
 }
 
 /* Moves title further down when expanded */
 .program-card:hover .card-title {
-  margin-top: 20px;       /* UPDATED */
+  margin-top: 40px;       /* UPDATED */
   margin-bottom: 15px;    /* ADDED */
   line-height: 1.4;       /* UPDATED */
 }
