@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McCormack Hall - CS Faculty Finder</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; background-color: #f4f4f9; }
+        header { background: #005a8b; color: white; padding: 1rem; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        .main-content { display: flex; flex: 1; overflow: hidden; }
+
+        /* Map Section */
+        .map-container { flex: 2; position: relative; background: #fff; display: flex; align-items: flex-start; justify-content: center; overflow: auto; padding: 20px; }
+        .map-wrapper { position: relative; display: inline-block; border: 2px solid #333; }
+        #baseMap { max-width: 1000px; height: auto; display: block; }
+
+        /* The Animated Pin */
+        #mapPin { 
+            position: absolute; 
+            font-size: 30px; 
+            display: none; 
+            transform: translate(-50%, -100%); 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 100;
+            filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
+        }
+
+        /* Sidebar Section */
+        .sidebar { flex: 1; background: white; border-left: 1px solid #ddd; display: flex; flex-direction: column; padding: 15px; }
+        #profSearch { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; }
+        
+        .table-wrapper { overflow-y: auto; flex: 1; border: 1px solid #eee; }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: #f8f9fa; position: sticky; top: 0; padding: 10px; text-align: left; border-bottom: 2px solid #ddd; }
+        td { padding: 10px; border-bottom: 1px solid #eee; cursor: pointer; transition: background 0.2s; }
+        tr:hover td { background: #e7f3ff; color: #005a8b; font-weight: bold; }
+        
+        .instructions { font-size: 12px; color: #666; margin-top: 10px; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CS Department Roadmap: McCormack Level 3</h1>
+</header>
+
+<div class="main-content">
+    <div class="map-container">
+        <div class="map-wrapper">
+            <img src="image_c0ca26.jpg" id="baseMap" alt="McCormack Hall Map">
+            <div id="mapPin">📍</div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <input type="text" id="profSearch" onkeyup="filterTable()" placeholder="Type professor name...">
+        <div class="table-wrapper">
+            <table id="profTable">
+                <thead>
+                    <tr>
+                        <th>Professor</th>
+                        <th>Office</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    </tbody>
+            </table>
+        </div>
+        <p class="instructions">Tip: Click a name to move the pin on the map.</p>
+    </div>
+</div>
+
+<script>
+    const facultyData = [
+        { name: "Ozgun Babur", room: "M-3-201-02", x: 80.5, y: 72.5 },
+        { name: "Temitayo Banjo", room: "M-3-201-32", x: 81.5, y: 64.5 },
+        { name: "Stephen Chang", room: "M-3-201-03", x: 80.5, y: 74.5 },
+        { name: "Tiago Cogumbreiro", room: "M-3-201-16", x: 91.5, y: 77.0 },
+        { name: "Jane H. DeBlois", room: "M-3-201-32", x: 81.5, y: 64.5 },
+        { name: "Wei Ding", room: "M-3-201-07", x: 80.5, y: 82.5 },
+        { name: "Funda Durupinar", room: "M-3-201-08", x: 80.5, y: 84.5 },
+        { name: "Kenneth Fletcher", room: "M-3-201-21", x: 91.5, y: 68.5 },
+        { name: "Gabriel Ghinita", room: "M-3-201-19", x: 91.5, y: 72.5 },
+        { name: "Daniel Haehn", room: "M-3-201-20", x: 91.5, y: 70.5 },
+        { name: "Nurit Haspel", room: "M-3-201-09", x: 80.5, y: 86.5 },
+        { name: "Glenn Hoffman", room: "M-3-201-22", x: 91.5, y: 66.5 },
+        { name: "Swami Iyer", room: "M-3-201-14", x: 88.5, y: 88.5 },
+        { name: "Tales Imbiriba", room: "M-3-201-04", x: 80.5, y: 76.5 },
+        { name: "Christopher Kelly", room: "M-3-201-31", x: 79.5, y: 64.5 },
+        { name: "Xiaohui Liang", room: "M-3-201-24", x: 91.5, y: 62.5 },
+        { name: "Tarikul Islam Papon", room: "M-3-201-28", x: 91.5, y: 55.5 },
+        { name: "Amanda Potasznik", room: "M-3-201-31", x: 79.5, y: 64.5 },
+        { name: "Bo Sheng", room: "M-3-201-23", x: 91.5, y: 64.5 },
+        { name: "Dan Simovici", room: "M-3-201-05", x: 80.5, y: 78.5 },
+        { name: "Torna Soro", room: "M-3-201-32", x: 81.5, y: 64.5 },
+        { name: "Jun Suzuki", room: "M-3-201-15", x: 90.5, y: 88.5 },
+        { name: "Duc Tran", room: "M-3-201-18", x: 91.5, y: 74.5 },
+        { name: "Yinxin Wan", room: "M-3-201-06", x: 80.5, y: 80.5 },
+        { name: "Shichao Pei", room: "M-3-201-05", x: 80.5, y: 78.5 },
+        { name: "Soheil Sepahyar", room: "M-3-201-31", x: 79.5, y: 64.5 },
+        { name: "Leonard David", room: "M-3-201-17", x: 91.5, y: 76.5 },
+        { name: "Gemma Galecia", room: "M-3-201-01", x: 80.5, y: 70.5 },
+        { name: "Elif Gurel", room: "M-3-201-13", x: 86.5, y: 88.5 },
+        { name: "Thomas Mullaly", room: "M-3-201-12", x: 84.5, y: 88.5 },
+        { name: "Antonio Pera", room: "M-3-201-34", x: 84.5, y: 64.5 },
+        { name: "Debbie Wade", room: "M-3-201-11", x: 82.5, y: 88.5 }
+    ];
+
+    // Populate the table
+    const tableBody = document.getElementById('tableBody');
+    facultyData.sort((a, b) => a.name.localeCompare(b.name)).forEach(prof => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${prof.name}</td><td>${prof.room}</td>`;
+        row.onclick = () => movePin(prof.x, prof.y);
+        tableBody.appendChild(row);
+    });
+
+    // Move the Pin
+    function movePin(x, y) {
+        const pin = document.getElementById('mapPin');
+        pin.style.left = x + "%";
+        pin.style.top = y + "%";
+        pin.style.display = "block";
+    }
+
+    // Search function
+    function filterTable() {
+        let input = document.getElementById("profSearch").value.toUpperCase();
+        let tr = tableBody.getElementsByTagName("tr");
+        for (let i = 0; i < tr.length; i++) {
+            let text = tr[i].textContent || tr[i].innerText;
+            tr[i].style.display = text.toUpperCase().indexOf(input) > -1 ? "" : "none";
+        }
+    }
+</script>
+
+</body>
+</html>
