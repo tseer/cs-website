@@ -62,5 +62,6 @@ This page documents the project’s clone-and-build workflow, including the step
 - [Clone and Build Guide]({{ '/resources/clone-and-build/' | relative_url }})
 - [Course Catalog]({{ '/academics/course-catalog/' | relative_url }})
 - [Chimera]({{ '/research/chimera/' | relative_url }})
+- [Research Paper]({{ '/updates/research-paper/' | relative_url }})
 - [Search Assistant]({{ '/ai-assistant' | relative_url }})
 - [Broken Links Repaired]({{ '/broken-links/' | relative_url }})

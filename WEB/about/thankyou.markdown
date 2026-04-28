@@ -25,4 +25,8 @@ The following students updated the existing version of this website as part of a
 * Bhavana Manneni
 * Jacob Jashwanth Patoju
 
+The following students updated the existing version of this website as part of a <a href="https://www.cs.umb.edu/~hdeblois/" target=_blank>CS410</a> project in Spring 2026.
+
+* Austin Ashworth
+
 Thank you!! :)
