@@ -35,7 +35,7 @@ related_topics:
 schema_collection_key: resources
 ---
 
-- [Search Assistant]({{ '/ai-assistant' | relative_url }})
+- [Site Search]({{ '/search' | relative_url }})
 
 - [CS Department IT Policies and Procedures]({{ '/cs-department-it-policies' | relative_url }})
 

@@ -15,8 +15,8 @@ resources:
   name: "Resources"
   description: "Resource pages for the UMass Boston Computer Science Department."
   items:
-    - name: "Search Assistant"
-      url: "/ai-assistant"
+    - name: "Site Search"
+      url: "/search"
     - name: "CS Department IT Policies and Procedures"
       url: "/cs-department-it-policies"
     - name: "Office Hours"

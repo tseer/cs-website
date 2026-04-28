@@ -57,8 +57,8 @@
 - title: Resources
   link: resources
   submenu:
-    - title: Search Assistant
-      link: ai-assistant
+    - title: Site Search
+      link: search
     - title: CS Department IT Policies and Procedures
       link: cs-department-it-policies
       #link: CS_dept_IT_Policies.pdf

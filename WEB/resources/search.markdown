@@ -1,41 +1,40 @@
 ---
-title: "Search Assistant"
+title: "Site Search"
 layout: page
-permalink: "/ai-assistant"
-description: "A lightweight on-site search assistant for the UMass Boston Computer Science Department website."
+permalink: "/search"
+description: "A lightweight on-site search page for the UMass Boston Computer Science Department website."
 keywords:
-  - "Search Assistant"
   - "Site Search"
+  - "Department Search"
   - "UMass Boston Computer Science"
   - "Courses"
   - "Programs"
   - "Resources"
 ---
 
-<div class="ai-assistant-search">
-  <label for="ai-assistant-query"><strong>Search the site</strong></label>
-  <div class="ai-assistant-controls">
+<div class="site-search">
+  <label for="site-search-query"><strong>Search the site</strong></label>
+  <div class="site-search-controls">
     <input
-      id="ai-assistant-query"
+      id="site-search-query"
       type="text"
       placeholder="Search courses, faculty, programs, groups, and resources"
       autocomplete="off"
     >
-    <button id="ai-assistant-button" type="button">Search</button>
+    <button id="site-search-button" type="button">Search</button>
   </div>
-  <div id="ai-assistant-status" class="ai-assistant-status">Search courses, faculty, programs, groups, and resources.</div>
-  <div id="ai-assistant-answer" class="ai-assistant-answer" aria-live="polite" hidden></div>
-  <div id="ai-assistant-debug" class="ai-assistant-debug" hidden></div>
-  <div id="ai-assistant-results" class="ai-assistant-results" aria-live="polite"></div>
+  <div id="site-search-status" class="site-search-status">Search courses, faculty, programs, groups, and resources.</div>
+  <div id="site-search-debug" class="site-search-debug" hidden></div>
+  <div id="site-search-results" class="site-search-results" aria-live="polite"></div>
 </div>
 
 <style>
-  .ai-assistant-search {
+  .site-search {
     margin: 1.5rem auto 0;
     max-width: 52rem;
   }
 
-  .ai-assistant-controls {
+  .site-search-controls {
     display: flex;
     gap: 0.75rem;
     margin: 0.75rem 0 1rem;
@@ -43,45 +42,29 @@ keywords:
     align-items: center;
   }
 
-  .ai-assistant-controls input {
+  .site-search-controls input {
     flex: 1 1 24rem;
     min-width: 16rem;
     padding: 0.75rem;
     font: inherit;
   }
 
-  .ai-assistant-controls button {
+  .site-search-controls button {
     padding: 0.75rem 1rem;
     font: inherit;
     cursor: pointer;
   }
 
-  .ai-assistant-status {
+  .site-search-status {
     margin-bottom: 1rem;
   }
 
-  .ai-assistant-results {
+  .site-search-results {
     display: grid;
     gap: 1rem;
   }
 
-  .ai-assistant-answer {
-    margin: 0 0 1rem;
-    padding: 1rem;
-    border: 1px solid #d7d7d7;
-    background: #f8f8f8;
-  }
-
-  .ai-assistant-answer ul {
-    margin: 0;
-    padding-left: 1.25rem;
-  }
-
-  .ai-assistant-answer li + li {
-    margin-top: 0.75rem;
-  }
-
-  .ai-assistant-debug {
+  .site-search-debug {
     margin: 0 0 1rem;
     padding: 1rem;
     border: 1px dashed #c7c7c7;
@@ -89,36 +72,36 @@ keywords:
     font-size: 0.95rem;
   }
 
-  .ai-assistant-debug h2 {
+  .site-search-debug h2 {
     margin: 0 0 0.75rem;
     font-size: 1.05rem;
   }
 
-  .ai-assistant-debug h3 {
+  .site-search-debug h3 {
     margin: 0 0 0.5rem;
     font-size: 1rem;
   }
 
-  .ai-assistant-debug p {
+  .site-search-debug p {
     margin: 0 0 0.75rem;
   }
 
-  .ai-assistant-debug ul {
+  .site-search-debug ul {
     margin: 0 0 1rem;
     padding-left: 1.25rem;
   }
 
-  .ai-assistant-debug code {
+  .site-search-debug code {
     font-size: 0.95em;
   }
 
-  .ai-assistant-result {
+  .site-search-result {
     border: 1px solid #d7d7d7;
     padding: 1rem;
     background: #fff;
   }
 
-  .ai-assistant-result-header {
+  .site-search-result-header {
     display: flex;
     gap: 0.75rem;
     justify-content: space-between;
@@ -127,16 +110,16 @@ keywords:
     margin-bottom: 0.5rem;
   }
 
-  .ai-assistant-result h3 {
+  .site-search-result h3 {
     margin: 0;
     font-size: 1.05rem;
   }
 
-  .ai-assistant-result p {
+  .site-search-result p {
     margin: 0 0 0.75rem;
   }
 
-  .ai-assistant-type {
+  .site-search-type {
     display: inline-block;
     padding: 0.2rem 0.55rem;
     border-radius: 999px;
@@ -147,100 +130,98 @@ keywords:
     border: 1px solid transparent;
   }
 
-  .ai-assistant-type-course {
+  .site-search-type-course {
     background: #eef5ff;
     color: #184a90;
     border-color: #c8daf7;
   }
 
-  .ai-assistant-type-person {
+  .site-search-type-person {
     background: #eef8f0;
     color: #25613a;
     border-color: #cde6d3;
   }
 
-  .ai-assistant-type-program {
+  .site-search-type-program {
     background: #fff4ea;
     color: #8f4a12;
     border-color: #f0d6bc;
   }
 
-  .ai-assistant-type-group {
+  .site-search-type-group {
     background: #f4efff;
     color: #5d3aa0;
     border-color: #ddd2f7;
   }
 
-  .ai-assistant-type-department {
+  .site-search-type-department {
     background: #f1f1f1;
     color: #3f3f3f;
     border-color: #d8d8d8;
   }
 
-  .ai-assistant-type-page {
+  .site-search-type-page {
     background: #f2f6f2;
     color: #34543b;
     border-color: #d7e4d9;
   }
 
-  .ai-assistant-type-resource {
+  .site-search-type-resource {
     background: #eef8fb;
     color: #1e596c;
     border-color: #cfe2ea;
   }
 
-  .ai-assistant-type-facility {
+  .site-search-type-facility {
     background: #fff7e8;
     color: #8a5a12;
     border-color: #ecd8b2;
   }
 
-  .ai-assistant-meta {
+  .site-search-meta {
     margin: 0 0 0.75rem;
     color: #555;
     font-size: 0.95rem;
   }
 
-  .ai-assistant-explanation {
+  .site-search-explanation {
     margin-bottom: 0.75rem;
   }
 
-  .ai-assistant-link {
+  .site-search-link {
     font-weight: 600;
   }
 
-  .ai-assistant-related {
+  .site-search-related {
     margin: 0.75rem 0 0.75rem;
     padding-top: 0.75rem;
     border-top: 1px solid #ececec;
   }
 
-  .ai-assistant-related h4 {
+  .site-search-related h4 {
     margin: 0 0 0.5rem;
     font-size: 0.98rem;
   }
 
-  .ai-assistant-related ul {
+  .site-search-related ul {
     margin: 0;
     padding-left: 1.25rem;
   }
 
-  .ai-assistant-related li + li {
+  .site-search-related li + li {
     margin-top: 0.35rem;
   }
 </style>
 
 <script>
   (function() {
-    const queryInput = document.getElementById('ai-assistant-query');
-    const searchButton = document.getElementById('ai-assistant-button');
-    const statusNode = document.getElementById('ai-assistant-status');
-    const answerNode = document.getElementById('ai-assistant-answer');
-    const debugNode = document.getElementById('ai-assistant-debug');
-    const resultsNode = document.getElementById('ai-assistant-results');
-    const dataUrl = '{{ "/ai/index.json" | relative_url }}';
+    const queryInput = document.getElementById('site-search-query');
+    const searchButton = document.getElementById('site-search-button');
+    const statusNode = document.getElementById('site-search-status');
+    const debugNode = document.getElementById('site-search-debug');
+    const resultsNode = document.getElementById('site-search-results');
+    const dataUrl = '{{ "/search/index.json" | relative_url }}';
     const configuredSiteRoot = {{ '/' | absolute_url | jsonify }};
-    const maxContextEntities = 4;
     const debugQueries = [
       'chimera',
       'hpc',
@@ -399,11 +380,6 @@ keywords:
           teachesCourses: toArray(entity.teaches_courses),
           currentTeachingTerms: toArray(entity.current_teaching_terms),
           teachingAcademicYears: toArray(entity.teaching_academic_years),
-          externalResearchTopics: toArray(entity.external_research_topics),
-          labOrGroup: toArray(entity.lab_or_group),
-          profileLinks: toArray(entity.profile_links),
-          sourceUrls: toArray(entity.source_urls),
-          recentNewsTitles: toArray(entity.recent_news_titles),
           instructors: toArray(entity.instructors),
           offeringsTerms: toArray(entity.offerings_terms),
           offeringsAcademicYears: toArray(entity.offerings_academic_years),
@@ -458,17 +434,17 @@ keywords:
 
     function getEntityTypeClass(type) {
       const classes = {
-        department: 'ai-assistant-type-department',
-        course: 'ai-assistant-type-course',
-        person: 'ai-assistant-type-person',
-        program: 'ai-assistant-type-program',
-        group: 'ai-assistant-type-group',
-        page: 'ai-assistant-type-page',
-        resource: 'ai-assistant-type-resource',
-        facility: 'ai-assistant-type-facility'
+        department: 'site-search-type-department',
+        course: 'site-search-type-course',
+        person: 'site-search-type-person',
+        program: 'site-search-type-program',
+        group: 'site-search-type-group',
+        page: 'site-search-type-page',
+        resource: 'site-search-type-resource',
+        facility: 'site-search-type-facility'
       };
 
-      return classes[type] || 'ai-assistant-type-department';
+      return classes[type] || 'site-search-type-department';
     }
 
     function buildExplanation(item) {
@@ -522,15 +498,6 @@ keywords:
       }
     }
 
-    function buildCompactEntity(item) {
-      return {
-        title: item.title,
-        type: item.type,
-        summary: item.summary || '',
-        url: sanitizeEntityUrl(item.url)
-      };
-    }
-
     function isNavigationQuery(query) {
       const normalizedQuery = normalizeQuery(query);
       const raw = normalizedQuery.raw;
@@ -545,40 +512,6 @@ keywords:
       }
 
       return tokens.length <= 2 && tokens.some((token) => navigationTerms.has(token));
-    }
-
-    function buildPromptPayload(query, results) {
-      const entities = results.slice(0, maxContextEntities).map(buildCompactEntity);
-      const systemMessage = [
-        'You are a CS department assistant for the UMass Boston Computer Science Department.',
-        'ONLY use the provided entities.',
-        'DO NOT invent courses, people, programs, groups, facilities, or resources.',
-        'If unsure or if there is no exact match, say "No exact match found."',
-        'Return concise structured results.',
-        'Use only each entity title, type, summary, and url.',
-        'Output plain text bullet lines in this exact format:',
-        '- Title (Type): short explanation. Link: URL'
-      ].join(' ');
-      const userPayload = {
-        query: query.trim(),
-        instructions: {
-          use_only_retrieved_entities: true,
-          do_not_invent_entities: true,
-          no_full_site_content: true,
-          concise_grounded_output: true,
-          output_format: '- Title (Type): short explanation. Link: URL'
-        },
-        retrieved_entities: entities
-      };
-
-      return {
-        query: query.trim(),
-        entities,
-        messages: [
-          { role: 'system', content: systemMessage },
-          { role: 'user', content: JSON.stringify(userPayload) }
-        ]
-      };
     }
 
     function scoreField(text, queryText, queryTokens, weights) {
@@ -655,11 +588,6 @@ keywords:
       const teachesCourses = item.teachesCourses.map(normalizeText);
       const currentTeachingTerms = item.currentTeachingTerms.map(normalizeText);
       const teachingAcademicYears = item.teachingAcademicYears.map(normalizeText);
-      const externalResearchTopics = item.externalResearchTopics.map(normalizeText);
-      const labOrGroup = item.labOrGroup.map(normalizeText);
-      const profileLinks = item.profileLinks.map(normalizeText);
-      const sourceUrls = item.sourceUrls.map(normalizeText);
-      const recentNewsTitles = item.recentNewsTitles.map(normalizeText);
       const instructors = item.instructors.map(normalizeText);
       const offeringsTerms = item.offeringsTerms.map(normalizeText);
       const offeringsAcademicYears = item.offeringsAcademicYears.map(normalizeText);
@@ -681,11 +609,6 @@ keywords:
           teachesCourses,
           currentTeachingTerms,
           teachingAcademicYears,
-          externalResearchTopics,
-          labOrGroup,
-          profileLinks,
-          sourceUrls,
-          recentNewsTitles,
           instructors,
           offeringsTerms,
           offeringsAcademicYears,
@@ -733,11 +656,6 @@ keywords:
       score += scoreArray(teachesCourses, cleanQuery, queryTokens, { exact: 220, partial: 110, token: 28 });
       score += scoreArray(currentTeachingTerms, cleanQuery, queryTokens, { exact: 90, partial: 40, token: 10 });
       score += scoreArray(teachingAcademicYears, cleanQuery, queryTokens, { exact: 60, partial: 25, token: 8 });
-      score += scoreArray(externalResearchTopics, cleanQuery, queryTokens, { exact: 140, partial: 60, token: 14 });
-      score += scoreArray(labOrGroup, cleanQuery, queryTokens, { exact: 120, partial: 55, token: 14 });
-      score += scoreArray(profileLinks, cleanQuery, queryTokens, { exact: 30, partial: 12, token: 4 });
-      score += scoreArray(sourceUrls, cleanQuery, queryTokens, { exact: 10, partial: 5, token: 2 });
-      score += scoreArray(recentNewsTitles, cleanQuery, queryTokens, { exact: 45, partial: 18, token: 5 });
       score += scoreArray(instructors, cleanQuery, queryTokens, { exact: 260, partial: 120, token: 35 });
       score += scoreArray(offeringsTerms, cleanQuery, queryTokens, { exact: 80, partial: 30, token: 8 });
       score += scoreArray(offeringsAcademicYears, cleanQuery, queryTokens, { exact: 70, partial: 25, token: 8 });
@@ -757,10 +675,6 @@ keywords:
 
       if (item.type === 'person' && (personName === cleanQuery || aliases.includes(cleanQuery))) {
         score += 420;
-      }
-
-      if (item.type === 'person' && (externalResearchTopics.length || labOrGroup.length)) {
-        score += 8;
       }
 
       if (intent.person && item.type === 'person') { score += 160; }
@@ -872,7 +786,7 @@ keywords:
         ${sections}
       `;
 
-      console.groupCollapsed('AI assistant retrieval debug');
+      console.groupCollapsed('Site search retrieval debug');
       debugQueries.forEach((query) => {
         const strictRanked = getRankedEntries(query, { strict: true });
         const ranked = strictRanked.length ? strictRanked : getRankedEntries(query, { strict: false });
@@ -916,7 +830,7 @@ keywords:
       const safeRelatedItems = relatedItems || [];
 
       const relatedMarkup = safeRelatedItems.length ? `
-        <div class="ai-assistant-related">
+        <div class="site-search-related">
           <h4>Related pages</h4>
           <ul>
             ${safeRelatedItems.map((relatedItem) => {
@@ -932,28 +846,28 @@ keywords:
 
       if (!itemUrl) {
         return `
-          <article class="ai-assistant-result">
-            <div class="ai-assistant-result-header">
+          <article class="site-search-result">
+            <div class="site-search-result-header">
               <h3>${escapeHtml(item.title)}</h3>
-              <span class="ai-assistant-type ${escapeHtml(getEntityTypeClass(item.type))}">${escapeHtml(itemLabel)}</span>
+              <span class="site-search-type ${escapeHtml(getEntityTypeClass(item.type))}">${escapeHtml(itemLabel)}</span>
             </div>
-            ${metaParts.length ? `<p class="ai-assistant-meta">${escapeHtml(metaParts.join(' • '))}</p>` : ''}
-            <p class="ai-assistant-explanation">${escapeHtml(explanation)}</p>
+            ${metaParts.length ? `<p class="site-search-meta">${escapeHtml(metaParts.join(' • '))}</p>` : ''}
+            <p class="site-search-explanation">${escapeHtml(explanation)}</p>
             ${relatedMarkup}
           </article>
         `;
       }
 
       return `
-        <article class="ai-assistant-result">
-          <div class="ai-assistant-result-header">
+        <article class="site-search-result">
+          <div class="site-search-result-header">
             <h3><a href="${escapeHtml(itemUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a></h3>
-            <span class="ai-assistant-type ${escapeHtml(getEntityTypeClass(item.type))}">${escapeHtml(itemLabel)}</span>
+            <span class="site-search-type ${escapeHtml(getEntityTypeClass(item.type))}">${escapeHtml(itemLabel)}</span>
           </div>
-          ${metaParts.length ? `<p class="ai-assistant-meta">${escapeHtml(metaParts.join(' • '))}</p>` : ''}
-          <p class="ai-assistant-explanation">${escapeHtml(explanation)}</p>
+          ${metaParts.length ? `<p class="site-search-meta">${escapeHtml(metaParts.join(' • '))}</p>` : ''}
+          <p class="site-search-explanation">${escapeHtml(explanation)}</p>
           ${relatedMarkup}
-          <a class="ai-assistant-link" href="${escapeHtml(itemUrl)}" target="_blank" rel="noopener noreferrer">Open ${escapeHtml(itemLabel.toLowerCase())}</a>
+          <a class="site-search-link" href="${escapeHtml(itemUrl)}" target="_blank" rel="noopener noreferrer">Open ${escapeHtml(itemLabel.toLowerCase())}</a>
         </article>
       `;
     }
@@ -982,108 +896,11 @@ keywords:
       }).join('');
     }
 
-    function renderAssistantAnswer(responseText) {
-      if (!responseText) {
-        answerNode.hidden = true;
-        answerNode.innerHTML = '';
-        return;
-      }
-
-      answerNode.hidden = false;
-      answerNode.innerHTML = `<div>${escapeHtml(responseText).replace(/\n/g, '<br>')}</div>`;
-    }
-
-    function renderFallbackMessage() {
-      answerNode.hidden = true;
-      answerNode.innerHTML = '';
-    }
-
-    function getSlmConfig() {
-      if (!window.csDepartmentAssistantSlmConfig) {
-        return null;
-      }
-
-      const config = window.csDepartmentAssistantSlmConfig;
-      if (!config.endpoint || !config.model) {
-        return null;
-      }
-
-      return {
-        endpoint: config.endpoint,
-        model: config.model,
-        apiKey: config.apiKey || '',
-        headers: config.headers || {},
-        temperature: typeof config.temperature === 'number' ? config.temperature : 0.2,
-        maxTokens: typeof config.maxTokens === 'number' ? config.maxTokens : 220
-      };
-    }
-
-    async function requestSlmCompletion(promptPayload) {
-      const slmConfig = getSlmConfig();
-      if (!slmConfig) {
-        return null;
-      }
-
-      const headers = Object.assign(
-        {
-          'Content-Type': 'application/json'
-        },
-        slmConfig.headers
-      );
-
-      if (slmConfig.apiKey) {
-        headers.Authorization = `Bearer ${slmConfig.apiKey}`;
-      }
-
-      const response = await fetch(slmConfig.endpoint, {
-        method: 'POST',
-        headers,
-        body: JSON.stringify({
-          model: slmConfig.model,
-          temperature: slmConfig.temperature,
-          max_tokens: slmConfig.maxTokens,
-          messages: promptPayload.messages
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error('SLM request failed.');
-      }
-
-      const data = await response.json();
-      const content = data
-        && data.choices
-        && data.choices[0]
-        && data.choices[0].message
-        && data.choices[0].message.content;
-
-      return typeof content === 'string' ? content.trim() : null;
-    }
-
-    async function requestGroundedAnswer(promptPayload) {
-      window.csAssistantLastPromptPayload = promptPayload;
-
-      try {
-        if (window.csDepartmentAssistantLlm && typeof window.csDepartmentAssistantLlm.complete === 'function') {
-          return await window.csDepartmentAssistantLlm.complete({
-            query: promptPayload.query,
-            messages: promptPayload.messages,
-            entities: promptPayload.entities
-          });
-        }
-
-        return await requestSlmCompletion(promptPayload);
-      } catch (error) {
-        return null;
-      }
-    }
-
-    async function performSearch() {
+    function performSearch() {
       const query = queryInput.value.trim();
 
       if (!query) {
         statusNode.textContent = 'Search courses, faculty, programs, groups, and resources.';
-        renderAssistantAnswer('');
         resultsNode.innerHTML = '';
         return;
       }
@@ -1106,13 +923,6 @@ keywords:
         statusMessage = fallback.message;
       }
 
-      const promptPayload = buildPromptPayload(query, ranked);
-      const assistantResponse = await requestGroundedAnswer(promptPayload);
-      if (assistantResponse) {
-        renderAssistantAnswer(assistantResponse);
-      } else {
-        renderFallbackMessage();
-      }
       renderResults(ranked, statusMessage, query);
     }
 

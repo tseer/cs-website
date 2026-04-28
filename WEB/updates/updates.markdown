@@ -6,14 +6,21 @@ permalink: /updates/
 
 This page lists completed updates made to the CS website.
 
+Austin Ashworth prepared the final handoff branch for professor review by keeping the completed static website and structured search work while removing unfinished local prototype code.
+
 ## Completed Changes
 
 - Standardized course pages around `layout: course` with structured front matter including `course_code`, `course_name`, `credits`, `description`, `prerequisites`, `co_requisites`, and `keywords`.
 - Added machine-readable course metadata through JSON-LD on course pages and structured search indexes for courses, pages, programs, people, groups, and resources.
-- Built the site search assistant and connected it to the generated department search index.
-- Cleaned the search assistant output by removing unnecessary response labels and fallback status text while keeping the results and fallback behavior intact.
+- Built the department site search page and connected it to the generated static search index.
+- Cleaned the search output by removing unnecessary response labels and fallback status text while keeping the results and fallback behavior intact.
+- Finalized the handoff branch so static structured search remains available while unfinished MCP/Ollama and external-scraping prototypes are removed.
 - Removed visible overview and summary sections from rendered pages while preserving summary data for metadata and structured data.
 - Simplified course page rendering so course pages focus on the title, credits, description, prerequisites, and co-requisites.
+
+## Project Documentation
+
+- [Repository README]({{ '/README.md' | relative_url }}) documents the final static-site handoff, including structured content, generated course offerings, JSON-LD metadata, and browser-based site search.
 
 ## Course Catalog & Schedule Modernization
 
@@ -63,5 +70,5 @@ This page documents the project’s clone-and-build workflow, including the step
 - [Course Catalog]({{ '/academics/course-catalog/' | relative_url }})
 - [Chimera]({{ '/research/chimera/' | relative_url }})
 - [Research Paper]({{ '/updates/research-paper/' | relative_url }})
-- [Search Assistant]({{ '/ai-assistant' | relative_url }})
+- [Site Search]({{ '/search' | relative_url }})
 - [Broken Links Repaired]({{ '/broken-links/' | relative_url }})
