@@ -1,7 +1,7 @@
 ---
 title: "Site Search"
 layout: page
-permalink: "/search"
+permalink: "/search/"
 description: "A lightweight on-site search page for the UMass Boston Computer Science Department website."
 keywords:
   - "Site Search"
