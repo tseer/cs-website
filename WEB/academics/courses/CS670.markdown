@@ -1,23 +1,43 @@
 ---
-title: "CS670"
-layout: page
+title: 'CS670: Artificial Intelligence'
+layout: course
 permalink: "/academics/courses/CS670"
+entity_type: course
+course_code: CS670
+course_name: Artificial Intelligence
+credits: 3
+description: 'A broad technical introduction to the techniques that enable computers to behave intelligently: problem solving and game playing, knowledge representation and reasoning, planning and decision making, learning, perception and interpretation. The application of these techniques to real-world systems, with some programming in LISP.'
+summary: Graduate course in artificial intelligence for graduate students covering foundational AI concepts and classic intelligent systems methods.
+keywords:
+- CS670
+- Artificial Intelligence
+- AI
+- intelligent systems
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS670
+- CS 670
+- AI
+- 'CS670: Artificial Intelligence'
+- 'CS 670: Artificial Intelligence'
+prerequisites:
+- CS310
+- CS220/CS320L/MATH320L
+- MATH470
+co_requisites: []
+related_programs:
+- "/cs_ms"
+- "/cs_phd"
+related_topics:
+- artificial intelligence
+- knowledge representation
+- planning
+- intelligent systems
+provider_id: https://www.cs.umb.edu/#department
 ---
 
+## Notes
 
-
-\
-**Artificial Intelligence (3 credits)**
-
----
-
-\
-A broad technical introduction to the techniques that enable computers to behave intelligently: problem solving and game playing, knowledge representation and reasoning, planning and decision making, learning, perception and interpretation. The application of these techniques to real-world systems, with some programming in LISP.
-
-**Note:**
-\
 This course is co-taught with CS470.
-
-**Pre-requisites**
-\
-CS310, CS220/CS320L/MATH320L and MATH470

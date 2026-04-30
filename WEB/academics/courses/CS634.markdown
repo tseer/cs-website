@@ -1,23 +1,30 @@
 ---
-title: "CS634"
-layout: page
+title: 'CS634: Architecture of Database Systems'
+layout: course
 permalink: "/academics/courses/CS634"
+entity_type: course
+course_code: CS634
+course_name: Architecture of Database Systems
+credits: 3
+description: 'Indexing and query optimization in database systems. Writing programs to update a database. ACID properties. Concurrency theory: serializability, 2-phase locking, deadlock detection. Transactional Recovery: REDO and UNDO logging, different checkpoint approaches, media recovery. Examples of recovery utility use in INGRES, ORACLE and DB2. Transactional performance: the TPC-A benchmark, analysis of bottlenecks, and cost-performance considerations. Distributed database systems. Two-phase commit. Database parallelism.'
+summary: Graduate course in architecture of database systems for graduate students covering database systems architecture, transactions, and recovery.
+keywords:
+- CS634
+- Database Architecture
+- UMass Boston
+- course
+- Architecture of Database Systems
+- Computer Science
+aliases:
+- CS634
+- CS 634
+- 'CS634: Architecture of Database Systems'
+- 'CS 634: Architecture of Database Systems'
+prerequisites:
+- CS430 or CS630
+co_requisites: []
+related_programs: []
+related_topics:
+- Database Architecture
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Architecture of Database Systems (3 credits)**
-
----
-
-\
-Indexing and query optimization in database systems. Writing programs to update a database. ACID properties. Concurrency theory: serializability, 2-phase locking, deadlock detection. Transactional Recovery: REDO and UNDO logging, different checkpoint approaches, media recovery. Examples of recovery utility use in INGRES, ORACLE and DB2. Transactional performance: the TPC-A benchmark, analysis of bottlenecks, and cost-performance considerations. Distributed database systems. Two-phase commit. Database parallelism.
-
-**Pre-requisites:**
-\
-CS430 or CS630
-
-**Topics:**
-
-Fall 2012 Course Website

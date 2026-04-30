@@ -1,7 +1,26 @@
 ---
-title: "Job Opening"
+title: "Senior Network and Systems Administrator"
 layout: page
 permalink: "/news_and_events/jobs_and_internships/398/"
+entity_type: resource
+summary: Department career opportunity for a senior network and systems administrator supporting CS infrastructure, labs, and operations.
+keywords:
+  - job opening
+  - systems administrator
+  - network administrator
+  - department job
+  - career opportunity
+aliases:
+  - sysadmin job
+  - network and systems administrator
+  - systems administrator job
+related_topics:
+  - jobs
+  - careers
+  - systems administration
+  - networking
+  - career opportunities
+parent_section: News-and-Events
 ---
 ## Senior Network/Systems Administrator
 ---

@@ -1,0 +1,248 @@
+---
+layout: page
+---
+
+{% assign course_title = page.course_code %}
+{% assign course_pages = site.pages | where_exp: "item", "item.course_code" %}
+{% assign linked_course_pages = site.pages | where_exp: "item", "item.course_code and item.course_code != page.course_code" %}
+{% assign offerings_data = site.data.course_offerings %}
+{% assign course_offerings = offerings_data.course_index[page.course_code] %}
+{% assign site_root_url = '/' | absolute_url %}
+{% if page.provider_id %}
+  {% assign course_provider_id = page.provider_id %}
+{% else %}
+  {% assign course_provider_id = site_root_url | append: "#department" %}
+{% endif %}
+{% if page.course_name %}
+  {% assign course_title = page.course_code | append: ': ' | append: page.course_name %}
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "@id": {{ page.url | absolute_url | append: "#course" | jsonify }},
+  "name": {{ course_title | jsonify }},
+  "courseCode": {{ page.course_code | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  {% assign course_description = page.summary | default: page.description %}
+  {% if course_description %}
+  "description": {{ course_description | strip_html | normalize_whitespace | jsonify }},
+  {% endif %}
+  {% if page.keywords %}
+  "keywords": {{ page.keywords | join: ", " | jsonify }},
+  {% endif %}
+  {% if course_offerings %}
+  "hasCourseInstance": [
+    {% for offering in course_offerings %}
+    {
+      "@type": "CourseInstance",
+      "name": {{ page.course_code | append: " " | append: offering.term_label | append: " Section " | append: offering.section | jsonify }},
+      "location": {{ offering.location | default: "TBA" | jsonify }},
+      "instructor": {
+        "@type": "Person",
+        "name": {{ offering.instructor | default: "TBA" | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  {% endif %}
+  "provider": {
+    "@type": "Organization",
+    "@id": {{ course_provider_id | jsonify }},
+    "name": {{ site.department_name | default: "Computer Science Department" | jsonify }},
+    "url": {{ site_root_url | jsonify }}
+  }
+}
+</script>
+
+<article class="course-page">
+  <header class="course-header">
+    <h1>
+      {{ page.course_code }}{% if page.course_name %}: {{ page.course_name }}{% endif %}
+    </h1>
+
+    {% if page.credits %}
+      <p><strong>Credits:</strong> {{ page.credits }}</p>
+    {% endif %}
+  </header>
+
+  {% if page.description %}
+    <section class="course-description">
+      <h2>Catalog Description</h2>
+      <p>{{ page.description }}</p>
+    </section>
+  {% endif %}
+
+  {% include course-offerings-summary.html %}
+
+  {% if page.prerequisites %}
+    <section class="course-prereqs">
+      <h2>Prerequisites</h2>
+      {% if page.prerequisites.first %}
+        <ul>
+          {% for prereq in page.prerequisites %}
+            {% assign prereq_page = course_pages | where: "course_code", prereq | first %}
+            <li>
+              {% if prereq_page %}
+                <a href="{{ prereq_page.url | relative_url }}">{{ prereq }}</a>
+              {% else %}
+                {{ prereq }}
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>{{ page.prerequisites }}</p>
+      {% endif %}
+    </section>
+  {% endif %}
+
+  {% if page.co_requisites and page.co_requisites != empty %}
+    <section class="course-coreqs">
+      <h2>Co-requisites</h2>
+      {% if page.co_requisites.first %}
+        <ul>
+          {% for coreq in page.co_requisites %}
+            {% assign coreq_page = course_pages | where: "course_code", coreq | first %}
+            <li>
+              {% if coreq_page %}
+                <a href="{{ coreq_page.url | relative_url }}">{{ coreq }}</a>
+              {% else %}
+                {{ coreq }}
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>{{ page.co_requisites }}</p>
+      {% endif %}
+    </section>
+  {% endif %}
+
+  {% assign stripped_content = content | strip %}
+  {% if stripped_content != "" %}
+    <section class="course-extra">
+      {{ content }}
+    </section>
+  {% endif %}
+
+  {% if page.summary %}
+    <p>{{ page.summary }}</p>
+  {% endif %}
+
+  <p class="course-catalog-link">
+    <a href="{{ '/academics/course-catalog/' | relative_url }}">View Full Course Catalog</a>
+  </p>
+</article>
+
+<script type="application/json" id="course-link-data">
+[
+  {% for course in linked_course_pages %}
+    {
+      "code": {{ course.course_code | jsonify }},
+      "url": {{ course.url | relative_url | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
+
+<script>
+  (function() {
+    const dataNode = document.getElementById('course-link-data');
+    const courseRoot = document.querySelector('.course-page');
+
+    if (!dataNode || !courseRoot) {
+      return;
+    }
+
+    const courses = JSON.parse(dataNode.textContent)
+      .map((course) => {
+        const spacedCode = course.code.replace(/^([A-Z]+)([0-9].*)$/, '$1 $2');
+        return {
+          ...course,
+          aliases: [...new Set([course.code, spacedCode])].sort((a, b) => b.length - a.length),
+        };
+      });
+
+    if (!courses.length) {
+      return;
+    }
+
+    const aliasEntries = [];
+    for (const course of courses) {
+      for (const alias of course.aliases) {
+        aliasEntries.push([alias, course.url]);
+      }
+    }
+
+    aliasEntries.sort((a, b) => b[0].length - a[0].length);
+    const aliasMap = new Map(aliasEntries);
+    const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const pattern = new RegExp(
+      `(^|[^A-Za-z0-9])(${aliasEntries.map(([alias]) => escapeRegex(alias)).join('|')})(?=$|[^A-Za-z0-9])`,
+      'g'
+    );
+
+    const skipTags = new Set(['A', 'SCRIPT', 'STYLE', 'CODE', 'PRE', 'TEXTAREA']);
+    const walker = document.createTreeWalker(courseRoot, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        if (!node.nodeValue || !pattern.test(node.nodeValue)) {
+          pattern.lastIndex = 0;
+          return NodeFilter.FILTER_REJECT;
+        }
+
+        pattern.lastIndex = 0;
+
+        const parent = node.parentElement;
+        if (!parent || skipTags.has(parent.tagName)) {
+          return NodeFilter.FILTER_REJECT;
+        }
+
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+
+    const textNodes = [];
+    while (walker.nextNode()) {
+      textNodes.push(walker.currentNode);
+    }
+
+    for (const node of textNodes) {
+      const fragment = document.createDocumentFragment();
+      const text = node.nodeValue;
+      let lastIndex = 0;
+
+      text.replace(pattern, (match, prefix, alias, offset) => {
+        const start = offset;
+        const aliasStart = start + prefix.length;
+
+        if (start > lastIndex) {
+          fragment.appendChild(document.createTextNode(text.slice(lastIndex, start)));
+        }
+
+        if (prefix) {
+          fragment.appendChild(document.createTextNode(prefix));
+        }
+
+        const link = document.createElement('a');
+        link.href = aliasMap.get(alias);
+        link.textContent = alias;
+        fragment.appendChild(link);
+
+        lastIndex = aliasStart + alias.length;
+        return match;
+      });
+
+      if (lastIndex === 0) {
+        continue;
+      }
+
+      if (lastIndex < text.length) {
+        fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+      }
+
+      node.parentNode.replaceChild(fragment, node);
+    }
+  })();
+</script>

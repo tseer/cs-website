@@ -1,23 +1,36 @@
 ---
-title: "CS498"
-layout: page
+title: 'CS498: Honors Thesis'
+layout: course
 permalink: "/academics/courses/CS498"
+entity_type: course
+course_code: CS498
+course_name: Honors Thesis
+credits: 1-3
+description: The design and execution of a significant research project under the guidance of a faculty advisor. Successful completion and oral defense of the thesis is necessary to qualify for Honors in Computer Science. Both the instructor and the project must be chosen and approved prior to the start of the course.
+summary: Supervised honors thesis course for undergraduate computer science research and defense work.
+keywords:
+- CS498
+- Honors Thesis
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS498
+- CS 498
+- 'CS498: Honors Thesis'
+- 'CS 498: Honors Thesis'
+prerequisites:
+- GPA 3.0 overall
+- GPA 3.5 in major
+- CS310
+- CS420
+- Permission of instructor
+- Permission of department chair
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
 
-
-
-\
-**Honors Thesis (1-3 credits)**
-
----
-
-\
-The design and execution of a significant research project under the guidance of a faculty advisor. Successful completion and oral defense of the thesis is necessary to qualify for Honors in Computer Science. Both the instructor and the project must be chosen and approved prior to the start of the course.
-
-**Note:**
-\
-Successful completion and oral defense of the honors thesis is necessary to qualify for departmental honors in computer science. Both the instructor and the project must be chosen and approved prior to the start of the semester. Forms to enroll in the course can be found here.
-
-**Pre-requisites:**
-\
-Overall of GPA of 3.0 and GPA of 3.5 in the major; CS310 and CS420 and permission of instructor and department chair. Students are encouraged to take CS478 the semester before CS498 in order to undertake background research, formulate a successful project proposal, and present the proposal to the department.
+## Notes
+Students are encouraged to take CS478 before CS498.

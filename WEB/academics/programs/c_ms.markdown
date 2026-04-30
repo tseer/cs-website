@@ -1,11 +1,70 @@
 ---
-title: "Computer Science MS"
+title: Computer Science MS
 layout: page
 permalink: "/cs_ms"
+entity_type: program
+program_name: Computer Science MS
+description: Admissions, degree requirements, and elective options for the UMass Boston Master of Science in Computer Science.
+summary: Admissions, degree requirements, and elective options for the UMass Boston Master of Science in Computer Science.
+keywords:
+- Computer Science MS
+- MS in Computer Science
+- graduate computer science
+- master's in computer science
+- UMass Boston
+- Computer Science Department
+aliases:
+- Computer Science MS
+- MS in Computer Science
+- CS MS
+- master's in computer science
+related_people:
+- dan-simovici
+related_courses:
+- CS680
+- CS681
+- CS682
+- CS620
+- CS622
+- CS624
+- CS420
+- CS720
+- CS724
+- CS612
+- CS615
+- CS630
+- CS634
+- CS636
+- CS637
+- CS638
+- CS642
+- CS646
+- CS648
+- CS651
+- CS670
+- CS671
+- CS675
+- CS752
+- CS410
+- CS411
+- CS433
+- CS443
+- CS449
+- CS450
+- CS460
+- CS461
+related_topics:
+- master of science
+- computer science graduate study
+- admissions
+- degree requirements
+- software development
+- graduate electives
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 
-UMass Boston’s computer science master’s program thoroughly prepares students for a professional career in software development. This established and innovative program stresses the integration of theoretical knowledge with practical applications. Our Computer Science MS graduates are in high demand with major tech sector employers and startups. We invite you to learn more by joining <a href="https://admissions.umb.edu/graduate-students/request">our email list</a>.
+UMass Boston’s computer science master’s program thoroughly prepares students for a professional career in software development. This established and innovative program stresses the integration of theoretical knowledge with practical applications. Our Computer Science MS graduates are in high demand with major tech sector employers and startups. We invite you to learn more by joining <a href="https://www.umb.edu/admissions/request-info/">our email list</a>.
 
 **Admissions to the Program**
 
@@ -17,79 +76,78 @@ A combined BS/MS program is available. After completing 90 credits of undergradu
 
 Candidates for the degree complete a minimum of 30 credits, at least 24 of which must be in courses numbered 600 or above.
 
-Object-Oriented Software Development I and II ([CS680]({{site.baseurl}}/academics/courses/CS680) and [CS681]({{site.baseurl}}/academics/courses/CS681)), including Software Development Laboratory ([CS682]({{site.baseurl}}/academics/courses/CS682)) are required courses and carry a total of 9 credits. Students must take this sequence during the final part of their coursework. We also require that students choose two theoretical electives and five applied electives from among the following courses:
+Object-Oriented Software Development I and II ({% include course-link.html code="CS680" label="CS680" %} and {% include course-link.html code="CS681" label="CS681" %}), including Software Development Laboratory ({% include course-link.html code="CS682" label="CS682" %}) are required courses and carry a total of 9 credits. Students must take this sequence during the final part of their coursework. We also require that students choose two theoretical electives and five applied electives from among the following courses:
 
 **Theoretical Electives:**
 
-[CS620: Theory of Computation]({{site.baseurl}}/academics/courses/CS620)
+{% include course-link.html code="CS620" label="CS620: Theory of Computation" %}
 
-[CS622: Theory of Formal languages]({{site.baseurl}}/academics/courses/CS622)
+{% include course-link.html code="CS622" label="CS622: Theory of Formal languages" %}
 
-[CS624: Analysis of Algorithms]({{site.baseurl}}/academics/courses/CS624)
+{% include course-link.html code="CS624" label="CS624: Analysis of Algorithms" %}
 
-[CS420: Introduction to the Theory of Computation]({{site.baseurl}}/academics/courses/CS420)
+{% include course-link.html code="CS420" label="CS420: Introduction to the Theory of Computation" %}
 
-[CS720: Logical Foundations in Computer Science]({{site.baseurl}}/academics/courses/CS720)
+{% include course-link.html code="CS720" label="CS720: Logical Foundations in Computer Science" %}
 
-[CS724: Topics in Algorithm Theory and Design]({{site.baseurl}}/academics/courses/CS724)
+{% include course-link.html code="CS724" label="CS724: Topics in Algorithm Theory and Design" %}
 
 [MATH470: Mathematical Logic](https://courses.umb.edu/course_catalog/course_info/ugrd_math_all_470)
 
 Applied Electives:
 
-[CS612: Algorithms in Bioinformatics]({{site.baseurl}}/academics/courses/CS612)
+{% include course-link.html code="CS612" label="CS612: Algorithms in Bioinformatics" %}
 
-[CS615: User Interface Design]({{site.baseurl}}/academics/courses/CS615)
+{% include course-link.html code="CS615" label="CS615: User Interface Design" %}
 
-[CS630: Database Management Systems]({{site.baseurl}}/academics/courses/CS630)
+{% include course-link.html code="CS630" label="CS630: Database Management Systems" %}
 
-[CS634: Architecture of Database Systems]({{site.baseurl}}/academics/courses/CS634)
+{% include course-link.html code="CS634" label="CS634: Architecture of Database Systems" %}
 
-[CS636: Database Application Development]({{site.baseurl}}/academics/courses/CS636)
+{% include course-link.html code="CS636" label="CS636: Database Application Development" %}
 
-[CS637: Database-Backed Web Sites and Web Services]({{site.baseurl}}/academics/courses/CS637)
+{% include course-link.html code="CS637" label="CS637: Database-Backed Web Sites and Web Services" %}
 
-[CS638: Applied Machine Learning]({{site.baseurl}}/academics/courses/CS638)
+{% include course-link.html code="CS638" label="CS638: Applied Machine Learning" %}
 
-[CS642: Cybersecurity in the Internet of Things]({{site.baseurl}}/academics/courses/CS642)
+{% include course-link.html code="CS642" label="CS642: Cybersecurity in the Internet of Things" %}
 
-[CS646: Computer Communication Networks]({{site.baseurl}}/academics/courses/CS646)
+{% include course-link.html code="CS646" label="CS646: Computer Communication Networks" %}
 
-[CS648: Wireless Networks and Mobile Computing]({{site.baseurl}}/academics/courses/CS648)
+{% include course-link.html code="CS648" label="CS648: Wireless Networks and Mobile Computing" %}
 
-[CS651: Compilers]({{site.baseurl}}/academics/courses/CS651)
+{% include course-link.html code="CS651" label="CS651: Compilers" %}
 
-[CS670: Artificial Intelligence]({{site.baseurl}}/academics/courses/CS670)
+{% include course-link.html code="CS670" label="CS670: Artificial Intelligence" %}
 
-[CS671: Machine Learning]({{site.baseurl}}/academics/courses/CS671)
+{% include course-link.html code="CS671" label="CS671: Machine Learning" %}
 
-[CS675: Computer Vision]({{site.baseurl}}/academics/courses/CS675)
+{% include course-link.html code="CS675" label="CS675: Computer Vision" %}
 
-[CS752: Parallel Programming]({{site.baseurl}}/academics/courses/CS752)
+{% include course-link.html code="CS752" label="CS752: Parallel Programming" %}
 
 These following undergraduate courses:
 
-[CS410: Introduction to Software Engineering]({{site.baseurl}}/academics/courses/CS410)
+{% include course-link.html code="CS410" label="CS410: Introduction to Software Engineering" %}
 
-[CS411: Competitive Programming]({{site.baseurl}}/academics/courses/CS411)
+{% include course-link.html code="CS411" label="CS411: Competitive Programming" %}
 
-[CS433: Big Data Analytics]({{site.baseurl}}/academics/courses/CS433)
+{% include course-link.html code="CS433" label="CS433: Big Data Analytics" %}
 
-[CS443: Mobile Applications]({{site.baseurl}}/academics/courses/CS443)
+{% include course-link.html code="CS443" label="CS443: Mobile Applications" %}
 
-[CS449: Introduction to Computer Security]({{site.baseurl}}/academics/courses/CS449)
+{% include course-link.html code="CS449" label="CS449: Introduction to Computer Security" %}
 
-[CS450: The Structure of Higher Level Languages]({{site.baseurl}}/academics/courses/CS450)
+{% include course-link.html code="CS450" label="CS450: The Structure of Higher Level Languages" %}
 
-[CS460: Graphics]({{site.baseurl}}/academics/courses/CS460)
+{% include course-link.html code="CS460" label="CS460: Graphics" %}
 
-[CS461: Computer Games Programming]({{site.baseurl}}/academics/courses/CS461)
+{% include course-link.html code="CS461" label="CS461: Computer Games Programming" %}
 
 No more than two upper-level undergraduate courses may be used for graduate credit in the MS program. Upper-level undergraduate courses are undergraduate courses at the 400 level mentioned in one of the previous lists.  CS210L, CS240, and CS310 are general prerequisites for all graduate courses.
 
 **Capstone Requirement**
 
-To complete the MS program students must participate in a software development project by taking the software development sequence ([CS680]({{site.baseurl}}/academics/courses/CS680), [CS681]({{site.baseurl}}/academics/courses/CS681), and [CS682]({{site.baseurl}}/academics/courses/CS682)). In general, this sequence is taken during the last two semesters in the MS program. The project is approved by a committee that consists of two faculty members (professors who are currently teaching the software development course and supervise the software development laboratory) and the Graduate Program Director.
+To complete the MS program students must participate in a software development project by taking the software development sequence ({% include course-link.html code="CS680" label="CS680" %}, {% include course-link.html code="CS681" label="CS681" %}, and {% include course-link.html code="CS682" label="CS682" %}). In general, this sequence is taken during the last two semesters in the MS program. The project is approved by a committee that consists of two faculty members (professors who are currently teaching the software development course and supervise the software development laboratory) and the Graduate Program Director.
 
 In exceptional circumstances, students with significant industrial experience may request a waiver of the software development requirement by applying to a faculty committee established for this purpose. As a part of the waiver application, the student must present a portfolio demonstrating the nature of this experience. Students who receive a waiver will be required to complete an MS thesis.
-

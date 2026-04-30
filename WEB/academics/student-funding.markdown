@@ -2,6 +2,29 @@
 title: "Student Funding"
 layout: page
 permalink: "/student-funding"
+entity_type: resource
+summary: Scholarship and financial support resource for CS and IT students, including departmental funding opportunities and financial aid links.
+keywords:
+  - student funding
+  - scholarships
+  - financial aid
+  - funding opportunities
+  - student support
+  - scholarship funding
+  - financial support
+aliases:
+  - scholarships
+  - funding
+  - financial support
+  - scholarship funding
+  - financial aid help
+related_topics:
+  - scholarships
+  - financial aid
+  - student funding
+  - student support
+  - academic funding
+parent_section: Academics
 ---
 
 ## CSM Scholarship Funding

@@ -1,19 +1,38 @@
 ---
-title: "CS624"
-layout: page
+title: 'CS624: Analysis of Algorithms'
+layout: course
 permalink: "/academics/courses/CS624"
+entity_type: course
+course_code: CS624
+course_name: Analysis of Algorithms
+credits: 3
+description: 'Basic techniques for designing algorithms: divide and conquer, the greedy method, dynamic programming, etc. Applications to searching and sorting algorithms. Complexity of parsing. The fast Fourier transform and its applications (evaluation of polynomials and arithmetical problems). Lower bound theory. NP-hard and NP-complete problems. Probabilistic estimates of algorithms.'
+summary: Graduate course in analysis of algorithms for graduate students covering algorithms, abstract data types, and complexity analysis.
+keywords:
+- CS624
+- Analysis of Algorithms
+- complexity theory
+- algorithm analysis
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS624
+- CS 624
+- algorithm analysis
+- 'CS624: Analysis of Algorithms'
+- 'CS 624: Analysis of Algorithms'
+prerequisites:
+- CS220/CS320L/MATH320L
+- Permission of the instructor
+co_requisites: []
+related_programs:
+- "/cs_ms"
+- "/cs_phd"
+related_topics:
+- algorithms
+- complexity analysis
+- divide and conquer
+- dynamic programming
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Analysis of Algorithms (3 credits)**
-
----
-
-\
-Basic techniques for designing algorithms: divide and conquer, the greedy method, dynamic programming, etc. Applications to searching and sorting algorithms. Complexity of parsing. The fast Fourier transform and its applications (evaluation of polynomials and arithmetical problems). Lower bound theory. NP-hard and NP-complete problems. Probabilistic estimates of algorithms.
-
-**Pre-requisites:**
-\
-CS220/CS320L/MATH320L or permission of the instructor.

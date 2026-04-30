@@ -1,3 +1,10 @@
+{% assign programs_index = site.data.section_indexes.programs %}
+{% include item-list-schema.html
+  name=programs_index.name
+  url=page.url
+  description=programs_index.description
+  items=programs_index.items
+%}
 <div class="progs">
     <div>
         <div>

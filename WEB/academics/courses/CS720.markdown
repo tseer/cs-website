@@ -1,19 +1,28 @@
 ---
-title: "CS720"
-layout: page
+title: 'CS720: Logical Foundations in Computer Science'
+layout: course
 permalink: "/academics/courses/CS720"
+entity_type: course
+course_code: CS720
+course_name: Logical Foundations in Computer Science
+credits: 3
+description: The course treats the logical foundations of computer science in a mathematically rigorous way but with emphasis on the applications of logic in computer science. Topics include the syntax and semantics of predicate logic, formal systems for predicate logic, many-sorted logic, and logic programming. Additional topics may include equational logic, algebraic specification, term rewriting, program verification, nonstandard logic, and databases. Students are expected to demonstrate an understanding of theoretical material and the ability to apply it.
+summary: Graduate course in logical foundations in computer science for graduate students covering programming language syntax, semantics, and implementation models.
+keywords:
+- CS720
+- Logical Foundations in Computer Science
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS720
+- CS 720
+- 'CS720: Logical Foundations in Computer Science'
+- 'CS 720: Logical Foundations in Computer Science'
+prerequisites:
+- Math470 or equivalent and permission of the instructor.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Logical Foundations in Computer Science (3 credits)**
-
----
-
-\
-The course treats the logical foundations of computer science in a mathematically rigorous way but with emphasis on the applications of logic in computer science. Topics include the syntax and semantics of predicate logic, formal systems for predicate logic, many-sorted logic, and logic programming. Additional topics may include equational logic, algebraic specification, term rewriting, program verification, nonstandard logic, and databases. Students are expected to demonstrate an understanding of theoretical material and the ability to apply it.
-
-**Pre-requisites:**
-\
-Math470 or equivalent and permission of the instructor.

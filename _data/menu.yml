@@ -19,8 +19,8 @@
       link: admissions
     - title: Certificate Programs
       link: certificate-programs
-    - title: Course Schedule
-      link: course-schedule
+    - title: Course Catalog
+      link: academics/course-catalog
     - title: Courses
       link: courses
     - title: CS Minor
@@ -51,10 +51,14 @@
       link: funding
     - title: Groups
       link: groups
+    - title: Chimera
+      link: research/chimera
 
 - title: Resources
   link: resources
   submenu:
+    - title: Site Search
+      link: search
     - title: CS Department IT Policies and Procedures
       link: cs-department-it-policies
       #link: CS_dept_IT_Policies.pdf
@@ -68,3 +72,7 @@
     - title: VMware
       url: https://e5.onthehub.com/WebStore/Security/Signin.aspx?ws=41b75fa9-1473-de11-b7f9-0030487d8896&vsro=8&rurl=%2fWebStore%2fAccount%2fYourAccount.aspx%3fws%3d41b75fa91473-de11-b7f9-0030487d8896%26vsro%3d8&JSEnabled=1
       target: _blank
+
+- title: Updates
+  link: updates
+  accent: true
