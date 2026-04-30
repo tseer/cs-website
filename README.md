@@ -38,10 +38,19 @@ Course offerings are generated from schedule spreadsheet files stored in the rep
 - builds course and instructor relationship data
 - writes `_data/course_offerings.yml`
 
-Regenerate offerings when schedule spreadsheets change:
+**Important maintenance note:** adding or updating schedule spreadsheet files does not automatically update the website. After any course-offering spreadsheet is added, removed, renamed, or edited, rerun the generator before rebuilding/deploying the site:
 
 ```bash
 python3 scripts/build_course_offerings.py
+```
+
+This is a major design point of the catalog system: future maintainers can keep the catalog current by dropping in new schedule XLSX files, rerunning the generator, and then rebuilding the static Jekyll site. If this script is not rerun, `_data/course_offerings.yml` will remain stale and the course catalog/current-offering sections will not reflect the new spreadsheet data.
+
+Recommended update workflow:
+
+```bash
+python3 scripts/build_course_offerings.py
+bundle exec jekyll build --config _config.yml,_config_csserver.yml
 ```
 
 ## Local Build
