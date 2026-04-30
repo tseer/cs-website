@@ -25,7 +25,8 @@ Austin Ashworth prepared the final handoff branch for professor review by keepin
 ## Course Catalog & Schedule Modernization
 
 - Added planning and implementation for a new **XLSX-driven course catalog system** using semester schedule files already stored in the website repository.
-- Course offerings will be generated from spreadsheet data instead of manually maintained listings.
+- Course offerings are generated from spreadsheet data instead of manually maintained listings.
+- **Important:** when new schedule spreadsheets are added or existing ones are updated, the generator script must be rerun to refresh the catalog data.
 - The catalog follows the academic-year model used by colleges:
   - Fall starts the academic year.
   - Example: Fall 2025 -> Spring 2026 -> Summer 2026.
@@ -37,6 +38,14 @@ Austin Ashworth prepared the final handoff branch for professor review by keepin
   - Summer Session 2
   - Summer Session 3
 - Schedule files are auto-discovered by filename pattern such as `schedule_fall_2025.xlsx` and `schedule_spring_2026.xlsx`, and future files can be added easily by dropping new XLSX files into the repo.
+
+**Required update step:**
+
+```bash
+python3 scripts/build_course_offerings.py
+```
+
+If this step is skipped, the course catalog and “Current & Upcoming Offerings” sections will not reflect newly added or updated spreadsheet data.
 
 ## New Catalog Pages & Course Listings
 
