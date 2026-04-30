@@ -20,7 +20,7 @@ Austin Ashworth prepared the final handoff branch for professor review by keepin
 
 ## Project Documentation
 
-- [Repository README]({{ '/README.md' | relative_url }}) documents the final static-site handoff, including structured content, generated course offerings, JSON-LD metadata, and browser-based site search.
+- [Repository README](https://github.com/AustieKid/cs-website/blob/finalAsh/README.md) documents the final static-site handoff, including structured content, generated course offerings, JSON-LD metadata, and browser-based site search.
 
 ## Course Catalog & Schedule Modernization
 
