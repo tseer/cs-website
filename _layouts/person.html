@@ -51,11 +51,14 @@ layout: page
       </dl>
 
       {% if page.same_as and page.same_as.size > 0 %}
-      <p class="person-profile-links">
+      <section class="person-profile-links" aria-labelledby="person-external-profiles">
+        <h2 id="person-external-profiles">External Profiles</h2>
+        <ul>
         {% for link in page.same_as %}
-        <a href="{{ link }}" target="_blank" rel="noopener">Profile</a>{% unless forloop.last %} {% endunless %}
+          <li><a href="{{ link }}" target="_blank" rel="noopener">Faculty Website</a></li>
         {% endfor %}
-      </p>
+        </ul>
+      </section>
       {% endif %}
     </div>
   </div>
