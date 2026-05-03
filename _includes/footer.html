@@ -5,11 +5,11 @@
         <p>{{ site.phone }} &bull; {{site.email}}</p>
       </div>
     </div>
-    <p><small>This site was originally created by <a href="/thankyou" style='color:white'>students</a> as part of a <a href="https://cs410.net" target=_blank style='color:white'>CS410.net</a> project!</p>
-    <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="position:absolute;right:10px;bottom:4px;"><img src="/WEB/images/cc.png"></a>
+    <p><small>This site was originally created by <a href="{{ '/thankyou' | relative_url }}" style='color:white'>students</a> as part of a <a href="https://cs410.net" target=_blank style='color:white'>CS410.net</a> project!</p>
+    <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" style="position:absolute;right:10px;bottom:4px;"><img src="{{ '/WEB/images/cc.png' | relative_url }}"></a>
   </div>
 </footer>
 
 
 
-<script src="/WEB/javascript/util.js"></script>
+<script src="{{ '/WEB/javascript/util.js' | relative_url }}"></script>

@@ -75,8 +75,6 @@ nav ul {
 nav ul li {
   margin: 0px;
   display: inline-block;
-  //float: left;
-  //background-color: white;
   padding-left: 10px;
 }
 nav .menu > li:first-child {
@@ -107,16 +105,36 @@ nav a:hover {
   padding-right: 10px;
 }
 
+nav a.nav-accent {
+  color: #c1121f !important;
+  font-weight: 700;
+}
+
+nav a.nav-accent:visited,
+nav a.nav-accent:focus,
+nav a.nav-accent:active {
+  color: #c1121f !important;
+}
+
+nav a.nav-accent:hover {
+  color: white;
+}
+
 nav ul ul {
   display: none;
   position: absolute;
-  top: 25;
+  top: 25px;
   z-index: 99;
   width: max-content;
 }
 
 nav ul li:hover > ul {
   display: inherit;
+}
+
+nav ul ul ul {
+  top: 0;
+  left: 100%;
 }
 
 nav ul ul li {
@@ -142,6 +160,25 @@ nav ul ul li a {
   transition: margin 1s;*/
 }
 
+nav ul ul li.has-submenu {
+  min-width: 100%;
+}
+
+nav ul ul li.has-submenu > a {
+  position: relative;
+  padding-right: 28px;
+  white-space: nowrap;
+}
+
+nav ul ul li.has-submenu > a::after {
+  content: ">";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85em;
+}
+
 nav ul ul li a:hover {
   /*padding-left: 10px;
   padding-right: 10px;
@@ -164,7 +201,8 @@ nav ul ul li a:hover {
     display: none;
   }
   .toggle,
-  .header-menu .menu > li:first-child a {
+  .header-menu .menu > li:first-child a,
+  .header-menu .menu > li.no-submenu > a {
     display: block;
     background-color: rgba($color: $umass-blue, $alpha: 1);
     padding: 0 20px;
@@ -173,6 +211,8 @@ nav ul ul li a:hover {
     line-height: 60px;
     text-decoration: none;
     border: none;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .toggle::after {
@@ -181,8 +221,14 @@ nav ul ul li a:hover {
     color: rgba($color: white, $alpha: 0.5);
   }
 
+  .toggle.nav-accent {
+    color: #c1121f !important;
+    font-weight: 700;
+  }
+
   .toggle:hover,
-  .header-menu .menu > li:first-child a:hover {
+  .header-menu .menu > li:first-child a:hover,
+  .header-menu .menu > li.no-submenu > a:hover {
     background-color: rgba($color: $umass-blue, $alpha: 0.7);
   }
 
@@ -209,6 +255,15 @@ nav ul ul li a:hover {
   nav ul ul .toggle,
   nav ul ul a {
     padding: 0 40px;
+  }
+
+  nav ul ul .toggle {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    line-height: 60px;
   }
 
   nav ul ul ul a {

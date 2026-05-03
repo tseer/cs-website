@@ -2,6 +2,28 @@
 title: "Dreamspark/Microsoft Imagine"
 layout: page
 permalink: "/dreamspark-microsoft-imagine"
+entity_type: resource
+summary: Software access resource for students and educators using Microsoft development tools, software downloads, and learning materials.
+keywords:
+  - DreamSpark
+  - Microsoft Imagine
+  - Microsoft software
+  - software resources
+  - development tools
+  - student software
+  - software access
+aliases:
+  - Imagine
+  - Microsoft Imagine
+  - Dreamspark
+  - Microsoft software access
+related_topics:
+  - software access
+  - development tools
+  - student software
+  - microsoft tools
+  - educational software
+parent_section: Resources
 ---
 
 # Dreamspark Microsoft Imagine

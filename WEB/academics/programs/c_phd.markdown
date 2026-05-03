@@ -1,7 +1,41 @@
 ---
-title: "Computer Science PhD"
+title: Computer Science PhD
 layout: page
 permalink: "/cs_phd"
+entity_type: program
+program_name: Computer Science PhD
+description: Degree requirements, dissertation expectations, and qualifying milestones for the UMass Boston PhD in Computer Science.
+summary: Degree requirements, dissertation expectations, and qualifying milestones for the UMass Boston PhD in Computer Science.
+keywords:
+- Computer Science PhD
+- PhD in Computer Science
+- doctoral program
+- computer science research
+- UMass Boston
+- Computer Science Department
+aliases:
+- Computer Science PhD
+- PhD in Computer Science
+- CS PhD
+- doctoral program in computer science
+related_people:
+- dan-simovici
+related_courses:
+- CS720
+- CS724
+- CS680
+- CS681
+- CS682
+- CS899
+related_topics:
+- doctoral study
+- computer science research
+- qualifying exam
+- dissertation
+- computer vision
+- bioinformatics
+- data mining
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 
@@ -14,11 +48,11 @@ The Computer Science PhD Program prepares students for research careers in the s
 
     | Course requirements | Notes |
     |------|-------|
-    | [CS720]({{site.baseurl}}/academics/courses/CS720) | |
-    | [CS724]({{site.baseurl}}/academics/courses/CS724) |  |
-    | [CS680]({{site.baseurl}}/academics/courses/CS680) |  Cannot co-requisite with CS681 or CS682. |
-   |  [CS681]({{site.baseurl}}/academics/courses/CS681) | Must be taken in the same semester as CS682. <br/> *Pre-requisites:* CS680 and one of the following with a grade of B or better: CS636 or CS CS637 or CS651. |
-   | [CS682]({{site.baseurl}}/academics/courses/CS682) | Must be taken in the same semester as CS681. |
+    | {% include course-link.html code="CS720" label="CS720" %} | |
+    | {% include course-link.html code="CS724" label="CS724" %} |  |
+    | {% include course-link.html code="CS680" label="CS680" %} |  Cannot co-requisite with CS681 or CS682. |
+   |  {% include course-link.html code="CS681" label="CS681" %} | Must be taken in the same semester as CS682. <br/> *Pre-requisites:* CS680 and one of the following with a grade of B or better: CS636 or CS CS637 or CS651. |
+   | {% include course-link.html code="CS682" label="CS682" %} | Must be taken in the same semester as CS681. |
    | 2 Theoretical courses | *Pick from:* CS620, CS622, CS624, CS420, MATH470  |
    | 5 Applied courses | *Pick from:* CS612, CS615, CS630, CS634, CS636, CS637, CS638, CS642, CS646, CS648, CS651, CS670, CS671, CS675, CS752, CS410, CS411, CS433, CS443, CS449, CS450, CS460, CS461 |
    | 4 CS graduate-level courses|  *Pick from:* CS-400 level, CS-600 level, and CS-700 level. |
@@ -26,7 +60,7 @@ The Computer Science PhD Program prepares students for research careers in the s
 2. **Take the Qualifying Exam after completing 30 credits.**
     * Exam covers theoretical CS and two of the following areas (Artificial Intelligence ‘AI’, Databases, Programming Languages, Networks, and Systems). 
 
-3. **Complete a minimum of 15 credits of [CS899]({{site.baseurl}}/academics/courses/CS899).**
+3. **Complete a minimum of 15 credits of {% include course-link.html code="CS899" label="CS899" %}.**
     * Up to 9 credits per semester.
     * *Pre-requisites:* qualifying exam.
 

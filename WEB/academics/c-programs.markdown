@@ -1,9 +1,40 @@
 ---
-title: "Certificate Programs"
+title: Certificate Programs
 layout: page
 permalink: "/certificate-programs"
+entity_type: program
+program_name: Certificate Programs
+description: UMass Boston Computer Science certificate programs include the undergraduate certificate in Computer Science and the graduate certificate in Database Technology.
+summary: Overview of UMass Boston computer science certificate options, including the undergraduate certificate in Computer Science and the graduate certificate in Database Technology.
+keywords:
+- Certificate Programs
+- Computer Science Certificate
+- Database Technology Certificate
+- UMass Boston
+- Computer Science Department
+aliases:
+- Certificate Programs
+- Computer Science Certificate Programs
+- certificate options
+related_people:
+- nurit-haspel
+related_courses:
+- CS110
+- CS210
+- CS220
+- CS240
+- CS310
+- CS341
+- CS630
+- CS615
+- CS634
+related_topics:
+- certificate programs
+- database technology
+- computer science
+- undergraduate certificate
+provider_id: https://www.cs.umb.edu/#department
 ---
-
 # Certificate Undergraduate Program
 
 > Students whose preparation in Computer Science is insufficient for admission to the Master’s program should consider seeking the Undergraduate Certificate. The Undergraduate Certificate is also intended for students who are mainly interested in computer applications, or in a certificate program instead of receiving a Bachelor’s degree in Computer Science. [Read more...](#anchor1)
@@ -28,18 +59,18 @@ Since non-matriculated students in the Certificate programs are considered non-d
 
 **Certificate in Computer Science Requirements:**
 
-- [CS110]({{site.baseurl}}/academics/courses/CS110), [CS210]({{site.baseurl}}/academics/courses/CS210), [Math140](https://www.umb.edu/course_catalog/course_info/ugrd_MATH_all_140), [CS220]({{site.baseurl}}/academics/courses/CS220), [CS240]({{site.baseurl}}/academics/courses/CS240), [CS310]({{site.baseurl}}/academics/courses/CS310)
-- [CS341]({{site.baseurl}}/academics/courses/CS341) or Computer Science elective
+- {% include course-link.html code="CS110" label="CS110" %}, {% include course-link.html code="CS210" label="CS210" %}, [Math140](https://www.umb.edu/course_catalog/course_info/ugrd_MATH_all_140), {% include course-link.html code="CS220" label="CS220" %}, {% include course-link.html code="CS240" label="CS240" %}, {% include course-link.html code="CS310" label="CS310" %}
+- {% include course-link.html code="CS341" label="CS341" %} or Computer Science elective
 - One application elective
 - A minimum 2.0 GPA of the courses for the CS certificate is required
 
 The Computer Science Department does not offer winter courses; we only offer classes during Fall, Spring, and Summer semesters. We currently do not offer online courses. The Undergraduate Certificate typically requires 4 semesters due to prerequisites. We do not allow students to take requisites out of order. The schedule is as follows:
 
-1st semester –[CS110]({{site.baseurl}}/academics/courses/CS110) and [Math140](https://www.umb.edu/course_catalog/course_info/ugrd_MATH_all_140)
+1st semester –{% include course-link.html code="CS110" label="CS110" %} and [Math140](https://www.umb.edu/course_catalog/course_info/ugrd_MATH_all_140)
 
-2nd semester-[CS210]({{site.baseurl}}/academics/courses/CS210), [CS220]({{site.baseurl}}/academics/courses/CS220) and [CS240]({{site.baseurl}}/academics/courses/CS240)
+2nd semester-{% include course-link.html code="CS210" label="CS210" %}, {% include course-link.html code="CS220" label="CS220" %} and {% include course-link.html code="CS240" label="CS240" %}
 
-3rd semester-[CS310]({{site.baseurl}}/academics/courses/CS310) and [CS341]({{site.baseurl}}/academics/courses/CS341) (or CS elective)
+3rd semester-{% include course-link.html code="CS310" label="CS310" %} and {% include course-link.html code="CS341" label="CS341" %} (or CS elective)
 
 4th semester – (\*Application Elective)
 
@@ -62,7 +93,7 @@ The decision to institute this program was made upon our assessment of a strong 
 
 Proficiency in programming will be expected (including Java and C). The entire program is offered in the extended day, so the students can attend while holding a full-time position in industry.
 
-The certificate requires 12 credit hours (4 courses). The basic training consists of a sequence of three courses: [CS630]({{site.baseurl}}/academics/courses/CS630) (Database Management Systems), [CS615]({{site.baseurl}}/academics/courses/CS615) (User Interface Design), and [CS634]({{site.baseurl}}/academics/courses/CS634) (Architecture of Database Systems). These courses provide a thorough introduction to relational and object-relational databases, SQL, indexing, concurrency and recovery, and design of user interfaces for database applications.
+The certificate requires 12 credit hours (4 courses). The basic training consists of a sequence of three courses: {% include course-link.html code="CS630" label="CS630" %} (Database Management Systems), {% include course-link.html code="CS615" label="CS615" %} (User Interface Design), and {% include course-link.html code="CS634" label="CS634" %} (Architecture of Database Systems). These courses provide a thorough introduction to relational and object-relational databases, SQL, indexing, concurrency and recovery, and design of user interfaces for database applications.
 
 For information regarding the Graduate Certificate, including fees and registration, please visit the webpage for the [College of Advancing and Professional Studies](https://www.umb.edu/academics/caps).
 

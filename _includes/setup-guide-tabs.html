@@ -1,0 +1,9 @@
+<nav class="setup-guide-banner" aria-label="Setup guide platform navigation">
+  <div class="setup-guide-banner__inner">
+    <div class="setup-guide-banner__title">CS410 Website Setup</div>
+    <div class="setup-guide-tabs">
+      <a href="{{ '/resources/clone-and-build/' | relative_url }}" class="setup-guide-tab{% if include.active == 'mac' %} is-active{% endif %}"{% if include.active == 'mac' %} aria-current="page"{% endif %}>Mac Setup</a>
+      <a href="{{ '/resources/clone-and-build/windows/' | relative_url }}" class="setup-guide-tab{% if include.active == 'windows' %} is-active{% endif %}"{% if include.active == 'windows' %} aria-current="page"{% endif %}>Windows Setup</a>
+    </div>
+  </div>
+</nav>

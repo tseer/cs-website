@@ -1,7 +1,26 @@
 ---
-title: "Job Opening"
+title: "Data Analytics Tutor Opportunity"
 layout: page
 permalink: "/news_and_events/jobs_and_internships/394/"
+entity_type: resource
+summary: Career opportunity for online data analytics tutoring support with emphasis on Excel-based coursework help.
+keywords:
+  - job opening
+  - data analytics tutor
+  - tutoring
+  - Excel
+  - career opportunity
+aliases:
+  - tutor job
+  - data analytics job
+  - tutoring opportunity
+related_topics:
+  - jobs
+  - tutoring
+  - data analytics
+  - student support
+  - career opportunities
+parent_section: News-and-Events
 ---
 
 ## Data Analytics Tutor

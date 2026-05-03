@@ -1,0 +1,164 @@
+{% assign empty_array = "" | split: "" %}
+{% assign is_course_page = false %}
+{% if page.course_code %}
+  {% assign is_course_page = true %}
+{% endif %}
+{% assign hide_background_metadata = is_course_page %}
+{% assign hide_course_relationship_metadata = is_course_page %}
+{% assign dynamic_course_relationships = nil %}
+{% assign dynamic_person_relationships = nil %}
+{% assign dynamic_person_course_entries = empty_array %}
+{% assign is_person_page = nil %}
+{% if page.layout == "person" or page.collection == "people" or page.entity_type == "person" %}
+  {% assign is_person_page = true %}
+{% endif %}
+{% if is_course_page and page.course_code %}
+  {% assign dynamic_course_relationships = site.data.course_offerings.relationships.courses[page.course_code] %}
+{% endif %}
+{% if is_person_page %}
+  {% assign dynamic_person_relationships = site.data.course_offerings.relationships.people[page.slug] %}
+  {% if dynamic_person_relationships and dynamic_person_relationships.related_course_entries %}
+    {% assign dynamic_person_course_entries = dynamic_person_relationships.related_course_entries %}
+  {% endif %}
+{% endif %}
+
+{% capture related_people_blob %}
+{% if page.related_people and page.related_people.size > 0 %}
+  {% for slug in page.related_people %}{{ slug }}||{% endfor %}
+{% endif %}
+{% if dynamic_course_relationships and dynamic_course_relationships.related_people %}
+  {% for slug in dynamic_course_relationships.related_people %}{{ slug }}||{% endfor %}
+{% endif %}
+{% endcapture %}
+{% assign related_people_slugs = related_people_blob | split: "||" | uniq %}
+{% assign related_people_count = 0 %}
+{% for slug in related_people_slugs %}
+  {% if slug != "" %}
+    {% assign related_people_count = related_people_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% capture related_courses_blob %}
+{% if is_person_page and page.related_courses and page.related_courses.size > 0 %}
+  {% for code in page.related_courses %}{{ code }}||{% endfor %}
+{% endif %}
+{% if is_person_page and dynamic_person_relationships and dynamic_person_relationships.related_courses %}
+  {% for code in dynamic_person_relationships.related_courses %}{{ code }}||{% endfor %}
+{% endif %}
+{% endcapture %}
+{% assign related_course_codes = related_courses_blob | split: "||" | uniq %}
+{% assign related_course_count = 0 %}
+{% for code in related_course_codes %}
+  {% if code != "" %}
+    {% assign related_course_count = related_course_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign show_audience = false %}
+{% if page.audience and hide_background_metadata != true %}
+  {% assign show_audience = true %}
+{% endif %}
+
+{% assign related_people = site.people | where_exp: "person", "related_people_slugs contains person.slug" %}
+{% assign show_related_people = false %}
+{% if related_people.size > 0 and hide_course_relationship_metadata != true %}
+  {% assign show_related_people = true %}
+{% endif %}
+
+{% assign show_related_courses = false %}
+{% if is_person_page and related_course_count > 0 %}
+  {% assign show_related_courses = true %}
+{% endif %}
+
+{% assign related_groups = site.groups | where_exp: "group", "page.related_groups contains group.slug" %}
+{% assign show_related_groups = false %}
+{% if related_groups.size > 0 %}
+  {% assign show_related_groups = true %}
+{% endif %}
+
+{% assign show_related_programs = false %}
+{% if page.related_programs and page.related_programs.size > 0 and hide_background_metadata != true %}
+  {% assign show_related_programs = true %}
+{% endif %}
+
+{% if show_audience or show_related_people or show_related_courses or show_related_groups or show_related_programs %}
+<section class="entity-connections">
+  {% if show_audience %}
+  <div class="entity-connections-block">
+    <h2>Audience</h2>
+    {% if page.audience.first %}
+    <ul>
+      {% for item in page.audience %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>{{ page.audience }}</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if show_related_people %}
+  <div class="entity-connections-block">
+    <h2>Related People</h2>
+    <ul>
+      {% for person in related_people %}
+      <li><a href="{{ person.url | relative_url }}">{{ person.person_name }}</a>{% if person.job_title %}, {{ person.job_title }}{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if show_related_courses %}
+  <div class="entity-connections-block">
+    <h2>Related Courses</h2>
+    <ul>
+      {% if dynamic_person_course_entries and dynamic_person_course_entries.size > 0 %}
+        {% for course_entry in dynamic_person_course_entries %}
+          <li><a href="{{ course_entry.url | relative_url }}">{{ course_entry.course_code }}: {{ course_entry.course_name }}</a></li>
+        {% endfor %}
+      {% else %}
+        {% for course_code in related_course_codes %}
+        {% if course_code != "" %}
+        {% assign related_course_page = site.pages | where: "course_code", course_code | first %}
+        {% if related_course_page %}
+        <li><a href="{{ related_course_page.url | relative_url }}">{{ related_course_page.title }}</a></li>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if show_related_groups %}
+  <div class="entity-connections-block">
+    <h2>Related Groups</h2>
+    <ul>
+      {% for group in related_groups %}
+      <li><a href="{{ group.url | relative_url }}">{{ group.group_name | default: group.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if show_related_programs %}
+  <div class="entity-connections-block">
+    <h2>Related Programs</h2>
+    <ul>
+      {% for program_url in page.related_programs %}
+      {% assign program_page = site.pages | where: "url", program_url | first %}
+      <li>
+        {% if program_page %}
+        <a href="{{ program_page.url | relative_url }}">{{ program_page.program_name | default: program_page.title }}</a>
+        {% else %}
+        {{ program_url }}
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+</section>
+{% endif %}

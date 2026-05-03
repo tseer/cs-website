@@ -1,19 +1,28 @@
 ---
-title: "CS680"
-layout: page
+title: 'CS680: Object-Oriented Design and Programming'
+layout: course
 permalink: "/academics/courses/CS680"
+entity_type: course
+course_code: CS680
+course_name: Object-Oriented Design and Programming
+credits: 3
+description: Object-oriented techniques for the design and development of software. Students will develop a series of moderate sized programs in C++ and Java and then design and implement a more substantial project in small teams.
+summary: Graduate course in object-oriented design and programming for graduate students covering object-oriented software development and team implementation.
+keywords:
+- CS680
+- Object-Oriented Design and Programming
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS680
+- CS 680
+- 'CS680: Object-Oriented Design and Programming'
+- 'CS 680: Object-Oriented Design and Programming'
+prerequisites:
+- CS310 or permission of instructor.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Object-Oriented Design and Programming (3 credits)**
-
----
-
-\
-Object-oriented techniques for the design and development of software. Students will develop a series of moderate sized programs in C++ and Java and then design and implement a more substantial project in small teams.
-
-**Pre-requisites**
-\
-CS310 or permission of instructor.

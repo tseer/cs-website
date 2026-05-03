@@ -1,0 +1,138 @@
+---
+layout: null
+permalink: /site-index.json
+---
+{
+  {% assign site_root_url = '/' | absolute_url %}
+  "site": {
+    "name": "UMass Boston Computer Science Department",
+    "url": {{ site_root_url | jsonify }}
+  },
+  "sections": [
+    {% for menu_section in site.data.menu %}
+    {% if menu_section.include_in_site_index %}
+    {% assign section = menu_section %}
+    {% assign section_key = section.section_key %}
+    {% assign section_items = section.index_items | default: section.submenu %}
+    {
+      "name": {{ section.name | default: section.title | jsonify }},
+      "description": {{ section.description | default: "" | jsonify }},
+      "items": [
+        {% for item in section_items %}
+        {% assign item_name = item.name | default: item.title %}
+        {% if item.url %}
+        {% assign item_url = item.url %}
+        {% else %}
+        {% assign item_url = item.link | prepend: "/" %}
+        {% endif %}
+        {% assign target_page = site.pages | where: "url", item_url | first %}
+        {% assign item_type = "page" %}
+        {% if section_key == "programs" %}
+          {% assign item_type = "program" %}
+        {% elsif target_page and target_page.path contains "academics/programs/" %}
+          {% assign item_type = "program" %}
+        {% elsif item_url == "/undergraduate-programs" or item_url == "/graduate-programs" or item_url == "/honors-programs" or item_url == "/certificate-programs" %}
+          {% assign item_type = "program" %}
+        {% endif %}
+        {
+          "name": {{ item_name | jsonify }},
+          "url": {{ item_url | absolute_url | jsonify }},
+          "type": {{ item_type | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    },
+    {% endif %}
+    {% for schema_collection in menu_section.schema_collections %}
+    {% if schema_collection.include_in_site_index %}
+    {% assign section = schema_collection %}
+    {% assign section_key = section.section_key %}
+    {% assign section_items = section.index_items | default: section.submenu %}
+    {
+      "name": {{ section.name | default: section.title | jsonify }},
+      "description": {{ section.description | default: "" | jsonify }},
+      "items": [
+        {% for item in section_items %}
+        {% assign item_name = item.name | default: item.title %}
+        {% if item.url %}
+        {% assign item_url = item.url %}
+        {% else %}
+        {% assign item_url = item.link | prepend: "/" %}
+        {% endif %}
+        {% assign target_page = site.pages | where: "url", item_url | first %}
+        {% assign item_type = "page" %}
+        {% if section_key == "programs" %}
+          {% assign item_type = "program" %}
+        {% elsif target_page and target_page.path contains "academics/programs/" %}
+          {% assign item_type = "program" %}
+        {% elsif item_url == "/undergraduate-programs" or item_url == "/graduate-programs" or item_url == "/honors-programs" or item_url == "/certificate-programs" %}
+          {% assign item_type = "program" %}
+        {% endif %}
+        {
+          "name": {{ item_name | jsonify }},
+          "url": {{ item_url | absolute_url | jsonify }},
+          "type": {{ item_type | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    },
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+    {
+      "name": "Research",
+      "description": "Research posts from the UMass Boston Computer Science Department.",
+      "items": [
+        {% for post in site.categories.research %}
+        {
+          "name": {{ post.title | jsonify }},
+          "url": {{ post.url | absolute_url | jsonify }},
+          "type": "post"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    },
+    {
+      "name": "News",
+      "description": "News posts from the UMass Boston Computer Science Department.",
+      "items": [
+        {% for post in site.categories.news %}
+        {
+          "name": {{ post.title | jsonify }},
+          "url": {{ post.url | absolute_url | jsonify }},
+          "type": "post"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    },
+    {
+      "name": "Events",
+      "description": "Event posts from the UMass Boston Computer Science Department.",
+      "items": [
+        {% for post in site.categories.events %}
+        {
+          "name": {{ post.title | jsonify }},
+          "url": {{ post.url | absolute_url | jsonify }},
+          "type": "post"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    },
+    {% assign course_pages = site.pages | where_exp: "item", "item.course_code" | sort: "course_code" %}
+    {
+      "name": "Courses",
+      "description": "Course pages for the UMass Boston Computer Science Department.",
+      "items": [
+        {% for course in course_pages %}
+        {
+          "name": {{ course.course_code | append: ": " | append: course.course_name | jsonify }},
+          "url": {{ course.url | absolute_url | jsonify }},
+          "type": "course",
+          "course_code": {{ course.course_code | jsonify }},
+          "course_name": {{ course.course_name | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+  ]
+}

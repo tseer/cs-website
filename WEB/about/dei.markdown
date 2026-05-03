@@ -31,7 +31,7 @@ permalink: "/dei"
   <br> 617.287.5150 
   <br>
   Marie.Bowen@umb.edu 
-  <br><a href="https://www.umb.edu/odei">www.umb.edu/odei</a>
+  <br><a href="https://www.umb.edu/campus-life/inclusion-belonging/">www.umb.edu/campus-life/inclusion-belonging/</a>
   <br>
   <br>
   By incorporating these principles into our Computer Science courses, we aim to empower our students to become not only skilled and innovative technologists but also advocates for diversity, equity, and inclusion in their future careers. In doing so, we believe we can collectively advance our department's mission of excellence in computer science and contribute to positive change in our field and society as a whole.  

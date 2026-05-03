@@ -2,6 +2,25 @@
 title: "Staff"
 layout: page
 permalink: "/staff"
+summary: Browse current and retired department staff, including office locations, phone numbers, and email contacts where listed.
+entity_type: page
+keywords:
+  - staff
+  - department staff
+  - staff contacts
+aliases:
+  - staff directory
+  - cs staff
+nav_label: Staff
+section_name: Staff
+parent_section: People
+is_landing_page: true
+menu_keywords:
+  - staff
+  - people
+related_topics:
+  - staff
+  - contact information
 ---
 <div id='active_staff' class='listing'>
   <div class="person">

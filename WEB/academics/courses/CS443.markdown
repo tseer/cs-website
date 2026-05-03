@@ -1,19 +1,28 @@
 ---
-title: "CS443"
-layout: page
+title: 'CS443: Mobile Applications'
+layout: course
 permalink: "/academics/courses/CS443"
+entity_type: course
+course_code: CS443
+course_name: Mobile Applications
+credits: 3
+description: Mobile devices are becoming ubiquitous along with the high demand for mobile applications serving corporations and millions of end-users. In this course, students will learn programming skills for developing mobile applications on the Android platform, which is the fastest growing mobile operating system. Android is open source and includes many libraries that can help developers easily implement rich and complex applications. Students in this course will learn how to create, test,and deploy Android applications. Solid skills of Java programming and application development are necessary for successful completion of this course.
+summary: Upper-level course in mobile applications for advanced undergraduates covering Android application development and mobile programming.
+keywords:
+- CS443
+- Mobile Applications
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS443
+- CS 443
+- 'CS443: Mobile Applications'
+- 'CS 443: Mobile Applications'
+prerequisites:
+- CS310
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Mobile Applications (3 credits)**
-
----
-
-\
-Mobile devices are becoming ubiquitous along with the high demand for mobile applications serving corporations and millions of end-users. In this course, students will learn programming skills for developing mobile applications on the Android platform, which is the fastest growing mobile operating system. Android is open source and includes many libraries that can help developers easily implement rich and complex applications. Students in this course will learn how to create, test,and deploy Android applications. Solid skills of Java programming and application development are necessary for successful completion of this course.
-
-**Pre-requisites:**
-\
-CS 310

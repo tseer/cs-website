@@ -1,19 +1,28 @@
 ---
-title: "IT110"
-layout: page
+title: 'IT110: IT Problem Solving'
+layout: course
 permalink: "/academics/courses/IT110"
+entity_type: course
+course_code: IT110
+course_name: IT Problem Solving
+credits: 3
+description: Several IT concepts are introduced including programming, databases, networking, web servers and how they work together in a modern system. Students work in groups to implement examples of these systems. The course examines the importance of key issues such as security and human-computer interaction (HCI). Students should leave the course with an understanding of the components of modern systems and the scope of knowledge needed to become an IT professional.
+summary: Foundational course in it problem solving covering core IT problem-solving concepts and modern systems components.
+keywords:
+- IT110
+- IT Problem Solving
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT110
+- IT 110
+- 'IT110: IT Problem Solving'
+- 'IT 110: IT Problem Solving'
+prerequisites:
+- Placement into Math115.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**IT Problem Solving (3 credits)**
-
----
-
-\
-Several IT concepts are introduced including programming, databases, networking, web servers and how they work together in a modern system. Students work in groups to implement examples of these systems. The course examines the importance of key issues such as security and human-computer interaction (HCI). Students should leave the course with an understanding of the components of modern systems and the scope of knowledge needed to become an IT professional.
-
-**Pre-requisites:**
-\
-Placement into Math115.
