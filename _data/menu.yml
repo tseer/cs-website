@@ -23,6 +23,8 @@
       link: course-schedule
     - title: Courses
       link: courses
+    - title: Course Planner
+      link: planner
     - title: CS Minor
       link: cs-minor
     - title: Graduate Programs
