@@ -27,6 +27,11 @@ related_topics:
 <div id='active_faculty' class='listing'>
   {% assign empty_array = "" | split: "" %}
   {% assign active_people = site.people | default: empty_array | where: "status", "active" | sort: "sort_order" %}
+  {% comment %}
+  Faculty cards intentionally link to generated internal profile pages. Original
+  external faculty pages stay in each person's same_as field for structured data,
+  search, AI-ready indexing, and clear outbound links from the internal profile.
+  {% endcomment %}
   {% for person in active_people %}
   <div class="person">
     <a href="{{ person.url | relative_url }}"><img src="{{ person.image | relative_url }}" alt="{{ person.person_name }}"></a><br>
@@ -36,7 +41,7 @@ related_topics:
     {% if person.telephone %}{{ person.telephone }}<br>{% endif %}
     {% if person.email %}<a href="mailto:{{ person.email }}">{{ person.email }}</a><br>{% endif %}
     {% if person.same_as and person.same_as.size > 0 %}
-    <a href="{{ person.same_as | first }}" target="_blank" rel="noopener">External profile</a>
+    <a href="{{ person.same_as | first }}" target="_blank" rel="noopener">External faculty page</a>
     {% endif %}
   </div>
   {% endfor %}

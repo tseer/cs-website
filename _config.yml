@@ -48,6 +48,12 @@ plugins:
 
 future: true
 
+collections:
+  people:
+    output: true
+  groups:
+    output: true
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -247,7 +247,7 @@ keywords:
       'related', 'show', 'tell', 'that', 'the', 'to', 'what', 'who', 'works'
     ]);
     const navigationTerms = new Set([
-      'about', 'academics', 'people', 'research', 'resources', 'updates', 'news',
+      'about', 'academics', 'people', 'research', 'resources', 'news',
       'events', 'faculty', 'staff', 'funding', 'groups', 'computing', 'programs',
       'advising', 'internship', 'internships'
     ]);

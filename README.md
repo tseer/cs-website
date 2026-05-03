@@ -29,6 +29,10 @@ The search page does not call MCP, Ollama, external scraping code, or a hosted l
 
 `search-data.json` is a broader static retrieval/search export advertised in the page head as machine-readable JSON. `site-index.json` provides a compact section-oriented site index.
 
+## Faculty Profiles
+
+Faculty cards intentionally link to generated internal profile pages under `/people/<person-slug>/`. Original external or personal faculty pages are preserved in each `_people/*.md` file's `same_as` field and rendered from the internal profile page. This keeps navigation consistent while supporting structured data, site search, and AI-ready indexing.
+
 ## Course Offerings
 
 Course offerings are generated from schedule spreadsheet files stored in the repository. The generator:
