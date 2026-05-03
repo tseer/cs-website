@@ -19,6 +19,8 @@
       link: admissions
     - title: Certificate Programs
       link: certificate-programs
+    - title: Course Catalog
+      link: academics/course-catalog
     - title: Course Schedule
       link: course-schedule
     - title: Courses
@@ -53,10 +55,14 @@
       link: funding
     - title: Groups
       link: groups
+    - title: Chimera
+      link: research/chimera
 
 - title: Resources
   link: resources
   submenu:
+    - title: Site Search
+      link: search
     - title: CS Department IT Policies and Procedures
       link: cs-department-it-policies
       #link: CS_dept_IT_Policies.pdf
@@ -73,4 +79,7 @@
     - title: CS Server Guide
       url: https://www.cs.umb.edu/~krina001/index.html
       target: _blank
-      
+
+- title: Updates
+  link: updates
+  accent: true

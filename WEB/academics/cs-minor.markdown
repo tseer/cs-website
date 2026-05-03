@@ -8,7 +8,7 @@ The CS minor program provides an education in the core courses of Computer Scien
 
 **Minor in Computer Science requirements:**
 
-- [CS110]({{site.baseurl}}/academics/courses/CS110), [MATH140](https://www.umb.edu/course_catalog/course_info/ugrd_MATH_all_140), [CS210]({{site.baseurl}}/academics/courses/CS210), [CS220]({{site.baseurl}}/academics/courses/CS220) , [CS240]({{site.baseurl}}/academics/courses/CS240), and [CS310]({{site.baseurl}}/academics/courses/CS310).
+- {% include course-link.html code="CS110" label="CS110" %}, [MATH140](https://www.umb.edu/course_catalog/course_info/ugrd_MATH_all_140), {% include course-link.html code="CS210" label="CS210" %}, {% include course-link.html code="CS220" label="CS220" %} , {% include course-link.html code="CS240" label="CS240" %}, and {% include course-link.html code="CS310" label="CS310" %}.
 - One CS elective at the 300- or higher levels.
 - A minimum 2.0 GPA of the courses for the CS minor is required.
 
@@ -16,7 +16,7 @@ Many students who are studying within the College of Science and Mathematics wil
 
 The Computer Science Department does not offer winter courses; we only offer classes during Fall, Spring, and Summer semesters. We currently do not offer online courses. The minor typically requires 4 semesters due to prerequisites. We do not allow students to take requisites out of ordeer. The schedule is as follows:
 
-1st semester - [CS110]({{site.baseurl}}/academics/courses/CS110) and [MATH140](https://www.umb.edu/course_catalog/course_info/ugrd_MATH_all_140) \
-2nd semester - [CS210]({{site.baseurl}}/academics/courses/CS210) and [CS240]({{site.baseurl}}/academics/courses/CS240) \
-3rd semester - [CS220]({{site.baseurl}}/academics/courses/CS220) and [CS310]({{site.baseurl}}/academics/courses/CS310) \
+1st semester - {% include course-link.html code="CS110" label="CS110" %} and [MATH140](https://www.umb.edu/course_catalog/course_info/ugrd_MATH_all_140) \
+2nd semester - {% include course-link.html code="CS210" label="CS210" %} and {% include course-link.html code="CS240" label="CS240" %} \
+3rd semester - {% include course-link.html code="CS220" label="CS220" %} and {% include course-link.html code="CS310" label="CS310" %} \
 4th semester - (CS elective)

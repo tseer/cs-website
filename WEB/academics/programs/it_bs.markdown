@@ -1,7 +1,62 @@
 ---
-title: "Information Technology BS Program"
+title: Information Technology BS Program
 layout: page
 permalink: "/it_bs"
+entity_type: program
+program_name: Information Technology BS Program
+description: Program structure, tracks, and course planning information for the UMass Boston Bachelor of Science in Information Technology.
+summary: Program structure, tracks, and course planning information for the UMass Boston Bachelor of Science in Information Technology.
+keywords:
+- Information Technology BS Program
+- BS in Information Technology
+- information systems
+- business intelligence
+- UMass Boston
+- Computer Science Department
+aliases:
+- Information Technology BS Program
+- BS in Information Technology
+- IT BS
+- bachelor's in information technology
+related_people:
+- glenn-hoffman
+related_courses:
+- IT110
+- IT111L
+- IT114L
+- IT115L
+- IT230L
+- IT240
+- IT244
+- IT246
+- IT285L
+- IT341
+- IT442
+- IT443
+- IT444
+- IT360
+- IT428
+- IT461
+- IT370
+- IT471
+- IT472
+- IT428L
+- IT456
+- IT460
+- IT461L
+- IT220
+- IT221
+- IT420
+- IT421
+- IT425L
+- IT485
+related_topics:
+- information technology
+- system administration
+- business intelligence
+- computer forensics
+- network administration
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 **Guiding Principles**
@@ -68,23 +123,23 @@ In addition to the general education courses that all undergraduate students tak
     <a name= "a5"></a>
     **There are nine core courses you take in the first two years:**
 
-[IT110 IT Problem Solving]({{site.baseurl}}/academics/courses/IT110)
+{% include course-link.html code="IT110" label="IT110 IT Problem Solving" %}
 
-[IT111L Managerial Statistics]({{site.baseurl}}/academics/courses/IT111L)
+{% include course-link.html code="IT111L" label="IT111L Managerial Statistics" %}
 
-[IT114L Introduction to Java Part I]({{site.baseurl}}/academics/courses/IT114L)
+{% include course-link.html code="IT114L" label="IT114L Introduction to Java Part I" %}
 
-[IT115L Introduction to Java Part II]({{site.baseurl}}/academics/courses/IT115L) (syllabus)
+{% include course-link.html code="IT115L" label="IT115L Introduction to Java Part II" %} (syllabus)
 
-[IT230L Relational Databases]({{site.baseurl}}/academics/courses/IT230L)
+{% include course-link.html code="IT230L" label="IT230L Relational Databases" %}
 
-[IT240 Web Fluency]({{site.baseurl}}/academics/courses/IT240) (syllabus)
+{% include course-link.html code="IT240" label="IT240 Web Fluency" %} (syllabus)
 
-[IT244 Introduction to Linux/Unix]({{site.baseurl}}/academics/courses/IT244)
+{% include course-link.html code="IT244" label="IT244 Introduction to Linux/Unix" %}
 
-[IT246 Introduction to Networks]({{site.baseurl}}/academics/courses/IT246)
+{% include course-link.html code="IT246" label="IT246 Introduction to Networks" %}
 
-[IT285L Social Issues and Ethics in Computing]({{site.baseurl}}/academics/courses/IT285L)
+{% include course-link.html code="IT285L" label="IT285L Social Issues and Ethics in Computing" %}
 
 ---
 
@@ -92,13 +147,13 @@ In addition to the general education courses that all undergraduate students tak
 
 # The System Administration Track
 
-[IT341 Introduction to System Administration]({{site.baseurl}}/academics/courses/IT341)
+{% include course-link.html code="IT341" label="IT341 Introduction to System Administration" %}
 
-[IT442 Windows System Administration]({{site.baseurl}}/academics/courses/IT442)
+{% include course-link.html code="IT442" label="IT442 Windows System Administration" %}
 
-[IT443 Network Security Administration]({{site.baseurl}}/academics/courses/IT443)
+{% include course-link.html code="IT443" label="IT443 Network Security Administration" %}
 
-[IT444 Network Services Administration]({{site.baseurl}}/academics/courses/IT444)
+{% include course-link.html code="IT444" label="IT444 Network Services Administration" %}
 
 ---
 
@@ -106,11 +161,11 @@ In addition to the general education courses that all undergraduate students tak
 
 # The Information Architecture Track
 
-[IT360 Enterprise Software]({{site.baseurl}}/academics/courses/IT360)
+{% include course-link.html code="IT360" label="IT360 Enterprise Software" %}
 
-[IT428 Info Security]({{site.baseurl}}/academics/courses/IT428)
+{% include course-link.html code="IT428" label="IT428 Info Security" %}
 
-[IT461 Systems Analysis]({{site.baseurl}}/academics/courses/IT461)
+{% include course-link.html code="IT461" label="IT461 Systems Analysis" %}
 
 one course from IT 456, 460, 471
 
@@ -120,22 +175,22 @@ one course from IT 456, 460, 471
 
 # The Business Intelligence Track
 
-[IT 370 Business Intelligence]({{site.baseurl}}/academics/courses/IT370)
+{% include course-link.html code="IT370" label="IT 370 Business Intelligence" %}
 
-[IT 471 Data Warehousing]({{site.baseurl}}/academics/courses/IT471)
+{% include course-link.html code="IT471" label="IT 471 Data Warehousing" %}
 
-[IT 472 Data Mining]({{site.baseurl}}/academics/courses/IT472)
+{% include course-link.html code="IT472" label="IT 472 Data Mining" %}
 
 **Two of the following elective courses:**
-[IT 360 Enterprise Software]({{site.baseurl}}/academics/courses/IT360)
+{% include course-link.html code="IT360" label="IT 360 Enterprise Software" %}
 
-[IT 428L Information System Security]({{site.baseurl}}/academics/courses/IT428L)
+{% include course-link.html code="IT428L" label="IT 428L Information System Security" %}
 
-[IT 456 Storage Management]({{site.baseurl}}/academics/courses/IT456)
+{% include course-link.html code="IT456" label="IT 456 Storage Management" %}
 
-[IT 460 Integration Methodologies and Tools]({{site.baseurl}}/academics/courses/IT460)
+{% include course-link.html code="IT460" label="IT 460 Integration Methodologies and Tools" %}
 
-[IT 461L Systems Analysis and Design]({{site.baseurl}}/academics/courses/IT461L)
+{% include course-link.html code="IT461L" label="IT 461L Systems Analysis and Design" %}
 
 [MSIS 422 Decision Support Systems](http://www.umb.edu/academics/course_catalog/course_info/ugrd_MSIS_all_422)
 
@@ -153,13 +208,13 @@ Take five of the following courses:
 
 [SOCIOL104L Intro to Criminal Justice](http://www.umb.edu/academics/course_catalog/course_info/ugrd_SOCIOL_all_104L)
 
-[IT220 Computer Forensics I]({{site.baseurl}}/academics/courses/IT220)
+{% include course-link.html code="IT220" label="IT220 Computer Forensics I" %}
 
-[IT221 Computer Forensics II]({{site.baseurl}}/academics/courses/IT221)
+{% include course-link.html code="IT221" label="IT221 Computer Forensics II" %}
 
-[IT420 Network and Mobile Forensics]({{site.baseurl}}/academics/courses/IT420)
+{% include course-link.html code="IT420" label="IT420 Network and Mobile Forensics" %}
 
-[IT421 Malware Analysis]({{site.baseurl}}/academics/courses/IT421)
+{% include course-link.html code="IT421" label="IT421 Malware Analysis" %}
 
 [SOCIOL364 Cyber Crime](https://www.umb.edu/course_catalog/course_info/ugrd_SOCIOL_all_364)
 
@@ -171,9 +226,9 @@ Take five of the following courses:
 
 Near the end of one’s study, one takes a project management course, three professional electives and a capstone course.
 
-[IT425 Project Management]({{site.baseurl}}/academics/courses/IT425L)
+{% include course-link.html code="IT425L" label="IT425 Project Management" %}
 
-[IT485 Information Technology Capstone]({{site.baseurl}}/academics/courses/IT485)
+{% include course-link.html code="IT485" label="IT485 Information Technology Capstone" %}
 
 In addition to completing the core, the capstone, and the specialized track, students must complete three electives; electives will be selected in an appropriate area outside of IT (e.g. biology, computer science, finance, marketing, nursing, etc…) and are intended to support a student’s expected career path and interests.
 

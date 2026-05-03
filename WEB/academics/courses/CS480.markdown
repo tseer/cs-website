@@ -1,21 +1,28 @@
 ---
-title: "CS480"
-layout: page
+title: 'CS480: Special Topics'
+layout: course
 permalink: "/academics/courses/CS480"
+entity_type: course
+course_code: CS480
+course_name: Special Topics
+credits: 3
+description: An advanced course offering intensive study of selected topics in computer science. Course content varies and will be announced prior to registration.
+summary: Upper-level course in special topics with content varying by offering.
+keywords:
+- CS480
+- Special Topics
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS480
+- CS 480
+- 'CS480: Special Topics'
+- 'CS 480: Special Topics'
+prerequisites:
+- Permission from instructor
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Special Topics (3 credits)**
-
----
-
-\
-An advanced course offering intensive study of selected topics in computer science. Course content varies and will be announced prior to registration.
-
-**Pre-requisites:**
-\
-Permission from instructor.
-\
-Permission of the department chair or undergraduate program director is required for the course to count as a CS upper level elective.

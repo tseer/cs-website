@@ -1,19 +1,28 @@
 ---
-title: "CS724"
-layout: page
+title: 'CS724: Topics in Algorithm Theory and Design'
+layout: course
 permalink: "/academics/courses/CS724"
+entity_type: course
+course_code: CS724
+course_name: Topics in Algorithm Theory and Design
+credits: 3
+description: 'An examination of current topics in algorithm analysis and design: complexity classes, abstract complexity theory, generating functions. Topics may include genetic algorithms, string matching algorithms, and circuit complexity.'
+summary: Graduate course in topics in algorithm theory and design for graduate students covering advanced topics in algorithm theory and complexity.
+keywords:
+- CS724
+- Topics in Algorithm Theory and Design
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS724
+- CS 724
+- 'CS724: Topics in Algorithm Theory and Design'
+- 'CS 724: Topics in Algorithm Theory and Design'
+prerequisites:
+- CS624 or equivalent and permission of the instructor.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Topics in Algorithm Theory and Design (3 credits)**
-
----
-
-\
-An examination of current topics in algorithm analysis and design: complexity classes, abstract complexity theory, generating functions. Topics may include genetic algorithms, string matching algorithms, and circuit complexity.
-
-**Pre-requisites:**
-\
-CS624 or equivalent and permission of the instructor.

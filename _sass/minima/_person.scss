@@ -13,3 +13,125 @@
   float:left;
 
 }
+
+.person img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.person-profile {
+  margin-top: 1.5rem;
+}
+
+.page-summary {
+  margin: 1rem 0 1.5rem 0;
+  padding: 0.9rem 1rem;
+  background: #f6f8fa;
+  border-left: 4px solid #005a8b;
+  border-radius: 4px;
+}
+
+.page-summary-heading {
+  margin: 0 0 0.4rem 0;
+  font-size: 1rem;
+}
+
+.page-summary-text {
+  margin: 0;
+}
+
+.entity-connections {
+  margin: 1.5rem 0;
+}
+
+.entity-connections-block {
+  margin-top: 1rem;
+}
+
+.entity-connections-block h2 {
+  margin-bottom: 0.5rem;
+}
+
+.entity-connections-block ul {
+  margin-left: 1.25rem;
+}
+
+.person-profile-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.person-profile-image img {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.person-profile-meta {
+  flex: 1 1 320px;
+}
+
+.person-profile-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.person-profile-details {
+  margin: 0;
+}
+
+.person-profile-details div {
+  margin-bottom: 0.6rem;
+}
+
+.person-profile-details dt {
+  font-weight: 700;
+}
+
+.person-profile-details dd {
+  margin: 0;
+}
+
+.person-profile-links {
+  margin-top: 1rem;
+}
+
+.person-profile-section {
+  margin-top: 1.75rem;
+}
+
+.group-profile {
+  margin-top: 1.5rem;
+}
+
+.group-profile-section {
+  margin-top: 1.5rem;
+}
+
+.group-profile-links {
+  margin-top: 1rem;
+}
+
+.group-listing {
+  margin-top: 1.5rem;
+}
+
+.group-listing-card {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.group-listing-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.group-listing-card p {
+  margin-bottom: 0.75rem;
+}

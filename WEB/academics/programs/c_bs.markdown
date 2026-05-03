@@ -1,7 +1,62 @@
 ---
-title: "Computer Science BS"
+title: Computer Science BS
 layout: page
 permalink: "/cs_bs"
+entity_type: program
+program_name: Computer Science BS
+description: Degree requirements, outcomes, and sample course planning information for the UMass Boston Bachelor of Science in Computer Science.
+summary: Degree requirements, outcomes, and sample course planning information for the UMass Boston Bachelor of Science in Computer Science.
+keywords:
+- Computer Science BS
+- BS in Computer Science
+- Bachelor of Science in Computer Science
+- computer science major
+- UMass Boston
+- Computer Science Department
+- ABET
+aliases:
+- Computer Science BS
+- BS in Computer Science
+- CS BS
+- Bachelor of Science in Computer Science
+related_people: []
+related_courses:
+- CS110
+- CS210
+- CS240
+- CS220
+- CS310
+- CS341
+- CS420
+- CS450
+- CS444
+- CS451
+- CS410
+- CS285L
+- CS446
+- CS449
+related_groups: []
+related_people:
+- bo-sheng
+related_programs:
+- "/undergraduate-programs"
+- "/honors-programs"
+related_topics:
+- bachelor of science
+- computer science major
+- abet accreditation
+- degree requirements
+- artificial intelligence
+- data mining
+- software engineering
+audience:
+- undergraduate students pursuing a computer science major
+- prospective CS majors
+action_phrases:
+- review CS BS requirements
+- plan a computer science major
+- compare BA and BS pathways
+provider_id: https://www.cs.umb.edu/#department
 ---
 
 Our BS program in Computer Science is accredited by the [Computing Accreditation Commission of ABET](https://www.abet.org/). ABET assures quality for degree programs in applied science, computing, engineering, and technology. The program provides a rigorous education in theory and practice of Computer Science in addition to outside science courses. A BS degree can be used as a basis for many jobs in industry or for graduate work in Computer Science and other fields. We have an Honors Program for students who complete an Honors Thesis.
@@ -80,14 +135,14 @@ We present below a possible sequence of Mathematics and Computer Science courses
 This schedule is only an example; not a prescription or a recommendation. Programs of study will vary depending on students’ interests and abilities. Stronger students may wish to do more than meet the minimal requirements. 
 
 - [Math130](https://www.umb.edu/course_catalog/course_info/ugrd_MATH_all_130) (if necessary)
-- [CS110]({{site.baseurl}}/academics/courses/CS110), [Math140](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_140)
-- [CS210]({{site.baseurl}}/academics/courses/CS210), [Math141](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_141), [Physics113](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_113), [Physics181](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_181)
-- [CS240]({{site.baseurl}}/academics/courses/CS240), [CS220]({{site.baseurl}}/academics/courses/CS220), [Physics114](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_114), [Physics182](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_182)
-- [CS310]({{site.baseurl}}/academics/courses/CS310), [CS341]({{site.baseurl}}/academics/courses/CS341), [Math260](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_260)
-- [CS420]({{site.baseurl}}/academics/courses/CS420), [CS450]({{site.baseurl}}/academics/courses/CS450), [Math345](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_345)
-- [CS444]({{site.baseurl}}/academics/courses/CS444), [CS451]({{site.baseurl}}/academics/courses/CS451), science elective
-- [CS410]({{site.baseurl}}/academics/courses/CS410), Computer Science elective
-- [CS285L]({{site.baseurl}}/academics/courses/CS285L), Computer Science elective
+- {% include course-link.html code="CS110" label="CS110" %}, [Math140](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_140)
+- {% include course-link.html code="CS210" label="CS210" %}, [Math141](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_141), [Physics113](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_113), [Physics181](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_181)
+- {% include course-link.html code="CS240" label="CS240" %}, {% include course-link.html code="CS220" label="CS220" %}, [Physics114](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_114), [Physics182](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_182)
+- {% include course-link.html code="CS310" label="CS310" %}, {% include course-link.html code="CS341" label="CS341" %}, [Math260](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_260)
+- {% include course-link.html code="CS420" label="CS420" %}, {% include course-link.html code="CS450" label="CS450" %}, [Math345](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_345)
+- {% include course-link.html code="CS444" label="CS444" %}, {% include course-link.html code="CS451" label="CS451" %}, science elective
+- {% include course-link.html code="CS410" label="CS410" %}, Computer Science elective
+- {% include course-link.html code="CS285L" label="CS285L" %}, Computer Science elective
 
 
 **Sample Program for the Major (for students who declared a CS major in or after Spring 2023)**
@@ -97,11 +152,11 @@ This schedule satisfies the new CS major requirements.
 This schedule is only an example; not a prescription or a recommendation. Programs of study will vary depending on students’ interests and abilities. Stronger students may wish to do more than meet the minimal requirements.
 
 - [Math130](https://www.umb.edu/course_catalog/course_info/ugrd_MATH_all_130) (if necessary)
-- [CS110]({{site.baseurl}}/academics/courses/CS110), [Math140](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_140)
-- [CS210]({{site.baseurl}}/academics/courses/CS210), [Math141](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_141), [Physics113](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_113), [Physics181](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_181)
-- [CS240]({{site.baseurl}}/academics/courses/CS240), [CS220]({{site.baseurl}}/academics/courses/CS220), [Physics114](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_114), [Physics182](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_182)
-- [CS310]({{site.baseurl}}/academics/courses/CS310), [CS341]({{site.baseurl}}/academics/courses/CS341), [Math260](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_260)
-- [CS420]({{site.baseurl}}/academics/courses/CS420), [CS446]({{site.baseurl}}/academics/courses/CS446), [Math345](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_345)
-- [CS444]({{site.baseurl}}/academics/courses/CS444), [CS451]({{site.baseurl}}/academics/courses/CS451), [CS449]({{site.baseurl}}/academics/courses/CS449)
-- [CS410]({{site.baseurl}}/academics/courses/CS410), Computer Science elective
-- [CS285L]({{site.baseurl}}/academics/courses/CS285L), Computer Science elective
+- {% include course-link.html code="CS110" label="CS110" %}, [Math140](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_140)
+- {% include course-link.html code="CS210" label="CS210" %}, [Math141](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_141), [Physics113](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_113), [Physics181](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_181)
+- {% include course-link.html code="CS240" label="CS240" %}, {% include course-link.html code="CS220" label="CS220" %}, [Physics114](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_114), [Physics182](https://www.umb.edu/academics/course_catalog/course_info/ugrd_PHYSIC_all_182)
+- {% include course-link.html code="CS310" label="CS310" %}, {% include course-link.html code="CS341" label="CS341" %}, [Math260](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_260)
+- {% include course-link.html code="CS420" label="CS420" %}, {% include course-link.html code="CS446" label="CS446" %}, [Math345](https://www.umb.edu/academics/course_catalog/course_info/ugrd_MATH_all_345)
+- {% include course-link.html code="CS444" label="CS444" %}, {% include course-link.html code="CS451" label="CS451" %}, {% include course-link.html code="CS449" label="CS449" %}
+- {% include course-link.html code="CS410" label="CS410" %}, Computer Science elective
+- {% include course-link.html code="CS285L" label="CS285L" %}, Computer Science elective

@@ -1,19 +1,28 @@
 ---
-title: "CS646"
-layout: page
+title: 'CS646: Computer Communication Networks'
+layout: course
 permalink: "/academics/courses/CS646"
+entity_type: course
+course_code: CS646
+course_name: Computer Communication Networks
+credits: 3
+description: Need for computer networks. Architectures of networks. Architectures of systems. ISO Reference Model. Standardization efforts. Specification of protocols. Example of protocols and networks.
+summary: Graduate course in computer communication networks for graduate students covering networking architectures and communication protocols.
+keywords:
+- CS646
+- Computer Communication Networks
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS646
+- CS 646
+- 'CS646: Computer Communication Networks'
+- 'CS 646: Computer Communication Networks'
+prerequisites:
+- CS641
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Computer Communication Networks (3 credits)**
-
----
-
-\
-Need for computer networks. Architectures of networks. Architectures of systems. ISO Reference Model. Standardization efforts. Specification of protocols. Example of protocols and networks.
-
-**Pre-requisites**
-\
-CS641

@@ -1,23 +1,41 @@
 ---
-title: "CS438"
-layout: page
+title: 'CS438: Applied Machine Learning'
+layout: course
 permalink: "/academics/courses/CS438"
+entity_type: course
+course_code: CS438
+course_name: Applied Machine Learning
+credits: 3
+description: This course presents the practical side of machine learning for applications, such as pattern recognition from images or building predictive classifiers. Topics will include linear models for regression, decision trees, rule based classification, support vector machines, Bayesian networks, and clustering. The emphasis of the course will be on the hands-on application of machine learning to a variety of problems. This course does not assume any prior exposure to machine learning theory or practice.
+summary: Upper-level course in applied machine learning for advanced undergraduates covering practical machine learning methods and applications.
+keywords:
+- CS438
+- Applied Machine Learning
+- machine learning
+- predictive modeling
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS438
+- CS 438
+- machine learning
+- applied ML
+- 'CS438: Applied Machine Learning'
+- 'CS 438: Applied Machine Learning'
+prerequisites:
+- CS310
+co_requisites: []
+related_programs:
+- "/cs_ba"
+- "/cs_bs"
+related_topics:
+- machine learning
+- predictive modeling
+- classification
+- pattern recognition
+provider_id: https://www.cs.umb.edu/#department
 ---
 
-
-
-\
-**Applied Machine Learning (3 credits)**
-
----
-
-\
-This course presents the practical side of machine learning for applications, such as pattern recognition from images or building predictive classifiers. Topics will include linear models for regression, decision trees, rule based classification, support vector machines, Bayesian networks, and clustering. The emphasis of the course will be on the hands-on application of machine learning to a variety of problems. This course does not assume any prior exposure to machine learning theory or practice.
-
-**Note:**
-\
+## Notes
 This course is co-taught with CS638.
-
-**Pre-requisites:**
-\
-CS 310
