@@ -1,3 +1,18 @@
+{% assign programs_index = nil %}
+{% for menu_section in site.data.menu %}
+  {% for schema_collection in menu_section.schema_collections %}
+    {% if schema_collection.section_key == "programs" %}
+      {% assign programs_index = schema_collection %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% include item-list-schema.html
+  name=programs_index.name
+  url=page.url
+  description=programs_index.description
+  items=programs_index.index_items
+%}
 <div class="progs">
     <div>
         <div>

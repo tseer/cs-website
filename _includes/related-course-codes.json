@@ -1,0 +1,1 @@
+[{% assign source_codes = include.codes %}{% assign first_written = false %}{% for course_code in source_codes %}{% assign related_course_page = site.pages | where: "course_code", course_code | first %}{% if related_course_page %}{% unless first_written %}{% assign first_written = true %}{% else %}, {% endunless %}{{ course_code | jsonify }}{% endif %}{% endfor %}]

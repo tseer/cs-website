@@ -1,10 +1,34 @@
 ---
-title: "Undergraduate Programs"
+title: Undergraduate Programs
 layout: page
 permalink: "/undergraduate-programs"
+entity_type: program
+program_name: Undergraduate Programs
+description: UMass Boston Computer Science undergraduate programs include the BA and BS in Computer Science, the BS in Information Technology, and the undergraduate certificate in Computer Science.
+summary: Overview of UMass Boston undergraduate computer science offerings, including the BA and BS in Computer Science, the BS in Information Technology, and the undergraduate certificate pathway.
+keywords:
+- Undergraduate Programs
+- Computer Science
+- Information Technology
+- UMass Boston
+- Computer Science Department
+aliases:
+- Undergraduate Programs
+- Undergraduate Computer Science Programs
+- undergraduate degrees
+related_people:
+- bo-sheng
+- glenn-hoffman
+related_courses:
+- CS105
+related_topics:
+- undergraduate study
+- computer science
+- information technology
+- certificate programs
+- degree options
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
 For more information on our program click below:
 
 - [Computer Science BA Program]({{site.baseurl}}/cs_ba)
@@ -14,7 +38,7 @@ For more information on our program click below:
 
 The department offers a BS and BA in [Computer Science](https://www.umb.edu/science-mathematics/academic-departments/computer-science/) and a BS in [Information Technology](https://www.umb.edu/academics/program-finder/information-technology-bs/). Our BS program in Computer Science is accredited by the Computing Accreditation Commission of [ABET](http://www.abet.org/). ABET assures quality for degree programs in applied science, computing, engineering, and technology. The BS program provides a rigorous education in theory and practice of Computer Science in addition to outside science courses. Our BA program provides a similar education in the theory and practice of Computer Science with more of an emphasis on outside humanities. Either degree can be used as a basis for many jobs in industry or for graduate work in Computer Science and other fields. We have an Honors Program for students who complete an Honors Thesis.
 
-We offer the Undergraduate Certificate in Computer Science for non-degree seeking students, and for matriculated students who are majoring in other fields. We also provide a [CS105]({{site.baseurl}}/academics/courses/CS105) course introducing computer literacy for non-majors.
+We offer the Undergraduate Certificate in Computer Science for non-degree seeking students, and for matriculated students who are majoring in other fields. We also provide a {% include course-link.html code="CS105" label="CS105" %} course introducing computer literacy for non-majors.
 
 The Undergraduate Certificate provides a fundamental core education in Computer Science that may be appropriate for students who need a Computer Science education in their career field. It may also be beneficial for students having undergraduate degrees in other fields who want to demonstrate their competency in Computer Science.
 
@@ -33,4 +57,3 @@ New students who wish to work towards a BA or BS at UMass Boston must file the a
 This section describes the various undergraduate degrees that the department offers. Please note that the requirements depend on whether or not you declared your major prior to September 1, 2002. Information for the Undergraduate Certificate Program in CS can be found [here]({{site.baseurl}}/certificate-programs).
 
 **No course taken to satisfy a requirement for a degree or certificate may be taken Pass/Fail.**
-

@@ -1,19 +1,28 @@
 ---
-title: "IT443"
-layout: page
+title: 'IT443: Network Security Administration'
+layout: course
 permalink: "/academics/courses/IT443"
+entity_type: course
+course_code: IT443
+course_name: Network Security Administration
+credits: 3
+description: This course explores the application of policy and techniques to securing both public and private networks. The course is project-based and includes such topics as threat analysis and management, cryptography, firewalls, isolation, issues in securing wireless networks, and certificates.
+summary: Upper-level course in network security administration for advanced undergraduates covering applied cryptography and practical security techniques.
+keywords:
+- IT443
+- Network Security Administration
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT443
+- IT 443
+- 'IT443: Network Security Administration'
+- 'IT 443: Network Security Administration'
+prerequisites:
+- IT341.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Network Security Administration (3 credits)**
-
----
-
-\
-This course explores the application of policy and techniques to securing both public and private networks. The course is project-based and includes such topics as threat analysis and management, cryptography, firewalls, isolation, issues in securing wireless networks, and certificates.
-
-**Pre-requisites:**
-\
-IT341.

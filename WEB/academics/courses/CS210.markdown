@@ -1,19 +1,28 @@
 ---
-title: "CS210"
-layout: page
+title: 'CS210: Intermediate Computing with Data Structures'
+layout: course
 permalink: "/academics/courses/CS210"
+entity_type: course
+course_code: CS210
+course_name: Intermediate Computing with Data Structures
+credits: 4
+description: 'The design and implementation of computer programs in a high-level language, with emphasis on proper design principles and advanced programming concepts, including dynamic data structures and recursion. The assignments are designed to introduce the student to a variety of topics in computing: data structures and ADTs, Lists, Stacks, Queues, Ordered Lists, Binary Trees, and searching and sorting techniques. CS 210L and IT 210L are the same course.'
+summary: Intermediate course in intermediate computing with data structures covering data structures, recursion, and algorithmic problem solving.
+keywords:
+- CS210
+- Intermediate Computing with Data Structures
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS210
+- CS 210
+- 'CS210: Intermediate Computing with Data Structures'
+- 'CS 210: Intermediate Computing with Data Structures'
+prerequisites:
+- CS 110 or CS/IT 115L with a grade of C- or better and MATH 130 or permission of instructor.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Intermediate Computing with Data Structures (4 credits)**
-
----
-
-\
-The design and implementation of computer programs in a high-level language, with emphasis on proper design principles and advanced programming concepts, including dynamic data structures and recursion. The assignments are designed to introduce the student to a variety of topics in computing: data structures and ADTs, Lists, Stacks, Queues, Ordered Lists, Binary Trees, and searching and sorting techniques. CS 210L and IT 210L are the same course.
-
-**Pre-requisites:**
-\
-CS 110 or CS/IT 115L with a grade of C- or better and MATH 130 or permission of instructor.

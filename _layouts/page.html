@@ -3,13 +3,52 @@ layout: default
 table-count: 4
 ---
 <div class="wrapper">
-  <article class="post">
+  <article class="post{% if page.entity_type %} post--{{ page.entity_type | slugify }}{% endif %}">
+    {% assign schema_collection_data = nil %}
+    {% if page.schema_collection_key %}
+    {% for menu_section in site.data.menu %}
+      {% if menu_section.section_key == page.schema_collection_key %}
+        {% assign schema_collection_data = menu_section %}
+        {% break %}
+      {% endif %}
+      {% for schema_collection in menu_section.schema_collections %}
+        {% if schema_collection.section_key == page.schema_collection_key %}
+          {% assign schema_collection_data = schema_collection %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    {% endif %}
+    {% assign schema_collection_items = page.schema_collection_items | default: schema_collection_data.index_items | default: schema_collection_data.submenu %}
+    {% if schema_collection_items %}
+    {% assign schema_collection_name = page.schema_collection_name | default: schema_collection_data.name | default: schema_collection_data.title | default: page.title %}
+    {% assign schema_collection_description = page.schema_collection_description | default: schema_collection_data.description %}
+    {% include item-list-schema.html
+      name=schema_collection_name
+      url=page.url
+      description=schema_collection_description
+      items=schema_collection_items
+    %}
+    {% endif %}
+    {% if page.entity_type == "program" %}
+    {% include program-json-ld.html %}
+    {% endif %}
+    {% include breadcrumbs.html %}
+    {% include breadcrumb-json-ld.html %}
+    {% unless page.layout == "course" or page.hide_page_header %}
     <header class="post-header">
       <h1 class="post-title">{{ page.title | escape }}</h1>
     </header>
-    
+    {% endunless %}
+    {% unless page.layout == "course" or page.layout == "person" or page.layout == "group" %}
+    {% include page-summary.html %}
+    {% endunless %}
     <div class="post-content">
       {{ content }}
     </div>
+
+    {% unless page.layout == "course" or page.layout == "person" or page.layout == "group" %}
+    {% include entity-connections.html %}
+    {% endunless %}
   </article>
 </div>

@@ -19,6 +19,22 @@ function loadCourses(filename) {
 
 }
 
+function getCourseEntry(courses, code) {
+  if (!courses || !courses.hasOwnProperty(code)) {
+    return null;
+  }
+
+  var entry = courses[code];
+  if (typeof entry === 'string') {
+    return {
+      title: entry,
+      url: 'academics/courses/' + code
+    };
+  }
+
+  return entry;
+}
+
 function printOfficeHours(url, element) {
   var req = new XMLHttpRequest();
 
@@ -126,7 +142,8 @@ function printSchedule(url, element) {
       aaaa = row
       var course = row['Subject'].toString().trim()+row['Ctlg #'].toString().trim();
       var section = row['Sect'].toString();
-      var title = courses[course];
+      var courseEntry = getCourseEntry(courses, course);
+      var title = courseEntry ? courseEntry.title : '';
       var room = row['Fac Id'];
       var days = row['Mtg Ptrn'];
       var time = row['Mtg Start'] + '-' + row['Mtg End'];
@@ -166,11 +183,13 @@ function printSchedule(url, element) {
         section = section.substr(0,section.length-1);
       }  
 
-      var url1 = "<a href='academics/courses/" + course + "'>";
-      var url2 = "</a>";
+      var courseLabel = course;
+      if (courseEntry && courseEntry.url) {
+        courseLabel = "<a href='" + courseEntry.url + "'>" + course + "</a>";
+      }
 
       var html = "<tr>";
-      html += "<td>"+url1+course+url2+"</td>";
+      html += "<td>"+courseLabel+"</td>";
       html += "<td>"+section+"</td>";
       html += "<td>"+title+"</td>";
       html += "<td>"+room+"</td>";

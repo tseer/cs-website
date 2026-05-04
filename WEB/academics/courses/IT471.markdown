@@ -1,15 +1,36 @@
 ---
-title: "IT471"
-layout: page
+title: 'IT471: Data Warehousing for Business Intelligence'
+layout: course
 permalink: "/academics/courses/IT471"
+entity_type: course
+course_code: IT471
+course_name: Data Warehousing for Business Intelligence
+credits: 3
+description: This course provides students with the technical skills required to plan and implement a data warehouse using a database management system. It describes basic data warehousing concepts. The course covers design and implementation of data marts and operational data stores. Topics include dimensional data modeling for warehouses, CUBES and storage modes including MOLAP, ROLAP and HOLAP, and data warehousing infrastructure and analytical service tool selection. This course involves designing a data warehousing system and the implementation of a database with a stare schema, gathering data from primary data sources, transforming data, and loading it into a database management system. Students create cubes using OLAP and analyze cube data using client application.
+summary: Upper-level course in data warehousing for business intelligence covering dimensional modeling, OLAP, and warehouse implementation.
+keywords:
+- IT471
+- Data Warehousing for Business Intelligence
+- data warehousing
+- OLAP
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT471
+- IT 471
+- data warehousing
+- business intelligence
+- 'IT471: Data Warehousing for Business Intelligence'
+- 'IT 471: Data Warehousing for Business Intelligence'
+prerequisites: []
+co_requisites: []
+related_programs:
+- "/it_bs"
+related_topics:
+- data warehousing
+- business intelligence
+- dimensional modeling
+- OLAP
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Data Warehousing for Business Intelligence (3 credits)**
-
----
-
-\
-This course provides students with the technical skills required to plan and implement a data warehouse using a database management system. It describes basic data warehousing concepts. The course covers design and implementation of data marts and operational data stores. Topics include dimensional data modeling for warehouses, CUBES and storage modes including MOLAP, ROLAP and HOLAP, and data warehousing infrastructure and analytical service tool selection. This course involves designing a data warehousing system and the implementation of a database with a stare schema, gathering data from primary data sources, transforming data, and loading it into a database management system. Students create cubes using OLAP and analyze cube data using client application.

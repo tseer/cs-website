@@ -1,0 +1,59 @@
+{% assign empty_array = "" | split: "" %}
+{% assign course_pages = site.pages | default: empty_array | where_exp: "item", "item.course_code" | sort: "course_code" %}
+<script type="application/json" id="course-link-guard-data">
+[
+  {% for course in course_pages %}
+  {{ course.url | relative_url | jsonify }}{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
+
+<script>
+  (function() {
+    const dataNode = document.getElementById('course-link-guard-data');
+    if (!dataNode) {
+      return;
+    }
+
+    function normalizePathname(rawUrl) {
+      if (!rawUrl) {
+        return '';
+      }
+
+      try {
+        const resolved = new URL(rawUrl, window.location.origin);
+        return resolved.pathname.replace(/\/+$/, '') || '/';
+      } catch (error) {
+        return '';
+      }
+    }
+
+    const validCoursePaths = new Set(
+      JSON.parse(dataNode.textContent).map(normalizePathname).filter(Boolean)
+    );
+
+    if (!validCoursePaths.size) {
+      return;
+    }
+
+    const courseAnchors = document.querySelectorAll('a[href*="/academics/courses/"]');
+
+    courseAnchors.forEach((link) => {
+      const pathname = normalizePathname(link.getAttribute('href'));
+      if (!pathname) {
+        return;
+      }
+
+      if (!pathname.includes('/academics/courses/')) {
+        return;
+      }
+
+      if (validCoursePaths.has(pathname)) {
+        return;
+      }
+
+      const replacement = document.createTextNode(link.textContent);
+      link.replaceWith(replacement);
+    });
+  })();
+</script>

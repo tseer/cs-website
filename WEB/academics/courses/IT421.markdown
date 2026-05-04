@@ -1,19 +1,37 @@
 ---
-title: "IT421"
-layout: page
+title: 'IT421: Business Intelligence Applications'
+layout: course
 permalink: "/academics/courses/IT421"
+entity_type: course
+course_code: IT421
+course_name: Business Intelligence Applications
+credits: 3
+description: This course provides an introduction to advanced digital forensics topics relating to malicious software (malware) and its analysis. Malware (virus, worms, rootkits, spam...) represents an increasing information security threat to computer systems and networks. Students will review software engineering design fundamentals and reverse engineering techniques utilized to conduct static and dynamic forensic analysis on computer systems and networks on multiple platforms (e.g.Windows, Linux..). Students will learn about the importance of forensic principles, legal considerations, digital evidence controls, and documentation of forensic procedures in the context of malware. In addition, students will study remediation measures for malware infection.
+summary: Upper-level course on malware analysis and digital forensics covering reverse engineering, forensic procedures, and incident response.
+keywords:
+- IT421
+- Business Intelligence Applications
+- malware analysis
+- digital forensics
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT421
+- IT 421
+- malware analysis
+- digital forensics
+- 'IT421: Business Intelligence Applications'
+- 'IT 421: Business Intelligence Applications'
+prerequisites:
+- MSIS110 or IT110 and IT244
+co_requisites: []
+related_programs:
+- "/it_bs"
+related_topics:
+- malware analysis
+- digital forensics
+- reverse engineering
+- information security
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Business Intelligence Applications (3 credits)**
-
----
-
-\
-This course provides an introduction to advanced digital forensics topics relating to malicious software (malware) and its analysis. Malware (virus, worms, rootkits, spam...) represents an increasing information security threat to computer systems and networks. Students will review software engineering design fundamentals and reverse engineering techniques utilized to conduct static and dynamic forensic analysis on computer systems and networks on multiple platforms (e.g.Windows, Linux..). Students will learn about the importance of forensic principles, legal considerations, digital evidence controls, and documentation of forensic procedures in the context of malware. In addition, students will study remediation measures for malware infection.
-
-**Pre-requisites:**
-\
-MSIS110 or IT110 and IT244

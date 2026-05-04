@@ -1,15 +1,27 @@
 ---
-title: "IT246"
-layout: page
+title: 'IT246: Introduction to Networks'
+layout: course
 permalink: "/academics/courses/IT246"
+entity_type: course
+course_code: IT246
+course_name: Introduction to Networks
+credits: 3
+description: 'We will study basic data communication and networking concepts for LAN and WAN: network protocols with emphasis on Ethernet, PPP, TCP/IP, and WWW protocols, and mobile and wireless networks. Network applications include Telnet, ftp, email, distributed file systems, and client-server applications. We survey network security issues. We will do hands-on network simulation and network sniffing exercises to see how these technologies work in practice.'
+summary: Introductory course in networks covering processes, memory, files, and operating system design.
+keywords:
+- IT246
+- Introduction to Networks
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT246
+- IT 246
+- 'IT246: Introduction to Networks'
+- 'IT 246: Introduction to Networks'
+prerequisites: []
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Introduction to Networks (3 credits)**
-
----
-
-\
-We will study basic data communication and networking concepts for LAN and WAN: network protocols with emphasis on Ethernet, PPP, TCP/IP, and WWW protocols, and mobile and wireless networks. Network applications include Telnet, ftp, email, distributed file systems, and client-server applications. We survey network security issues. We will do hands-on network simulation and network sniffing exercises to see how these technologies work in practice.

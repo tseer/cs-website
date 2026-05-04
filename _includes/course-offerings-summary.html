@@ -1,0 +1,39 @@
+{% assign offerings_data = site.data.course_offerings %}
+{% assign course_pages = site.pages | where_exp: "item", "item.course_code" %}
+{% assign course_offerings = offerings_data.course_index[page.course_code] %}
+
+{% if course_offerings %}
+  <section class="course-offerings-summary">
+    <h2>Current &amp; Upcoming Offerings</h2>
+
+    {% for academic_year in offerings_data.academic_years %}
+      {% assign academic_year_has_offerings = false %}
+      {% for term in academic_year.terms %}
+        {% assign term_offerings = term.offerings | where: "course_code", page.course_code %}
+        {% if term_offerings.size > 0 %}
+          {% assign academic_year_has_offerings = true %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      {% if academic_year_has_offerings %}
+        <div class="course-offerings-year">
+          <h3>{{ academic_year.label }}</h3>
+
+          {% for term in academic_year.terms %}
+            {% assign term_offerings = term.offerings | where: "course_code", page.course_code %}
+            {% if term_offerings.size > 0 %}
+              <details class="catalog-term-details catalog-term-details-compact">
+                <summary>
+                  <span class="catalog-term-summary-text">{{ term.label }}</span>
+                  <span class="catalog-term-summary-count">{{ term_offerings.size }} section{% if term_offerings.size != 1 %}s{% endif %}</span>
+                </summary>
+                {% include course-catalog-table.html offerings=term_offerings course_pages=course_pages compact=true hide_course=true hide_title=true %}
+              </details>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </section>
+{% endif %}

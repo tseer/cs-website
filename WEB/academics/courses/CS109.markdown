@@ -1,18 +1,28 @@
 ---
-title: "CS109"
-layout: page
+title: 'CS109: Computer Programming for Engineering'
+layout: course
 permalink: "/academics/courses/CS109"
+entity_type: course
+course_code: CS109
+course_name: Computer Programming for Engineering
+credits: 3
+description: An introduction to computer programming for engineering students. This course is not intended for computer science majors. Credit cannot be used to satisfy any requirement of computer science majors.
+summary: Foundational course in computer programming for engineering for non-majors.
+keywords:
+- CS109
+- Computer Programming for Engineering
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS109
+- CS 109
+- 'CS109: Computer Programming for Engineering'
+- 'CS 109: Computer Programming for Engineering'
+prerequisites:
+- Completion of MATH 130 or equivalent of math placement exam.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Computer Programming for Engineering (3 credits)**
-
----
-
-\
-An introduction to computer programming for engineering students. This course is not intended for computer science majors. Credit cannot be used to satisfy any requirement of computer science majors.
-**Pre-requisites:**
-\
-Completion of MATH 130 or equivalent of math placement exam.

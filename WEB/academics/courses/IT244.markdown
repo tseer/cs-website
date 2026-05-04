@@ -1,15 +1,27 @@
 ---
-title: "IT244"
-layout: page
+title: 'IT244: Introduction to Linux/Unix'
+layout: course
 permalink: "/academics/courses/IT244"
+entity_type: course
+course_code: IT244
+course_name: Introduction to Linux/Unix
+credits: 3
+description: A course designed to introduce students to Linux and UNIX. Students will install, set up, and operate standard tools and learn how they operate together. By course end students will have installed a fully functional Internet server while understanding its structure. Security issues of operating systems will be studied throughout the course.
+summary: Introductory course in linux/unix covering processes, memory, files, and operating system design.
+keywords:
+- IT244
+- Introduction to Linux/Unix
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT244
+- IT 244
+- 'IT244: Introduction to Linux/Unix'
+- 'IT 244: Introduction to Linux/Unix'
+prerequisites: []
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Introduction to Linux/Unix (3 credits)**
-
----
-
-\
-A course designed to introduce students to Linux and UNIX. Students will install, set up, and operate standard tools and learn how they operate together. By course end students will have installed a fully functional Internet server while understanding its structure. Security issues of operating systems will be studied throughout the course.

@@ -1,7 +1,28 @@
 ---
-title: "Internship2"
+title: "Department of Defense Research Opportunities"
 layout: page
 permalink: "/news_and_events/jobs_and_internships/396/"
+entity_type: resource
+summary: Research and internship opportunity listing from the U.S. Department of Defense and affiliated labs.
+keywords:
+  - internship
+  - research opportunities
+  - Department of Defense
+  - fellowship
+  - jobs
+  - internships
+  - career opportunities
+aliases:
+  - DoD internships
+  - defense research opportunities
+  - department of defense internships
+related_topics:
+  - internships
+  - research
+  - careers
+  - fellowships
+  - career opportunities
+parent_section: News-and-Events
 ---
 
 ## Research Opportunities with the U.S. Department of Defense

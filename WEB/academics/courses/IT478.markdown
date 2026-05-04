@@ -1,15 +1,27 @@
 ---
-title: "IT478"
-layout: page
+title: 'IT478: Independent Study'
+layout: course
 permalink: "/academics/courses/IT478"
+entity_type: course
+course_code: IT478
+course_name: Independent Study
+credits: 3
+description: Work done by a student or group of students under faculty supervision on material not currently offered in a regularly scheduled course. Students wishing to undertake such work must first find a faculty member willing to supervise it; the work to be completed must be approved by the department chairperson.
+summary: Upper-level course in independent study with faculty-supervised work on a specialized topic.
+keywords:
+- IT478
+- Independent Study
+- UMass Boston
+- course
+- Information Technology
+aliases:
+- IT478
+- IT 478
+- 'IT478: Independent Study'
+- 'IT 478: Independent Study'
+prerequisites: []
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Independent Study (3 credits)**
-
----
-
-\
-Work done by a student or group of students under faculty supervision on material not currently offered in a regularly scheduled course. Students wishing to undertake such work must first find a faculty member willing to supervise it; the work to be completed must be approved by the department chairperson.

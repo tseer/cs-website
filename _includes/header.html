@@ -10,7 +10,7 @@
   </div>
 
   <div class="header-bottom">
-    <a href="/" style='text-decoration: none; color:black;'>
+    <a href="{{ '/' | relative_url }}" style='text-decoration: none; color:black;'>
       <div class="wrapper">
         <p>Department of</p>
         <p>COMPUTER SCIENCE</p>
@@ -24,29 +24,54 @@
         <input type="checkbox" id="drop" />
         <label for="drop" class="toggle">Menu</label>
         <ul class="menu">
-          <li><a href="{{ site.baseurl }}/">Home</a></li>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
           {% for menui in site.data.menu %}
-          <li>
+          <li{% unless menui.submenu %} class="no-submenu"{% endunless %}>
+            {% if menui.submenu %}
             <input type="checkbox" id="drop-{{ menui.title }}" />
-            <label for="drop-{{ menui.title }}" class="toggle"
+            <label for="drop-{{ menui.title }}" class="toggle{% if menui.accent %} nav-accent{% endif %}"{% if menui.accent %} style="color: #c1121f !important; font-weight: 700;"{% endif %}
               >{{ menui.title }}</label
             >
-            <a href="{{ site.baseurl }}/{{ menui.link }}">{{ menui.title }}</a>
+            {% endif %}
+            <a href="{{ menui.link | prepend: '/' | relative_url }}"{% if menui.accent %} class="nav-accent" style="color: #c1121f !important; font-weight: 700;"{% endif %}>{{ menui.title }}</a>
             {% if menui.submenu %}
             <ul>
               {% for submenui in menui.submenu %}
-              <li>
+              <li{% if submenui.submenu %} class="has-submenu"{% else %} class="no-submenu"{% endif %}>
+                {% if submenui.submenu %}
+                <input type="checkbox" id="drop-{{ menui.title | slugify }}-{{ submenui.title | slugify }}" />
+                <label for="drop-{{ menui.title | slugify }}-{{ submenui.title | slugify }}" class="toggle">{{ submenui.title }}</label>
+                {% endif %}
                 <a href="
-                  {% if submenui.url  %}
+                  {% if submenui.url %}
                     {{ submenui.url }}
                   {% else %}
-                    {{ site.baseurl }}/{{ submenui.link }}
+                    {{ submenui.link | prepend: '/' | relative_url }}
                   {% endif %}
                 "
-                  {% if submenui.target  %}
+                  {% if submenui.target %}
                     target="{{ submenui.target }}"
                   {% endif %}
                 >{{ submenui.title }}</a>
+                {% if submenui.submenu %}
+                <ul>
+                  {% for childmenui in submenui.submenu %}
+                  <li>
+                    <a href="
+                      {% if childmenui.url %}
+                        {{ childmenui.url }}
+                      {% else %}
+                        {{ childmenui.link | prepend: '/' | relative_url }}
+                      {% endif %}
+                    "
+                      {% if childmenui.target %}
+                        target="{{ childmenui.target }}"
+                      {% endif %}
+                    >{{ childmenui.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
               </li>
               {% endfor %}
             </ul>
