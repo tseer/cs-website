@@ -4,7 +4,7 @@ layout: page
 
 {% assign course_title = page.course_code %}
 {% assign course_pages = site.pages | where_exp: "item", "item.course_code" %}
-{% assign linked_course_pages = site.pages | where_exp: "item", "item.course_code and item.course_code != page.course_code" %}
+{% assign linked_course_pages = course_pages | where_exp: "item", "item.course_code != page.course_code" %}
 {% assign offerings_data = site.data.course_offerings %}
 {% assign course_offerings = offerings_data.course_index[page.course_code] %}
 {% assign site_root_url = '/' | absolute_url %}
