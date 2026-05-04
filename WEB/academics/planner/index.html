@@ -276,7 +276,7 @@ permalink: /planner
     </div>
 
     <script>
-        fetch('/WEB/academics/planner/prerequisites.json?v=' + new Date().getTime())
+        fetch('{{ site.baseurl }}/WEB/academics/planner/prerequisites.json?v=' + new Date().getTime())
             .then(res => res.json())
             .then(data => {
                 const cy = cytoscape({
