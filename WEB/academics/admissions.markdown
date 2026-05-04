@@ -15,30 +15,30 @@ permalink: "/admissions"
 
 **Freshman Students** interested in applying for Computer Science BS, Computer Science BA, Information Technology BS, and CS Certificate, can visit the sites below:
 
-**[US Undergraduate Freshman Application, Requirements, Deadline, and more](https://admissions.umb.edu/freshman-students/apply)**<br>
-- [Cost and Aid for Freshman Students](https://admissions.umb.edu/freshman-students/cost-and-aid)<br>
+**[US Undergraduate Freshman Application, Requirements, Deadline, and more](https://www.umb.edu/admissions/first-year-students/apply/)**<br>
+- [Cost and Aid for Freshman Students](https://www.umb.edu/financial-aid/undergraduate-financial-aid/)<br>
 
 **[International Undergraduate Application, Requirements, Deadline, and more](https://www.umb.edu/admissions/international-students/apply-as-a-international-student/first-year/)**<br>
-- [Cost and Aid for International Undergraduate Students](https://admissions.umb.edu/international-students/cost-and-aid)<br>
+- [Cost and Aid for International Undergraduate Students](https://www.umb.edu/financial-aid/undergraduate-financial-aid/international-undergraduate-students/)<br>
 <br>
 
 **Transfer Students** interested in applying for Computer Science BS, Computer Science BA, Information Technology BS, and CS Certificate, by visiting the sites below:
 
-**[Residential Undergraduate Transfer Student Application,Requirements, Deadline, and more](https://admissions.umb.edu/transfer-students/apply)**<br>
-- [Cost and Aid for Transfer Students](https://admissions.umb.edu/transfer-students/cost-and-aid)<br>
+**[Residential Undergraduate Transfer Student Application,Requirements, Deadline, and more](https://www.umb.edu/admissions/transfer-students/apply/)**<br>
+- [Cost and Aid for Transfer Students](https://www.umb.edu/financial-aid/undergraduate-financial-aid/)<br>
 
 **[International Undergraduate Transfer Application,Requirements, Deadline, and more](https://www.umb.edu/admissions/international-students/apply-as-a-international-student/transfer/)**<br>
-- [Cost and Aid for International Undergraduate Students](https://admissions.umb.edu/international-students/cost-and-aid)<br>
+- [Cost and Aid for International Undergraduate Students](https://www.umb.edu/financial-aid/undergraduate-financial-aid/international-undergraduate-students/)<br>
 <br>
 
 **Graduate Students** interested in applying for Computer Science Masters, Ph.D., and Database Technology Certificate, by visiting the sites below:
 
-**[Residential Graduate Student Application and Requirements](https://admissions.umb.edu/graduate-students/apply)**<br>
+**[Residential Graduate Student Application and Requirements](https://www.umb.edu/admissions/graduate-students/apply/)**<br>
 - Recommended Scores (GRE: 155+ in Quantitative Reasoning; IELTS: 6.0; TOEFL: 79+ on the IBT)<br>
 - Deadline: June 1 for Fall and November 1 for Spring (No Summer)<br>
-- [Residential Graduate Cost and Aid](https://www.umb.edu/media/umassboston/editor-uploads/bursar/Fall-2023-and-Spring-2024-Graduate-Full-time-Tuition-and-Fees.pdf)<br>
+- [Residential Graduate Cost and Aid](https://www.umb.edu/admissions/graduate-students/apply/estimate-your-program-costs/)<br>
 
-**[International Graduate Student Application and Requirements](https://admissions.umb.edu/graduate-students/apply/international-graduate-applicants)**<br>
+**[International Graduate Student Application and Requirements](https://www.umb.edu/admissions/graduate-students/apply/)**<br>
 - Recommended Scores (GRE: 155+ in Quantitative Reasoning; IELTS: 6.0; TOEFL: 79+ on the IBT)<br>
 - International Deadline: May 1 for Fall and October 1 for Spring (No Summer)<br>
 - [Cost and Aid for International Graduate Students](https://www.umb.edu/financial-aid/)<br>
@@ -49,6 +49,6 @@ permalink: "/admissions"
 - [Non-Degree Students Application, Requirements, Deadline and more](https://www.umb.edu/registrar/registration/guest-students/)<br>
 <br>
 
-For more information regarding admissions please visit the [UMass Boston Graduate Admissions](https://admissions.umb.edu/graduate-students) web page.<br>
+For more information regarding admissions please visit the [UMass Boston Graduate Admissions](https://www.umb.edu/admissions/graduate-students/) web page.<br>
 
 For information regarding tuition and fees please visit the [Bursar's Office](https://www.umb.edu/bursar) web page.

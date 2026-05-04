@@ -2,6 +2,26 @@
 title: "Office Hours"
 layout: page
 permalink: "office-hours"
+entity_type: resource
+summary: Department office hours listing with instructor contact details, office locations, phone numbers, and availability.
+keywords:
+  - office hours
+  - instructor office hours
+  - faculty office hours
+  - contact instructors
+  - advising hours
+  - instructor contact
+aliases:
+  - instructor office hours
+  - faculty office hours
+  - advising hours
+  - instructor availability
+related_topics:
+  - advising
+  - instructor contact
+  - student support
+  - office locations
+parent_section: Resources
 ---
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>

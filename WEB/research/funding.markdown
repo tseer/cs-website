@@ -2,6 +2,28 @@
 title: "Funding"
 layout: page
 permalink: "/funding"
+summary: Department research funding page listing grants, sponsors, investigators, and award amounts across CS research projects.
+entity_type: page
+keywords:
+  - funding
+  - research funding
+  - grants
+  - sponsors
+aliases:
+  - grants
+  - funded research
+nav_label: Funding
+section_name: Funding
+parent_section: Research
+is_landing_page: true
+menu_keywords:
+  - funding
+  - research funding
+  - grants
+related_topics:
+  - grants
+  - sponsored research
+  - research funding
 ---
 
 PIs and Co-PIs only include members of the UMass Boston Computer Science department.
@@ -431,7 +453,7 @@ End Date                           |March 31, 2012
 
 <h3>CSR-PDOS: A Scalable and Self-Organizing System Architecture for Fast and Efficient Information Retrieval in Large-Scale Decentralized Networks</h3>
 
-|Source of funds                   |[National Science Foundation](http://www.vertica.com)
+|Source of funds                   |[National Science Foundation](https://new.nsf.gov/)
 |PI(s)                             |[Duc Tran](http://www.cs.umb.edu/~duc) 
 |Start Date                        |Sept. 1, 2006
 |End Date                           |Aug. 31, 2009
@@ -501,7 +523,7 @@ End Date                           |March 31, 2012
 
 <h3>Collaborative Research: Development of New Digital Library Applications in the Context of a Basic Ontology for Biosystematics Information Using the Literature of Entomology (ants)</h3>
 
-|Source of funds                   |[The American Museum of National History](http://www.amnh.org)
+|Source of funds                   |[The American Museum of Natural History](https://www.amnh.org/)
 |PI(s)                             |[Robert Morris](http://www.cs.umb.edu/~ram) 
 |Start Date                        |Dec. 1, 2003
 |End Date                          |Nov. 30, 2006
@@ -546,7 +568,5 @@ End Date                           |March 31, 2012
 |Start Date                        |Sept. 1, 1997
 |End Date                          |Aug 31, 2004
 |Amount                            |$360,000
-
-
 
 

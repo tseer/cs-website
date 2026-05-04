@@ -1,0 +1,25 @@
+{%- assign program_description = page.summary | default: page.description -%}
+{%- assign site_root_url = '/' | absolute_url -%}
+{%- if page.provider_id -%}
+  {%- assign program_provider_id = page.provider_id -%}
+{%- else -%}
+  {%- assign program_provider_id = site_root_url | append: "#department" -%}
+{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalProgram",
+  "@id": {{ page.url | absolute_url | append: "#program" | jsonify }},
+  "name": {{ page.program_name | default: page.title | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "description": {{ program_description | strip_html | normalize_whitespace | jsonify }},
+  "provider": {
+    "@type": "Organization",
+    "@id": {{ program_provider_id | jsonify }},
+    "name": {{ site.department_name | default: "Computer Science Department" | jsonify }},
+    "url": {{ site_root_url | jsonify }}
+  }{% if page.keywords %},
+  "keywords": {{ page.keywords | join: ", " | jsonify }}
+  {% endif %}
+}
+</script>

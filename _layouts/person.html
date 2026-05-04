@@ -1,0 +1,74 @@
+---
+layout: page
+---
+
+{% include person-json-ld.html %}
+
+<div class="person-profile">
+  <div class="person-profile-hero">
+    {% if page.image %}
+    <div class="person-profile-image">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.person_name | default: page.title }}">
+    </div>
+    {% endif %}
+    <div class="person-profile-meta">
+      {% if page.job_title %}
+      <p class="person-profile-title">{{ page.job_title }}</p>
+      {% endif %}
+      {% include page-summary.html %}
+
+      <dl class="person-profile-details">
+        {% if page.email %}
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:{{ page.email }}">{{ page.email }}</a></dd>
+        </div>
+        {% endif %}
+        {% if page.telephone %}
+        <div>
+          <dt>Phone</dt>
+          <dd>{{ page.telephone }}</dd>
+        </div>
+        {% endif %}
+        {% if page.office %}
+        <div>
+          <dt>Office</dt>
+          <dd>{{ page.office }}</dd>
+        </div>
+        {% endif %}
+        {% if page.works_for %}
+        <div>
+          <dt>Department</dt>
+          <dd>{{ page.works_for }}</dd>
+        </div>
+        {% endif %}
+        {% if page.affiliations and page.affiliations.size > 0 %}
+        <div>
+          <dt>Affiliation</dt>
+          <dd>{{ page.affiliations | join: ", " }}</dd>
+        </div>
+        {% endif %}
+      </dl>
+
+      {% if page.same_as and page.same_as.size > 0 %}
+      <section class="person-profile-links" aria-labelledby="person-external-profiles">
+        <h2 id="person-external-profiles">External Profiles</h2>
+        <ul>
+        {% for link in page.same_as %}
+          <li><a href="{{ link }}" target="_blank" rel="noopener">Faculty Website</a></li>
+        {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+    </div>
+  </div>
+
+  {% include entity-connections.html %}
+
+  {% assign stripped_content = content | strip %}
+  {% if stripped_content != "" %}
+  <section class="person-profile-section">
+    {{ content }}
+  </section>
+  {% endif %}
+</div>

@@ -1,7 +1,27 @@
 ---
-title: "Job Opening"
+title: "LSAMP Summer Internship Opportunity"
 layout: page
 permalink: "/news_and_events/jobs_and_internships/393/"
+entity_type: resource
+summary: Summer internship and STEM research opportunity for LSAMP students with stipend support.
+keywords:
+  - internship
+  - summer internship
+  - LSAMP
+  - STEM internship
+  - research opportunity
+  - career opportunity
+aliases:
+  - LSAMP internship
+  - summer internship
+  - STEM internship opportunity
+related_topics:
+  - internships
+  - careers
+  - STEM opportunities
+  - research experience
+  - career opportunities
+parent_section: News-and-Events
 ---
 
 ## Summer Internship Opportunity for LSAMP Students at UMASS

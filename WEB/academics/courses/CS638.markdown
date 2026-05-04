@@ -1,19 +1,41 @@
 ---
-title: "CS638"
-layout: page
+title: 'CS638: Applied Machine Learning'
+layout: course
 permalink: "/academics/courses/CS638"
+entity_type: course
+course_code: CS638
+course_name: Applied Machine Learning
+credits: 3
+description: This course presents the practical side of machine learning for applications, such as pattern recognition from images or building predictive classifiers. Topics will include linear models for regression, decision trees, rule based classification, support vector machines, Bayesian networks, and clustering. The emphasis of the course will be on the hands-on application of machine learning to a variety of problems. This course does not assume any prior exposure to machine learning theory or practice.
+summary: Graduate course in applied machine learning for graduate students covering practical machine learning methods and applications.
+keywords:
+- CS638
+- Applied Machine Learning
+- machine learning
+- predictive modeling
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS638
+- CS 638
+- machine learning
+- applied ML
+- 'CS638: Applied Machine Learning'
+- 'CS 638: Applied Machine Learning'
+prerequisites: []
+co_requisites: []
+related_programs:
+- "/cs_ms"
+- "/cs_phd"
+related_topics:
+- machine learning
+- predictive modeling
+- classification
+- pattern recognition
+provider_id: https://www.cs.umb.edu/#department
 ---
 
+## Notes
 
-
-\
-**Applied Machine Learning (3 credits)**
-
----
-
-\
-This course presents the practical side of machine learning for applications, such as pattern recognition from images or building predictive classifiers. Topics will include linear models for regression, decision trees, rule based classification, support vector machines, Bayesian networks, and clustering. The emphasis of the course will be on the hands-on application of machine learning to a variety of problems. This course does not assume any prior exposure to machine learning theory or practice.
-
-**Note:**
-\
 This course is co-taught with CS438.

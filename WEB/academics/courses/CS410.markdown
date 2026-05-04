@@ -1,19 +1,28 @@
 ---
-title: "CS410"
-layout: page
+title: 'CS410: Introduction to Software Engineering'
+layout: course
 permalink: "/academics/courses/CS410"
+entity_type: course
+course_code: CS410
+course_name: Introduction to Software Engineering
+credits: 3
+description: This course covers all aspects of the software development process from initial specification to final validation of completed software design. Implementation methodologies are discussed in the context of a major team project, to be chosen according to student and instructor interest. Oral presentations by students are an important part of the course.
+summary: Introductory course in software engineering for advanced undergraduates covering the software development lifecycle and team-based project work.
+keywords:
+- CS410
+- Introduction to Software Engineering
+- UMass Boston
+- course
+- Computer Science
+aliases:
+- CS410
+- CS 410
+- 'CS410: Introduction to Software Engineering'
+- 'CS 410: Introduction to Software Engineering'
+prerequisites:
+- CS 310, CS220/CS320L and any CS400 level course, or permission of the instructor.
+co_requisites: []
+related_programs: []
+related_topics: []
+provider_id: https://www.cs.umb.edu/#department
 ---
-
-
-
-\
-**Introduction to Software Engineering (3 credits)**
-
----
-
-\
-This course covers all aspects of the software development process from initial specification to final validation of completed software design. Implementation methodologies are discussed in the context of a major team project, to be chosen according to student and instructor interest. Oral presentations by students are an important part of the course.
-
-**Pre-requisites:**
-\
-CS 310, CS220/CS320L and any CS400 level course, or permission of the instructor.

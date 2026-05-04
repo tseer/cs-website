@@ -2,9 +2,111 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {%- seo -%}
-  <link rel="stylesheet" href="{{ "WEB/assets/main.css" | relative_url }}">
+
+  {%- assign site_root_url = '/' | absolute_url -%}
+  {%- assign organization_url = site.organization_url | default: site.url -%}
+  {%- assign page_title_for_head = page.title | default: page.course_code | default: site.title -%}
+  {%- assign canonical_url = page.url | absolute_url -%}
+  {%- assign page_description_for_meta = page.summary | default: page.description | default: site.description | strip_html | normalize_whitespace -%}
+  {%- assign page_description_for_meta = page_description_for_meta | truncate: 180 -%}
+  {%- assign keyword_blob = "" -%}
+  {%- if page.keywords and page.keywords.size > 0 -%}
+    {%- assign keyword_blob = page.keywords | join: "||" -%}
+  {%- endif -%}
+  {%- if page.layout == "course" and page.course_code -%}
+    {%- assign dynamic_course_relationships = site.data.course_offerings.relationships.courses[page.course_code] -%}
+    {%- if dynamic_course_relationships and dynamic_course_relationships.keyword_supplements -%}
+      {%- for keyword in dynamic_course_relationships.keyword_supplements -%}
+        {%- if keyword_blob != "" -%}{%- assign keyword_blob = keyword_blob | append: "||" -%}{%- endif -%}
+        {%- assign keyword_blob = keyword_blob | append: keyword -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- elsif page.layout == "person" -%}
+    {%- assign dynamic_person_relationships = site.data.course_offerings.relationships.people[page.slug] -%}
+    {%- if dynamic_person_relationships and dynamic_person_relationships.keyword_supplements -%}
+      {%- for keyword in dynamic_person_relationships.keyword_supplements -%}
+        {%- if keyword_blob != "" -%}{%- assign keyword_blob = keyword_blob | append: "||" -%}{%- endif -%}
+        {%- assign keyword_blob = keyword_blob | append: keyword -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endif -%}
+  {%- assign meta_keywords = keyword_blob | split: "||" | uniq -%}
+  <title>{% if page_title_for_head == site.title %}{{ site.title | escape }}{% else %}{{ page_title_for_head | escape }} | {{ site.title | escape }}{% endif %}</title>
+  <meta property="og:title" content="{{ page_title_for_head | escape }}">
+  <meta property="og:type" content="{{ page.og_type | default: 'website' | escape }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta name="twitter:card" content="{{ page.twitter_card | default: 'summary' | escape }}">
+  <meta name="twitter:title" content="{{ page_title_for_head | escape }}">
+  <link rel="stylesheet" href="{{ 'WEB/assets/main.css' | relative_url }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="alternate" type="application/json" href="{{ '/site-index.json' | relative_url }}">
+  <link rel="alternate" type="application/json" href="{{ '/search-data.json' | relative_url }}">
   {%- feed_meta -%}
+
+  {%- if page_description_for_meta -%}
+    <meta name="description" content="{{ page_description_for_meta | strip_html | strip_newlines | escape }}">
+    <meta property="og:description" content="{{ page_description_for_meta | strip_html | strip_newlines | escape }}">
+    <meta name="twitter:description" content="{{ page_description_for_meta | strip_html | strip_newlines | escape }}">
+  {%- endif -%}
+
+  {%- if meta_keywords and meta_keywords.size > 0 and meta_keywords.first != "" -%}
+    <meta name="keywords" content="{{ meta_keywords | join: ', ' | escape }}">
+  {%- endif -%}
+
+  {%- assign page_title_for_schema = page.title | default: page.course_code | default: site.title -%}
+  {%- assign page_description_for_schema = page.summary | default: page.description | default: site.description -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollegeOrUniversity",
+        "@id": {{ organization_url | append: "#organization" | jsonify }},
+        "name": {{ site.organization_name | default: "University of Massachusetts Boston" | jsonify }},
+        "url": {{ organization_url | jsonify }},
+        "description": {{ site.description | strip_html | normalize_whitespace | jsonify }},
+        "logo": {
+          "@type": "ImageObject",
+          "url": {{ site.organization_logo | absolute_url | jsonify }}
+        },
+        "department": {
+          "@type": "EducationalOrganization",
+          "name": {{ site.department_name | default: "Computer Science Department" | jsonify }}
+        }{% assign same_as = "" %}
+        {% if site.facebook_url %}{% assign same_as = same_as | append: site.facebook_url %}{% endif %}
+        {% if site.twitter_url %}{% if same_as != "" %}{% assign same_as = same_as | append: "||" %}{% endif %}{% assign same_as = same_as | append: site.twitter_url %}{% endif %}
+        {% if site.linkedin_url %}{% if same_as != "" %}{% assign same_as = same_as | append: "||" %}{% endif %}{% assign same_as = same_as | append: site.linkedin_url %}{% endif %}
+        {% assign same_as_list = same_as | split: "||" %}
+        {% if same_as != "" %},
+        "sameAs": {{ same_as_list | jsonify }}
+        {% endif %}
+      },
+      {
+        "@type": "WebSite",
+        "@id": {{ site_root_url | append: "#website" | jsonify }},
+        "url": {{ site_root_url | jsonify }},
+        "name": {{ site.title | jsonify }},
+        "description": {{ site.description | strip_html | normalize_whitespace | jsonify }},
+        "publisher": {
+          "@id": {{ organization_url | append: "#organization" | jsonify }}
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": {{ page.url | absolute_url | append: "#webpage" | jsonify }},
+        "url": {{ page.url | absolute_url | jsonify }},
+        "name": {{ page_title_for_schema | jsonify }},
+        "description": {{ page_description_for_schema | strip_html | normalize_whitespace | jsonify }},
+        "isPartOf": {
+          "@id": {{ site_root_url | append: "#website" | jsonify }}
+        }
+      }
+    ]
+  }
+  </script>
+
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
