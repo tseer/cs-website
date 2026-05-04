@@ -24,7 +24,7 @@ related_topics:
 ---
 <div id='active_staff' class='listing'>
   <div class="person">
-    <img src="/WEB/images/people/No_Photo_Available.jpg"><br>
+    <img src="{{ '/WEB/images/people/No_Photo_Available.jpg' | relative_url }}"><br>
     Leonard David<br>
     Systems/Network Administrator<br>
     M-3-201-17<br>
@@ -32,7 +32,7 @@ related_topics:
     leonard.david@umb.edu
   </div>
   <div class="person">
-    <img src="/WEB/images/people/No_Photo_Available.jpg"><br>
+    <img src="{{ '/WEB/images/people/No_Photo_Available.jpg' | relative_url }}"><br>
     Gemma Galecia<br>
     Graduate Program Secretary<br>
     M-3-201-01<br>
@@ -40,7 +40,7 @@ related_topics:
     gemma.galecia@umb.edu
   </div>
   <div class="person">
-    <img src="/WEB/images/people/No_Photo_Available.jpg"><br>
+    <img src="{{ '/WEB/images/people/No_Photo_Available.jpg' | relative_url }}"><br>
     Elif Gurel<br>
     Budget Administrator<br>
     M-3-201-13<br>
@@ -48,7 +48,7 @@ related_topics:
     elif.gurel@umb.edu
   </div>
   <div class="person">
-    <img src="/WEB/images/people/No_Photo_Available.jpg"><br>
+    <img src="{{ '/WEB/images/people/No_Photo_Available.jpg' | relative_url }}"><br>
     Thomas Mullaly<br>
     Senior System/Network Administrator<br>
     M-3-201-12<br>
@@ -56,7 +56,7 @@ related_topics:
     thomas.mullaly@umb.edu
   </div>
   <div class="person">
-    <img src="/WEB/images/people/No_Photo_Available.jpg"><br>
+    <img src="{{ '/WEB/images/people/No_Photo_Available.jpg' | relative_url }}"><br>
     Antonio Pera<br>
     System/Network Support Specialist<br>
     M-3-201-34<br>
@@ -64,7 +64,7 @@ related_topics:
     antonio.pera@umb.edu
   </div>
   <div class="person">
-    <img src="/WEB/images/people/No_Photo_Available.jpg"><br>
+    <img src="{{ '/WEB/images/people/No_Photo_Available.jpg' | relative_url }}"><br>
     Debbie Wade<br>
     Administrative Assistant<br>
     M-3-201-11<br>
@@ -77,7 +77,7 @@ related_topics:
   <h3 style='width:100%'>Retired Staff:</h3>
   
   <div class="person">
-    <img src="/WEB/images/people/No_Photo_Available.jpg"><br>
+    <img src="{{ '/WEB/images/people/No_Photo_Available.jpg' | relative_url }}"><br>
     John Lewis<br>
     Budget Administrator (retired)<br>
     john.lewis@umb.edu<br>
@@ -85,7 +85,7 @@ related_topics:
     <br>
   </div>
   <div class="person">
-    <img src="/WEB/images/people/No_Photo_Available.jpg"><br>
+    <img src="{{ '/WEB/images/people/No_Photo_Available.jpg' | relative_url }}"><br>
     Rick Martin<br>
     Systems Programmer (retired)<br>
     richard.martin@umb.edu<br>
@@ -93,7 +93,7 @@ related_topics:
     <br>
   </div>
   <div class="person">
-    <img src="/WEB/images/people/William_Perry.jpg"><br>
+    <img src="{{ '/WEB/images/people/William_Perry.jpg' | relative_url }}"><br>
     William Perry<br>
     Systems/Network Administrator (retired)<br>
     billcc@cs.umb.edu<br>
