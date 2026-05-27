@@ -657,17 +657,35 @@ html, body {
   transition: all 0.4s ease-in-out;
 }
 
+/* Styling for Markdown generated content inside the answer */
 .faq-answer p {
-  padding: 0 20px 25px 20px; /* Clean spacing inside the answer */
+  padding: 0 20px 20px 20px;
   margin: 0;
   color: #475569;
   line-height: 1.7;
   font-size: 1.05rem;
 }
 
+.faq-answer ul, .faq-answer ol {
+  padding: 0 20px 25px 40px; /* Indents the bullet points */
+  margin: 0;
+  color: #475569;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.faq-answer li {
+  margin-bottom: 8px; /* Spaces out the bullet points */
+}
+
+/* Fixes the spacing for the very first element */
+.faq-answer > *:first-child {
+  padding-top: 20px;
+}
+
 /*  Active States  */
 .faq-item.active > .faq-answer {
-  max-height: 1000px; /* Increased to accommodate content */
+  max-height: 3000px; /* Increased to accommodate content */
   padding-bottom: 20px;
   visibility: visible;
   opacity: 1;

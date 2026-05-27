@@ -18,7 +18,7 @@ permalink: /answers-to-faqs/
           </button>
           
           <div class="faq-answer">
-            <p>{{ item.answer | strip_html | strip }}</p>
+            {{ item.answer | markdownify }}
           </div>
           
         </div>
